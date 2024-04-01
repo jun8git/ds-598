@@ -56,8 +56,6 @@ the project or have suggestions, please feel free to fork the repository,
 make changes, and submit a pull request.
 
 
-## Acknowledgments
-
-- Special thanks to the authors and contributors of the MuST-Cinema dataset.
-- Our project builds on research from various sources, including advancements in neural text segmentation and unsupervised learning models.
+## Acknowledgments and references
+(...)
 
