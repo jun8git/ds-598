@@ -1,0 +1,5396 @@
+1
+00:00:00,133 --> 00:00:01,000
+okay so
+
+2
+00:00:02,333 --> 00:00:03,666
+I want to talk about
+
+3
+00:00:03,666 --> 00:00:07,266
+hey I want to talk about the diffusion model so this is
+
+4
+00:00:09,366 --> 00:00:13,933
+rounding out the generative image parts
+
+5
+00:00:14,966 --> 00:00:15,933
+I know there was
+
+6
+00:00:17,600 --> 00:00:19,133
+when I sent out the survey at the beginning of the
+
+7
+00:00:19,133 --> 00:00:21,733
+class I know there was interest on generative AI
+
+8
+00:00:21,733 --> 00:00:24,400
+actually I'm not sure if it was mainly just the LLM
+
+9
+00:00:25,133 --> 00:00:26,566
+stuff which we covered or
+
+10
+00:00:26,966 --> 00:00:29,200
+also the vision vision stuff
+
+11
+00:00:31,000 --> 00:00:33,133
+so for diffusion models as I
+
+12
+00:00:33,966 --> 00:00:35,300
+alluded to last time
+
+13
+00:00:36,766 --> 00:00:39,400
+so you're not going to get through all of the
+
+14
+00:00:41,466 --> 00:00:41,933
+you know
+
+15
+00:00:41,933 --> 00:00:44,300
+all of the details of how diffusion models work
+
+16
+00:00:44,300 --> 00:00:46,400
+it's just it's very math heavy
+
+17
+00:00:48,400 --> 00:00:49,333
+ideally I mean
+
+18
+00:00:49,600 --> 00:00:52,466
+I can imagine a short course just on
+
+19
+00:00:53,266 --> 00:00:54,066
+generative
+
+20
+00:00:55,000 --> 00:00:57,266
+image models and diffusion models
+
+21
+00:00:57,266 --> 00:00:58,766
+there's so much going on
+
+22
+00:00:59,166 --> 00:01:00,800
+so what I hope to do like
+
+23
+00:01:00,800 --> 00:01:03,133
+last time is at least give you a sense
+
+24
+00:01:03,200 --> 00:01:06,600
+you know build some intuition about what's going on
+
+25
+00:01:07,133 --> 00:01:07,933
+and
+
+26
+00:01:08,700 --> 00:01:10,266
+you'll have to dive in
+
+27
+00:01:10,266 --> 00:01:12,600
+and actually if anyone's interested
+
+28
+00:01:14,066 --> 00:01:16,800
+happy to do a little side project
+
+29
+00:01:17,300 --> 00:01:18,566
+with you if you want
+
+30
+00:01:20,400 --> 00:01:21,900
+I can always create
+
+31
+00:01:22,933 --> 00:01:23,933
+more content
+
+32
+00:01:24,966 --> 00:01:25,766
+as well
+
+33
+00:01:27,066 --> 00:01:27,866
+so
+
+34
+00:01:28,100 --> 00:01:32,566
+also like last time the book at least the way the book
+
+35
+00:01:33,466 --> 00:01:35,933
+kind of organized things I didn't find it that
+
+36
+00:01:36,466 --> 00:01:39,866
+accessible and so I'm going to rely heavily on
+
+37
+00:01:41,166 --> 00:01:42,733
+similar blog
+
+38
+00:01:44,133 --> 00:01:44,866
+from last time
+
+39
+00:01:44,866 --> 00:01:48,066
+and I guess these are this might be publicly available
+
+40
+00:01:48,066 --> 00:01:49,566
+I realize I referenced
+
+41
+00:01:50,133 --> 00:01:52,066
+towards Data Science because I subscribe
+
+42
+00:01:52,100 --> 00:01:53,766
+if you don't have access and you
+
+43
+00:01:54,100 --> 00:01:57,066
+I'm pointing to something that you don't have access
+
+44
+00:01:57,333 --> 00:01:58,500
+just let me know I can
+
+45
+00:01:59,200 --> 00:02:00,000
+do it like a
+
+46
+00:02:01,200 --> 00:02:02,466
+print screen or something
+
+47
+00:02:03,166 --> 00:02:05,500
+of the site and share it
+
+48
+00:02:10,100 --> 00:02:12,966
+um oh and then in terms of announcement so did
+
+49
+00:02:13,700 --> 00:02:15,133
+Xavier reach out to
+
+50
+00:02:15,966 --> 00:02:18,900
+last time I mentioned you're nodding ahead yet so the
+
+51
+00:02:19,366 --> 00:02:21,733
+yeah so what I asked them to do is take the
+
+52
+00:02:21,733 --> 00:02:23,766
+5 people on the top of the leaderboard
+
+53
+00:02:24,000 --> 00:02:25,866
+so am I
+
+54
+00:02:26,300 --> 00:02:31,000
+remembering right it's like Andy Jessica Furry Jasmine
+
+55
+00:02:31,900 --> 00:02:34,000
+who else and you're as well
+
+56
+00:02:34,533 --> 00:02:38,266
+yeah and so what I ask savior is just organize
+
+57
+00:02:38,366 --> 00:02:41,066
+just you know collect amongst you
+
+58
+00:02:42,133 --> 00:02:44,500
+just what your training tactic was and what model
+
+59
+00:02:44,500 --> 00:02:46,400
+you use and then either
+
+60
+00:02:46,533 --> 00:02:49,066
+he'll put it together in a slide if there's you know
+
+61
+00:02:49,066 --> 00:02:51,933
+not a huge difference but let's let's spend a
+
+62
+00:02:53,200 --> 00:02:55,800
+at least a few minutes 10 minutes or something at the
+
+63
+00:02:56,266 --> 00:02:58,500
+beginning of next class on Tuesday
+
+64
+00:02:59,000 --> 00:03:00,166
+that would be interesting
+
+65
+00:03:00,333 --> 00:03:01,933
+we can learn something
+
+66
+00:03:02,866 --> 00:03:05,533
+about your approaches and congrats for
+
+67
+00:03:05,700 --> 00:03:07,366
+being top of the leaderboard to
+
+68
+00:03:10,966 --> 00:03:12,400
+and I think that's
+
+69
+00:03:13,166 --> 00:03:14,533
+that's it for announcements
+
+70
+00:03:15,900 --> 00:03:18,933
+okay so let me give some I'm
+
+71
+00:03:19,100 --> 00:03:21,000
+going to try to give some context about how
+
+72
+00:03:21,000 --> 00:03:22,333
+diffusion models work
+
+73
+00:03:22,600 --> 00:03:24,733
+and then go into a little bit of the theory
+
+74
+00:03:24,733 --> 00:03:26,733
+but I'm not going to go into all of
+
+75
+00:03:27,100 --> 00:03:28,533
+the math it's just not
+
+76
+00:03:29,566 --> 00:03:33,700
+not conducive to try to do it in a lecture format and
+
+77
+00:03:34,100 --> 00:03:35,533
+I forget who said it but
+
+78
+00:03:36,100 --> 00:03:38,700
+math is not a spectator sport and so you really
+
+79
+00:03:39,266 --> 00:03:41,333
+I encourage you to go in and
+
+80
+00:03:41,533 --> 00:03:43,000
+actually just kind of rederive
+
+81
+00:03:43,000 --> 00:03:44,600
+either what's in the book or in the
+
+82
+00:03:44,933 --> 00:03:46,300
+in this blog post
+
+83
+00:03:46,700 --> 00:03:48,066
+here because even here they
+
+84
+00:03:49,000 --> 00:03:50,066
+they skip some steps
+
+85
+00:03:50,066 --> 00:03:52,100
+and I'll certainly skip some steps here
+
+86
+00:03:53,566 --> 00:03:55,266
+and then I'll talk a little bit about
+
+87
+00:03:55,766 --> 00:04:00,200
+how you get to training and then flash some application
+
+88
+00:04:00,600 --> 00:04:01,533
+examples
+
+89
+00:04:04,000 --> 00:04:06,200
+okay so kind of like last time
+
+90
+00:04:06,933 --> 00:04:08,166
+you know the idea is that
+
+91
+00:04:08,466 --> 00:04:09,800
+we're going to
+
+92
+00:04:10,100 --> 00:04:13,266
+somehow figure out a probability distribution
+
+93
+00:04:14,366 --> 00:04:15,666
+and we're going to try to
+
+94
+00:04:16,700 --> 00:04:19,933
+generate new samples from that probability distribution
+
+95
+00:04:19,933 --> 00:04:21,300
+and the new samples will be
+
+96
+00:04:21,900 --> 00:04:24,333
+hopefully high quality images
+
+97
+00:04:25,966 --> 00:04:27,000
+so the way
+
+98
+00:04:27,700 --> 00:04:29,100
+diffusion models work
+
+99
+00:04:29,733 --> 00:04:30,900
+is that
+
+100
+00:04:31,600 --> 00:04:33,200
+they essentially start
+
+101
+00:04:33,733 --> 00:04:34,700
+kind of like in
+
+102
+00:04:35,700 --> 00:04:36,966
+with the variational
+
+103
+00:04:38,166 --> 00:04:40,333
+auto encoders and also Gans
+
+104
+00:04:40,333 --> 00:04:42,500
+and I'll make the comparison here in a little bit
+
+105
+00:04:42,500 --> 00:04:43,300
+but
+
+106
+00:04:43,700 --> 00:04:46,333
+like in the 1D example it starts with just random noise
+
+107
+00:04:46,333 --> 00:04:47,666
+and basically what you've done
+
+108
+00:04:47,933 --> 00:04:49,800
+is you Learned a generative model
+
+109
+00:04:50,100 --> 00:04:52,400
+that can go from a
+
+110
+00:04:53,500 --> 00:04:56,366
+purely like Galcian random distribution
+
+111
+00:04:56,500 --> 00:04:59,333
+to some more complicated distribution that reflects
+
+112
+00:05:00,466 --> 00:05:04,300
+the dataset of images in this case
+
+113
+00:05:06,700 --> 00:05:08,733
+so the exact same thing
+
+114
+00:05:08,766 --> 00:05:10,966
+for images is just that you have it's a
+
+115
+00:05:10,966 --> 00:05:12,533
+much higher dimensional space
+
+116
+00:05:12,533 --> 00:05:13,533
+but basically
+
+117
+00:05:13,600 --> 00:05:15,266
+every color of every pixel
+
+118
+00:05:15,533 --> 00:05:16,900
+you know you have a distribution
+
+119
+00:05:16,900 --> 00:05:18,566
+multi dimensional distribution
+
+120
+00:05:18,766 --> 00:05:20,133
+across that so we're going to
+
+121
+00:05:20,900 --> 00:05:22,800
+try and it you know
+
+122
+00:05:22,800 --> 00:05:25,200
+just probably like last time it seems counterintuitive
+
+123
+00:05:25,200 --> 00:05:26,300
+we're gonna start from noise
+
+124
+00:05:26,300 --> 00:05:27,966
+and somehow we're gonna generate these
+
+125
+00:05:28,333 --> 00:05:30,933
+these high quality images
+
+126
+00:05:33,566 --> 00:05:35,800
+so what's interesting
+
+127
+00:05:37,166 --> 00:05:37,966
+so I
+
+128
+00:05:38,266 --> 00:05:41,966
+lectured in the slightly reversed order but these three
+
+129
+00:05:42,466 --> 00:05:44,866
+key papers came out for each of these three
+
+130
+00:05:44,966 --> 00:05:47,566
+areas just a year apart so in 2013
+
+131
+00:05:49,500 --> 00:05:52,366
+King Ma and Welling introduced the Variational
+
+132
+00:05:52,400 --> 00:05:54,166
+Auto Encoder which I talked about
+
+133
+00:05:54,400 --> 00:05:56,466
+2,014 good Fellow
+
+134
+00:05:56,766 --> 00:06:01,133
+and others introduced Gans and then 2,015
+
+135
+00:06:01,866 --> 00:06:03,066
+Saul Dickstein
+
+136
+00:06:04,466 --> 00:06:05,666
+introduced this paper
+
+137
+00:06:05,666 --> 00:06:09,100
+it's called Deep Unsupervised Learning using Non
+
+138
+00:06:09,100 --> 00:06:11,266
+Equilibrium Thermodynamics
+
+139
+00:06:15,000 --> 00:06:16,866
+wasn't clear from the paper
+
+140
+00:06:17,166 --> 00:06:19,400
+title that these became the diffusion models
+
+141
+00:06:19,400 --> 00:06:21,200
+and there been variations of
+
+142
+00:06:21,933 --> 00:06:23,600
+that since then and of course
+
+143
+00:06:24,200 --> 00:06:27,066
+there's a lot of commercial so a lot of excitement
+
+144
+00:06:27,600 --> 00:06:28,766
+especially after
+
+145
+00:06:31,200 --> 00:06:33,666
+these more efficient versions like stable diffusion
+
+146
+00:06:33,666 --> 00:06:35,400
+which I'm not going to really go into
+
+147
+00:06:35,400 --> 00:06:38,133
+I'll mention very briefly at the end
+
+148
+00:06:39,133 --> 00:06:41,300
+but of course Doli 2 Doli 3
+
+149
+00:06:43,133 --> 00:06:45,766
+Imagen from Google make a scene from meta
+
+150
+00:06:46,700 --> 00:06:47,933
+imagine video
+
+151
+00:06:48,000 --> 00:06:49,500
+so going into video space
+
+152
+00:06:49,800 --> 00:06:52,100
+from Google and make a video from meta
+
+153
+00:06:53,066 --> 00:06:56,133
+stable diffusion 3 just came out from stability
+
+154
+00:06:56,500 --> 00:06:58,900
+AI and then there's a mid journey
+
+155
+00:06:59,333 --> 00:07:00,266
+that they're on
+
+156
+00:07:00,800 --> 00:07:03,933
+now their their model version 6
+
+157
+00:07:04,100 --> 00:07:04,900
+and
+
+158
+00:07:05,333 --> 00:07:07,566
+and you've seen examples I'll show some
+
+159
+00:07:08,333 --> 00:07:11,700
+today as well but this is from metasmacosine
+
+160
+00:07:12,066 --> 00:07:12,866
+that's
+
+161
+00:07:13,066 --> 00:07:18,200
+generating images from a sketch and a text prompt
+
+162
+00:07:18,666 --> 00:07:20,000
+they don't show the
+
+163
+00:07:21,266 --> 00:07:22,466
+input here but
+
+164
+00:07:24,333 --> 00:07:25,533
+the idea is that you can
+
+165
+00:07:25,966 --> 00:07:28,200
+you have a lot of creative control now you can
+
+166
+00:07:28,733 --> 00:07:32,000
+sketch and not just verbally describe
+
+167
+00:07:32,933 --> 00:07:33,933
+what's going on
+
+168
+00:07:36,300 --> 00:07:39,466
+okay so what's the basic idea
+
+169
+00:07:39,866 --> 00:07:41,466
+of these diffusion
+
+170
+00:07:41,933 --> 00:07:45,766
+models or they call diffusion probabilistic models
+
+171
+00:07:47,000 --> 00:07:47,800
+so
+
+172
+00:07:48,266 --> 00:07:52,166
+the idea is you take this and I'll describe what
+
+173
+00:07:52,533 --> 00:07:54,100
+this stochastic process is
+
+174
+00:07:54,100 --> 00:07:55,933
+but there's a forward process that you take
+
+175
+00:07:56,166 --> 00:07:57,166
+in your training
+
+176
+00:07:57,166 --> 00:07:59,400
+you take all of these high quality images
+
+177
+00:07:59,666 --> 00:08:02,500
+and you slowly add noise to them where you get to
+
+178
+00:08:02,766 --> 00:08:05,900
+essentially a fully random image
+
+179
+00:08:08,533 --> 00:08:12,500
+but you have all of these samples and then
+
+180
+00:08:12,966 --> 00:08:15,333
+the goal of diffusion models
+
+181
+00:08:15,333 --> 00:08:18,100
+is you're trying to learn the reverse process
+
+182
+00:08:18,100 --> 00:08:20,600
+you're basically trying to figure out from a
+
+183
+00:08:20,966 --> 00:08:22,133
+random sample
+
+184
+00:08:23,266 --> 00:08:27,366
+can I get back to one step at a time can I get back to
+
+185
+00:08:28,566 --> 00:08:29,700
+some high quality
+
+186
+00:08:30,666 --> 00:08:32,000
+high quality image
+
+187
+00:08:32,500 --> 00:08:34,700
+and you know if it's just
+
+188
+00:08:34,966 --> 00:08:36,266
+if there's no other information
+
+189
+00:08:36,266 --> 00:08:38,766
+it'll just come back to something
+
+190
+00:08:39,100 --> 00:08:40,600
+that's high quality but there's these
+
+191
+00:08:40,966 --> 00:08:44,266
+conditional diffusion models just like the conditional
+
+192
+00:08:44,733 --> 00:08:48,966
+Gans and VAEs that you can give it text prompts or
+
+193
+00:08:49,100 --> 00:08:50,800
+as we saw in the other one like give it
+
+194
+00:08:51,000 --> 00:08:52,266
+even image input
+
+195
+00:08:52,933 --> 00:08:54,700
+to kind of guide
+
+196
+00:08:55,300 --> 00:08:57,100
+how it does this reverse
+
+197
+00:08:57,766 --> 00:08:59,533
+diffusion process
+
+198
+00:09:02,400 --> 00:09:03,533
+okay so we're going to
+
+199
+00:09:03,900 --> 00:09:06,400
+hopefully give you some intuition about
+
+200
+00:09:07,000 --> 00:09:10,500
+how this works and so I'll start by I'll talk about
+
+201
+00:09:11,000 --> 00:09:14,466
+what are stochastic processes and
+
+202
+00:09:15,133 --> 00:09:17,066
+specifically diffusion processes
+
+203
+00:09:17,800 --> 00:09:19,400
+then give a little bit of
+
+204
+00:09:19,566 --> 00:09:21,366
+intuition hopefully behind these
+
+205
+00:09:21,733 --> 00:09:24,300
+diffusion probabilistic models
+
+206
+00:09:24,600 --> 00:09:26,000
+going to go into a little bit of math
+
+207
+00:09:26,000 --> 00:09:28,000
+not going to do the complete derivation like I said
+
+208
+00:09:28,000 --> 00:09:30,000
+and then talk about
+
+209
+00:09:30,800 --> 00:09:33,300
+how it's trained in practice all right
+
+210
+00:09:35,600 --> 00:09:35,966
+okay
+
+211
+00:09:35,966 --> 00:09:39,900
+so let's just to kind of set things up a little bit
+
+212
+00:09:40,666 --> 00:09:43,000
+when we're talking about stochastic processes
+
+213
+00:09:43,000 --> 00:09:44,133
+or diffusion processes
+
+214
+00:09:44,133 --> 00:09:45,000
+we're talking about
+
+215
+00:09:45,133 --> 00:09:46,400
+random variables
+
+216
+00:09:48,566 --> 00:09:49,566
+what makes a
+
+217
+00:09:49,933 --> 00:09:52,866
+random variable a stocastic process is that
+
+218
+00:09:52,966 --> 00:09:54,366
+you basically have
+
+219
+00:09:55,966 --> 00:09:58,466
+continuously varying random variable
+
+220
+00:09:58,466 --> 00:10:03,000
+in the continuous case index by time
+
+221
+00:10:03,933 --> 00:10:06,600
+or you can have discrete
+
+222
+00:10:07,100 --> 00:10:09,700
+random variables that are just indexed either by
+
+223
+00:10:10,300 --> 00:10:14,366
+indexing points of times or just simple simple indexing
+
+224
+00:10:15,866 --> 00:10:16,666
+and so
+
+225
+00:10:19,000 --> 00:10:21,900
+yeah so when you have a random variable and you have
+
+226
+00:10:22,166 --> 00:10:25,333
+a realization of it that's what we call that a sample
+
+227
+00:10:25,333 --> 00:10:26,366
+you know you have one
+
+228
+00:10:26,700 --> 00:10:29,466
+example or one sample from the random variable
+
+229
+00:10:31,333 --> 00:10:33,800
+but for the stochastic process
+
+230
+00:10:34,100 --> 00:10:37,066
+a realization is a sample path
+
+231
+00:10:37,600 --> 00:10:40,866
+so over time how did that random variable
+
+232
+00:10:41,800 --> 00:10:42,600
+kind of
+
+233
+00:10:43,566 --> 00:10:44,966
+evolve over time
+
+234
+00:10:45,066 --> 00:10:46,500
+let me show you some pictures
+
+235
+00:10:49,966 --> 00:10:50,966
+there are
+
+236
+00:10:51,366 --> 00:10:54,600
+like I said there are discrete time and continues time
+
+237
+00:10:54,900 --> 00:10:56,066
+random variables
+
+238
+00:10:57,300 --> 00:10:59,166
+but there's also discrete value
+
+239
+00:10:59,600 --> 00:11:02,133
+and continuous value so discrete time
+
+240
+00:11:03,733 --> 00:11:06,100
+let's say you're taking daily average temperature
+
+241
+00:11:06,600 --> 00:11:10,200
+once a day you're recording average temperature
+
+242
+00:11:10,766 --> 00:11:14,266
+or coin flipping discrete events
+
+243
+00:11:14,666 --> 00:11:16,066
+whereas continuous time
+
+244
+00:11:17,300 --> 00:11:20,766
+you're monitoring the I guess the second by second
+
+245
+00:11:21,066 --> 00:11:22,066
+stock price
+
+246
+00:11:22,700 --> 00:11:26,966
+values or you're monitoring Q length
+
+247
+00:11:28,333 --> 00:11:31,100
+which can change instantaneously but
+
+248
+00:11:31,533 --> 00:11:33,733
+presumably it's like you know cue of people
+
+249
+00:11:34,466 --> 00:11:38,133
+it changes by a discrete discrete value so
+
+250
+00:11:39,266 --> 00:11:41,200
+the you know temperatures
+
+251
+00:11:42,166 --> 00:11:45,700
+are you know to some precision
+
+252
+00:11:45,766 --> 00:11:48,666
+are you know basically continuous valued and same
+
+253
+00:11:48,766 --> 00:11:49,933
+to stock price
+
+254
+00:11:51,900 --> 00:11:55,900
+but coin flip of course is discrete value
+
+255
+00:11:56,066 --> 00:11:56,900
+and cue length
+
+256
+00:11:56,900 --> 00:11:58,933
+if you're counting the number of people or the
+
+257
+00:11:59,000 --> 00:12:00,466
+number of jobs in your
+
+258
+00:12:01,066 --> 00:12:02,933
+batch Q on SCC
+
+259
+00:12:03,400 --> 00:12:06,966
+then they're going to be discrete values but
+
+260
+00:12:07,900 --> 00:12:12,700
+the cue size can change basically instantaneously
+
+261
+00:12:13,066 --> 00:12:14,333
+at any point in time
+
+262
+00:12:16,900 --> 00:12:18,066
+okay so
+
+263
+00:12:20,533 --> 00:12:22,600
+there's the we're going to use
+
+264
+00:12:23,166 --> 00:12:23,966
+the
+
+265
+00:12:24,333 --> 00:12:26,100
+properties of Markoff
+
+266
+00:12:26,133 --> 00:12:28,700
+process and a Markoff process is basically
+
+267
+00:12:28,733 --> 00:12:30,666
+it's a stochastic process
+
+268
+00:12:31,500 --> 00:12:35,766
+but as it says with no memory so that just means that
+
+269
+00:12:37,700 --> 00:12:40,600
+the current value at the current time
+
+270
+00:12:40,666 --> 00:12:43,066
+is only dependent on the previous value
+
+271
+00:12:43,100 --> 00:12:43,900
+so
+
+272
+00:12:44,533 --> 00:12:47,166
+if it wasn't Markoff process then it
+
+273
+00:12:47,333 --> 00:12:49,533
+can be dependent on all the previous
+
+274
+00:12:50,166 --> 00:12:52,100
+values or realizations of the
+
+275
+00:12:54,166 --> 00:12:55,333
+of the process
+
+276
+00:12:55,700 --> 00:12:56,866
+but with Markoff
+
+277
+00:12:58,000 --> 00:12:58,800
+basically
+
+278
+00:12:59,000 --> 00:13:01,566
+everything you need to know to figure out what's
+
+279
+00:13:02,500 --> 00:13:05,766
+coming next is in the last sample
+
+280
+00:13:10,566 --> 00:13:11,800
+okay and so
+
+281
+00:13:12,800 --> 00:13:16,466
+a diffusion process now is
+
+282
+00:13:16,766 --> 00:13:19,366
+so it can be described by a stochastic
+
+283
+00:13:19,500 --> 00:13:21,000
+differential equation
+
+284
+00:13:21,566 --> 00:13:24,133
+so differential equation is just
+
+285
+00:13:24,400 --> 00:13:25,533
+something that's
+
+286
+00:13:25,766 --> 00:13:30,533
+referring like some infinitesimal change of some value
+
+287
+00:13:31,900 --> 00:13:35,166
+usually versus some other variable like time
+
+288
+00:13:36,133 --> 00:13:38,733
+but a stochastic
+
+289
+00:13:39,200 --> 00:13:41,333
+differential process has
+
+290
+00:13:41,600 --> 00:13:44,100
+a random process inserted as well
+
+291
+00:13:44,100 --> 00:13:48,766
+and so this is kind of the standard form is here's our
+
+292
+00:13:49,900 --> 00:13:54,100
+variable that we're trying to predict or measure
+
+293
+00:13:55,166 --> 00:13:57,933
+you have this thing called the drift coefficient
+
+294
+00:13:58,166 --> 00:13:59,600
+which is deterministic
+
+295
+00:13:59,600 --> 00:14:00,866
+but it can be dependent
+
+296
+00:14:00,866 --> 00:14:02,800
+on the value of your random variable
+
+297
+00:14:02,800 --> 00:14:03,966
+and the point in time
+
+298
+00:14:04,300 --> 00:14:07,266
+so it can be varying in a deterministic way
+
+299
+00:14:09,166 --> 00:14:11,600
+and then you have something called a diffusion
+
+300
+00:14:11,600 --> 00:14:13,500
+coefficient which can be
+
+301
+00:14:15,000 --> 00:14:16,000
+dependent on
+
+302
+00:14:16,066 --> 00:14:18,366
+the value of the random variable in the time
+
+303
+00:14:19,133 --> 00:14:20,266
+and then it's
+
+304
+00:14:22,166 --> 00:14:26,300
+the product with a so called wiener process that I'll
+
+305
+00:14:26,733 --> 00:14:27,566
+describe here
+
+306
+00:14:28,266 --> 00:14:29,366
+in a minute so
+
+307
+00:14:30,000 --> 00:14:32,066
+and I'll show some pictures
+
+308
+00:14:32,700 --> 00:14:35,300
+and again just to emphasize so
+
+309
+00:14:35,666 --> 00:14:39,333
+the drift coefficient and the diffusion coefficient
+
+310
+00:14:39,966 --> 00:14:41,466
+are functions of the
+
+311
+00:14:43,800 --> 00:14:46,266
+value of the random variable in time
+
+312
+00:14:49,066 --> 00:14:49,933
+okay so
+
+313
+00:14:51,333 --> 00:14:54,166
+as I said this part here if you just
+
+314
+00:14:55,400 --> 00:14:56,900
+mask out this this is
+
+315
+00:14:57,100 --> 00:14:59,500
+just a regular differential equation
+
+316
+00:14:59,766 --> 00:15:02,300
+but this makes it a stochastic
+
+317
+00:15:03,133 --> 00:15:04,333
+differential equation
+
+318
+00:15:06,666 --> 00:15:07,466
+okay so
+
+319
+00:15:08,333 --> 00:15:11,333
+let's talk about what a Wiener process is
+
+320
+00:15:12,366 --> 00:15:14,366
+so it's a
+
+321
+00:15:14,900 --> 00:15:18,133
+continuous time stochastic process that has
+
+322
+00:15:18,666 --> 00:15:21,400
+these properties generally just by convention
+
+323
+00:15:21,766 --> 00:15:25,966
+the first sample is 0
+
+324
+00:15:26,966 --> 00:15:28,366
+it kind of doesn't really matter
+
+325
+00:15:28,866 --> 00:15:30,266
+where it starts
+
+326
+00:15:30,766 --> 00:15:31,900
+but it has
+
+327
+00:15:32,066 --> 00:15:35,366
+independent increments and so has this Markoff
+
+328
+00:15:35,766 --> 00:15:37,300
+property that
+
+329
+00:15:40,266 --> 00:15:41,066
+the
+
+330
+00:15:43,366 --> 00:15:44,166
+two
+
+331
+00:15:44,733 --> 00:15:46,066
+samples that are
+
+332
+00:15:46,766 --> 00:15:47,733
+side by side
+
+333
+00:15:48,866 --> 00:15:51,866
+are independent of all the past samples
+
+334
+00:15:52,666 --> 00:15:54,366
+okay and then probably the
+
+335
+00:15:54,366 --> 00:15:56,766
+kind of the key thing to take away here is that
+
+336
+00:15:57,300 --> 00:15:59,133
+the difference and so if I take
+
+337
+00:15:59,466 --> 00:16:02,200
+even in the continuous case if I take
+
+338
+00:16:03,966 --> 00:16:07,166
+two samples and I take the difference
+
+339
+00:16:08,166 --> 00:16:11,300
+they're going to be normally distributed with
+
+340
+00:16:11,700 --> 00:16:13,100
+mean of zero
+
+341
+00:16:14,000 --> 00:16:16,800
+okay so I'm taking so I have this
+
+342
+00:16:16,800 --> 00:16:19,800
+this meaner process or Browning motion process
+
+343
+00:16:20,466 --> 00:16:22,500
+I take a sample doesn't matter
+
+344
+00:16:22,866 --> 00:16:25,133
+even when I take another sample
+
+345
+00:16:25,733 --> 00:16:28,533
+some later point that difference
+
+346
+00:16:28,900 --> 00:16:33,200
+is going to be follow this agaussian distribution
+
+347
+00:16:33,866 --> 00:16:34,666
+with
+
+348
+00:16:36,300 --> 00:16:37,100
+0 mean
+
+349
+00:16:39,000 --> 00:16:42,700
+and the variance is just related to
+
+350
+00:16:43,266 --> 00:16:45,000
+the distance between the samples
+
+351
+00:16:47,200 --> 00:16:50,700
+kind of I mean you think about it so here's a picture
+
+352
+00:16:51,500 --> 00:16:52,300
+right here
+
+353
+00:16:54,166 --> 00:16:55,933
+these are just different
+
+354
+00:16:56,766 --> 00:16:58,666
+Wiener processes that
+
+355
+00:16:58,766 --> 00:17:01,000
+start zero and because of the random nature
+
+356
+00:17:01,533 --> 00:17:04,666
+that of course they'll have different paths
+
+357
+00:17:10,966 --> 00:17:12,533
+and so you can calculate
+
+358
+00:17:13,200 --> 00:17:14,733
+the standard deviation
+
+359
+00:17:16,266 --> 00:17:18,400
+which is just related to
+
+360
+00:17:19,100 --> 00:17:19,900
+the
+
+361
+00:17:20,500 --> 00:17:23,166
+distance from the first sample
+
+362
+00:17:23,866 --> 00:17:27,066
+which is the gray area here and so
+
+363
+00:17:27,366 --> 00:17:29,466
+it kind of makes sense if it's randomly
+
+364
+00:17:29,466 --> 00:17:32,100
+jumping up and down in this 1d case
+
+365
+00:17:32,133 --> 00:17:33,500
+the further away you get
+
+366
+00:17:34,866 --> 00:17:38,666
+the more likely you are to be farther from zero right
+
+367
+00:17:40,066 --> 00:17:41,900
+kind of makes sense yep
+
+368
+00:17:42,200 --> 00:17:43,000
+are
+
+369
+00:17:43,100 --> 00:17:46,533
+the curves generated differentiable everywhere or
+
+370
+00:17:47,066 --> 00:17:47,866
+is it
+
+371
+00:17:48,333 --> 00:17:50,100
+not different differentiable anywhere
+
+372
+00:17:50,100 --> 00:17:52,466
+it's kind of jagged
+
+373
+00:17:53,100 --> 00:17:53,900
+yeah
+
+374
+00:18:01,666 --> 00:18:04,600
+we we are going to be differentiating
+
+375
+00:18:07,933 --> 00:18:10,300
+so but you know we're going to be
+
+376
+00:18:10,733 --> 00:18:14,666
+differentiating the equations I guess for the curve
+
+377
+00:18:15,100 --> 00:18:15,900
+but
+
+378
+00:18:16,466 --> 00:18:18,866
+I think what you're asking is can you differentiate the
+
+379
+00:18:19,000 --> 00:18:20,266
+kind of the realizations
+
+380
+00:18:20,266 --> 00:18:21,566
+I mean because you're referring to
+
+381
+00:18:22,000 --> 00:18:23,800
+the jagged nature so
+
+382
+00:18:26,466 --> 00:18:27,266
+I guess
+
+383
+00:18:27,900 --> 00:18:30,333
+short answer is yes from
+
+384
+00:18:30,600 --> 00:18:32,066
+analytical perspective
+
+385
+00:18:32,066 --> 00:18:35,166
+so we're going to you'll see we'll have an expression
+
+386
+00:18:35,666 --> 00:18:38,666
+for this stochastic differential equation
+
+387
+00:18:38,900 --> 00:18:42,666
+and and we will be differentiate because it's gonna
+
+388
+00:18:42,866 --> 00:18:43,133
+well
+
+389
+00:18:43,133 --> 00:18:45,766
+we're gonna build that into our loss function of a
+
+390
+00:18:45,766 --> 00:18:48,000
+network that we're going to be training
+
+391
+00:18:48,900 --> 00:18:49,700
+makes sense
+
+392
+00:18:52,133 --> 00:18:52,933
+okay
+
+393
+00:18:54,466 --> 00:18:55,800
+so I do like my
+
+394
+00:18:56,500 --> 00:18:59,466
+profiles so I threw one in here so
+
+395
+00:18:59,700 --> 00:19:03,100
+the Weiner process is named after Norber Weiner he's
+
+396
+00:19:03,166 --> 00:19:04,166
+an interesting character
+
+397
+00:19:05,733 --> 00:19:08,800
+he was at MIT he's kind of a child prodigy
+
+398
+00:19:09,266 --> 00:19:12,166
+but he was a you know computer scientist in the
+
+399
+00:19:12,266 --> 00:19:15,666
+he died in 64 but in the early days
+
+400
+00:19:16,666 --> 00:19:18,966
+but he was credited with
+
+401
+00:19:18,966 --> 00:19:21,366
+creating at the time it was called the field of
+
+402
+00:19:21,866 --> 00:19:22,966
+cybernetics
+
+403
+00:19:24,900 --> 00:19:27,533
+and so he did a lot of research around these
+
+404
+00:19:27,533 --> 00:19:31,400
+kind of stochastic processes and these noise processes
+
+405
+00:19:31,400 --> 00:19:33,100
+and basically they became
+
+406
+00:19:34,166 --> 00:19:34,966
+key
+
+407
+00:19:35,466 --> 00:19:36,933
+contributions to
+
+408
+00:19:37,666 --> 00:19:40,566
+areas in electrical engineering communication
+
+409
+00:19:40,666 --> 00:19:43,733
+control systems like wiener filter if you ever
+
+410
+00:19:44,266 --> 00:19:46,733
+looked at control and actually
+
+411
+00:19:47,300 --> 00:19:50,133
+we use it sometimes in computer vision
+
+412
+00:19:53,133 --> 00:19:56,733
+and so he was kind of a contemporary or slightly
+
+413
+00:19:56,866 --> 00:19:59,400
+older but he influenced like John
+
+414
+00:19:59,866 --> 00:20:01,800
+von Neumann who
+
+415
+00:20:02,566 --> 00:20:04,966
+famous mathematician and was credited with
+
+416
+00:20:05,600 --> 00:20:07,200
+inventing the modern
+
+417
+00:20:08,400 --> 00:20:09,733
+computer architecture
+
+418
+00:20:10,500 --> 00:20:11,300
+the
+
+419
+00:20:11,600 --> 00:20:14,166
+CPU kind of architecture it's still called the
+
+420
+00:20:14,566 --> 00:20:16,900
+von Neumann architecture Today
+
+421
+00:20:17,266 --> 00:20:18,966
+Claude Shannon who's the
+
+422
+00:20:20,066 --> 00:20:23,300
+uh basically the creator of uh information theory
+
+423
+00:20:23,300 --> 00:20:24,700
+or information science
+
+424
+00:20:25,500 --> 00:20:28,000
+um and so he you know interesting enough he wrote
+
+425
+00:20:28,000 --> 00:20:29,400
+I put a link here he wrote a
+
+426
+00:20:30,066 --> 00:20:33,766
+paper in 1949 called The Machine Age
+
+427
+00:20:34,000 --> 00:20:36,100
+you know again think back to 1949
+
+428
+00:20:36,400 --> 00:20:38,466
+but anticipating you know
+
+429
+00:20:38,933 --> 00:20:41,866
+a lot of what's what's happening today around robots
+
+430
+00:20:42,066 --> 00:20:43,800
+and things like that and there was a
+
+431
+00:20:45,200 --> 00:20:47,200
+I don't know if you're if you're interested there is a
+
+432
+00:20:48,500 --> 00:20:51,266
+interesting book it's I guess it's kind of niche but
+
+433
+00:20:52,933 --> 00:20:55,000
+where they call them the dark hero of the Information
+
+434
+00:20:55,200 --> 00:20:56,000
+Age
+
+435
+00:20:57,300 --> 00:21:00,166
+I found it interesting and then the other little tidbit
+
+436
+00:21:00,333 --> 00:21:03,400
+is that he's my great great grand advisor
+
+437
+00:21:03,500 --> 00:21:07,000
+so if you do your academic genealogy I'm over the PhD
+
+438
+00:21:07,266 --> 00:21:09,000
+students probably know what I'm talking about
+
+439
+00:21:09,766 --> 00:21:10,566
+that
+
+440
+00:21:11,900 --> 00:21:15,866
+so my advisor was at MIT his advisor
+
+441
+00:21:16,533 --> 00:21:17,866
+Oppenheim and Schaeffer
+
+442
+00:21:17,866 --> 00:21:19,466
+they kind of founded the field of
+
+443
+00:21:19,466 --> 00:21:20,366
+digital signal
+
+444
+00:21:20,366 --> 00:21:21,400
+processing which
+
+445
+00:21:21,400 --> 00:21:22,666
+I did my PhD in
+
+446
+00:21:23,000 --> 00:21:23,800
+and actually
+
+447
+00:21:24,100 --> 00:21:26,766
+interesting enough there advisor was Amar Bose
+
+448
+00:21:26,800 --> 00:21:30,366
+founder of Bose Corporation and Bose was a student of
+
+449
+00:21:31,100 --> 00:21:32,466
+Norbert Wiener so
+
+450
+00:21:34,866 --> 00:21:35,966
+little bit of trivia
+
+451
+00:21:37,800 --> 00:21:40,200
+so I feel compelled to understand what he's
+
+452
+00:21:40,866 --> 00:21:43,200
+done I'm not sure I'm doing it justice but
+
+453
+00:21:45,600 --> 00:21:46,600
+okay so
+
+454
+00:21:47,466 --> 00:21:48,500
+let's go back
+
+455
+00:21:50,466 --> 00:21:51,666
+so we have these
+
+456
+00:21:52,500 --> 00:21:56,333
+just look at the think about the Wiener process itself
+
+457
+00:21:57,533 --> 00:21:59,566
+we can take those
+
+458
+00:22:00,266 --> 00:22:04,266
+samples like a sample that's just some small
+
+459
+00:22:04,733 --> 00:22:07,366
+time apart from another sample
+
+460
+00:22:10,266 --> 00:22:11,866
+and as I showed you on the
+
+461
+00:22:12,966 --> 00:22:13,933
+previous slide
+
+462
+00:22:14,100 --> 00:22:16,766
+that that difference is always going to be a zero mean
+
+463
+00:22:17,133 --> 00:22:20,366
+and the standard deviation is always going to be the
+
+464
+00:22:20,666 --> 00:22:22,666
+basically the distance between
+
+465
+00:22:23,300 --> 00:22:24,733
+the samples okay
+
+466
+00:22:25,366 --> 00:22:26,200
+so if you take
+
+467
+00:22:26,500 --> 00:22:28,766
+samples further apart it's gonna have bigger
+
+468
+00:22:29,500 --> 00:22:30,700
+standard deviation
+
+469
+00:22:31,200 --> 00:22:32,133
+that makes sense
+
+470
+00:22:33,966 --> 00:22:36,300
+okay so we can
+
+471
+00:22:38,933 --> 00:22:40,000
+discritize
+
+472
+00:22:40,466 --> 00:22:42,933
+that stochastic differential equation by just
+
+473
+00:22:43,300 --> 00:22:46,400
+taking two samples and subtracting them
+
+474
+00:22:47,200 --> 00:22:49,533
+from each other and
+
+475
+00:22:52,666 --> 00:22:55,900
+that basically so there's a little bit of
+
+476
+00:22:58,366 --> 00:23:01,900
+assumptions here which I didn't make explicit but
+
+477
+00:23:02,133 --> 00:23:02,933
+I think
+
+478
+00:23:03,000 --> 00:23:05,766
+they're assuming that these are kind of slow moving
+
+479
+00:23:05,766 --> 00:23:08,600
+so these are approximation these are slow moving
+
+480
+00:23:09,066 --> 00:23:11,733
+curves and so they're not taking account that
+
+481
+00:23:13,566 --> 00:23:14,666
+these values
+
+482
+00:23:15,500 --> 00:23:17,300
+might have changed
+
+483
+00:23:17,366 --> 00:23:19,500
+but it's just factoring in
+
+484
+00:23:19,700 --> 00:23:22,266
+the difference of the wiener process here
+
+485
+00:23:22,266 --> 00:23:26,166
+and so it went from this the wiener process to this
+
+486
+00:23:27,766 --> 00:23:30,266
+this zero mean galcian
+
+487
+00:23:30,966 --> 00:23:31,766
+okay
+
+488
+00:23:32,300 --> 00:23:33,200
+at taking the
+
+489
+00:23:33,966 --> 00:23:34,766
+difference
+
+490
+00:23:35,733 --> 00:23:36,533
+and then
+
+491
+00:23:37,266 --> 00:23:39,533
+we can just bring this term
+
+492
+00:23:40,666 --> 00:23:41,466
+over
+
+493
+00:23:41,866 --> 00:23:43,333
+here and then
+
+494
+00:23:44,666 --> 00:23:46,866
+if you have a zero mean
+
+495
+00:23:47,066 --> 00:23:50,200
+Gaussian and you're multiplying it by some value
+
+496
+00:23:51,000 --> 00:23:52,200
+you're just changing
+
+497
+00:23:52,300 --> 00:23:54,666
+you're just creating a new galcian right and so
+
+498
+00:23:55,133 --> 00:23:57,533
+U becomes U prime
+
+499
+00:23:58,366 --> 00:24:00,766
+we're multiplying it by something so
+
+500
+00:24:01,933 --> 00:24:03,300
+this is now just a
+
+501
+00:24:03,766 --> 00:24:05,533
+galcian 0 mean
+
+502
+00:24:06,366 --> 00:24:09,533
+but the standard deviation is just the
+
+503
+00:24:10,700 --> 00:24:13,200
+the constant you know or the value that's
+
+504
+00:24:13,366 --> 00:24:15,566
+being multiplied here
+
+505
+00:24:16,066 --> 00:24:17,133
+okay does that
+
+506
+00:24:18,900 --> 00:24:19,800
+make sense
+
+507
+00:24:25,333 --> 00:24:26,300
+okay so
+
+508
+00:24:28,466 --> 00:24:31,966
+let's look at actually going back to the
+
+509
+00:24:33,266 --> 00:24:36,300
+stochastic differential equation
+
+510
+00:24:38,566 --> 00:24:43,533
+there's different flavors of the equation plotted here
+
+511
+00:24:44,966 --> 00:24:47,600
+this line in the middle this dash line in the middle
+
+512
+00:24:48,366 --> 00:24:49,166
+is just
+
+513
+00:24:50,366 --> 00:24:52,866
+basically a constant it's just saying that
+
+514
+00:24:53,700 --> 00:24:54,766
+just for a reference
+
+515
+00:24:54,766 --> 00:24:56,300
+is just saying that nothing changes
+
+516
+00:24:56,300 --> 00:24:57,200
+it's actually not
+
+517
+00:24:57,566 --> 00:25:00,533
+these are the kind of the dash lines are these
+
+518
+00:25:01,500 --> 00:25:02,300
+non
+
+519
+00:25:03,500 --> 00:25:04,400
+stochastic
+
+520
+00:25:05,800 --> 00:25:08,133
+equations just for reference
+
+521
+00:25:08,300 --> 00:25:14,266
+but if I have no deterministic part and I just have
+
+522
+00:25:14,500 --> 00:25:15,866
+the Wiener process
+
+523
+00:25:15,933 --> 00:25:17,466
+then just like before
+
+524
+00:25:17,533 --> 00:25:19,900
+it's just going to kind of wander around
+
+525
+00:25:21,300 --> 00:25:23,900
+starting from the zero mean right that's
+
+526
+00:25:24,166 --> 00:25:25,966
+the equation at the top
+
+527
+00:25:28,700 --> 00:25:30,800
+this one is
+
+528
+00:25:32,133 --> 00:25:34,966
+this is a simple differential equation
+
+529
+00:25:35,200 --> 00:25:38,166
+this dash line here DX equals 2 DT
+
+530
+00:25:38,733 --> 00:25:39,533
+that
+
+531
+00:25:40,000 --> 00:25:41,500
+the coefficient
+
+532
+00:25:42,000 --> 00:25:43,466
+is just
+
+533
+00:25:44,166 --> 00:25:45,800
+a constant right
+
+534
+00:25:50,100 --> 00:25:50,966
+the drift
+
+535
+00:25:51,766 --> 00:25:54,400
+coefficient is just a constant
+
+536
+00:25:57,900 --> 00:25:58,700
+so
+
+537
+00:26:00,600 --> 00:26:02,600
+and then here you see that
+
+538
+00:26:03,666 --> 00:26:06,000
+so you have this it's just kind of growing
+
+539
+00:26:06,500 --> 00:26:09,533
+you know linearly with time
+
+540
+00:26:09,600 --> 00:26:11,333
+and then you're adding
+
+541
+00:26:13,333 --> 00:26:15,500
+the Wiener process on top of it
+
+542
+00:26:16,066 --> 00:26:18,366
+and then the line down here
+
+543
+00:26:18,900 --> 00:26:21,200
+now it's getting you know a little bit more you have
+
+544
+00:26:21,533 --> 00:26:24,466
+the drift coefficient is a simple function
+
+545
+00:26:25,100 --> 00:26:27,800
+of the random variable itself
+
+546
+00:26:28,800 --> 00:26:31,766
+and you have something some non
+
+547
+00:26:33,000 --> 00:26:36,966
+unitary drift coefficient as well for
+
+548
+00:26:37,900 --> 00:26:41,266
+the purple line here
+
+549
+00:26:41,266 --> 00:26:43,166
+and so you can see that the
+
+550
+00:26:43,366 --> 00:26:45,666
+standard deviation because we have a
+
+551
+00:26:45,900 --> 00:26:47,000
+bigger constant
+
+552
+00:26:47,333 --> 00:26:48,933
+multiplying the Wiener process
+
+553
+00:26:48,933 --> 00:26:50,366
+it's kind of wandering around
+
+554
+00:26:51,100 --> 00:26:53,133
+quite a bit quite a bit more
+
+555
+00:26:57,400 --> 00:27:01,533
+okay all right so we want to reverse this process
+
+556
+00:27:03,000 --> 00:27:04,000
+and so we had
+
+557
+00:27:04,733 --> 00:27:07,400
+the stochastic differential equation
+
+558
+00:27:07,866 --> 00:27:10,066
+and so here's
+
+559
+00:27:10,066 --> 00:27:12,200
+where I'm going to start skipping a bunch of math
+
+560
+00:27:12,200 --> 00:27:14,800
+but you know can encourage you to
+
+561
+00:27:15,266 --> 00:27:16,800
+do it or we can talk offline
+
+562
+00:27:17,100 --> 00:27:20,366
+is that we can just define this new variable
+
+563
+00:27:20,766 --> 00:27:21,566
+X hat
+
+564
+00:27:22,200 --> 00:27:23,100
+which is just
+
+565
+00:27:23,100 --> 00:27:24,466
+instead of starting from time
+
+566
+00:27:24,466 --> 00:27:26,000
+zero and going to like time
+
+567
+00:27:26,000 --> 00:27:26,800
+capital t
+
+568
+00:27:27,866 --> 00:27:30,300
+it's X hat we just define it to be
+
+569
+00:27:31,100 --> 00:27:34,533
+capital t minus t right so if you have
+
+570
+00:27:35,133 --> 00:27:35,966
+basically one where
+
+571
+00:27:35,966 --> 00:27:37,533
+we're going to be talking a lot about
+
+572
+00:27:38,700 --> 00:27:41,666
+time here so probably point to this
+
+573
+00:27:43,666 --> 00:27:46,600
+that the normal diffusion process like I was showing
+
+574
+00:27:46,600 --> 00:27:48,400
+is going from zero to time t
+
+575
+00:27:48,400 --> 00:27:49,200
+and now
+
+576
+00:27:50,000 --> 00:27:50,800
+X
+
+577
+00:27:51,300 --> 00:27:52,100
+hat
+
+578
+00:27:52,966 --> 00:27:54,600
+X hat is going
+
+579
+00:27:56,666 --> 00:27:57,500
+back that way
+
+580
+00:27:59,166 --> 00:28:03,400
+so with some manipulations and some substitutions
+
+581
+00:28:03,933 --> 00:28:07,066
+you can write what looks like
+
+582
+00:28:07,466 --> 00:28:09,700
+actually there's one thing that's also
+
+583
+00:28:09,733 --> 00:28:10,533
+a little bit different
+
+584
+00:28:10,533 --> 00:28:12,733
+here is that the diffusion coefficient
+
+585
+00:28:13,166 --> 00:28:15,900
+is only dependent on time it's not dependent on the
+
+586
+00:28:16,966 --> 00:28:18,666
+random variable value itself
+
+587
+00:28:19,266 --> 00:28:20,166
+but with that
+
+588
+00:28:21,933 --> 00:28:24,766
+Assumption you can rewrite the
+
+589
+00:28:24,766 --> 00:28:27,400
+equation and then basically get it in a form
+
+590
+00:28:30,000 --> 00:28:33,466
+substituting these variables it looks very much like
+
+591
+00:28:33,666 --> 00:28:36,533
+just another stochastic differential equation
+
+592
+00:28:37,533 --> 00:28:38,333
+okay
+
+593
+00:28:39,866 --> 00:28:41,966
+and this term here has a
+
+594
+00:28:42,666 --> 00:28:45,600
+special name the gradient of log
+
+595
+00:28:45,766 --> 00:28:48,900
+of the probability distribution of the random variable
+
+596
+00:28:49,000 --> 00:28:50,900
+is called the score function
+
+597
+00:28:51,133 --> 00:28:51,933
+whereas the
+
+598
+00:28:52,666 --> 00:28:54,566
+the probability of the random variable is just
+
+599
+00:28:54,900 --> 00:28:56,966
+the marginal probability
+
+600
+00:29:00,200 --> 00:29:01,166
+okay so
+
+601
+00:29:01,933 --> 00:29:03,933
+it turns out that
+
+602
+00:29:04,666 --> 00:29:05,933
+if you have this
+
+603
+00:29:06,200 --> 00:29:08,533
+this kind of stochastic differential equation
+
+604
+00:29:11,266 --> 00:29:13,700
+that if you carefully pick your
+
+605
+00:29:13,966 --> 00:29:16,600
+drift coefficient your diffusion coefficient
+
+606
+00:29:17,366 --> 00:29:21,166
+that you can start with any kind of distribution
+
+607
+00:29:21,500 --> 00:29:22,300
+over here
+
+608
+00:29:23,866 --> 00:29:25,600
+and basically
+
+609
+00:29:27,333 --> 00:29:28,500
+you can guarantee
+
+610
+00:29:28,766 --> 00:29:32,366
+that if you take enough steps that you will end up
+
+611
+00:29:32,566 --> 00:29:35,700
+at some point with a just a pure
+
+612
+00:29:36,400 --> 00:29:39,200
+Galcian distribution so you
+
+613
+00:29:40,200 --> 00:29:41,966
+this is so it's an equation
+
+614
+00:29:44,700 --> 00:29:48,000
+that you know essentially diffuses the
+
+615
+00:29:49,400 --> 00:29:51,866
+your complicated distribution
+
+616
+00:29:52,266 --> 00:29:54,966
+to a simple Galcian
+
+617
+00:29:55,933 --> 00:29:56,900
+distribution
+
+618
+00:29:58,200 --> 00:29:59,466
+and this is the
+
+619
+00:29:59,666 --> 00:30:02,666
+form of the equations that will be used in the
+
+620
+00:30:02,900 --> 00:30:04,133
+diffusion modeling
+
+621
+00:30:07,200 --> 00:30:09,766
+I warned you guys it can be a lot of math right
+
+622
+00:30:12,566 --> 00:30:13,500
+ah
+
+623
+00:30:14,966 --> 00:30:16,000
+okay so
+
+624
+00:30:17,600 --> 00:30:19,900
+let's develop a little bit more intuition
+
+625
+00:30:20,533 --> 00:30:24,966
+so we had this form like I showed you here
+
+626
+00:30:26,933 --> 00:30:30,266
+and so if you picket the values
+
+627
+00:30:30,933 --> 00:30:34,933
+of this form and P is between 01 you'll have this
+
+628
+00:30:35,333 --> 00:30:37,333
+property and you can take
+
+629
+00:30:37,933 --> 00:30:40,800
+step by step you can substitute for
+
+630
+00:30:41,866 --> 00:30:43,700
+every subsequent step
+
+631
+00:30:44,200 --> 00:30:45,300
+like for example
+
+632
+00:30:45,700 --> 00:30:47,900
+at the final step over here
+
+633
+00:30:50,466 --> 00:30:53,500
+of course the equation is simply just the previous step
+
+634
+00:30:54,566 --> 00:30:55,966
+and then you just keep going back
+
+635
+00:30:55,966 --> 00:30:57,900
+another step and substitute back in there
+
+636
+00:30:57,900 --> 00:30:59,066
+and then when you
+
+637
+00:30:59,466 --> 00:31:02,700
+do all of that you end up with equation
+
+638
+00:31:03,500 --> 00:31:07,133
+like this which is kind of of the same form you have
+
+639
+00:31:08,166 --> 00:31:09,533
+your first sample value
+
+640
+00:31:10,533 --> 00:31:11,400
+over here
+
+641
+00:31:12,333 --> 00:31:15,000
+and then you just have this kind of sum
+
+642
+00:31:15,400 --> 00:31:19,300
+of like the square root of square to 1 minus p
+
+643
+00:31:19,933 --> 00:31:21,700
+raised to the I power
+
+644
+00:31:22,700 --> 00:31:23,766
+of the summation
+
+645
+00:31:24,400 --> 00:31:26,400
+but they're all just multiplying
+
+646
+00:31:26,866 --> 00:31:27,866
+one of these
+
+647
+00:31:29,100 --> 00:31:29,966
+Gaussian
+
+648
+00:31:31,066 --> 00:31:34,066
+these normal distribution random variables and so
+
+649
+00:31:36,733 --> 00:31:40,733
+when you're of course when you're multiplying something
+
+650
+00:31:41,266 --> 00:31:43,700
+like a normally distributed random variable something
+
+651
+00:31:43,866 --> 00:31:45,400
+all you're doing is you're just changing
+
+652
+00:31:45,800 --> 00:31:47,066
+the variance of that
+
+653
+00:31:47,766 --> 00:31:48,766
+random variable
+
+654
+00:31:48,766 --> 00:31:50,000
+so you can
+
+655
+00:31:50,000 --> 00:31:53,266
+view this as simply just a sum of independent Gaussians
+
+656
+00:31:54,500 --> 00:31:56,466
+which you can then just add up all the
+
+657
+00:31:58,500 --> 00:32:01,766
+standard deviations to get just a single Gaussian
+
+658
+00:32:07,000 --> 00:32:08,100
+okay so
+
+659
+00:32:10,666 --> 00:32:14,066
+if you do that for large enough step sizes
+
+660
+00:32:14,366 --> 00:32:16,100
+then the
+
+661
+00:32:17,066 --> 00:32:18,766
+value here
+
+662
+00:32:19,400 --> 00:32:21,966
+as Tegos Infini is eventually going to go to zero
+
+663
+00:32:23,533 --> 00:32:27,166
+and this is just a geometric series here
+
+664
+00:32:27,900 --> 00:32:29,766
+if you're looking at the variance
+
+665
+00:32:29,866 --> 00:32:32,200
+so you square the terms inside here
+
+666
+00:32:33,866 --> 00:32:35,300
+as t goes infinity
+
+667
+00:32:35,766 --> 00:32:38,200
+that this just collapses into
+
+668
+00:32:38,900 --> 00:32:40,933
+this close form representation from the
+
+669
+00:32:40,933 --> 00:32:42,000
+geometric series
+
+670
+00:32:42,133 --> 00:32:44,700
+and as t goes infinity this just becomes
+
+671
+00:32:44,900 --> 00:32:47,000
+1 and so this tells you that
+
+672
+00:32:48,866 --> 00:32:52,133
+again this diffusion process works analytically
+
+673
+00:32:52,366 --> 00:32:53,466
+you take enough steps
+
+674
+00:32:53,466 --> 00:32:55,966
+you're eventually going to get through just a unit
+
+675
+00:32:57,500 --> 00:32:58,600
+standard Calcium
+
+676
+00:33:00,766 --> 00:33:03,500
+okay and that's what we're doing but
+
+677
+00:33:04,600 --> 00:33:06,200
+for images okay you start
+
+678
+00:33:06,766 --> 00:33:09,600
+here with a picture it already looks a little noisy
+
+679
+00:33:10,400 --> 00:33:11,366
+picture of a cat
+
+680
+00:33:11,900 --> 00:33:14,766
+and then you're just adding adding noise
+
+681
+00:33:14,933 --> 00:33:15,966
+to the point where
+
+682
+00:33:16,366 --> 00:33:18,266
+at some point you basically just have a
+
+683
+00:33:19,000 --> 00:33:21,666
+Gaussian random noise distributed
+
+684
+00:33:22,333 --> 00:33:24,500
+image and for every step
+
+685
+00:33:25,500 --> 00:33:28,133
+it's just that equation that I that I showed you
+
+686
+00:33:28,133 --> 00:33:29,700
+so actually the forward pass
+
+687
+00:33:30,066 --> 00:33:32,733
+you don't have to learn anything you can just use this
+
+688
+00:33:34,133 --> 00:33:36,600
+process is that you're adding
+
+689
+00:33:37,133 --> 00:33:38,966
+noise in this kind of
+
+690
+00:33:39,666 --> 00:33:42,900
+structured structured way step by step
+
+691
+00:33:48,600 --> 00:33:49,766
+okay so
+
+692
+00:33:50,700 --> 00:33:51,866
+the question is
+
+693
+00:33:52,200 --> 00:33:53,000
+so why
+
+694
+00:33:54,166 --> 00:33:54,966
+use this
+
+695
+00:33:56,000 --> 00:33:58,366
+seemingly complicated process
+
+696
+00:33:59,866 --> 00:34:01,866
+so it turns out that
+
+697
+00:34:02,300 --> 00:34:04,266
+it gives us this kind of
+
+698
+00:34:04,366 --> 00:34:05,466
+structured way
+
+699
+00:34:05,466 --> 00:34:07,500
+of going step by step to go from
+
+700
+00:34:07,500 --> 00:34:09,166
+any complex distribution
+
+701
+00:34:09,733 --> 00:34:11,933
+to a standard
+
+702
+00:34:13,333 --> 00:34:14,900
+normal distribution
+
+703
+00:34:16,500 --> 00:34:18,400
+and it does it in a way and hopefully
+
+704
+00:34:18,666 --> 00:34:19,766
+I'll show you enough
+
+705
+00:34:20,133 --> 00:34:21,800
+to convince you that
+
+706
+00:34:23,366 --> 00:34:26,500
+it does it in a way that you can learn the reverse
+
+707
+00:34:26,533 --> 00:34:27,366
+process
+
+708
+00:34:30,466 --> 00:34:31,266
+um
+
+709
+00:34:32,300 --> 00:34:33,266
+and generally
+
+710
+00:34:34,066 --> 00:34:35,366
+it's really easy
+
+711
+00:34:36,166 --> 00:34:36,966
+to go
+
+712
+00:34:37,333 --> 00:34:41,900
+from a original image to just a pure noise image right
+
+713
+00:34:42,266 --> 00:34:43,066
+you can just
+
+714
+00:34:43,200 --> 00:34:45,866
+go through that process but it is it's hard to
+
+715
+00:34:47,666 --> 00:34:48,566
+go the other way
+
+716
+00:34:52,733 --> 00:34:53,533
+but
+
+717
+00:34:54,000 --> 00:34:55,100
+if you think about it
+
+718
+00:34:56,366 --> 00:35:01,066
+you do get some clues like maybe this first step
+
+719
+00:35:01,566 --> 00:35:03,800
+is difficult when you just have pure noise
+
+720
+00:35:04,166 --> 00:35:06,366
+but you know maybe you're getting something
+
+721
+00:35:06,366 --> 00:35:08,466
+that looks like a image
+
+722
+00:35:09,800 --> 00:35:12,800
+but those clues kind of influence
+
+723
+00:35:13,400 --> 00:35:14,533
+what happens
+
+724
+00:35:15,000 --> 00:35:17,600
+now it's maybe just a little bit easier because
+
+725
+00:35:17,966 --> 00:35:22,700
+you're starting to get to some sample in your
+
+726
+00:35:23,933 --> 00:35:24,733
+space
+
+727
+00:35:25,966 --> 00:35:28,733
+and then it generally can get
+
+728
+00:35:29,366 --> 00:35:30,333
+easier as
+
+729
+00:35:31,100 --> 00:35:31,900
+you progress
+
+730
+00:35:34,466 --> 00:35:37,500
+and in fact that's kind of key to this so you can
+
+731
+00:35:37,933 --> 00:35:40,300
+write it in a closed form like that
+
+732
+00:35:40,366 --> 00:35:42,133
+the forward pass which is not
+
+733
+00:35:42,733 --> 00:35:45,100
+trained you just apply that equation
+
+734
+00:35:45,366 --> 00:35:46,733
+you know you can just take the
+
+735
+00:35:46,733 --> 00:35:48,566
+composition of all those functions
+
+736
+00:35:49,000 --> 00:35:51,666
+and you could write a big function
+
+737
+00:35:52,266 --> 00:35:53,100
+that tries to
+
+738
+00:35:53,766 --> 00:35:56,700
+go from random noise to your
+
+739
+00:35:57,400 --> 00:35:58,666
+you know final image
+
+740
+00:35:58,866 --> 00:36:00,533
+but it's a really hard
+
+741
+00:36:01,100 --> 00:36:01,900
+you know
+
+742
+00:36:02,133 --> 00:36:05,533
+probably impossible thing to do first of all can be
+
+743
+00:36:05,866 --> 00:36:07,900
+very large function
+
+744
+00:36:09,333 --> 00:36:10,700
+but it also probably doesn't
+
+745
+00:36:10,800 --> 00:36:13,666
+behave well from a kind of a gradient perspective
+
+746
+00:36:13,666 --> 00:36:14,933
+you kind of have like one
+
+747
+00:36:15,766 --> 00:36:16,600
+shot to
+
+748
+00:36:17,733 --> 00:36:20,366
+to try to learn this model whereas
+
+749
+00:36:20,900 --> 00:36:22,166
+when you do it
+
+750
+00:36:22,800 --> 00:36:24,500
+in this step by step
+
+751
+00:36:24,866 --> 00:36:26,966
+each of these mappings here
+
+752
+00:36:28,733 --> 00:36:31,500
+what usually happens is this is learning
+
+753
+00:36:32,100 --> 00:36:33,100
+kind of a course
+
+754
+00:36:33,400 --> 00:36:36,366
+step first and then as the image gets better
+
+755
+00:36:36,600 --> 00:36:38,600
+it's learning kind of finer and finer
+
+756
+00:36:39,000 --> 00:36:40,566
+updates to get to the
+
+757
+00:36:41,333 --> 00:36:44,066
+the final image that seems to be helping
+
+758
+00:36:44,066 --> 00:36:48,200
+and it also turns out that the nature of this function
+
+759
+00:36:48,600 --> 00:36:50,133
+can be the same it's just a
+
+760
+00:36:50,766 --> 00:36:51,966
+I'll show you
+
+761
+00:36:51,966 --> 00:36:55,333
+it can be just like a unit or a transformer model
+
+762
+00:36:56,766 --> 00:36:57,766
+and so you're just
+
+763
+00:36:59,066 --> 00:37:00,066
+adapting
+
+764
+00:37:00,733 --> 00:37:03,266
+there's some parameterization
+
+765
+00:37:03,533 --> 00:37:05,733
+you know like just the time
+
+766
+00:37:06,566 --> 00:37:09,100
+step that's changing
+
+767
+00:37:09,100 --> 00:37:12,266
+and so you can actually reuse weights you know learn
+
+768
+00:37:12,900 --> 00:37:13,800
+a function G
+
+769
+00:37:14,766 --> 00:37:17,866
+that takes as the image as its input
+
+770
+00:37:18,300 --> 00:37:20,766
+the noisy image and the time step
+
+771
+00:37:21,466 --> 00:37:23,466
+and it's that same model
+
+772
+00:37:23,466 --> 00:37:25,666
+with just different inputs and different time steps
+
+773
+00:37:25,666 --> 00:37:28,400
+and so it turns out to be much more efficient
+
+774
+00:37:29,733 --> 00:37:32,133
+just in terms of the number of parameters
+
+775
+00:37:32,733 --> 00:37:34,333
+and the size of the model
+
+776
+00:37:36,733 --> 00:37:38,400
+so and that's basically what it's
+
+777
+00:37:39,366 --> 00:37:40,166
+saying here
+
+778
+00:37:42,333 --> 00:37:43,133
+so
+
+779
+00:37:43,966 --> 00:37:44,766
+for these
+
+780
+00:37:46,400 --> 00:37:50,666
+multi step process just that the gradient descent
+
+781
+00:37:50,866 --> 00:37:51,933
+is better behaved
+
+782
+00:37:58,300 --> 00:37:59,100
+OK
+
+783
+00:38:05,766 --> 00:38:10,266
+yeah this is the point that I just made before is that
+
+784
+00:38:10,700 --> 00:38:12,600
+this we can have the exact same
+
+785
+00:38:12,600 --> 00:38:14,300
+so now these aren't different
+
+786
+00:38:14,866 --> 00:38:17,100
+transforms these are exact same transforms
+
+787
+00:38:17,133 --> 00:38:18,133
+and they're just
+
+788
+00:38:19,066 --> 00:38:21,400
+the arguments to them are just the image
+
+789
+00:38:21,933 --> 00:38:24,200
+that's going in and the which step
+
+790
+00:38:24,733 --> 00:38:25,900
+that we're on
+
+791
+00:38:25,966 --> 00:38:28,333
+so we can reuse the process
+
+792
+00:38:29,400 --> 00:38:30,200
+so
+
+793
+00:38:30,666 --> 00:38:31,866
+in a lot of ways
+
+794
+00:38:33,200 --> 00:38:34,766
+it's similar to
+
+795
+00:38:35,766 --> 00:38:37,466
+variational auto encoders
+
+796
+00:38:37,933 --> 00:38:40,066
+with some key differences so it is
+
+797
+00:38:41,400 --> 00:38:42,900
+it's going from
+
+798
+00:38:43,366 --> 00:38:45,133
+the encoder or the diffusion
+
+799
+00:38:45,200 --> 00:38:47,133
+forward diffusion is going from a
+
+800
+00:38:47,333 --> 00:38:49,466
+complex distribution to a simple
+
+801
+00:38:49,466 --> 00:38:51,000
+so like the encoder and the
+
+802
+00:38:52,200 --> 00:38:53,300
+in the VAE
+
+803
+00:38:55,333 --> 00:38:58,666
+and it's learning decoder to go in the other
+
+804
+00:38:59,466 --> 00:39:00,266
+direction
+
+805
+00:39:00,733 --> 00:39:01,733
+to produce a
+
+806
+00:39:01,733 --> 00:39:04,200
+you know a sample that looks like something from your
+
+807
+00:39:04,333 --> 00:39:05,366
+sample set but
+
+808
+00:39:06,266 --> 00:39:10,366
+as I mentioned that unlike VAE this is a multistep
+
+809
+00:39:10,666 --> 00:39:11,700
+process
+
+810
+00:39:12,666 --> 00:39:13,866
+the encoder is fixed
+
+811
+00:39:13,866 --> 00:39:16,333
+so we're not actually learning the encoder like in VAE
+
+812
+00:39:17,166 --> 00:39:18,000
+and
+
+813
+00:39:19,533 --> 00:39:23,133
+we're using this diffusion process to train
+
+814
+00:39:23,900 --> 00:39:25,366
+the other big thing is that in VA
+
+815
+00:39:25,733 --> 00:39:26,600
+remember we were
+
+816
+00:39:26,900 --> 00:39:30,366
+shrinking the latent space was a smaller dimension
+
+817
+00:39:30,600 --> 00:39:34,533
+but it's key here that the model at each step
+
+818
+00:39:34,733 --> 00:39:37,366
+has the exact same size input
+
+819
+00:39:37,766 --> 00:39:39,933
+as it has output
+
+820
+00:39:41,500 --> 00:39:42,300
+okay
+
+821
+00:39:44,066 --> 00:39:44,933
+all right so I'm
+
+822
+00:39:45,533 --> 00:39:47,000
+just going to get a little bit
+
+823
+00:39:47,733 --> 00:39:50,300
+deeper but I'm not going to go through all the math
+
+824
+00:39:51,000 --> 00:39:51,800
+anyone see
+
+825
+00:39:52,466 --> 00:39:53,600
+the problem with the
+
+826
+00:39:57,333 --> 00:39:58,666
+what is it what do you see
+
+827
+00:39:59,000 --> 00:39:59,766
+yeah
+
+828
+00:39:59,766 --> 00:40:02,900
+so it's still again doing a lot better with words but
+
+829
+00:40:03,300 --> 00:40:04,100
+not
+
+830
+00:40:04,866 --> 00:40:05,666
+perfect
+
+831
+00:40:08,766 --> 00:40:12,133
+okay again I'm not going to go through all of the
+
+832
+00:40:13,100 --> 00:40:14,566
+all of the math here but
+
+833
+00:40:17,266 --> 00:40:18,066
+all right so
+
+834
+00:40:18,533 --> 00:40:22,066
+we're going to assume that we're going to operate in
+
+835
+00:40:22,300 --> 00:40:23,900
+t discrete steps
+
+836
+00:40:24,800 --> 00:40:26,766
+and we're going to assume that these are Markoff
+
+837
+00:40:26,766 --> 00:40:29,400
+processes and so they only depend on
+
+838
+00:40:29,933 --> 00:40:32,933
+the step before in
+
+839
+00:40:35,366 --> 00:40:36,300
+either direction
+
+840
+00:40:41,300 --> 00:40:42,100
+and so
+
+841
+00:40:42,466 --> 00:40:46,866
+we can define the so called transition probability
+
+842
+00:40:47,266 --> 00:40:49,066
+that basically says
+
+843
+00:40:49,600 --> 00:40:52,866
+okay at a current time stamp
+
+844
+00:40:54,166 --> 00:40:55,933
+current sample
+
+845
+00:40:56,000 --> 00:40:57,500
+there's a distribution
+
+846
+00:40:57,500 --> 00:40:59,600
+this conditional distribution is saying that
+
+847
+00:41:01,366 --> 00:41:04,800
+if I take a new sample given the previous sample
+
+848
+00:41:05,733 --> 00:41:07,300
+that it's going to be
+
+849
+00:41:08,600 --> 00:41:10,100
+a normal distribution
+
+850
+00:41:10,766 --> 00:41:14,166
+and this is reminiscent of that that equation
+
+851
+00:41:14,566 --> 00:41:16,500
+that I showed you right because
+
+852
+00:41:17,600 --> 00:41:18,966
+it's just going to be
+
+853
+00:41:20,133 --> 00:41:20,933
+the mean
+
+854
+00:41:21,000 --> 00:41:23,100
+is going to be centered around your last sample
+
+855
+00:41:23,933 --> 00:41:24,733
+with that
+
+856
+00:41:26,266 --> 00:41:29,333
+weighting that I showed you in that previous equation
+
+857
+00:41:29,733 --> 00:41:30,600
+and
+
+858
+00:41:31,933 --> 00:41:34,900
+the variance were just multiplying that
+
+859
+00:41:36,600 --> 00:41:38,100
+the previous value by
+
+860
+00:41:39,766 --> 00:41:40,666
+some value beta
+
+861
+00:41:40,666 --> 00:41:42,766
+and so that's going to influence the variance
+
+862
+00:41:42,766 --> 00:41:44,100
+or standard deviation
+
+863
+00:41:44,766 --> 00:41:45,866
+and this gives us
+
+864
+00:41:46,700 --> 00:41:49,266
+a way to do a trade off between
+
+865
+00:41:50,700 --> 00:41:53,366
+basically how much information to keep from the
+
+866
+00:41:54,466 --> 00:41:55,466
+previous sample
+
+867
+00:41:59,600 --> 00:42:00,466
+yeah and so
+
+868
+00:42:01,566 --> 00:42:04,266
+we can for this next sample
+
+869
+00:42:04,966 --> 00:42:09,466
+we can say because you know this is the trick we use
+
+870
+00:42:09,733 --> 00:42:11,266
+I guess a number of times now
+
+871
+00:42:11,733 --> 00:42:15,500
+with these Gaussian random variables is if you take
+
+872
+00:42:15,866 --> 00:42:19,466
+the previous random variable at t minus 1
+
+873
+00:42:19,666 --> 00:42:21,200
+you multiply by something
+
+874
+00:42:23,333 --> 00:42:26,700
+well actually this is a deterministic value
+
+875
+00:42:27,200 --> 00:42:28,766
+if you take the
+
+876
+00:42:30,400 --> 00:42:33,266
+some random process
+
+877
+00:42:33,266 --> 00:42:34,500
+and you multiply it by something
+
+878
+00:42:34,500 --> 00:42:35,766
+you're just changing the
+
+879
+00:42:36,333 --> 00:42:39,200
+standard deviation and shifting it so this
+
+880
+00:42:40,000 --> 00:42:41,666
+is equivalent to
+
+881
+00:42:42,533 --> 00:42:44,400
+this up here right
+
+882
+00:42:45,733 --> 00:42:46,533
+we're just
+
+883
+00:42:46,766 --> 00:42:49,700
+shifting it and changing the standard deviation
+
+884
+00:42:53,300 --> 00:42:54,100
+okay
+
+885
+00:42:57,333 --> 00:43:00,200
+so we can go all the way from step zero
+
+886
+00:43:01,200 --> 00:43:02,100
+two step t
+
+887
+00:43:04,566 --> 00:43:06,200
+in kind of this closed form
+
+888
+00:43:06,200 --> 00:43:08,766
+but it just becomes the product
+
+889
+00:43:09,333 --> 00:43:11,166
+of all of those
+
+890
+00:43:11,733 --> 00:43:14,166
+equations and so you have
+
+891
+00:43:15,666 --> 00:43:18,200
+essentially those the one minus betas
+
+892
+00:43:19,300 --> 00:43:20,266
+that were here
+
+893
+00:43:20,466 --> 00:43:22,266
+this is just previous step
+
+894
+00:43:22,466 --> 00:43:23,266
+we can just
+
+895
+00:43:23,900 --> 00:43:27,866
+multiply all those out right and then you have the
+
+896
+00:43:29,166 --> 00:43:30,733
+you have the product
+
+897
+00:43:31,166 --> 00:43:32,700
+of those terms right so
+
+898
+00:43:33,600 --> 00:43:35,366
+if you want to go figure out
+
+899
+00:43:36,066 --> 00:43:37,566
+the probability
+
+900
+00:43:38,733 --> 00:43:40,066
+over all the steps
+
+901
+00:43:40,800 --> 00:43:42,066
+you just multiply
+
+902
+00:43:43,333 --> 00:43:44,166
+each step
+
+903
+00:43:45,533 --> 00:43:46,466
+going back right
+
+904
+00:43:50,500 --> 00:43:51,900
+so it turns out that
+
+905
+00:43:54,800 --> 00:43:55,600
+with the
+
+906
+00:43:56,400 --> 00:43:59,366
+the choices of the drift and the
+
+907
+00:43:59,866 --> 00:44:01,500
+diffusion coefficient
+
+908
+00:44:01,900 --> 00:44:03,933
+that you can write
+
+909
+00:44:04,466 --> 00:44:05,266
+the
+
+910
+00:44:06,166 --> 00:44:07,600
+transition probability
+
+911
+00:44:07,800 --> 00:44:10,200
+the probability of the previous sample
+
+912
+00:44:10,200 --> 00:44:12,133
+so now we're going back the other way
+
+913
+00:44:12,800 --> 00:44:15,166
+you can write it in a very similar way
+
+914
+00:44:15,166 --> 00:44:17,933
+so now this is the important
+
+915
+00:44:18,533 --> 00:44:20,366
+direction because we have to figure out
+
+916
+00:44:20,366 --> 00:44:22,100
+we have to learn this we want to
+
+917
+00:44:23,300 --> 00:44:24,200
+denoise
+
+918
+00:44:25,133 --> 00:44:26,133
+go back this way
+
+919
+00:44:26,466 --> 00:44:29,266
+and so we can write in this form but
+
+920
+00:44:30,000 --> 00:44:31,866
+it's going to be based on some
+
+921
+00:44:32,533 --> 00:44:35,133
+function that's going to determine the mean and some
+
+922
+00:44:35,133 --> 00:44:37,733
+function that's going to determine the covariance
+
+923
+00:44:37,900 --> 00:44:39,166
+and we don't know what those are
+
+924
+00:44:39,166 --> 00:44:41,900
+yeah but let's assume that they're parameterized but
+
+925
+00:44:42,766 --> 00:44:43,700
+they're basically
+
+926
+00:44:44,366 --> 00:44:46,966
+we can use deep learning models to do that
+
+927
+00:44:52,000 --> 00:44:52,866
+okay so
+
+928
+00:44:53,066 --> 00:44:55,766
+you can do the same thing now in the reverse direction
+
+929
+00:44:57,100 --> 00:44:58,266
+if you're trying to do
+
+930
+00:44:58,666 --> 00:45:01,600
+over the whole sequence it's just a product of
+
+931
+00:45:01,800 --> 00:45:02,700
+all of those
+
+932
+00:45:03,400 --> 00:45:05,566
+conditionals right going back
+
+933
+00:45:10,666 --> 00:45:11,466
+and
+
+934
+00:45:12,166 --> 00:45:13,100
+yeah and it just
+
+935
+00:45:14,300 --> 00:45:16,666
+the starting term here
+
+936
+00:45:17,100 --> 00:45:20,933
+was not dependent on time it's just a regular Calcium
+
+937
+00:45:22,900 --> 00:45:23,866
+okay so
+
+938
+00:45:26,666 --> 00:45:27,866
+you know with a
+
+939
+00:45:28,400 --> 00:45:31,533
+little leap of faith here we have the
+
+940
+00:45:31,933 --> 00:45:33,533
+function going forward
+
+941
+00:45:34,166 --> 00:45:35,966
+this forward process which is
+
+942
+00:45:37,133 --> 00:45:40,133
+we don't have to learn it it's just defined here
+
+943
+00:45:40,733 --> 00:45:43,133
+and now we have this reverse process
+
+944
+00:45:44,400 --> 00:45:45,966
+and at least we have a
+
+945
+00:45:46,200 --> 00:45:48,600
+description for the probability distribution
+
+946
+00:45:48,700 --> 00:45:50,066
+but it's based on some
+
+947
+00:45:51,400 --> 00:45:53,800
+parameters here that we have to learn
+
+948
+00:45:56,500 --> 00:45:58,200
+so ah
+
+949
+00:46:00,900 --> 00:46:03,400
+yeah so question is how do we learn those parameters
+
+950
+00:46:03,400 --> 00:46:04,566
+and you know
+
+951
+00:46:04,566 --> 00:46:06,566
+we're going to we want to train a deep learning model
+
+952
+00:46:06,566 --> 00:46:09,566
+so how do we define the loss function
+
+953
+00:46:13,700 --> 00:46:14,500
+remember
+
+954
+00:46:15,066 --> 00:46:17,400
+well we had a we defined a
+
+955
+00:46:17,933 --> 00:46:20,733
+or you can think of a probability distribution
+
+956
+00:46:20,733 --> 00:46:21,566
+when you're training
+
+957
+00:46:21,566 --> 00:46:23,133
+you have these example
+
+958
+00:46:23,400 --> 00:46:24,500
+you know your data set
+
+959
+00:46:24,700 --> 00:46:27,400
+so you have a probability distribution
+
+960
+00:46:31,700 --> 00:46:32,900
+the original model
+
+961
+00:46:32,900 --> 00:46:35,366
+and then you're going all the way to the noise
+
+962
+00:46:35,500 --> 00:46:36,866
+and then when you come back
+
+963
+00:46:37,366 --> 00:46:39,666
+we have this probability
+
+964
+00:46:40,200 --> 00:46:41,500
+distribution of our
+
+965
+00:46:44,000 --> 00:46:45,666
+our denoising process
+
+966
+00:46:46,466 --> 00:46:50,500
+and the goal is to make this look like
+
+967
+00:46:50,933 --> 00:46:52,200
+this right so we want
+
+968
+00:46:52,800 --> 00:46:53,600
+the
+
+969
+00:46:53,733 --> 00:46:56,866
+result of our denoising the probability distribution
+
+970
+00:46:56,866 --> 00:46:58,533
+we want it to look like
+
+971
+00:46:58,766 --> 00:47:00,200
+the distribution of our
+
+972
+00:47:00,666 --> 00:47:03,100
+dataset of our sample set right and so
+
+973
+00:47:06,333 --> 00:47:07,133
+how do we
+
+974
+00:47:08,366 --> 00:47:10,866
+compare probability distributions
+
+975
+00:47:13,666 --> 00:47:14,866
+what's the measure yeah
+
+976
+00:47:16,100 --> 00:47:18,566
+Chao divergence yeah yeah and so
+
+977
+00:47:19,133 --> 00:47:21,266
+similar to like in the VAE
+
+978
+00:47:22,666 --> 00:47:23,933
+we're going to
+
+979
+00:47:24,666 --> 00:47:27,333
+build a loss function that
+
+980
+00:47:28,400 --> 00:47:29,766
+is going to try to find
+
+981
+00:47:30,600 --> 00:47:31,400
+the
+
+982
+00:47:31,933 --> 00:47:32,666
+models
+
+983
+00:47:32,666 --> 00:47:35,900
+the parameterized models for the mean and the variance
+
+984
+00:47:36,466 --> 00:47:39,466
+so that the divergence
+
+985
+00:47:40,000 --> 00:47:42,566
+from the actual distribution
+
+986
+00:47:42,966 --> 00:47:44,266
+to the Learned
+
+987
+00:47:45,066 --> 00:47:47,900
+denoised distribution is minimized and
+
+988
+00:47:48,333 --> 00:47:50,666
+this is where I'm going to wave my
+
+989
+00:47:51,500 --> 00:47:52,700
+wave my hands
+
+990
+00:47:52,800 --> 00:47:56,733
+I'm going to skip a lot more math you can thank me
+
+991
+00:47:58,066 --> 00:47:58,600
+but
+
+992
+00:47:58,600 --> 00:48:01,133
+you know if you go through there's a bunch of tricks
+
+993
+00:48:01,133 --> 00:48:02,933
+and again suggest you
+
+994
+00:48:03,533 --> 00:48:05,166
+try this if you're interested but
+
+995
+00:48:06,500 --> 00:48:08,900
+I just captured some of the tricks here
+
+996
+00:48:09,966 --> 00:48:11,933
+expanding the probability
+
+997
+00:48:13,000 --> 00:48:13,866
+sub theta
+
+998
+00:48:15,733 --> 00:48:18,366
+use Jensen's inequality and so the
+
+999
+00:48:18,800 --> 00:48:21,166
+the equation for that divergence
+
+1000
+00:48:22,200 --> 00:48:24,600
+you can use Gensis inequality find
+
+1001
+00:48:26,100 --> 00:48:28,666
+a upper bound that's simpler
+
+1002
+00:48:29,333 --> 00:48:31,866
+and so if you minimize the upper bound
+
+1003
+00:48:32,766 --> 00:48:35,200
+simpler equation you're minimizing the actual
+
+1004
+00:48:35,266 --> 00:48:37,666
+equation so the book also
+
+1005
+00:48:38,366 --> 00:48:39,666
+talks about this as well
+
+1006
+00:48:40,300 --> 00:48:42,566
+there are some manipulations with base theorem
+
+1007
+00:48:44,800 --> 00:48:47,866
+you can take advantage of the properties that the
+
+1008
+00:48:48,066 --> 00:48:49,266
+Chao divergence
+
+1009
+00:48:49,266 --> 00:48:52,133
+that both of these are Gaussian distributions and so
+
+1010
+00:48:52,700 --> 00:48:56,133
+you can there are some properties of
+
+1011
+00:48:56,733 --> 00:48:59,800
+kale divergence measures of two calciums that you
+
+1012
+00:48:59,900 --> 00:49:00,766
+you can use
+
+1013
+00:49:02,100 --> 00:49:04,800
+and then there's actually another simplification
+
+1014
+00:49:05,300 --> 00:49:06,500
+suggested by
+
+1015
+00:49:07,400 --> 00:49:11,000
+Ho Adal in this paper of 2020
+
+1016
+00:49:11,300 --> 00:49:12,466
+that simplified it
+
+1017
+00:49:12,700 --> 00:49:14,600
+even more just kind of
+
+1018
+00:49:14,733 --> 00:49:15,533
+I guess
+
+1019
+00:49:15,566 --> 00:49:18,700
+I don't know if he guessed but it's not analytically
+
+1020
+00:49:19,200 --> 00:49:21,700
+derive but it turns out that it
+
+1021
+00:49:21,933 --> 00:49:23,333
+actually works even a little bit better
+
+1022
+00:49:23,866 --> 00:49:24,666
+than the
+
+1023
+00:49:25,200 --> 00:49:27,100
+analytical derivation and so
+
+1024
+00:49:27,566 --> 00:49:29,300
+the forward process again
+
+1025
+00:49:29,800 --> 00:49:31,400
+was what I showed you
+
+1026
+00:49:31,900 --> 00:49:33,766
+this reverse process where we have to learn
+
+1027
+00:49:33,766 --> 00:49:34,933
+these parameters
+
+1028
+00:49:36,133 --> 00:49:38,900
+and then this kind of the near final
+
+1029
+00:49:40,566 --> 00:49:41,866
+it's like the simplified
+
+1030
+00:49:41,933 --> 00:49:44,466
+it was the upper bound with Jensen's inequality
+
+1031
+00:49:45,466 --> 00:49:49,066
+and then this other step but it's basically
+
+1032
+00:49:50,466 --> 00:49:53,133
+what's kind of interesting here is
+
+1033
+00:49:53,166 --> 00:49:54,166
+what is trying to do it
+
+1034
+00:49:54,166 --> 00:49:56,800
+every step is trying to minimize the noise
+
+1035
+00:49:57,300 --> 00:49:58,600
+measures of the
+
+1036
+00:49:59,533 --> 00:50:00,333
+sample
+
+1037
+00:50:00,866 --> 00:50:02,900
+that's coming in
+
+1038
+00:50:03,400 --> 00:50:05,700
+and the noise that you're producing
+
+1039
+00:50:10,066 --> 00:50:10,866
+okay
+
+1040
+00:50:11,333 --> 00:50:12,166
+so we can
+
+1041
+00:50:12,900 --> 00:50:13,800
+we can leave the
+
+1042
+00:50:16,566 --> 00:50:17,866
+the math for the most part
+
+1043
+00:50:18,533 --> 00:50:19,333
+okay so
+
+1044
+00:50:21,900 --> 00:50:24,500
+it's very involved how to get in the training process
+
+1045
+00:50:24,500 --> 00:50:25,100
+but I'm going to
+
+1046
+00:50:25,100 --> 00:50:26,533
+summarize it at a high level
+
+1047
+00:50:26,533 --> 00:50:29,500
+so again maybe you got some intuition and
+
+1048
+00:50:29,933 --> 00:50:32,300
+I did ask Xavier I didn't find a good
+
+1049
+00:50:32,866 --> 00:50:35,066
+small example I think he
+
+1050
+00:50:36,533 --> 00:50:37,333
+did he
+
+1051
+00:50:37,766 --> 00:50:38,766
+he showed some
+
+1052
+00:50:39,000 --> 00:50:40,800
+a VAE and Gan example right
+
+1053
+00:50:40,800 --> 00:50:42,366
+anyone go to the discussion
+
+1054
+00:50:42,966 --> 00:50:45,400
+section yeah so I asked them to do a
+
+1055
+00:50:45,766 --> 00:50:47,300
+diffusion example for
+
+1056
+00:50:47,566 --> 00:50:49,600
+next week we'll see if you can find
+
+1057
+00:50:50,000 --> 00:50:51,400
+a good simple example
+
+1058
+00:50:52,200 --> 00:50:55,100
+but the idea is basically this and so
+
+1059
+00:50:56,566 --> 00:50:58,300
+this is the training process
+
+1060
+00:50:58,533 --> 00:51:02,200
+so you start with a sample image
+
+1061
+00:51:03,533 --> 00:51:05,666
+and you have noise
+
+1062
+00:51:05,766 --> 00:51:08,566
+and basically you generate a random step
+
+1063
+00:51:09,000 --> 00:51:10,700
+by adding the
+
+1064
+00:51:11,866 --> 00:51:13,000
+noise to the image
+
+1065
+00:51:15,400 --> 00:51:18,100
+and then you do a
+
+1066
+00:51:19,166 --> 00:51:21,566
+you try to take a guess at what the
+
+1067
+00:51:22,266 --> 00:51:23,766
+image would look like
+
+1068
+00:51:24,333 --> 00:51:26,566
+from this noisy image from
+
+1069
+00:51:26,900 --> 00:51:29,133
+through this parameterized model
+
+1070
+00:51:31,133 --> 00:51:34,966
+and from that you're estimating the noise of the
+
+1071
+00:51:35,266 --> 00:51:36,300
+noisy image
+
+1072
+00:51:40,700 --> 00:51:42,600
+for the gradient descent step
+
+1073
+00:51:43,133 --> 00:51:45,300
+you have the estimated noise
+
+1074
+00:51:45,800 --> 00:51:49,066
+and a measure of the true noise
+
+1075
+00:51:50,966 --> 00:51:55,566
+and you calculate gradient descent which I didn't cover
+
+1076
+00:51:56,933 --> 00:52:00,866
+more involved but you can update the model parameters
+
+1077
+00:52:04,100 --> 00:52:06,400
+when you do that and there's some pseudocode there
+
+1078
+00:52:06,800 --> 00:52:09,600
+at the top kind of saying the similar thing
+
+1079
+00:52:13,966 --> 00:52:17,100
+so when you sample it after you train
+
+1080
+00:52:18,700 --> 00:52:21,733
+the process is like this so you start step 1
+
+1081
+00:52:21,733 --> 00:52:24,533
+so you just start with pure random noise
+
+1082
+00:52:26,100 --> 00:52:27,266
+you're estimating
+
+1083
+00:52:28,366 --> 00:52:29,466
+so you're using this
+
+1084
+00:52:29,766 --> 00:52:32,933
+model that you've Learned to estimate the noise of the
+
+1085
+00:52:33,200 --> 00:52:34,066
+current state
+
+1086
+00:52:34,200 --> 00:52:37,566
+you take a first best guess of some image
+
+1087
+00:52:38,000 --> 00:52:40,600
+that's not going to look very good
+
+1088
+00:52:43,533 --> 00:52:46,400
+and then you do a linear combination
+
+1089
+00:52:47,066 --> 00:52:50,366
+between the current state and the estimated noise
+
+1090
+00:52:54,000 --> 00:52:55,800
+from the original sample
+
+1091
+00:52:56,500 --> 00:52:58,533
+to create a new sample
+
+1092
+00:52:58,533 --> 00:53:00,733
+and basically you just you keep doing that
+
+1093
+00:53:02,000 --> 00:53:03,900
+through that transform
+
+1094
+00:53:04,666 --> 00:53:06,700
+and then you'll progressively get
+
+1095
+00:53:07,966 --> 00:53:08,766
+better
+
+1096
+00:53:13,500 --> 00:53:15,933
+that's the pseudocode code for it
+
+1097
+00:53:15,933 --> 00:53:18,500
+but so the model you can use just
+
+1098
+00:53:18,666 --> 00:53:20,866
+you can just use the good old unit
+
+1099
+00:53:22,500 --> 00:53:24,100
+the old encoder decoder
+
+1100
+00:53:24,333 --> 00:53:28,100
+architecture with some kind of time embedding
+
+1101
+00:53:29,200 --> 00:53:31,766
+unit is nice because you have the exact same
+
+1102
+00:53:32,200 --> 00:53:34,866
+resolution of your input to your output right
+
+1103
+00:53:34,866 --> 00:53:37,200
+that's one of the requirements
+
+1104
+00:53:38,866 --> 00:53:39,966
+I think this is
+
+1105
+00:53:40,400 --> 00:53:41,333
+literally the
+
+1106
+00:53:41,800 --> 00:53:43,733
+size of the model
+
+1107
+00:53:44,100 --> 00:53:46,800
+the thing that's I'm not sure
+
+1108
+00:53:47,800 --> 00:53:50,733
+when it was added but there is
+
+1109
+00:53:52,200 --> 00:53:53,400
+these residual blocks
+
+1110
+00:53:53,400 --> 00:53:56,166
+the normal residual blocks from unit right
+
+1111
+00:53:56,166 --> 00:53:57,600
+so you these are
+
+1112
+00:53:57,933 --> 00:53:59,466
+convolutional layers
+
+1113
+00:54:00,500 --> 00:54:02,100
+and then you have these residual
+
+1114
+00:54:02,466 --> 00:54:04,400
+connections that get added in when you're
+
+1115
+00:54:04,566 --> 00:54:06,533
+doing the decombolution side
+
+1116
+00:54:06,766 --> 00:54:08,466
+but they also added these
+
+1117
+00:54:08,600 --> 00:54:10,500
+residual blocks with self attention
+
+1118
+00:54:10,500 --> 00:54:11,966
+so kind of interesting
+
+1119
+00:54:11,966 --> 00:54:14,766
+so taking a little bit from the transformer
+
+1120
+00:54:15,133 --> 00:54:16,133
+architecture
+
+1121
+00:54:17,166 --> 00:54:18,500
+and putting a
+
+1122
+00:54:21,100 --> 00:54:22,100
+self attention
+
+1123
+00:54:22,666 --> 00:54:24,600
+head and I don't know I have to check
+
+1124
+00:54:24,933 --> 00:54:26,266
+or you guys can check
+
+1125
+00:54:27,166 --> 00:54:27,966
+how many
+
+1126
+00:54:28,466 --> 00:54:30,700
+if it's multiheaded attention or not
+
+1127
+00:54:31,800 --> 00:54:33,700
+but that you know
+
+1128
+00:54:34,700 --> 00:54:36,200
+the complicated part was
+
+1129
+00:54:37,900 --> 00:54:40,133
+is deriving the the loss function
+
+1130
+00:54:40,133 --> 00:54:41,566
+you know once you have the loss function
+
+1131
+00:54:42,866 --> 00:54:45,200
+the model architecture itself is
+
+1132
+00:54:47,733 --> 00:54:49,466
+not complicated
+
+1133
+00:54:50,966 --> 00:54:52,666
+and yeah so basically
+
+1134
+00:54:52,900 --> 00:54:56,166
+you train that model it has the time step
+
+1135
+00:54:56,366 --> 00:55:00,466
+that's coming in but you're just running that model at
+
+1136
+00:55:01,400 --> 00:55:02,733
+at every step
+
+1137
+00:55:03,366 --> 00:55:05,300
+this is actually the reverse process
+
+1138
+00:55:05,300 --> 00:55:07,000
+even though it's going to the right
+
+1139
+00:55:10,666 --> 00:55:12,400
+and there's but you can imagine
+
+1140
+00:55:12,766 --> 00:55:14,166
+there's just been a ton of
+
+1141
+00:55:14,733 --> 00:55:17,766
+innovation and experimentation here
+
+1142
+00:55:18,166 --> 00:55:20,800
+I'll show you a couple examples but
+
+1143
+00:55:22,566 --> 00:55:23,366
+they
+
+1144
+00:55:23,966 --> 00:55:30,600
+trying lots of even transformer base
+
+1145
+00:55:33,100 --> 00:55:36,266
+down here yeah it's the exact same model
+
+1146
+00:55:37,666 --> 00:55:38,733
+so but
+
+1147
+00:55:40,266 --> 00:55:42,933
+it's getting the the time index coming in
+
+1148
+00:55:42,966 --> 00:55:44,900
+so it has the
+
+1149
+00:55:45,333 --> 00:55:47,366
+of course different input
+
+1150
+00:55:47,466 --> 00:55:49,366
+and then I think it's
+
+1151
+00:55:50,200 --> 00:55:52,933
+kind of showing it here there's a time in bedding
+
+1152
+00:55:53,566 --> 00:55:56,533
+that's incorporated
+
+1153
+00:55:57,466 --> 00:55:58,533
+as well and I'm
+
+1154
+00:55:58,900 --> 00:56:02,000
+not exactly sure offhand how but is that your question
+
+1155
+00:56:05,900 --> 00:56:07,300
+yeah so text
+
+1156
+00:56:08,900 --> 00:56:10,600
+is conditional generation
+
+1157
+00:56:11,533 --> 00:56:12,333
+so
+
+1158
+00:56:12,866 --> 00:56:15,533
+the yeah so indeed it didn't
+
+1159
+00:56:17,366 --> 00:56:19,933
+it didn't incorporate any kind of you know external
+
+1160
+00:56:19,933 --> 00:56:21,533
+you know additional prompting
+
+1161
+00:56:21,533 --> 00:56:23,100
+and so you know there's
+
+1162
+00:56:23,533 --> 00:56:25,300
+of course a lot of variants here
+
+1163
+00:56:25,300 --> 00:56:26,100
+but I
+
+1164
+00:56:26,100 --> 00:56:28,866
+call out two of them is there's classifier guidance
+
+1165
+00:56:28,866 --> 00:56:29,666
+like
+
+1166
+00:56:29,933 --> 00:56:34,166
+I showed on the was it the VAE or Gan lecture now but
+
+1167
+00:56:34,366 --> 00:56:37,100
+where you're incorporating class information
+
+1168
+00:56:37,100 --> 00:56:39,666
+and you're influencing the reconstruction based on
+
+1169
+00:56:39,666 --> 00:56:42,800
+class and I'll show you a picture example or
+
+1170
+00:56:43,366 --> 00:56:44,366
+guidance from text
+
+1171
+00:56:44,366 --> 00:56:45,133
+and basically
+
+1172
+00:56:45,133 --> 00:56:46,600
+what you're doing is you're incorporating
+
+1173
+00:56:46,600 --> 00:56:47,600
+you're using a
+
+1174
+00:56:47,600 --> 00:56:48,666
+language model
+
+1175
+00:56:48,933 --> 00:56:50,300
+like a transformer
+
+1176
+00:56:51,400 --> 00:56:52,666
+to create an embedding
+
+1177
+00:56:52,733 --> 00:56:53,566
+and then
+
+1178
+00:56:54,600 --> 00:56:56,666
+you're adding that you're injecting that
+
+1179
+00:56:56,866 --> 00:56:59,200
+into the flow and I think I have a picture
+
+1180
+00:57:00,500 --> 00:57:01,300
+here
+
+1181
+00:57:02,500 --> 00:57:03,300
+but
+
+1182
+00:57:04,666 --> 00:57:05,733
+and then there's
+
+1183
+00:57:07,166 --> 00:57:07,966
+other
+
+1184
+00:57:08,266 --> 00:57:10,766
+examples like I mentioned at the very beginning that
+
+1185
+00:57:10,966 --> 00:57:14,166
+you can also like show it a sketch and text
+
+1186
+00:57:14,166 --> 00:57:15,200
+you know so there's
+
+1187
+00:57:16,166 --> 00:57:17,700
+variations here but here's
+
+1188
+00:57:18,133 --> 00:57:21,933
+this is this paper by Darry Wall and nickel
+
+1189
+00:57:22,366 --> 00:57:25,200
+that's doing again its image net
+
+1190
+00:57:25,600 --> 00:57:27,200
+and is just taking the
+
+1191
+00:57:27,766 --> 00:57:31,200
+Imagenet class as guidance here
+
+1192
+00:57:31,200 --> 00:57:32,800
+and so you can imagine
+
+1193
+00:57:33,100 --> 00:57:34,666
+that it didn't put the labels here
+
+1194
+00:57:34,666 --> 00:57:37,000
+this is an example from the book but
+
+1195
+00:57:37,733 --> 00:57:40,766
+you can kind of guess what the class labels are
+
+1196
+00:57:41,300 --> 00:57:42,333
+and it's doing
+
+1197
+00:57:43,800 --> 00:57:44,766
+high quality
+
+1198
+00:57:45,933 --> 00:57:46,733
+generation
+
+1199
+00:57:48,800 --> 00:57:50,866
+so but yeah so for
+
+1200
+00:57:52,300 --> 00:57:56,200
+text this is one example this is Saharia
+
+1201
+00:57:57,933 --> 00:58:00,333
+and it's pretty recent 2022 but
+
+1202
+00:58:00,533 --> 00:58:02,700
+this is taking a language model
+
+1203
+00:58:02,700 --> 00:58:03,933
+but it's also doing this
+
+1204
+00:58:04,866 --> 00:58:08,066
+hierarchical this kind of cascaded so it does
+
+1205
+00:58:10,566 --> 00:58:11,800
+low resolution
+
+1206
+00:58:12,100 --> 00:58:14,733
+and then that feeds into a slightly higher resolution
+
+1207
+00:58:14,733 --> 00:58:16,200
+and then that feeds into a
+
+1208
+00:58:16,733 --> 00:58:19,166
+slightly higher resolution
+
+1209
+00:58:19,733 --> 00:58:21,500
+as well but you see
+
+1210
+00:58:23,066 --> 00:58:25,700
+the embedding vectors are injected and I
+
+1211
+00:58:26,200 --> 00:58:28,600
+I don't no offhand the
+
+1212
+00:58:28,733 --> 00:58:31,400
+exact architecture but you can imagine that it's
+
+1213
+00:58:31,733 --> 00:58:33,400
+being added you know at the
+
+1214
+00:58:36,933 --> 00:58:39,166
+at some of the layers I mean
+
+1215
+00:58:39,566 --> 00:58:42,733
+for unit it's probably being
+
+1216
+00:58:44,300 --> 00:58:46,300
+remapped into
+
+1217
+00:58:47,466 --> 00:58:48,400
+two dimensional
+
+1218
+00:58:48,933 --> 00:58:51,400
+kind of feature vector so that it can be
+
+1219
+00:58:52,166 --> 00:58:54,466
+added in or it could be
+
+1220
+00:58:55,766 --> 00:58:58,466
+you know weighted across channels or something
+
+1221
+00:58:58,466 --> 00:59:01,700
+you have to look at the paper to see exactly how
+
+1222
+00:59:03,400 --> 00:59:04,200
+but of course
+
+1223
+00:59:05,133 --> 00:59:07,400
+yeah so lots of examples now
+
+1224
+00:59:09,100 --> 00:59:10,466
+this was again from
+
+1225
+00:59:11,133 --> 00:59:13,133
+the Saharia paper but
+
+1226
+00:59:13,966 --> 00:59:15,600
+and I guess okay this is
+
+1227
+00:59:15,700 --> 00:59:18,800
+imagine this is the Google model
+
+1228
+00:59:25,900 --> 00:59:30,266
+and so yeah I'm not going to go into it here but
+
+1229
+00:59:30,566 --> 00:59:31,766
+stable diffusion
+
+1230
+00:59:33,766 --> 00:59:35,600
+really kicked off because
+
+1231
+00:59:36,000 --> 00:59:39,066
+it was more efficient and slightly higher
+
+1232
+00:59:39,700 --> 00:59:40,700
+higher quality
+
+1233
+00:59:42,566 --> 00:59:44,700
+but it's using
+
+1234
+00:59:45,200 --> 00:59:47,966
+a you know encoder decoder with attention
+
+1235
+00:59:48,200 --> 00:59:49,466
+kind of architecture
+
+1236
+00:59:49,600 --> 00:59:50,900
+and I guess it's not really
+
+1237
+00:59:51,533 --> 00:59:54,133
+showing it here I mean this is like their overall
+
+1238
+00:59:54,566 --> 00:59:55,400
+diagram
+
+1239
+00:59:56,333 --> 00:59:57,333
+maybe it's
+
+1240
+00:59:57,500 --> 01:00:01,933
+kind of represented here but it's reducing the size
+
+1241
+01:00:02,766 --> 01:00:05,200
+into kind of like a smaller embedding space
+
+1242
+01:00:06,066 --> 01:00:07,766
+denoising and then
+
+1243
+01:00:09,533 --> 01:00:10,400
+upscaling
+
+1244
+01:00:11,066 --> 01:00:11,866
+to
+
+1245
+01:00:12,866 --> 01:00:14,166
+the higher resolution
+
+1246
+01:00:15,666 --> 01:00:17,566
+but and it's also
+
+1247
+01:00:19,400 --> 01:00:21,966
+able to condition on images
+
+1248
+01:00:22,466 --> 01:00:25,566
+some other representation some kind of semantic map
+
+1249
+01:00:25,866 --> 01:00:27,933
+or text so you could condition it on
+
+1250
+01:00:28,066 --> 01:00:29,400
+a lot of different things and
+
+1251
+01:00:30,600 --> 01:00:31,733
+it seems to work well
+
+1252
+01:00:36,000 --> 01:00:38,566
+so I thought I'd throw this picture in because
+
+1253
+01:00:38,700 --> 01:00:39,933
+I was trying to create
+
+1254
+01:00:40,333 --> 01:00:42,166
+create it and I wasn't successful
+
+1255
+01:00:42,166 --> 01:00:44,200
+and I think the way it failed is kind of
+
+1256
+01:00:44,933 --> 01:00:47,066
+interesting so on Dolly 3 now
+
+1257
+01:00:47,500 --> 01:00:49,333
+they have this new feature
+
+1258
+01:00:50,666 --> 01:00:53,266
+so my original prompt was this
+
+1259
+01:00:54,933 --> 01:00:57,566
+so I wanted to use it as the transition in the slide
+
+1260
+01:00:57,600 --> 01:00:58,400
+where it's a
+
+1261
+01:00:59,000 --> 01:01:01,000
+Victorian butcher addressed
+
+1262
+01:01:01,500 --> 01:01:03,066
+cranking a meat grinder but
+
+1263
+01:01:03,500 --> 01:01:06,300
+math symbols are going in and
+
+1264
+01:01:06,800 --> 01:01:10,400
+nice pictures are falling out and so actually what
+
+1265
+01:01:11,533 --> 01:01:13,533
+this is not my first iteration
+
+1266
+01:01:13,533 --> 01:01:14,066
+but it was actually
+
+1267
+01:01:14,066 --> 01:01:15,700
+ground meat look kind of disgusting
+
+1268
+01:01:15,700 --> 01:01:17,966
+so I didn't include that picture
+
+1269
+01:01:18,366 --> 01:01:19,100
+so the
+
+1270
+01:01:19,100 --> 01:01:21,666
+interesting thing about Dolly 3 now is that you can
+
+1271
+01:01:22,133 --> 01:01:24,566
+go into it and you can actually select
+
+1272
+01:01:24,566 --> 01:01:26,800
+part of the image and so
+
+1273
+01:01:28,200 --> 01:01:30,700
+and this is where diffusion models also
+
+1274
+01:01:31,400 --> 01:01:34,366
+one of their strengths is in painting so
+
+1275
+01:01:35,733 --> 01:01:38,566
+I just selected all of the ground meet here
+
+1276
+01:01:38,900 --> 01:01:40,133
+and then I tried it again
+
+1277
+01:01:40,466 --> 01:01:42,800
+and by the way remember in Dolly 3
+
+1278
+01:01:43,200 --> 01:01:44,400
+behind the scenes
+
+1279
+01:01:44,400 --> 01:01:46,366
+it's creating a much more detailed
+
+1280
+01:01:46,366 --> 01:01:47,733
+so it's using an LLM
+
+1281
+01:01:47,733 --> 01:01:49,400
+actually using gpt4
+
+1282
+01:01:49,866 --> 01:01:52,733
+to create a very detailed
+
+1283
+01:01:52,900 --> 01:01:54,066
+prompt that it
+
+1284
+01:01:54,133 --> 01:01:56,266
+doesn't even show you unless you kind of click
+
+1285
+01:01:56,733 --> 01:01:58,966
+click on the info button
+
+1286
+01:01:59,500 --> 01:02:01,500
+so it's interesting how it's
+
+1287
+01:02:01,800 --> 01:02:04,900
+you know they've trained this more detailed prompt
+
+1288
+01:02:04,900 --> 01:02:08,000
+and even on the detailed prompt it is saying
+
+1289
+01:02:10,500 --> 01:02:11,666
+that you know
+
+1290
+01:02:11,700 --> 01:02:12,766
+that I want
+
+1291
+01:02:12,866 --> 01:02:15,966
+math symbols going in and pictures coming out
+
+1292
+01:02:15,966 --> 01:02:16,766
+and I even
+
+1293
+01:02:18,400 --> 01:02:21,300
+mask this and told it to do it again
+
+1294
+01:02:21,300 --> 01:02:23,366
+but you know you can think that
+
+1295
+01:02:23,700 --> 01:02:26,066
+at least in the probability distribution
+
+1296
+01:02:26,900 --> 01:02:28,866
+apparently it was so far out of the
+
+1297
+01:02:28,900 --> 01:02:31,866
+distribution of having a meek grinder doing math
+
+1298
+01:02:31,966 --> 01:02:33,266
+I just couldn't get it
+
+1299
+01:02:33,900 --> 01:02:35,000
+I couldn't steer it
+
+1300
+01:02:35,600 --> 01:02:39,066
+you know out of this mode kind of realistic
+
+1301
+01:02:39,066 --> 01:02:41,800
+it did draw a lot of symbols on the meek grinder
+
+1302
+01:02:42,133 --> 01:02:43,533
+itself funny enough
+
+1303
+01:02:44,300 --> 01:02:45,500
+I didn't ask it to
+
+1304
+01:02:45,800 --> 01:02:47,966
+but I think it's kind of indicative of
+
+1305
+01:02:48,733 --> 01:02:52,533
+that you know you're playing with these distributions
+
+1306
+01:02:52,733 --> 01:02:55,733
+and you know I could not get it out of the
+
+1307
+01:02:56,400 --> 01:02:57,800
+you know the more
+
+1308
+01:02:58,100 --> 01:03:00,700
+central mode of you know a picture of a
+
+1309
+01:03:00,933 --> 01:03:03,400
+Victorian butcher with a meek grinder
+
+1310
+01:03:06,600 --> 01:03:09,900
+but you can imagine so in painting is kind of an easy
+
+1311
+01:03:10,166 --> 01:03:12,000
+conditioning process right
+
+1312
+01:03:12,000 --> 01:03:14,166
+so you just mask out this area
+
+1313
+01:03:14,600 --> 01:03:17,800
+you just provide the rest of the image with the mask
+
+1314
+01:03:17,900 --> 01:03:18,933
+the masked area
+
+1315
+01:03:19,466 --> 01:03:21,466
+and then just do
+
+1316
+01:03:21,900 --> 01:03:23,266
+noise and diffusion on
+
+1317
+01:03:24,266 --> 01:03:28,566
+that part conditioned on everything else
+
+1318
+01:03:28,566 --> 01:03:31,333
+so it has a lot of flexibility and of course
+
+1319
+01:03:31,733 --> 01:03:34,466
+they're using it for music and
+
+1320
+01:03:35,166 --> 01:03:36,300
+everything else as well
+
+1321
+01:03:38,700 --> 01:03:39,866
+okay so if you want to
+
+1322
+01:03:40,800 --> 01:03:42,400
+this here's the link again
+
+1323
+01:03:42,400 --> 01:03:44,966
+let me know if you don't have access to the blog post
+
+1324
+01:03:45,666 --> 01:03:46,466
+I think it
+
+1325
+01:03:46,533 --> 01:03:49,966
+helps make the chapter a little bit more readable too
+
+1326
+01:03:50,900 --> 01:03:52,966
+and then there's a CVPR
+
+1327
+01:03:53,500 --> 01:03:55,533
+2023 last year
+
+1328
+01:03:55,766 --> 01:03:56,766
+there was a
+
+1329
+01:03:57,900 --> 01:03:58,700
+tutorial
+
+1330
+01:03:59,400 --> 01:04:01,566
+like a five hour tutorial if you want to go
+
+1331
+01:04:02,600 --> 01:04:03,866
+it starts from
+
+1332
+01:04:04,200 --> 01:04:05,500
+you know like where I started
+
+1333
+01:04:05,500 --> 01:04:07,800
+but it goes pretty quickly into the
+
+1334
+01:04:08,400 --> 01:04:09,766
+into more details there's
+
+1335
+01:04:12,666 --> 01:04:15,300
+another version the next version at CVPR this year
+
+1336
+01:04:15,300 --> 01:04:17,866
+they're doing it again as well
+
+1337
+01:04:19,866 --> 01:04:24,866
+all right so okay so that's it for diffusion so next
+
+1338
+01:04:25,533 --> 01:04:26,333
+time
+
+1339
+01:04:27,800 --> 01:04:29,733
+I'm doing graph neural networks
+
+1340
+01:04:30,733 --> 01:04:31,866
+and then
+
+1341
+01:04:34,466 --> 01:04:35,566
+reinforcement learning
+
+1342
+01:04:35,566 --> 01:04:37,866
+and again I'm gonna try to focus on like
+
+1343
+01:04:38,733 --> 01:04:40,666
+rlhf because I know
+
+1344
+01:04:41,533 --> 01:04:43,866
+these half the class has taken reinforcement learning
+
+1345
+01:04:44,566 --> 01:04:46,466
+so and then please for the
+
+1346
+01:04:47,000 --> 01:04:49,700
+leaderboard people work with Xavier
+
+1347
+01:04:50,166 --> 01:04:52,500
+and get that slider 2 together
+
+1348
+01:04:52,500 --> 01:04:53,300
+all
+
+1349
+01:04:53,400 --> 01:04:54,200
+right thank you
+
