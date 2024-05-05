@@ -1,0 +1,4224 @@
+1
+00:00:01,200 --> 00:00:02,466
+all right so
+
+2
+00:00:04,000 --> 00:00:04,800
+today we're
+
+3
+00:00:05,700 --> 00:00:06,700
+back on the
+
+4
+00:00:09,066 --> 00:00:09,900
+book chapter
+
+5
+00:00:10,766 --> 00:00:11,566
+I think
+
+6
+00:00:11,666 --> 00:00:14,333
+the treatment of Graphenolo networks was just fine
+
+7
+00:00:14,333 --> 00:00:17,133
+so actually follow it very closely
+
+8
+00:00:21,166 --> 00:00:22,900
+and it's more
+
+9
+00:00:23,733 --> 00:00:25,333
+I think straightforward
+
+10
+00:00:25,400 --> 00:00:26,333
+extension from
+
+11
+00:00:26,333 --> 00:00:27,366
+what we've been talking about
+
+12
+00:00:27,366 --> 00:00:28,900
+earlier as opposed to the
+
+13
+00:00:29,200 --> 00:00:30,666
+oops I forgot to move the
+
+14
+00:00:31,400 --> 00:00:32,600
+you are here pointer
+
+15
+00:00:36,000 --> 00:00:38,300
+but yeah a little bit more straightforward
+
+16
+00:00:38,533 --> 00:00:40,966
+extension from the neural net stuff
+
+17
+00:00:41,166 --> 00:00:44,166
+from the Gans and diffusion models and VAE
+
+18
+00:00:45,866 --> 00:00:46,666
+so
+
+19
+00:00:47,866 --> 00:00:49,700
+I think so I will keep
+
+20
+00:00:50,100 --> 00:00:50,900
+the final
+
+21
+00:00:51,533 --> 00:00:53,700
+report and repo
+
+22
+00:00:54,933 --> 00:00:56,600
+here I guess technically
+
+23
+00:00:56,933 --> 00:01:00,066
+I think Asama you're right because there's no final
+
+24
+00:01:00,200 --> 00:01:01,000
+you know they
+
+25
+00:01:01,933 --> 00:01:03,500
+they want me to start
+
+26
+00:01:03,933 --> 00:01:06,333
+doing grades after the last class but
+
+27
+00:01:07,333 --> 00:01:09,966
+it seems like it's not strictly enforced and so
+
+28
+00:01:10,200 --> 00:01:13,866
+this gives you some more time to clean things up
+
+29
+00:01:18,566 --> 00:01:19,533
+see why it's not
+
+30
+00:01:21,733 --> 00:01:22,600
+so
+
+31
+00:01:24,300 --> 00:01:27,100
+I only have two volunteers for the 25th
+
+32
+00:01:27,333 --> 00:01:29,366
+thank you to the both of you
+
+33
+00:01:29,500 --> 00:01:33,600
+so tonight I'm going to randomly select the other
+
+34
+00:01:36,100 --> 00:01:37,666
+6 I guess for
+
+35
+00:01:38,133 --> 00:01:39,066
+the 25th
+
+36
+00:01:39,066 --> 00:01:41,800
+and then everyone else will go on the on the 30th
+
+37
+00:01:41,800 --> 00:01:42,600
+and so
+
+38
+00:01:42,933 --> 00:01:43,900
+I'll let you know
+
+39
+00:01:44,600 --> 00:01:45,466
+the other thing is
+
+40
+00:01:45,933 --> 00:01:49,333
+I updated everyone see the final project info
+
+41
+00:01:49,366 --> 00:01:50,666
+I updated on the
+
+42
+00:01:50,900 --> 00:01:54,000
+website and grade scope so I put
+
+43
+00:01:54,800 --> 00:01:55,600
+a
+
+44
+00:01:55,600 --> 00:01:57,400
+little bit more instruction on the
+
+45
+00:01:58,400 --> 00:02:00,933
+video I updated the
+
+46
+00:02:01,466 --> 00:02:04,500
+report template the late lautech template
+
+47
+00:02:05,266 --> 00:02:06,066
+and
+
+48
+00:02:06,766 --> 00:02:09,600
+I put a comment a little bit more detail on the Github
+
+49
+00:02:10,000 --> 00:02:12,500
+repo so in the report
+
+50
+00:02:12,900 --> 00:02:14,800
+if you could put a link
+
+51
+00:02:15,066 --> 00:02:17,333
+to the repo and I think on grade scope I also
+
+52
+00:02:18,266 --> 00:02:21,766
+had it as well but the idea is that I mean like any
+
+53
+00:02:23,366 --> 00:02:25,000
+kind of well executed project
+
+54
+00:02:26,100 --> 00:02:28,066
+idea is to make it reproducible
+
+55
+00:02:28,066 --> 00:02:31,733
+and so somebody can come and reproduce your work
+
+56
+00:02:31,900 --> 00:02:32,700
+as the
+
+57
+00:02:33,500 --> 00:02:35,400
+kind of ideal case
+
+58
+00:02:37,166 --> 00:02:41,166
+any questions about final projects presentations
+
+59
+00:02:45,500 --> 00:02:47,366
+all right so let's jump in
+
+60
+00:02:48,100 --> 00:02:49,933
+so graph neural networks
+
+61
+00:02:50,566 --> 00:02:52,766
+I think this is an interesting space
+
+62
+00:02:53,100 --> 00:02:54,300
+not something that I had
+
+63
+00:02:54,766 --> 00:02:56,333
+really worked in before
+
+64
+00:02:57,200 --> 00:03:00,766
+but like I said it's a pretty straightforward extension
+
+65
+00:03:01,300 --> 00:03:06,900
+so the main challenge is that the topology of the graph
+
+66
+00:03:07,533 --> 00:03:09,000
+can vary the
+
+67
+00:03:09,900 --> 00:03:12,166
+types of connections in which are connected
+
+68
+00:03:12,900 --> 00:03:14,200
+which nodes are connected
+
+69
+00:03:14,266 --> 00:03:16,600
+the size of these graphs can be quite large
+
+70
+00:03:17,600 --> 00:03:21,733
+and we have to deal with a case where you have a single
+
+71
+00:03:21,733 --> 00:03:24,100
+monolithic graph which is
+
+72
+00:03:24,666 --> 00:03:26,666
+I'll show a bunch of examples but that's
+
+73
+00:03:27,000 --> 00:03:30,066
+pretty common case and so we'll talk about
+
+74
+00:03:30,533 --> 00:03:31,766
+what does it mean to do
+
+75
+00:03:32,166 --> 00:03:35,300
+batches of data and
+
+76
+00:03:35,400 --> 00:03:37,666
+because you need that force to cast the gradient
+
+77
+00:03:37,666 --> 00:03:38,966
+descent for example
+
+78
+00:03:40,666 --> 00:03:41,866
+so I'll cover
+
+79
+00:03:42,566 --> 00:03:45,500
+definitions we'll talk about representation
+
+80
+00:03:46,300 --> 00:03:48,933
+the so called adjacency matrix which is
+
+81
+00:03:49,466 --> 00:03:52,200
+crucial for describing the topology of the graph
+
+82
+00:03:52,200 --> 00:03:55,133
+and then get into the graph neural networks
+
+83
+00:03:55,266 --> 00:03:57,166
+how you build a convolutional layer
+
+84
+00:03:57,266 --> 00:03:59,700
+on top of a graph and then how you
+
+85
+00:04:00,000 --> 00:04:00,866
+how you build
+
+86
+00:04:01,600 --> 00:04:02,400
+graph
+
+87
+00:04:05,733 --> 00:04:09,200
+classification and regression at the graph level
+
+88
+00:04:09,733 --> 00:04:10,933
+and the node level
+
+89
+00:04:13,500 --> 00:04:15,000
+yeah I just realized that
+
+90
+00:04:15,900 --> 00:04:17,466
+I had also mentioned
+
+91
+00:04:17,733 --> 00:04:19,766
+we're gonna do a little recap of the
+
+92
+00:04:20,466 --> 00:04:23,366
+project maybe we'll push it to the Thursday
+
+93
+00:04:24,666 --> 00:04:25,466
+okay
+
+94
+00:04:26,700 --> 00:04:29,766
+all right so basic definition of examples so
+
+95
+00:04:31,933 --> 00:04:33,933
+generally so the
+
+96
+00:04:35,266 --> 00:04:37,866
+nodes sometimes they're called vertices
+
+97
+00:04:38,866 --> 00:04:40,900
+are connected by edges or links
+
+98
+00:04:40,900 --> 00:04:41,700
+you can have
+
+99
+00:04:41,700 --> 00:04:44,200
+undirected where there's no kind of implied
+
+100
+00:04:44,400 --> 00:04:45,566
+direction between the
+
+101
+00:04:46,166 --> 00:04:47,966
+the nodes or you can have directed
+
+102
+00:04:48,500 --> 00:04:50,166
+and if you do have a
+
+103
+00:04:51,066 --> 00:04:53,766
+directed connection if there's no cycles
+
+104
+00:04:54,066 --> 00:04:55,100
+nothing going back
+
+105
+00:04:55,700 --> 00:04:59,900
+upon itself then you can have a directed asyclic
+
+106
+00:05:00,200 --> 00:05:03,600
+graph and so sometimes you'll hear the term Dag
+
+107
+00:05:04,900 --> 00:05:06,900
+because there are certain things that you can do with
+
+108
+00:05:07,566 --> 00:05:08,366
+Dags
+
+109
+00:05:09,333 --> 00:05:10,400
+if they have those
+
+110
+00:05:11,066 --> 00:05:12,100
+two properties
+
+111
+00:05:12,866 --> 00:05:13,666
+so
+
+112
+00:05:14,933 --> 00:05:16,766
+we have been looking at we didn't really
+
+113
+00:05:17,200 --> 00:05:19,533
+treated as a graph per se but
+
+114
+00:05:21,266 --> 00:05:22,866
+you know we have been looking at
+
+115
+00:05:23,366 --> 00:05:25,333
+directed asyclic graphs
+
+116
+00:05:25,600 --> 00:05:29,733
+just the feed forward neural network is one example
+
+117
+00:05:29,966 --> 00:05:30,766
+right
+
+118
+00:05:31,900 --> 00:05:34,166
+but it's you know like it's kind of a regular
+
+119
+00:05:34,700 --> 00:05:37,566
+topology we didn't treat it as a graph
+
+120
+00:05:38,200 --> 00:05:41,466
+I also mentioned this in the VAE talk
+
+121
+00:05:42,466 --> 00:05:45,533
+these basean probableistic
+
+122
+00:05:45,533 --> 00:05:47,866
+graphical models that you can represent
+
+123
+00:05:47,866 --> 00:05:49,566
+something like this where you have like
+
+124
+00:05:50,400 --> 00:05:52,400
+a node that represents
+
+125
+00:05:53,400 --> 00:05:55,933
+a variable and so typically
+
+126
+00:05:56,100 --> 00:05:58,866
+you have something like a prior probability
+
+127
+00:05:59,966 --> 00:06:02,566
+with a directed edge to another variable
+
+128
+00:06:02,933 --> 00:06:06,400
+and then that node is representing the conditional
+
+129
+00:06:06,466 --> 00:06:07,500
+probability the
+
+130
+00:06:07,666 --> 00:06:11,166
+probability of that this takes on some value given some
+
+131
+00:06:13,733 --> 00:06:15,366
+latent variable in this case
+
+132
+00:06:17,100 --> 00:06:18,333
+so in the book there's
+
+133
+00:06:19,133 --> 00:06:20,566
+a bunch of examples as well
+
+134
+00:06:20,566 --> 00:06:22,200
+so road networks
+
+135
+00:06:22,366 --> 00:06:23,266
+are graphs where the
+
+136
+00:06:23,266 --> 00:06:25,333
+physical locations or the landmarks
+
+137
+00:06:25,333 --> 00:06:26,333
+are the nodes
+
+138
+00:06:26,766 --> 00:06:29,300
+the roads are the edges
+
+139
+00:06:29,900 --> 00:06:33,166
+chemical molecules are examples where the
+
+140
+00:06:33,666 --> 00:06:36,533
+nodes are atoms and the edges are
+
+141
+00:06:37,166 --> 00:06:38,900
+are chemical bonds between them
+
+142
+00:06:39,333 --> 00:06:42,200
+you can have electrical circuits as graphs
+
+143
+00:06:42,366 --> 00:06:45,666
+the nodes are components or the junctions
+
+144
+00:06:46,266 --> 00:06:49,166
+and then the edges are the wires connecting them
+
+145
+00:06:53,733 --> 00:06:54,566
+some other examples
+
+146
+00:06:54,566 --> 00:06:55,700
+so social networks
+
+147
+00:06:55,700 --> 00:06:57,400
+and this is where it can be very large
+
+148
+00:06:58,000 --> 00:06:59,133
+graphs you can take
+
+149
+00:06:59,200 --> 00:07:02,700
+like all of Facebook as a social network
+
+150
+00:07:02,800 --> 00:07:05,366
+the nodes are the people and the edges are
+
+151
+00:07:06,466 --> 00:07:07,266
+you know
+
+152
+00:07:07,266 --> 00:07:10,300
+people who have friended each other on the platform
+
+153
+00:07:11,500 --> 00:07:12,733
+scientific literature
+
+154
+00:07:12,966 --> 00:07:14,133
+the nodes are the papers
+
+155
+00:07:14,133 --> 00:07:16,066
+citations so these are directed
+
+156
+00:07:17,000 --> 00:07:18,300
+generally asyclic
+
+157
+00:07:20,133 --> 00:07:22,800
+where it's citing passwork and then there's
+
+158
+00:07:23,000 --> 00:07:25,266
+I'm not aware of actually much use
+
+159
+00:07:25,900 --> 00:07:26,700
+here
+
+160
+00:07:27,133 --> 00:07:28,666
+of something like a knowledge graph
+
+161
+00:07:28,666 --> 00:07:30,700
+but you can have this kind of hybrid
+
+162
+00:07:31,466 --> 00:07:34,800
+graph actually in this case yeah these are
+
+163
+00:07:35,133 --> 00:07:38,133
+all directed but there it is cyclic
+
+164
+00:07:38,133 --> 00:07:40,266
+actually in the book I think it says it's a cyclic
+
+165
+00:07:40,466 --> 00:07:41,666
+if I remember right but
+
+166
+00:07:42,133 --> 00:07:45,133
+I see one cycle right there
+
+167
+00:07:48,300 --> 00:07:49,266
+and actually
+
+168
+00:07:49,800 --> 00:07:50,600
+yeah
+
+169
+00:07:51,700 --> 00:07:52,400
+so
+
+170
+00:07:52,400 --> 00:07:56,133
+in this case you're trying to the edges correspond to
+
+171
+00:07:56,366 --> 00:07:59,566
+kind of relationships between entities that are the
+
+172
+00:07:59,900 --> 00:08:00,700
+nodes
+
+173
+00:08:02,200 --> 00:08:04,600
+so you can also things that are maybe not
+
+174
+00:08:04,933 --> 00:08:08,000
+you wouldn't typically think of as graphs but
+
+175
+00:08:08,700 --> 00:08:10,666
+if you have a 3d geometry
+
+176
+00:08:10,666 --> 00:08:12,900
+of a physical object like in this case of plane
+
+177
+00:08:13,300 --> 00:08:16,133
+the vertices in 3D
+
+178
+00:08:16,600 --> 00:08:19,066
+can be the nodes and then they could just
+
+179
+00:08:19,166 --> 00:08:20,466
+have connections to all
+
+180
+00:08:20,700 --> 00:08:21,733
+the nodes nearby
+
+181
+00:08:28,466 --> 00:08:32,466
+there's also there's a scene graph which
+
+182
+00:08:34,066 --> 00:08:38,533
+is can be used in 3d rendering but it's typically it's
+
+183
+00:08:38,966 --> 00:08:42,066
+uh describes the relationship of 3d objects
+
+184
+00:08:42,066 --> 00:08:43,766
+and these can be hierarchical
+
+185
+00:08:43,766 --> 00:08:44,733
+so you can have
+
+186
+00:08:45,000 --> 00:08:47,000
+in this case like a room description
+
+187
+00:08:47,200 --> 00:08:50,600
+where you have the connection between like
+
+188
+00:08:52,066 --> 00:08:53,200
+the back walls
+
+189
+00:08:53,200 --> 00:08:55,600
+connected to the right wall and the left wall
+
+190
+00:08:55,600 --> 00:08:57,133
+and the ceiling and the floor
+
+191
+00:08:57,400 --> 00:08:58,266
+then you have
+
+192
+00:08:58,766 --> 00:09:00,800
+a hierarchy so you can then have a
+
+193
+00:09:01,066 --> 00:09:03,500
+a lampshade which is broken further down
+
+194
+00:09:03,733 --> 00:09:05,800
+into components or you can have the table
+
+195
+00:09:06,166 --> 00:09:07,566
+which is broken further down
+
+196
+00:09:08,266 --> 00:09:11,900
+as well I put some links of papers that
+
+197
+00:09:16,566 --> 00:09:18,700
+some of them are applying neural networks to these
+
+198
+00:09:18,700 --> 00:09:20,700
+kinds of scene graphs
+
+199
+00:09:21,300 --> 00:09:24,533
+and then there's a bunch of other examples so Wikipedia
+
+200
+00:09:25,366 --> 00:09:27,366
+where articles are the nodes
+
+201
+00:09:27,400 --> 00:09:29,933
+and the hyperlinks are the edges
+
+202
+00:09:29,933 --> 00:09:31,266
+computer programs
+
+203
+00:09:31,500 --> 00:09:32,300
+you can
+
+204
+00:09:32,600 --> 00:09:36,533
+show as graphs in fact in the example that I did with
+
+205
+00:09:37,400 --> 00:09:39,766
+the Jupiter notebook for the micrograd
+
+206
+00:09:40,100 --> 00:09:43,966
+we were basically building a tensor compute graph
+
+207
+00:09:44,333 --> 00:09:45,466
+right if you remember
+
+208
+00:09:48,400 --> 00:09:49,200
+so
+
+209
+00:09:50,600 --> 00:09:52,266
+but yeah so proteins
+
+210
+00:09:52,866 --> 00:09:55,566
+can be the proteins are the nodes the edges
+
+211
+00:09:55,800 --> 00:09:57,800
+are where the proteins
+
+212
+00:09:58,466 --> 00:10:00,600
+interact and then
+
+213
+00:10:00,600 --> 00:10:03,333
+you can even have like sets or lists or even
+
+214
+00:10:03,333 --> 00:10:05,933
+images where you just have the six
+
+215
+00:10:07,966 --> 00:10:09,966
+or eight neighboring pixels
+
+216
+00:10:12,200 --> 00:10:15,733
+just connected to a particular pixel as well
+
+217
+00:10:16,600 --> 00:10:17,400
+okay
+
+218
+00:10:17,933 --> 00:10:19,000
+all right so
+
+219
+00:10:20,266 --> 00:10:22,400
+how do we describe these
+
+220
+00:10:22,900 --> 00:10:26,733
+typically we're going to define something called
+
+221
+00:10:27,100 --> 00:10:28,700
+like a node embedding
+
+222
+00:10:29,266 --> 00:10:31,166
+so we talked about embedding vectors with
+
+223
+00:10:31,333 --> 00:10:32,700
+transformers there's
+
+224
+00:10:33,133 --> 00:10:33,966
+actually some
+
+225
+00:10:34,400 --> 00:10:38,200
+analogies there which we'll see later but
+
+226
+00:10:39,266 --> 00:10:42,300
+you can have some kind of information that you have
+
+227
+00:10:43,500 --> 00:10:46,300
+basically translated into an embedding vector
+
+228
+00:10:46,300 --> 00:10:49,800
+for example typically they're all of the same dimension
+
+229
+00:10:51,300 --> 00:10:52,800
+you can also do the same thing with
+
+230
+00:10:53,000 --> 00:10:54,100
+edges so you can have
+
+231
+00:10:55,200 --> 00:10:58,566
+an edge embedding or embedding vector for every edge
+
+232
+00:11:00,133 --> 00:11:01,200
+and then typically
+
+233
+00:11:01,966 --> 00:11:04,500
+we'll define adjacency matrix
+
+234
+00:11:04,500 --> 00:11:06,400
+and the way you read this is that
+
+235
+00:11:06,766 --> 00:11:07,766
+this is just
+
+236
+00:11:08,700 --> 00:11:10,766
+in this case for undirected graphs
+
+237
+00:11:11,166 --> 00:11:13,300
+that you just read the indices
+
+238
+00:11:13,400 --> 00:11:16,066
+and so if there's a non zero
+
+239
+00:11:16,366 --> 00:11:19,066
+for example here at 3 comma 1
+
+240
+00:11:19,333 --> 00:11:22,933
+that means there's a connection between 3 and one
+
+241
+00:11:23,300 --> 00:11:25,200
+on the nodes and because
+
+242
+00:11:25,400 --> 00:11:26,500
+it's undirected
+
+243
+00:11:26,533 --> 00:11:27,500
+then you would expect
+
+244
+00:11:27,500 --> 00:11:29,733
+there's going to be a connection on one comma 3
+
+245
+00:11:29,733 --> 00:11:31,466
+so it's going to be symmetric
+
+246
+00:11:32,666 --> 00:11:34,000
+always asymmetric matrix
+
+247
+00:11:34,000 --> 00:11:36,933
+but the diagonal is typically zero because
+
+248
+00:11:37,266 --> 00:11:41,000
+there's no at least external edge connecting back to
+
+249
+00:11:41,666 --> 00:11:42,466
+itself
+
+250
+00:11:43,000 --> 00:11:45,700
+so you see the diagonals are zeros and then we have
+
+251
+00:11:46,866 --> 00:11:48,300
+non zeros actually
+
+252
+00:11:49,166 --> 00:11:50,866
+typically just put a 1
+
+253
+00:11:51,333 --> 00:11:53,200
+where there's a connection
+
+254
+00:11:53,366 --> 00:11:54,566
+and these can be
+
+255
+00:11:54,800 --> 00:11:55,733
+very sparse
+
+256
+00:11:55,733 --> 00:11:58,400
+and so sometimes you'll use sparse representation for
+
+257
+00:11:58,600 --> 00:11:59,533
+the matrices
+
+258
+00:12:02,366 --> 00:12:03,966
+okay so we could take
+
+259
+00:12:05,000 --> 00:12:06,700
+all of the node
+
+260
+00:12:07,400 --> 00:12:11,100
+data edges and then we can put them into a matrix
+
+261
+00:12:11,100 --> 00:12:12,566
+right so remember we have
+
+262
+00:12:12,666 --> 00:12:15,600
+a d dimensional embedding vector for every node
+
+263
+00:12:16,600 --> 00:12:20,566
+and we have let's say N nodes in this case
+
+264
+00:12:21,166 --> 00:12:23,733
+yeah it lines up 6 6 nodes
+
+265
+00:12:23,900 --> 00:12:26,800
+and so just like we were doing for transformers
+
+266
+00:12:27,100 --> 00:12:28,266
+you can put together
+
+267
+00:12:28,966 --> 00:12:31,400
+input matrix that is just
+
+268
+00:12:31,733 --> 00:12:38,800
+d dimension and then n columns 1 column for every node
+
+269
+00:12:40,066 --> 00:12:41,400
+and then the same thing for
+
+270
+00:12:42,400 --> 00:12:43,200
+the edges
+
+271
+00:12:43,200 --> 00:12:45,900
+you can have a different dimensionality to the
+
+272
+00:12:46,766 --> 00:12:47,800
+edges
+
+273
+00:12:50,000 --> 00:12:50,800
+but
+
+274
+00:12:51,933 --> 00:12:53,100
+they represent
+
+275
+00:12:53,666 --> 00:12:57,900
+each one of these edges and so there's probably
+
+276
+00:12:58,466 --> 00:12:59,966
+some kind of metadata here
+
+277
+00:12:59,966 --> 00:13:02,400
+but these are the connections that
+
+278
+00:13:03,000 --> 00:13:03,966
+they represent
+
+279
+00:13:09,933 --> 00:13:11,000
+okay so
+
+280
+00:13:11,733 --> 00:13:12,733
+let's look at
+
+281
+00:13:14,000 --> 00:13:17,133
+some properties of the adjacent C matrix
+
+282
+00:13:17,466 --> 00:13:18,700
+in this case this is a
+
+283
+00:13:18,900 --> 00:13:21,400
+simple undirected graph with eight nodes
+
+284
+00:13:22,866 --> 00:13:24,200
+and so you can
+
+285
+00:13:25,400 --> 00:13:27,500
+I guess the font's a little bit small but you can
+
+286
+00:13:27,700 --> 00:13:29,133
+convince yourself that
+
+287
+00:13:31,200 --> 00:13:35,300
+there's a one everywhere where there's a connection
+
+288
+00:13:35,700 --> 00:13:37,300
+on the graph
+
+289
+00:13:40,366 --> 00:13:42,066
+and so we can
+
+290
+00:13:42,466 --> 00:13:47,700
+describe one of the nodes as just a one hot and coated
+
+291
+00:13:47,966 --> 00:13:49,933
+vector right and so like node
+
+292
+00:13:50,200 --> 00:13:51,000
+6
+
+293
+00:13:51,800 --> 00:13:53,666
+is just a vector
+
+294
+00:13:54,300 --> 00:13:55,866
+the length this is
+
+295
+00:13:56,400 --> 00:13:57,600
+should be length 8
+
+296
+00:13:58,133 --> 00:13:59,333
+and then there's just
+
+297
+00:13:59,800 --> 00:14:03,200
+it's all zeros except the one at the 6 position
+
+298
+00:14:03,500 --> 00:14:04,966
+there right so
+
+299
+00:14:05,800 --> 00:14:07,100
+and then once you do that
+
+300
+00:14:08,933 --> 00:14:09,766
+you can
+
+301
+00:14:11,933 --> 00:14:13,100
+left multiply
+
+302
+00:14:13,566 --> 00:14:14,666
+the embedding vector
+
+303
+00:14:14,666 --> 00:14:17,500
+I mean the one hot vector here by the
+
+304
+00:14:17,700 --> 00:14:19,266
+adjacent C matrix
+
+305
+00:14:19,533 --> 00:14:20,933
+and what that gives you
+
+306
+00:14:22,133 --> 00:14:22,966
+just think about it right
+
+307
+00:14:22,966 --> 00:14:25,733
+you're taking each row and then you're multiplying here
+
+308
+00:14:25,733 --> 00:14:27,066
+so you're just pulling out the
+
+309
+00:14:27,466 --> 00:14:29,766
+whatever column is non zero in this case
+
+310
+00:14:29,766 --> 00:14:31,866
+you're just pulling out the six column
+
+311
+00:14:32,700 --> 00:14:34,866
+here and remember
+
+312
+00:14:35,166 --> 00:14:37,566
+on the adjacency matrix this is saying that
+
+313
+00:14:37,933 --> 00:14:40,866
+for the sixth node these are the nodes that
+
+314
+00:14:41,100 --> 00:14:42,800
+it's connected to right
+
+315
+00:14:43,533 --> 00:14:44,333
+and so
+
+316
+00:14:46,133 --> 00:14:47,300
+it's telling you that
+
+317
+00:14:47,566 --> 00:14:49,133
+these are just by
+
+318
+00:14:49,133 --> 00:14:50,066
+doing this multiplication
+
+319
+00:14:50,066 --> 00:14:52,400
+it's telling you those are the neighboring nodes
+
+320
+00:14:52,900 --> 00:14:53,700
+to the
+
+321
+00:14:54,300 --> 00:14:55,700
+node that we're interested in
+
+322
+00:14:56,566 --> 00:14:58,333
+and then you can do it again
+
+323
+00:14:59,066 --> 00:15:00,500
+you can left multiply
+
+324
+00:15:01,533 --> 00:15:02,800
+again by another a
+
+325
+00:15:03,766 --> 00:15:05,133
+adjacent C matrix
+
+326
+00:15:06,800 --> 00:15:08,966
+and now what is showing you
+
+327
+00:15:09,366 --> 00:15:12,733
+is that all of the nodes as you can reach in exactly
+
+328
+00:15:13,133 --> 00:15:14,100
+two steps
+
+329
+00:15:15,666 --> 00:15:16,533
+and you can
+
+330
+00:15:18,133 --> 00:15:20,533
+you can hit a node twice but you see like
+
+331
+00:15:21,500 --> 00:15:22,300
+7
+
+332
+00:15:23,133 --> 00:15:23,933
+is not
+
+333
+00:15:24,666 --> 00:15:26,966
+lit up is not colored
+
+334
+00:15:27,700 --> 00:15:28,500
+because
+
+335
+00:15:29,933 --> 00:15:32,133
+you can't get there in exactly two steps
+
+336
+00:15:32,133 --> 00:15:34,566
+it's not up to two steps it's exactly
+
+337
+00:15:35,100 --> 00:15:37,700
+two steps that it's describing
+
+338
+00:15:40,100 --> 00:15:40,900
+okay
+
+339
+00:15:42,733 --> 00:15:43,533
+and so
+
+340
+00:15:44,733 --> 00:15:48,133
+if you just multiply a by itself
+
+341
+00:15:49,866 --> 00:15:51,166
+what this is telling you
+
+342
+00:15:53,666 --> 00:15:55,733
+is that um
+
+343
+00:15:55,933 --> 00:15:57,266
+so I write it here
+
+344
+00:15:57,966 --> 00:15:59,266
+that yeah if you raise
+
+345
+00:16:00,600 --> 00:16:03,366
+a to you know whatever power
+
+346
+00:16:03,500 --> 00:16:04,766
+this was example of 2
+
+347
+00:16:04,766 --> 00:16:07,300
+just multiply by itself that many times
+
+348
+00:16:07,600 --> 00:16:08,400
+then
+
+349
+00:16:09,333 --> 00:16:10,766
+every position here
+
+350
+00:16:11,533 --> 00:16:15,066
+it contains the number of as it says here unique walks
+
+351
+00:16:15,100 --> 00:16:17,866
+of that length that you raise
+
+352
+00:16:18,900 --> 00:16:20,166
+the power to
+
+353
+00:16:21,400 --> 00:16:23,666
+the number of unique walks from node
+
+354
+00:16:24,200 --> 00:16:25,000
+n to
+
+355
+00:16:25,566 --> 00:16:27,733
+n so if you look here
+
+356
+00:16:28,733 --> 00:16:29,533
+let's say
+
+357
+00:16:31,066 --> 00:16:32,866
+1 2 3 4
+
+358
+00:16:33,766 --> 00:16:34,933
+1 2 3
+
+359
+00:16:36,300 --> 00:16:37,100
+well
+
+360
+00:16:37,800 --> 00:16:38,933
+okay that's probably
+
+361
+00:16:39,333 --> 00:16:42,533
+well yeah this is saying from four to four you can
+
+362
+00:16:43,566 --> 00:16:46,966
+there should be four unique walks
+
+363
+00:16:48,100 --> 00:16:50,066
+steps of two right is that
+
+364
+00:16:52,500 --> 00:16:54,266
+I don't see the fourth one
+
+365
+00:16:54,266 --> 00:16:55,600
+has anyone see the fourth one
+
+366
+00:16:56,533 --> 00:16:58,533
+oh it's 3 3 okay yeah
+
+367
+00:17:02,300 --> 00:17:04,366
+okay yeah and so
+
+368
+00:17:05,866 --> 00:17:07,533
+but the thing to remember here is that
+
+369
+00:17:07,966 --> 00:17:09,600
+this that value
+
+370
+00:17:11,966 --> 00:17:12,766
+that
+
+371
+00:17:13,933 --> 00:17:16,533
+it's not the number of unique paths
+
+372
+00:17:17,866 --> 00:17:20,100
+so you can visit the same node
+
+373
+00:17:20,100 --> 00:17:22,733
+but what you can think about is kind of an upper bound
+
+374
+00:17:22,766 --> 00:17:24,966
+so that means that there is some path
+
+375
+00:17:25,600 --> 00:17:28,266
+up to the value here
+
+376
+00:17:29,300 --> 00:17:31,466
+that with a connection
+
+377
+00:17:31,766 --> 00:17:35,366
+so there can be different distance walks between the
+
+378
+00:17:35,766 --> 00:17:36,566
+nodes
+
+379
+00:17:42,333 --> 00:17:43,800
+okay so now you can do
+
+380
+00:17:45,500 --> 00:17:47,900
+you can do some things like for example I just
+
+381
+00:17:48,066 --> 00:17:50,133
+created a tiny graph with
+
+382
+00:17:50,333 --> 00:17:51,733
+these node embeddings
+
+383
+00:17:51,733 --> 00:17:53,966
+these three dimensional node embeddings
+
+384
+00:17:54,000 --> 00:17:54,800
+which you can
+
+385
+00:17:55,000 --> 00:17:56,600
+put together into
+
+386
+00:17:57,133 --> 00:17:58,700
+a node data matrix
+
+387
+00:17:59,266 --> 00:18:03,333
+and then this should be the adjacency matrix for that
+
+388
+00:18:03,733 --> 00:18:04,533
+graph
+
+389
+00:18:07,666 --> 00:18:10,366
+you can define a permutation matrix
+
+390
+00:18:10,933 --> 00:18:14,166
+and the permutation matrix just has a 1
+
+391
+00:18:15,000 --> 00:18:18,000
+in each column and each row
+
+392
+00:18:18,000 --> 00:18:22,466
+so you can't have more than one 1 in a column or a row
+
+393
+00:18:23,966 --> 00:18:24,766
+but if you
+
+394
+00:18:24,800 --> 00:18:27,200
+take that data matrix and you write multiply it
+
+395
+00:18:28,066 --> 00:18:29,166
+you're basically just
+
+396
+00:18:30,600 --> 00:18:32,333
+permuting these right so
+
+397
+00:18:34,000 --> 00:18:34,766
+same thing again
+
+398
+00:18:34,766 --> 00:18:37,333
+you're just taking the rows and you're just grabbing
+
+399
+00:18:38,000 --> 00:18:40,966
+for each of these columns you're just grabbing
+
+400
+00:18:41,733 --> 00:18:44,000
+one of the columns out
+
+401
+00:18:44,266 --> 00:18:45,066
+and so
+
+402
+00:18:45,800 --> 00:18:47,700
+this permutation matrix here
+
+403
+00:18:49,500 --> 00:18:51,700
+is just permuting the
+
+404
+00:18:53,333 --> 00:18:56,000
+the values of the data matrix there
+
+405
+00:18:56,000 --> 00:18:56,766
+and
+
+406
+00:18:56,766 --> 00:19:00,166
+so you can do the same thing to the adjacency matrix
+
+407
+00:19:00,466 --> 00:19:02,866
+but you have to post multiply and
+
+408
+00:19:03,000 --> 00:19:04,900
+pre multiply by the transpose
+
+409
+00:19:06,166 --> 00:19:07,166
+and so you can
+
+410
+00:19:08,066 --> 00:19:09,333
+hopefully I did this right
+
+411
+00:19:10,500 --> 00:19:12,000
+so I permuted it I
+
+412
+00:19:12,166 --> 00:19:15,266
+left the old indices these are the new indices
+
+413
+00:19:15,533 --> 00:19:17,533
+I renumbered them of course they're just
+
+414
+00:19:18,100 --> 00:19:21,133
+different numbers but they still have the same
+
+415
+00:19:21,866 --> 00:19:24,666
+value there's the same topology they're just indexed
+
+416
+00:19:25,333 --> 00:19:26,900
+differently but
+
+417
+00:19:27,733 --> 00:19:28,533
+the new
+
+418
+00:19:29,666 --> 00:19:31,600
+adjacency matrix
+
+419
+00:19:32,400 --> 00:19:35,566
+should be correct for this
+
+420
+00:19:40,500 --> 00:19:41,300
+so
+
+421
+00:19:43,566 --> 00:19:45,600
+yeah let me talk about some properties
+
+422
+00:19:45,600 --> 00:19:47,100
+and then we'll go back to the kind of
+
+423
+00:19:47,100 --> 00:19:49,000
+permutation adjacent C matrix
+
+424
+00:19:49,000 --> 00:19:50,366
+so okay so
+
+425
+00:19:50,866 --> 00:19:53,466
+how do we extend this to a graph neural network
+
+426
+00:19:54,200 --> 00:19:54,666
+essentially
+
+427
+00:19:54,666 --> 00:19:56,500
+what we're going to do is we're going to take those
+
+428
+00:19:56,766 --> 00:19:58,866
+node embedding matrices
+
+429
+00:19:59,600 --> 00:20:00,533
+that I showed you
+
+430
+00:20:00,733 --> 00:20:02,200
+and the adjacency matrix
+
+431
+00:20:02,200 --> 00:20:05,066
+which describes the topology of the graph
+
+432
+00:20:05,266 --> 00:20:06,700
+and we're going to pass them through
+
+433
+00:20:06,700 --> 00:20:08,666
+layers of a neural network
+
+434
+00:20:10,933 --> 00:20:13,866
+so the note in beddings are updated at each
+
+435
+00:20:14,566 --> 00:20:16,533
+each layer so you have these kind of hidden
+
+436
+00:20:16,800 --> 00:20:19,400
+representation or hidden activations
+
+437
+00:20:20,066 --> 00:20:21,266
+after each layer
+
+438
+00:20:25,566 --> 00:20:27,166
+and of course when you start
+
+439
+00:20:27,566 --> 00:20:28,366
+the
+
+440
+00:20:28,500 --> 00:20:31,966
+input data is just the embedding vector of each node
+
+441
+00:20:33,600 --> 00:20:34,600
+but at the end
+
+442
+00:20:35,466 --> 00:20:38,266
+you have this this output which is
+
+443
+00:20:40,400 --> 00:20:42,966
+you have a representation for each node
+
+444
+00:20:43,466 --> 00:20:47,466
+but now it's incorporated context
+
+445
+00:20:49,200 --> 00:20:51,333
+from its neighbors in the rest of the graph
+
+446
+00:20:51,333 --> 00:20:52,933
+because as you'll see we're going to
+
+447
+00:20:54,100 --> 00:20:55,200
+kind of aggregate
+
+448
+00:20:55,500 --> 00:20:57,533
+information from the neighboring nodes
+
+449
+00:20:59,466 --> 00:21:00,266
+and so
+
+450
+00:21:00,900 --> 00:21:01,733
+yeah interestingly
+
+451
+00:21:01,733 --> 00:21:05,200
+this is kind of like word embeddings in a transformer
+
+452
+00:21:06,300 --> 00:21:07,466
+you know when you start out
+
+453
+00:21:07,533 --> 00:21:09,566
+you just have a unique word embedding
+
+454
+00:21:09,666 --> 00:21:11,666
+for every word or token
+
+455
+00:21:11,933 --> 00:21:14,200
+but as it travels through the transformer
+
+456
+00:21:15,700 --> 00:21:16,500
+that
+
+457
+00:21:16,900 --> 00:21:19,666
+what you have at the end is you have
+
+458
+00:21:19,766 --> 00:21:22,066
+you know kind of something that represents the word
+
+459
+00:21:22,066 --> 00:21:23,266
+in its context
+
+460
+00:21:23,300 --> 00:21:26,566
+to the other words in the sentence
+
+461
+00:21:33,900 --> 00:21:34,800
+okay so
+
+462
+00:21:36,400 --> 00:21:39,866
+you can do just like other neural networks
+
+463
+00:21:40,133 --> 00:21:41,066
+we can
+
+464
+00:21:41,966 --> 00:21:42,766
+create
+
+465
+00:21:42,966 --> 00:21:45,566
+classification and regression networks with these
+
+466
+00:21:45,566 --> 00:21:46,366
+and so
+
+467
+00:21:46,866 --> 00:21:48,933
+some examples for example you can give it a
+
+468
+00:21:49,100 --> 00:21:52,266
+molecular structure in graph form and then you can
+
+469
+00:21:52,500 --> 00:21:53,733
+try to figure out
+
+470
+00:21:53,866 --> 00:21:57,266
+if it's poisonous or not based on the chemical
+
+471
+00:21:57,466 --> 00:21:58,933
+structure or
+
+472
+00:21:59,400 --> 00:22:02,800
+you can regress boiling and freezing points so to
+
+473
+00:22:03,100 --> 00:22:04,966
+regression values out of a
+
+474
+00:22:06,333 --> 00:22:07,600
+molecular graph
+
+475
+00:22:13,500 --> 00:22:14,700
+yeah and so generally
+
+476
+00:22:14,766 --> 00:22:16,966
+just like with the other neural networks that we
+
+477
+00:22:16,966 --> 00:22:18,600
+that we saw that
+
+478
+00:22:18,900 --> 00:22:21,700
+you can put a head to the network right
+
+479
+00:22:21,700 --> 00:22:24,733
+so you can put a classification head
+
+480
+00:22:25,466 --> 00:22:28,100
+or a regression head at the end of the network
+
+481
+00:22:28,166 --> 00:22:30,200
+to get it into that kind of final
+
+482
+00:22:30,800 --> 00:22:32,700
+regression or classification form
+
+483
+00:22:33,366 --> 00:22:35,300
+and I'll show you some examples
+
+484
+00:22:36,500 --> 00:22:38,466
+so I'm going to start with just
+
+485
+00:22:38,600 --> 00:22:39,400
+the head
+
+486
+00:22:39,466 --> 00:22:42,300
+of the network and then I'll build up to how you build
+
+487
+00:22:42,500 --> 00:22:45,400
+the network itself but imagine you had
+
+488
+00:22:46,466 --> 00:22:48,266
+a graph with node embeddings
+
+489
+00:22:49,400 --> 00:22:50,733
+we're going to focus mostly
+
+490
+00:22:51,000 --> 00:22:56,200
+on node the node data at the very end
+
+491
+00:22:56,266 --> 00:22:57,933
+I'll show there's kind of a simple
+
+492
+00:22:58,466 --> 00:22:59,700
+way to handle
+
+493
+00:23:00,666 --> 00:23:03,866
+data in the edges as well the edge embeddings
+
+494
+00:23:04,500 --> 00:23:08,066
+but let's focus on the node embeddings first
+
+495
+00:23:08,300 --> 00:23:10,566
+so let's say you put it through some
+
+496
+00:23:10,866 --> 00:23:13,700
+neural network which we haven't defined
+
+497
+00:23:14,266 --> 00:23:16,733
+but you have on the output you're going to have some
+
+498
+00:23:19,266 --> 00:23:23,533
+activations or embeddings associated with each node
+
+499
+00:23:24,200 --> 00:23:25,333
+and then you can
+
+500
+00:23:25,666 --> 00:23:28,800
+combine it you can put it through a linear layer
+
+501
+00:23:30,333 --> 00:23:32,366
+and then you can put it through for example
+
+502
+00:23:33,466 --> 00:23:36,200
+a sigmoid or a Softmax or something like that
+
+503
+00:23:36,400 --> 00:23:38,933
+and then you can end up with probabilities for every
+
+504
+00:23:38,933 --> 00:23:39,733
+class
+
+505
+00:23:40,333 --> 00:23:42,300
+so here's an example for just binary
+
+506
+00:23:42,666 --> 00:23:44,800
+classification it's just kind of what
+
+507
+00:23:46,133 --> 00:23:46,933
+should look
+
+508
+00:23:47,666 --> 00:23:50,100
+pretty familiar you have the sigmoid
+
+509
+00:23:50,500 --> 00:23:53,666
+you have a beta a bias here
+
+510
+00:23:54,400 --> 00:23:57,566
+and then you have the weights and this one is just
+
+511
+00:23:58,066 --> 00:23:59,933
+a d dimensional row vector
+
+512
+00:24:00,600 --> 00:24:02,000
+and then you have
+
+513
+00:24:03,533 --> 00:24:06,066
+your embeddings matrix here
+
+514
+00:24:07,333 --> 00:24:10,166
+and so this is just multiplying every
+
+515
+00:24:10,800 --> 00:24:12,533
+it's just waiting every
+
+516
+00:24:13,166 --> 00:24:15,600
+column right of your embedding matrix
+
+517
+00:24:16,166 --> 00:24:16,966
+but then
+
+518
+00:24:18,133 --> 00:24:20,733
+in this case because we want to get a single output
+
+519
+00:24:21,200 --> 00:24:22,700
+we have this one
+
+520
+00:24:23,133 --> 00:24:25,133
+vector right this is just a
+
+521
+00:24:29,500 --> 00:24:30,466
+I think this is a
+
+522
+00:24:31,000 --> 00:24:31,800
+yeah
+
+523
+00:24:31,900 --> 00:24:36,300
+typo here this is just a column of ones right
+
+524
+00:24:37,200 --> 00:24:40,100
+and this has the effect of basically
+
+525
+00:24:41,766 --> 00:24:42,566
+summing
+
+526
+00:24:43,200 --> 00:24:47,133
+well because we're dividing by the number of vectors
+
+527
+00:24:47,866 --> 00:24:48,666
+this says the
+
+528
+00:24:49,266 --> 00:24:51,800
+basically just taking the average
+
+529
+00:24:52,600 --> 00:24:54,600
+of every one of those vectors
+
+530
+00:24:55,100 --> 00:24:57,266
+and so and collapsing it into
+
+531
+00:24:59,800 --> 00:25:02,066
+single value and so this is like
+
+532
+00:25:02,533 --> 00:25:04,133
+mean pulling like
+
+533
+00:25:05,466 --> 00:25:07,466
+we showed you before earlier
+
+534
+00:25:09,700 --> 00:25:10,500
+OK
+
+535
+00:25:17,933 --> 00:25:19,866
+okay and so that was at the graph level
+
+536
+00:25:20,600 --> 00:25:23,866
+so we collapsed everything into a single value
+
+537
+00:25:27,600 --> 00:25:30,066
+but you can also do it at the node level
+
+538
+00:25:30,066 --> 00:25:31,900
+so for example you can do binary
+
+539
+00:25:32,100 --> 00:25:34,466
+classification you can decide between let's say
+
+540
+00:25:35,333 --> 00:25:36,966
+one of two kinds of
+
+541
+00:25:37,800 --> 00:25:40,300
+nodes here and it's very similar
+
+542
+00:25:40,566 --> 00:25:41,533
+except you're
+
+543
+00:25:41,933 --> 00:25:44,466
+doing it on every embedding vector
+
+544
+00:25:44,466 --> 00:25:45,900
+this is not the matrix
+
+545
+00:25:45,900 --> 00:25:48,333
+the whole matrix of all the embedding vector stacked
+
+546
+00:25:48,466 --> 00:25:51,300
+this is just the individual node vector
+
+547
+00:25:52,000 --> 00:25:54,700
+indexed by the node number n
+
+548
+00:25:56,533 --> 00:25:58,900
+and then so you're doing that
+
+549
+00:25:59,466 --> 00:26:03,000
+now and you're producing a vector and then you have
+
+550
+00:26:06,400 --> 00:26:08,733
+actually this is a scaler
+
+551
+00:26:08,733 --> 00:26:09,700
+you're adding the bias
+
+552
+00:26:09,700 --> 00:26:11,466
+and then you're getting the value
+
+553
+00:26:11,466 --> 00:26:13,333
+just for that particular node
+
+554
+00:26:15,566 --> 00:26:17,300
+okay is that that makes sense
+
+555
+00:26:19,933 --> 00:26:21,200
+okay ah
+
+556
+00:26:22,600 --> 00:26:24,766
+yeah so here's an example where you can
+
+557
+00:26:25,200 --> 00:26:27,966
+decide let's say you have
+
+558
+00:26:29,766 --> 00:26:32,166
+in some cases maybe an edge doesn't exist
+
+559
+00:26:32,166 --> 00:26:34,166
+and you're trying to predict if a edge
+
+560
+00:26:34,500 --> 00:26:35,966
+should exist there
+
+561
+00:26:35,966 --> 00:26:37,066
+and so here
+
+562
+00:26:37,333 --> 00:26:40,466
+you can take the essentially the dot product
+
+563
+00:26:40,733 --> 00:26:41,966
+of the neighboring
+
+564
+00:26:43,133 --> 00:26:45,166
+node embedding vectors
+
+565
+00:26:45,900 --> 00:26:47,100
+send it through a sigmoid
+
+566
+00:26:47,100 --> 00:26:49,333
+and then you can train it to
+
+567
+00:26:49,333 --> 00:26:51,466
+basically give you the probability that
+
+568
+00:26:51,533 --> 00:26:52,933
+in fact this edge
+
+569
+00:26:53,200 --> 00:26:54,900
+should be there
+
+570
+00:26:55,700 --> 00:26:56,566
+just kind of another
+
+571
+00:26:57,366 --> 00:26:58,166
+example
+
+572
+00:26:59,600 --> 00:27:00,400
+okay
+
+573
+00:27:03,366 --> 00:27:04,366
+okay so
+
+574
+00:27:05,500 --> 00:27:06,500
+let's build up the
+
+575
+00:27:06,666 --> 00:27:08,800
+those were the heads of the graph let's build up
+
+576
+00:27:09,333 --> 00:27:11,566
+the body of the graph itself
+
+577
+00:27:12,266 --> 00:27:14,800
+just like we saw before when we were
+
+578
+00:27:15,400 --> 00:27:16,600
+seemed like a long time ago now
+
+579
+00:27:16,600 --> 00:27:17,766
+when we were building up
+
+580
+00:27:18,000 --> 00:27:19,500
+the deep neural networks
+
+581
+00:27:19,733 --> 00:27:20,900
+that you
+
+582
+00:27:20,900 --> 00:27:21,000
+know
+
+583
+00:27:21,000 --> 00:27:23,266
+we're just going to create all of these hidden layers
+
+584
+00:27:24,266 --> 00:27:25,800
+we're going to start with the input
+
+585
+00:27:26,000 --> 00:27:27,733
+we now have the adjacent C matrix
+
+586
+00:27:27,733 --> 00:27:29,300
+but we have parameters
+
+587
+00:27:29,300 --> 00:27:30,500
+for each layer
+
+588
+00:27:30,600 --> 00:27:32,133
+and then we're just going to have a bunch of
+
+589
+00:27:32,133 --> 00:27:32,733
+hidden layers
+
+590
+00:27:32,733 --> 00:27:33,566
+and then we're going
+
+591
+00:27:33,666 --> 00:27:35,700
+to end up with that final
+
+592
+00:27:35,700 --> 00:27:38,400
+hidden layer before we go to the head of the network
+
+593
+00:27:41,500 --> 00:27:45,966
+and so we're going to define what this function F is
+
+594
+00:27:47,133 --> 00:27:47,933
+to
+
+595
+00:27:48,966 --> 00:27:50,733
+create the next hidden layer
+
+596
+00:27:56,700 --> 00:28:00,000
+okay so just like in the convolutional
+
+597
+00:28:00,366 --> 00:28:02,100
+networks and some of the other
+
+598
+00:28:02,500 --> 00:28:04,900
+networks that we do care about
+
+599
+00:28:05,933 --> 00:28:09,066
+equivariants and invariants and so remember
+
+600
+00:28:09,333 --> 00:28:11,166
+equivariant means that if I
+
+601
+00:28:12,066 --> 00:28:14,866
+transform the input somehow
+
+602
+00:28:15,300 --> 00:28:17,466
+that the output is transformed the same way
+
+603
+00:28:17,466 --> 00:28:20,466
+so remember back to the permutation matrix
+
+604
+00:28:21,766 --> 00:28:23,500
+I can right multiply
+
+605
+00:28:23,733 --> 00:28:26,500
+my data matrix by the permutation and then I have to
+
+606
+00:28:27,066 --> 00:28:30,700
+left multiply and right multiply the adjacency matrix
+
+607
+00:28:30,866 --> 00:28:31,966
+but if I do that
+
+608
+00:28:32,500 --> 00:28:35,266
+then the output is just the
+
+609
+00:28:35,933 --> 00:28:36,733
+hidden
+
+610
+00:28:37,866 --> 00:28:40,733
+layer with the same permutation
+
+611
+00:28:40,733 --> 00:28:43,000
+right multiply by the same permutation matrix
+
+612
+00:28:43,000 --> 00:28:46,666
+and so so it's equivariant to the permutation
+
+613
+00:28:47,566 --> 00:28:48,866
+and then invariant
+
+614
+00:28:51,200 --> 00:28:54,600
+if we're doing something like sigmoid
+
+615
+00:28:54,966 --> 00:28:57,166
+since we're summing all of these up anyway
+
+616
+00:28:57,800 --> 00:29:00,200
+we don't really care if we're shuffling the
+
+617
+00:29:01,933 --> 00:29:04,133
+order of the nodes
+
+618
+00:29:04,966 --> 00:29:08,733
+and so in this case you know for doing like graph level
+
+619
+00:29:08,800 --> 00:29:09,866
+classification
+
+620
+00:29:10,566 --> 00:29:14,766
+it's invariant to permutation as well so
+
+621
+00:29:16,133 --> 00:29:18,800
+that's a valuable thing for the
+
+622
+00:29:18,800 --> 00:29:20,500
+for the graph neural networks
+
+623
+00:29:26,333 --> 00:29:28,900
+okay so let's now build out
+
+624
+00:29:29,800 --> 00:29:32,400
+a convolutional layer for the graph
+
+625
+00:29:32,400 --> 00:29:33,200
+and so
+
+626
+00:29:33,200 --> 00:29:37,333
+I'm going to define a function here the aggregation
+
+627
+00:29:37,600 --> 00:29:40,666
+function and essentially what it's doing
+
+628
+00:29:41,166 --> 00:29:45,766
+you can see here that for a particular node and a
+
+629
+00:29:47,200 --> 00:29:48,166
+particular
+
+630
+00:29:49,666 --> 00:29:50,466
+layer
+
+631
+00:29:52,066 --> 00:29:52,866
+k
+
+632
+00:29:53,300 --> 00:29:56,966
+that I'm just taking the neighborhood so n e
+
+633
+00:29:57,400 --> 00:29:58,766
+is just saying that
+
+634
+00:29:58,766 --> 00:30:02,500
+it's returning the indices of all the neighboring nodes
+
+635
+00:30:03,066 --> 00:30:05,000
+for the node not including itself
+
+636
+00:30:05,166 --> 00:30:05,966
+okay so
+
+637
+00:30:06,933 --> 00:30:07,900
+see how that's
+
+638
+00:30:08,700 --> 00:30:09,766
+going to be handy
+
+639
+00:30:12,733 --> 00:30:20,500
+and then the whole layer itself is we have a weight
+
+640
+00:30:21,666 --> 00:30:25,400
+matrix we're going to multiply it by
+
+641
+00:30:25,900 --> 00:30:29,300
+the node the embedding vector for the node itself
+
+642
+00:30:29,566 --> 00:30:31,566
+but we're also going to multiply it
+
+643
+00:30:32,666 --> 00:30:33,466
+against
+
+644
+00:30:34,100 --> 00:30:35,766
+the sum of all the neighbors
+
+645
+00:30:36,200 --> 00:30:39,400
+as well so it's kind of like the convolution right
+
+646
+00:30:39,800 --> 00:30:41,466
+we're taking weights and we're
+
+647
+00:30:41,566 --> 00:30:43,866
+waiting all of the neighborhood around
+
+648
+00:30:44,533 --> 00:30:46,766
+a pixel in that case
+
+649
+00:30:47,933 --> 00:30:49,400
+okay that makes sense
+
+650
+00:30:49,800 --> 00:30:50,966
+and we're using the same
+
+651
+00:30:51,400 --> 00:30:53,566
+the same weights for both
+
+652
+00:30:53,966 --> 00:30:57,000
+so there's already some weight sharing
+
+653
+00:30:58,400 --> 00:30:59,300
+happening here
+
+654
+00:31:00,933 --> 00:31:01,766
+and those
+
+655
+00:31:01,766 --> 00:31:04,533
+same weights are going to be applied to every node
+
+656
+00:31:04,733 --> 00:31:05,533
+in
+
+657
+00:31:06,366 --> 00:31:07,800
+that graph at that layer
+
+658
+00:31:09,366 --> 00:31:11,533
+just like in a convolutional network
+
+659
+00:31:19,200 --> 00:31:20,366
+okay so
+
+660
+00:31:23,000 --> 00:31:27,766
+um yeah so if you have in this case you have your input
+
+661
+00:31:29,300 --> 00:31:32,166
+you have after the first layer so you
+
+662
+00:31:32,500 --> 00:31:35,466
+do the aggregation for each node you have a
+
+663
+00:31:36,600 --> 00:31:38,666
+Omega 0 weight matrix
+
+664
+00:31:39,600 --> 00:31:41,000
+and then put it through an activation
+
+665
+00:31:41,000 --> 00:31:42,300
+and you get the first
+
+666
+00:31:43,700 --> 00:31:47,333
+hidden unit output the embeddings at each node
+
+667
+00:31:47,866 --> 00:31:49,166
+and then you can do this through
+
+668
+00:31:49,366 --> 00:31:51,600
+a bunch of layers until you get to the
+
+669
+00:31:51,966 --> 00:31:54,333
+last layer and then you just do it again
+
+670
+00:31:54,900 --> 00:31:56,866
+at the last layer
+
+671
+00:31:58,666 --> 00:31:59,466
+so
+
+672
+00:32:00,700 --> 00:32:01,966
+it should look a lot like
+
+673
+00:32:03,566 --> 00:32:05,000
+the regular neural nets
+
+674
+00:32:05,000 --> 00:32:07,266
+and the convolutional neural nets that you saw
+
+675
+00:32:11,066 --> 00:32:12,066
+okay so
+
+676
+00:32:15,533 --> 00:32:16,666
+so we have this
+
+677
+00:32:17,200 --> 00:32:19,733
+equation where we have the aggregates
+
+678
+00:32:19,733 --> 00:32:21,133
+we have this weight matrix
+
+679
+00:32:21,200 --> 00:32:23,333
+we applied it to the node embedding vector
+
+680
+00:32:23,333 --> 00:32:24,700
+and then also the
+
+681
+00:32:25,166 --> 00:32:26,666
+sum of all the neighbors
+
+682
+00:32:29,133 --> 00:32:33,300
+and then so if you do this to the
+
+683
+00:32:33,933 --> 00:32:34,733
+entire
+
+684
+00:32:35,100 --> 00:32:38,066
+you can do this to just the embedding vector of a node
+
+685
+00:32:38,066 --> 00:32:40,266
+but you can also just stack them all together
+
+686
+00:32:40,700 --> 00:32:41,500
+like the
+
+687
+00:32:42,466 --> 00:32:44,133
+data matrix that I was showing you
+
+688
+00:32:45,333 --> 00:32:47,300
+so Capital H here
+
+689
+00:32:47,500 --> 00:32:50,200
+and what you see is that you're applying it to the same
+
+690
+00:32:53,933 --> 00:32:56,200
+yeah so I guess the first thing that's
+
+691
+00:32:56,866 --> 00:32:59,200
+important to note here is that remember when we
+
+692
+00:32:59,400 --> 00:33:02,200
+write multiplied by the adjacent C matrix
+
+693
+00:33:02,333 --> 00:33:06,133
+we got all of the immediate neighbors of the node right
+
+694
+00:33:06,200 --> 00:33:07,500
+and so we're replacing
+
+695
+00:33:07,966 --> 00:33:10,800
+the aggregate function with this
+
+696
+00:33:11,466 --> 00:33:14,700
+right multiply by the adjacency matrix
+
+697
+00:33:15,300 --> 00:33:16,700
+and so now we have the
+
+698
+00:33:18,333 --> 00:33:19,300
+hidden layer
+
+699
+00:33:19,933 --> 00:33:21,100
+embedding matrix
+
+700
+00:33:21,466 --> 00:33:23,766
+showing up twice and so we can just factor it out
+
+701
+00:33:24,333 --> 00:33:25,666
+and then we have the
+
+702
+00:33:26,533 --> 00:33:28,366
+equation here and so you
+
+703
+00:33:28,800 --> 00:33:33,366
+can do it in matrix form on the whole data matrix
+
+704
+00:33:36,700 --> 00:33:38,600
+and then you just have the adjacency plus
+
+705
+00:33:38,600 --> 00:33:40,900
+this is the identity matrix here
+
+706
+00:33:44,200 --> 00:33:46,933
+so the nice thing is that
+
+707
+00:33:47,733 --> 00:33:50,366
+this is equivariant to permutations
+
+708
+00:33:51,566 --> 00:33:54,766
+it can handle an arbitrary number of neighbors
+
+709
+00:33:54,933 --> 00:33:56,666
+so that's all handled in the
+
+710
+00:33:57,133 --> 00:33:59,066
+adjacency matrix we don't have to
+
+711
+00:33:59,733 --> 00:34:02,000
+deal with any kind of weird indexing or anything
+
+712
+00:34:02,733 --> 00:34:04,666
+and it is you know the
+
+713
+00:34:05,066 --> 00:34:08,500
+adjacency matrix is describing the graph structure so
+
+714
+00:34:09,000 --> 00:34:12,066
+it can exploit any kind of graph structure
+
+715
+00:34:12,800 --> 00:34:14,800
+and then we are sharing parameters
+
+716
+00:34:14,866 --> 00:34:16,400
+across every one of the
+
+717
+00:34:17,133 --> 00:34:20,400
+notes so we have that kind of efficiency of
+
+718
+00:34:21,266 --> 00:34:22,466
+parameters as well
+
+719
+00:34:25,533 --> 00:34:26,333
+OK
+
+720
+00:34:29,866 --> 00:34:31,500
+okay so
+
+721
+00:34:32,066 --> 00:34:34,166
+let's put it all together now in
+
+722
+00:34:34,766 --> 00:34:36,533
+graph and node classification
+
+723
+00:34:36,533 --> 00:34:40,133
+and there are I'm going to release a few notebooks
+
+724
+00:34:40,466 --> 00:34:41,733
+they're pretty straightforward
+
+725
+00:34:41,733 --> 00:34:43,600
+but I think it's just it just helps to
+
+726
+00:34:43,766 --> 00:34:45,166
+have a little experience with the
+
+727
+00:34:45,166 --> 00:34:47,333
+with the Python code and the matrices
+
+728
+00:34:47,400 --> 00:34:49,766
+and the indexing a little bit
+
+729
+00:34:51,100 --> 00:34:53,966
+and so the one example you're going to see in the
+
+730
+00:34:54,466 --> 00:34:56,400
+Python notebook maybe it's yeah
+
+731
+00:34:56,700 --> 00:34:58,600
+13.2 notebook
+
+732
+00:34:58,900 --> 00:34:59,800
+is that
+
+733
+00:35:00,533 --> 00:35:01,733
+so you can put it all together
+
+734
+00:35:02,333 --> 00:35:04,933
+you can put a sigmoid
+
+735
+00:35:05,266 --> 00:35:08,700
+head on it like this with mean pulling
+
+736
+00:35:10,400 --> 00:35:12,066
+and then we can do
+
+737
+00:35:13,066 --> 00:35:14,400
+for example classification
+
+738
+00:35:14,400 --> 00:35:16,800
+and so in this case there's 118 elements
+
+739
+00:35:16,800 --> 00:35:19,766
+and so we can just have a 1 hot and coated
+
+740
+00:35:20,766 --> 00:35:24,466
+for every node to describe which element it is
+
+741
+00:35:26,333 --> 00:35:29,533
+and then the first parameter we can decide what
+
+742
+00:35:29,866 --> 00:35:31,600
+embedding dimension we want
+
+743
+00:35:31,600 --> 00:35:34,866
+so that first weight matrix here
+
+744
+00:35:35,533 --> 00:35:37,166
+can just be d by 118
+
+745
+00:35:37,166 --> 00:35:39,933
+so we switch to some d dimensional embedding
+
+746
+00:35:41,533 --> 00:35:42,400
+and then we have
+
+747
+00:35:42,800 --> 00:35:47,000
+the weight matrix which is a 1 by d row vector as well
+
+748
+00:35:49,200 --> 00:35:50,000
+but
+
+749
+00:35:50,566 --> 00:35:52,366
+with that you can put it all together
+
+750
+00:35:52,366 --> 00:35:54,000
+and now you basically have
+
+751
+00:35:55,466 --> 00:35:58,966
+a graph classification network for
+
+752
+00:36:00,300 --> 00:36:02,866
+I guess molecular compound detection
+
+753
+00:36:08,400 --> 00:36:09,466
+all right so
+
+754
+00:36:10,300 --> 00:36:11,166
+let me define
+
+755
+00:36:11,700 --> 00:36:15,200
+another term here so the stuff we've been talking about
+
+756
+00:36:15,766 --> 00:36:16,666
+up to date
+
+757
+00:36:17,600 --> 00:36:19,866
+with supervised learning
+
+758
+00:36:20,266 --> 00:36:23,800
+has been these inductive kind of models
+
+759
+00:36:24,866 --> 00:36:25,666
+and so
+
+760
+00:36:27,166 --> 00:36:28,366
+typically what we
+
+761
+00:36:28,733 --> 00:36:31,700
+do is we split our data into like training and test
+
+762
+00:36:31,700 --> 00:36:34,300
+data so we have separate data
+
+763
+00:36:35,300 --> 00:36:38,500
+we can hold out test and validation data
+
+764
+00:36:39,766 --> 00:36:42,300
+and then we can train on the
+
+765
+00:36:43,766 --> 00:36:46,366
+the training data and then test
+
+766
+00:36:47,300 --> 00:36:48,533
+on the testing data
+
+767
+00:36:49,200 --> 00:36:50,000
+but
+
+768
+00:36:50,900 --> 00:36:52,200
+with graphs you have this
+
+769
+00:36:52,200 --> 00:36:54,566
+case where you can have this transductive
+
+770
+00:36:54,733 --> 00:36:55,733
+kind of model
+
+771
+00:36:56,066 --> 00:36:58,700
+where you might have a case where you know
+
+772
+00:36:59,000 --> 00:37:02,733
+the labels of some of the nodes but you don't know
+
+773
+00:37:03,133 --> 00:37:03,933
+some of the
+
+774
+00:37:05,100 --> 00:37:05,966
+other nodes
+
+775
+00:37:07,300 --> 00:37:08,200
+but you can
+
+776
+00:37:08,866 --> 00:37:12,066
+do this kind of like semi supervised learning
+
+777
+00:37:12,300 --> 00:37:14,366
+is that you can still train
+
+778
+00:37:14,866 --> 00:37:15,933
+with this network
+
+779
+00:37:16,600 --> 00:37:17,400
+and
+
+780
+00:37:18,100 --> 00:37:18,900
+your loss function
+
+781
+00:37:18,900 --> 00:37:21,666
+is just incorporating your labeled nodes
+
+782
+00:37:21,800 --> 00:37:25,300
+and so at training time you're not taking into account
+
+783
+00:37:25,600 --> 00:37:28,766
+because we don't know the labels on these unknown nodes
+
+784
+00:37:29,666 --> 00:37:31,400
+but we can still proceed with training
+
+785
+00:37:31,966 --> 00:37:33,400
+but then at inference time
+
+786
+00:37:33,566 --> 00:37:36,300
+you could run inference on these
+
+787
+00:37:37,133 --> 00:37:38,300
+unlabeled nodes
+
+788
+00:37:39,466 --> 00:37:40,266
+okay
+
+789
+00:37:42,333 --> 00:37:44,533
+so that's the transductive
+
+790
+00:37:45,266 --> 00:37:48,100
+model
+
+791
+00:37:50,800 --> 00:37:54,933
+yeah so think about this example here where you have
+
+792
+00:37:56,266 --> 00:37:57,066
+you want to do
+
+793
+00:37:58,000 --> 00:38:00,100
+binary classification at the node level
+
+794
+00:38:00,100 --> 00:38:02,900
+so I just grabbed an example of some
+
+795
+00:38:02,933 --> 00:38:03,900
+very large graph
+
+796
+00:38:03,900 --> 00:38:06,066
+but it could be you know millions of nodes
+
+797
+00:38:06,533 --> 00:38:08,500
+and these are partially labeled
+
+798
+00:38:10,766 --> 00:38:14,366
+so it's the same body as before
+
+799
+00:38:14,366 --> 00:38:16,933
+that we use for the graph classification
+
+800
+00:38:17,200 --> 00:38:18,266
+and then we just
+
+801
+00:38:19,700 --> 00:38:21,933
+we have vector outputs which are the
+
+802
+00:38:23,066 --> 00:38:24,333
+same dimension as the
+
+803
+00:38:25,266 --> 00:38:26,400
+number of nodes
+
+804
+00:38:27,166 --> 00:38:29,900
+we just remove the mean pulling like in the
+
+805
+00:38:30,100 --> 00:38:31,733
+node classification example
+
+806
+00:38:32,333 --> 00:38:34,200
+we get the vector output
+
+807
+00:38:34,666 --> 00:38:36,466
+1 by n and then
+
+808
+00:38:37,000 --> 00:38:37,933
+you can train
+
+809
+00:38:38,700 --> 00:38:41,566
+using binary cross entropy loss
+
+810
+00:38:41,933 --> 00:38:44,166
+on the nodes with the labels
+
+811
+00:38:51,466 --> 00:38:52,266
+so
+
+812
+00:38:53,133 --> 00:38:56,166
+the problem is that at least here
+
+813
+00:38:56,533 --> 00:38:58,533
+were training let's say you have
+
+814
+00:38:58,533 --> 00:39:00,300
+a graph with millions of nodes
+
+815
+00:39:00,500 --> 00:39:02,466
+that for the training and that
+
+816
+00:39:03,133 --> 00:39:05,533
+execution at every layer of the network
+
+817
+00:39:05,700 --> 00:39:07,700
+you have to read and
+
+818
+00:39:08,566 --> 00:39:09,666
+process every
+
+819
+00:39:10,066 --> 00:39:13,066
+one of the millions of millions of nodes and so
+
+820
+00:39:13,333 --> 00:39:15,066
+you could very easily run
+
+821
+00:39:15,066 --> 00:39:17,200
+into a situation where you just don't have the
+
+822
+00:39:17,766 --> 00:39:19,100
+you know the memory on your
+
+823
+00:39:19,500 --> 00:39:21,900
+GPU or your you know the resource
+
+824
+00:39:22,366 --> 00:39:23,500
+that you're using
+
+825
+00:39:24,566 --> 00:39:27,200
+to be able to store every node on
+
+826
+00:39:27,333 --> 00:39:30,000
+every layer of your of your network
+
+827
+00:39:30,000 --> 00:39:31,100
+and then basically
+
+828
+00:39:31,666 --> 00:39:33,933
+you know we're not doing batches here
+
+829
+00:39:33,933 --> 00:39:36,733
+so you can't do stochastic gradient descent so
+
+830
+00:39:38,066 --> 00:39:40,066
+we're not taking advantage of the fact that
+
+831
+00:39:41,333 --> 00:39:43,133
+randomly picking some of these
+
+832
+00:39:44,800 --> 00:39:46,466
+nodes and then
+
+833
+00:39:46,900 --> 00:39:49,300
+running that but there are ways to do it
+
+834
+00:39:50,066 --> 00:39:50,866
+and so
+
+835
+00:39:51,900 --> 00:39:53,333
+three of the ways
+
+836
+00:39:54,533 --> 00:39:55,666
+there's others as well
+
+837
+00:39:56,133 --> 00:39:59,466
+we can just randomly pick a subset of the nodes
+
+838
+00:40:00,566 --> 00:40:01,533
+as a batch
+
+839
+00:40:02,400 --> 00:40:05,266
+and run it and then just pick another subset
+
+840
+00:40:05,300 --> 00:40:08,133
+of the nodes and I'll explain
+
+841
+00:40:10,800 --> 00:40:12,100
+what the issue with that is
+
+842
+00:40:12,100 --> 00:40:13,933
+and then there's better ways
+
+843
+00:40:13,933 --> 00:40:15,533
+something called neighborhood sampling
+
+844
+00:40:15,800 --> 00:40:17,133
+and graph partitioning
+
+845
+00:40:17,466 --> 00:40:18,266
+which
+
+846
+00:40:18,933 --> 00:40:19,733
+is better
+
+847
+00:40:20,200 --> 00:40:21,866
+so the problem with
+
+848
+00:40:21,933 --> 00:40:23,266
+just taking a random subset
+
+849
+00:40:23,266 --> 00:40:24,966
+and this is so it's a small graph
+
+850
+00:40:25,166 --> 00:40:26,933
+and let's say we're just picking
+
+851
+00:40:28,266 --> 00:40:30,266
+node of 1 size 1
+
+852
+00:40:30,933 --> 00:40:31,766
+reset 1
+
+853
+00:40:34,133 --> 00:40:36,333
+that this node
+
+854
+00:40:36,800 --> 00:40:38,466
+because of that aggregation
+
+855
+00:40:38,533 --> 00:40:41,466
+it's dependent on the immediate neighbors of
+
+856
+00:40:41,900 --> 00:40:44,133
+that same node in the previous layer
+
+857
+00:40:44,933 --> 00:40:47,266
+and in turn each of these nodes
+
+858
+00:40:47,333 --> 00:40:49,933
+are influenced by their immediate neighbors
+
+859
+00:40:50,200 --> 00:40:52,366
+of the previous note
+
+860
+00:40:52,766 --> 00:40:54,100
+and so you can imagine with
+
+861
+00:40:54,666 --> 00:40:56,000
+a deeper graph
+
+862
+00:40:57,100 --> 00:40:58,866
+and you know even if it's larger
+
+863
+00:40:59,600 --> 00:41:02,100
+with a deeper graph
+
+864
+00:41:02,733 --> 00:41:05,066
+that you could quickly
+
+865
+00:41:06,966 --> 00:41:08,400
+start basically
+
+866
+00:41:08,800 --> 00:41:09,566
+using up
+
+867
+00:41:09,566 --> 00:41:13,166
+most of the networks actually using most of the network
+
+868
+00:41:13,600 --> 00:41:14,700
+and just like in
+
+869
+00:41:15,200 --> 00:41:16,700
+the convolutional
+
+870
+00:41:17,600 --> 00:41:20,066
+neural nets there's this notion of receptive field
+
+871
+00:41:20,066 --> 00:41:22,866
+so that growth so the fact that
+
+872
+00:41:23,400 --> 00:41:24,966
+from the original input
+
+873
+00:41:25,466 --> 00:41:27,133
+all of those nodes are
+
+874
+00:41:27,133 --> 00:41:29,133
+effectively influencing this node
+
+875
+00:41:30,666 --> 00:41:33,133
+you can call that the receptive field for that
+
+876
+00:41:33,333 --> 00:41:34,300
+particular node
+
+877
+00:41:39,866 --> 00:41:42,333
+so yeah and the problem is
+
+878
+00:41:42,866 --> 00:41:44,700
+if you have fairly dense connections
+
+879
+00:41:44,700 --> 00:41:46,166
+and you have lots of layers
+
+880
+00:41:46,400 --> 00:41:48,000
+you can quickly just
+
+881
+00:41:48,333 --> 00:41:51,733
+expand to encompass every node in the graph and so you
+
+882
+00:41:52,466 --> 00:41:55,000
+haven't accomplished your goal of having these
+
+883
+00:41:55,166 --> 00:41:56,466
+distinct batches
+
+884
+00:41:57,466 --> 00:42:00,933
+so the way neighborhood sampling works so you have the
+
+885
+00:42:02,566 --> 00:42:04,800
+I guess a different graph here but the same
+
+886
+00:42:05,933 --> 00:42:07,733
+random sampling where you just
+
+887
+00:42:08,766 --> 00:42:11,900
+showing all of the nodes that influence this node here
+
+888
+00:42:12,300 --> 00:42:13,566
+with neighborhood sampling
+
+889
+00:42:13,566 --> 00:42:15,466
+you're doing the same thing but
+
+890
+00:42:16,400 --> 00:42:17,500
+you're creating
+
+891
+00:42:17,666 --> 00:42:18,200
+just
+
+892
+00:42:18,200 --> 00:42:22,066
+a max a limit to how many nodes in your aggregation
+
+893
+00:42:22,333 --> 00:42:23,900
+so you're saying like in this case
+
+894
+00:42:24,100 --> 00:42:26,133
+I'm not going to use any more than three
+
+895
+00:42:26,666 --> 00:42:27,600
+of the neighboring nodes
+
+896
+00:42:27,600 --> 00:42:29,333
+and you can like just randomly select
+
+897
+00:42:30,400 --> 00:42:31,200
+which three
+
+898
+00:42:31,866 --> 00:42:32,900
+you use but
+
+899
+00:42:33,000 --> 00:42:35,733
+that case at least you bound the growth as you go
+
+900
+00:42:35,866 --> 00:42:38,333
+back into the network
+
+901
+00:42:39,000 --> 00:42:39,933
+that makes sense
+
+902
+00:42:45,400 --> 00:42:46,266
+and there's a
+
+903
+00:42:47,266 --> 00:42:50,366
+short notebook that goes into that a little bit more
+
+904
+00:42:51,966 --> 00:42:55,700
+and then graph partitioning takes a graph and then
+
+905
+00:42:56,400 --> 00:42:59,500
+what you do is you go and you clip some of the edges
+
+906
+00:42:59,566 --> 00:43:01,133
+then you try to find these
+
+907
+00:43:02,066 --> 00:43:04,100
+using some algorithms
+
+908
+00:43:04,166 --> 00:43:07,866
+you can find these kind of maximally connected subsets
+
+909
+00:43:08,066 --> 00:43:09,866
+of the graph
+
+910
+00:43:12,100 --> 00:43:13,800
+so that you partition them
+
+911
+00:43:14,533 --> 00:43:16,133
+and then you basically just remove them
+
+912
+00:43:16,133 --> 00:43:19,266
+and then you treat them as separate
+
+913
+00:43:22,266 --> 00:43:26,600
+graphs and you can do that partitioning on
+
+914
+00:43:27,466 --> 00:43:28,600
+you know like every
+
+915
+00:43:29,333 --> 00:43:32,166
+epoch you can change the partitioning
+
+916
+00:43:32,700 --> 00:43:36,100
+so that you cover some of these missing
+
+917
+00:43:36,666 --> 00:43:37,866
+edges as well
+
+918
+00:43:41,366 --> 00:43:42,166
+okay
+
+919
+00:43:42,533 --> 00:43:43,333
+makes sense
+
+920
+00:43:47,200 --> 00:43:50,200
+okay I'm not going to go into detail here
+
+921
+00:43:50,200 --> 00:43:54,366
+it's in the book but besides the mean pulling
+
+922
+00:43:54,566 --> 00:43:56,766
+there's a list in the book on
+
+923
+00:43:56,933 --> 00:43:58,500
+different ways that you can
+
+924
+00:43:58,666 --> 00:44:00,000
+instead of just straight
+
+925
+00:44:00,266 --> 00:44:03,733
+aggregation you can do things like enhance the
+
+926
+00:44:06,366 --> 00:44:07,866
+weight the diagonal
+
+927
+00:44:08,066 --> 00:44:10,600
+a little bit more in the equation up there
+
+928
+00:44:10,933 --> 00:44:13,900
+you can add residual connections just like we saw in
+
+929
+00:44:14,566 --> 00:44:15,366
+the
+
+930
+00:44:15,933 --> 00:44:19,900
+lecture on resonance you can just add the previous
+
+931
+00:44:20,966 --> 00:44:21,900
+hidden layer
+
+932
+00:44:22,700 --> 00:44:23,500
+to the
+
+933
+00:44:24,366 --> 00:44:26,400
+output of the activation function
+
+934
+00:44:27,533 --> 00:44:29,900
+for the aggregation function you
+
+935
+00:44:30,300 --> 00:44:31,133
+can weight them
+
+936
+00:44:31,966 --> 00:44:34,200
+so you're taking an average
+
+937
+00:44:34,200 --> 00:44:36,533
+instead of a simple sum on the aggregation
+
+938
+00:44:37,166 --> 00:44:38,733
+this Kip normalization
+
+939
+00:44:39,100 --> 00:44:40,933
+is factoring in that
+
+940
+00:44:40,933 --> 00:44:42,600
+if you have a node that's coming from
+
+941
+00:44:43,066 --> 00:44:45,333
+that has a lot of neighbors maybe you
+
+942
+00:44:45,533 --> 00:44:47,500
+don't want it to overly influence
+
+943
+00:44:49,800 --> 00:44:51,066
+this aggregation
+
+944
+00:44:51,466 --> 00:44:54,566
+here so you can you can normalize it a little bit there
+
+945
+00:44:55,066 --> 00:44:56,100
+and then instead of
+
+946
+00:44:58,200 --> 00:45:01,366
+you can do max pool aggregation instead of summing
+
+947
+00:45:01,400 --> 00:45:02,900
+you can just take the max of
+
+948
+00:45:03,466 --> 00:45:04,600
+all the neighbors as well
+
+949
+00:45:05,100 --> 00:45:06,400
+so just like with
+
+950
+00:45:07,133 --> 00:45:08,600
+regular neural networks
+
+951
+00:45:09,266 --> 00:45:10,266
+you can play with
+
+952
+00:45:10,866 --> 00:45:13,300
+the different kinds of pooling operators
+
+953
+00:45:16,266 --> 00:45:17,333
+okay so
+
+954
+00:45:20,800 --> 00:45:24,500
+then there is the analogy to transformers
+
+955
+00:45:24,666 --> 00:45:27,966
+you can also do aggregation by attention
+
+956
+00:45:28,066 --> 00:45:28,866
+and
+
+957
+00:45:30,100 --> 00:45:32,000
+essentially you're creating a
+
+958
+00:45:33,966 --> 00:45:35,933
+attention matrix
+
+959
+00:45:36,666 --> 00:45:38,733
+are learning and attention matrix
+
+960
+00:45:38,866 --> 00:45:39,900
+and then just
+
+961
+00:45:40,866 --> 00:45:43,000
+kind of very similar to transformers
+
+962
+00:45:43,533 --> 00:45:44,266
+is that
+
+963
+00:45:44,266 --> 00:45:47,133
+so you're doing a linear transformation on the input
+
+964
+00:45:47,500 --> 00:45:49,733
+remember when we took the input
+
+965
+00:45:49,900 --> 00:45:53,366
+and we transformed it into the value vectors
+
+966
+00:45:53,566 --> 00:45:55,533
+and then we had the query in the key
+
+967
+00:45:55,700 --> 00:45:58,066
+there's not really a separate query in the key
+
+968
+00:45:58,166 --> 00:46:02,966
+but it is creating this attention matrix
+
+969
+00:46:03,166 --> 00:46:06,600
+and then multiplying by this linear transformed
+
+970
+00:46:07,333 --> 00:46:08,133
+value
+
+971
+00:46:09,333 --> 00:46:11,600
+so it is similar
+
+972
+00:46:15,566 --> 00:46:18,766
+and so if you if you draw like we did before
+
+973
+00:46:18,766 --> 00:46:20,800
+so this is the the graph convolution
+
+974
+00:46:21,200 --> 00:46:23,700
+that I was just showing you where you have the
+
+975
+00:46:23,866 --> 00:46:25,366
+adjacency matrix
+
+976
+00:46:25,533 --> 00:46:26,666
+which is fixed
+
+977
+00:46:26,800 --> 00:46:28,300
+and then you have the input
+
+978
+00:46:28,300 --> 00:46:30,466
+which is going through a linear transformation
+
+979
+00:46:30,866 --> 00:46:32,566
+and then you are multiplying by the
+
+980
+00:46:32,933 --> 00:46:34,566
+adjacency matrix or the
+
+981
+00:46:36,733 --> 00:46:39,300
+that plus the identity the graph attention again
+
+982
+00:46:39,933 --> 00:46:44,266
+it's not exactly like the Transformers but it is now
+
+983
+00:46:45,333 --> 00:46:47,200
+coming up with these attention weights
+
+984
+00:46:47,800 --> 00:46:49,200
+and that's multiplying
+
+985
+00:46:49,200 --> 00:46:51,533
+so it's this kind of hypernetwork
+
+986
+00:46:51,533 --> 00:46:53,866
+like I showed you for the Transformers
+
+987
+00:46:53,866 --> 00:46:55,800
+it is learning some
+
+988
+00:46:56,500 --> 00:46:57,700
+attention weights
+
+989
+00:46:58,000 --> 00:46:59,666
+and then multiplying that
+
+990
+00:47:00,133 --> 00:47:03,200
+by the linear transformed input
+
+991
+00:47:03,866 --> 00:47:06,900
+okay and just for comparison I put the
+
+992
+00:47:10,733 --> 00:47:12,666
+text got cut off here a little bit but
+
+993
+00:47:13,366 --> 00:47:16,400
+this was the regular dot product self attention
+
+994
+00:47:16,400 --> 00:47:17,200
+where you had
+
+995
+00:47:18,300 --> 00:47:19,300
+the query
+
+996
+00:47:19,333 --> 00:47:22,166
+and the keys and then you had the linear transform
+
+997
+00:47:22,166 --> 00:47:22,966
+and then it was
+
+998
+00:47:23,566 --> 00:47:26,400
+being multiplied by this attention tension matrix
+
+999
+00:47:26,400 --> 00:47:28,100
+so not quite like
+
+1000
+00:47:28,566 --> 00:47:30,466
+the transformer but it
+
+1001
+00:47:31,366 --> 00:47:34,200
+does integrate some notions of the
+
+1002
+00:47:39,466 --> 00:47:42,133
+the trans the self attention
+
+1003
+00:47:44,200 --> 00:47:45,000
+okay
+
+1004
+00:47:47,300 --> 00:47:49,200
+all right we're actually on the last
+
+1005
+00:47:50,100 --> 00:47:52,700
+topic here you guys are going to get out a bit early
+
+1006
+00:47:52,800 --> 00:47:56,600
+so edge graphs so this is actually quite simple
+
+1007
+00:47:58,866 --> 00:47:59,800
+you have the
+
+1008
+00:48:00,466 --> 00:48:01,400
+take let's say
+
+1009
+00:48:01,866 --> 00:48:05,533
+some graph that you have with the the nodes
+
+1010
+00:48:05,766 --> 00:48:07,166
+you can create these
+
+1011
+00:48:08,666 --> 00:48:10,133
+you know basically nodes
+
+1012
+00:48:10,700 --> 00:48:12,333
+corresponding to every edge
+
+1013
+00:48:12,333 --> 00:48:14,500
+so these are just labeled by
+
+1014
+00:48:14,900 --> 00:48:15,900
+the nodes that
+
+1015
+00:48:16,300 --> 00:48:19,666
+they connect right so this is between nodes 4 and 6
+
+1016
+00:48:19,666 --> 00:48:21,966
+so we just call it like 4 slash 6
+
+1017
+00:48:22,700 --> 00:48:24,866
+so you can just add these
+
+1018
+00:48:25,966 --> 00:48:27,166
+at every edge
+
+1019
+00:48:28,333 --> 00:48:33,000
+and then just remove all of the nodes
+
+1020
+00:48:34,666 --> 00:48:35,933
+and now you have a
+
+1021
+00:48:36,866 --> 00:48:38,600
+you know an edge graph actually
+
+1022
+00:48:38,933 --> 00:48:40,500
+but this is representing
+
+1023
+00:48:40,566 --> 00:48:42,366
+you know assuming now that we have
+
+1024
+00:48:42,766 --> 00:48:44,666
+some useful information on the edges
+
+1025
+00:48:44,666 --> 00:48:47,266
+we have edge embedding vectors
+
+1026
+00:48:48,800 --> 00:48:51,766
+we end up with what looked like the node graph
+
+1027
+00:48:52,000 --> 00:48:53,500
+but it's just the
+
+1028
+00:48:53,933 --> 00:48:56,533
+edge embedding vectors so everything
+
+1029
+00:48:57,266 --> 00:48:58,700
+that I just showed you before
+
+1030
+00:48:59,000 --> 00:49:00,333
+now you can just apply
+
+1031
+00:49:00,766 --> 00:49:01,533
+and do
+
+1032
+00:49:01,533 --> 00:49:04,466
+you know whatever classification or regression on the
+
+1033
+00:49:05,566 --> 00:49:07,766
+with a node edge data
+
+1034
+00:49:11,800 --> 00:49:12,600
+so
+
+1035
+00:49:13,666 --> 00:49:16,700
+very very simple to handle
+
+1036
+00:49:17,866 --> 00:49:18,666
+okay
+
+1037
+00:49:21,900 --> 00:49:24,500
+all right it's a nice warm day so we can
+
+1038
+00:49:25,800 --> 00:49:26,900
+go enjoy the weather
+
+1039
+00:49:28,200 --> 00:49:31,700
+so next time my plan is to
+
+1040
+00:49:32,400 --> 00:49:33,600
+do kind of a
+
+1041
+00:49:34,400 --> 00:49:37,333
+RL HF spin on reinforcement learning
+
+1042
+00:49:37,333 --> 00:49:39,733
+so I'm not going to try to recreate the
+
+1043
+00:49:40,066 --> 00:49:42,566
+the other reinforcement classing class
+
+1044
+00:49:42,566 --> 00:49:44,166
+um and then
+
+1045
+00:49:46,000 --> 00:49:48,166
+my plan is to talk about these
+
+1046
+00:49:48,366 --> 00:49:51,000
+joint embedding predictive architecture for the
+
+1047
+00:49:51,366 --> 00:49:51,966
+last class
+
+1048
+00:49:51,966 --> 00:49:54,266
+and then we'll have the project presentations
+
+1049
+00:49:54,766 --> 00:49:58,566
+so like I said I'll send out a Piazza note tonight
+
+1050
+00:49:59,400 --> 00:50:00,200
+with the
+
+1051
+00:50:00,333 --> 00:50:03,266
+assignment of who gets which slot on the 25th and the
+
+1052
+00:50:03,400 --> 00:50:05,700
+30th but and then also
+
+1053
+00:50:05,766 --> 00:50:06,733
+what's Tuesday
+
+1054
+00:50:06,733 --> 00:50:09,700
+I will talk on Thursday but it's a good chance I'll be
+
+1055
+00:50:10,100 --> 00:50:13,400
+in office for office hours this week as well
+
+1056
+00:50:14,133 --> 00:50:15,500
+okay thanks
+

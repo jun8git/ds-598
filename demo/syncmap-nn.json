@@ -1,0 +1,7214 @@
+{
+ "fragments": [
+  {
+   "begin": "0.000",
+   "children": [],
+   "end": "10.560",
+   "id": "f000001",
+   "language": "eng",
+   "lines": [
+    "All right, so today we're back <eol> on the book chapter. <eob>"
+   ]
+  },
+  {
+   "begin": "10.560",
+   "children": [],
+   "end": "14.280",
+   "id": "f000002",
+   "language": "eng",
+   "lines": [
+    "I think the treatment <eol> of graphenolormat <eol> works was just fine, <eob>"
+   ]
+  },
+  {
+   "begin": "14.280",
+   "children": [],
+   "end": "21.920",
+   "id": "f000003",
+   "language": "eng",
+   "lines": [
+    "so I actually follow it very closely. <eob>"
+   ]
+  },
+  {
+   "begin": "21.920",
+   "children": [],
+   "end": "26.120",
+   "id": "f000004",
+   "language": "eng",
+   "lines": [
+    "And it's more, I think, <eol> straightforward extension <eob>"
+   ]
+  },
+  {
+   "begin": "26.120",
+   "children": [],
+   "end": "28.040",
+   "id": "f000005",
+   "language": "eng",
+   "lines": [
+    "from what we've been talking about earlier, <eob>"
+   ]
+  },
+  {
+   "begin": "28.040",
+   "children": [],
+   "end": "36.080",
+   "id": "f000006",
+   "language": "eng",
+   "lines": [
+    "opposed to the, oops, I forgot to move the, <eol> you are here pointer. <eob>"
+   ]
+  },
+  {
+   "begin": "36.080",
+   "children": [],
+   "end": "39.320",
+   "id": "f000007",
+   "language": "eng",
+   "lines": [
+    "But yeah, a little bit more straightforward extension <eob>"
+   ]
+  },
+  {
+   "begin": "39.320",
+   "children": [],
+   "end": "41.200",
+   "id": "f000008",
+   "language": "eng",
+   "lines": [
+    "from the neural net stuff, <eob>"
+   ]
+  },
+  {
+   "begin": "41.200",
+   "children": [],
+   "end": "47.920",
+   "id": "f000009",
+   "language": "eng",
+   "lines": [
+    "from the GANS and diffusion <eol> models and VAE. <eob>"
+   ]
+  },
+  {
+   "begin": "47.920",
+   "children": [],
+   "end": "54.240",
+   "id": "f000010",
+   "language": "eng",
+   "lines": [
+    "So I think, so I will keep <eol> the final report and repo here. <eob>"
+   ]
+  },
+  {
+   "begin": "54.240",
+   "children": [],
+   "end": "58.920",
+   "id": "f000011",
+   "language": "eng",
+   "lines": [
+    "I guess technically, I think, <eol> Osama, you're right, <eob>"
+   ]
+  },
+  {
+   "begin": "58.920",
+   "children": [],
+   "end": "60.400",
+   "id": "f000012",
+   "language": "eng",
+   "lines": [
+    "because there's no final. <eob>"
+   ]
+  },
+  {
+   "begin": "60.400",
+   "children": [],
+   "end": "66.240",
+   "id": "f000013",
+   "language": "eng",
+   "lines": [
+    "You know, they want me to start <eol> doing grades after the last class, <eob>"
+   ]
+  },
+  {
+   "begin": "66.240",
+   "children": [],
+   "end": "70.240",
+   "id": "f000014",
+   "language": "eng",
+   "lines": [
+    "but it seems like it's not <eol> strictly enforced. <eob>"
+   ]
+  },
+  {
+   "begin": "70.240",
+   "children": [],
+   "end": "78.920",
+   "id": "f000015",
+   "language": "eng",
+   "lines": [
+    "And so this gives you some more <eol> time <eol> to clean things up. <eob>"
+   ]
+  },
+  {
+   "begin": "78.920",
+   "children": [],
+   "end": "84.280",
+   "id": "f000016",
+   "language": "eng",
+   "lines": [
+    "See why it's not. <eob>"
+   ]
+  },
+  {
+   "begin": "84.280",
+   "children": [],
+   "end": "87.520",
+   "id": "f000017",
+   "language": "eng",
+   "lines": [
+    "So I only have two volunteers <eol> for the 25th. <eob>"
+   ]
+  },
+  {
+   "begin": "87.520",
+   "children": [],
+   "end": "89.520",
+   "id": "f000018",
+   "language": "eng",
+   "lines": [
+    "Thank you to the both of you. <eob>"
+   ]
+  },
+  {
+   "begin": "89.520",
+   "children": [],
+   "end": "98.360",
+   "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "So tonight I'm going to randomly <eol> select <eol> the other six, I guess, for the 25th. <eob>"
+   ]
+  },
+  {
+   "begin": "98.360",
+   "children": [],
+   "end": "102.920",
+   "id": "f000020",
+   "language": "eng",
+   "lines": [
+    "And then everyone else <eol> will go on the 30th. <eob>"
+   ]
+  },
+  {
+   "begin": "102.920",
+   "children": [],
+   "end": "104.560",
+   "id": "f000021",
+   "language": "eng",
+   "lines": [
+    "And so I'll let you know. <eob>"
+   ]
+  },
+  {
+   "begin": "104.560",
+   "children": [],
+   "end": "108.360",
+   "id": "f000022",
+   "language": "eng",
+   "lines": [
+    "The other thing is I updated, <eol> everyone see the final project info. <eob>"
+   ]
+  },
+  {
+   "begin": "108.360",
+   "children": [],
+   "end": "110.760",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "I updated on the website <eol> and grade scope. <eob>"
+   ]
+  },
+  {
+   "begin": "110.760",
+   "children": [],
+   "end": "119.480",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "So I put a little bit <eol> more <eol> instruction on the video. <eob>"
+   ]
+  },
+  {
+   "begin": "119.480",
+   "children": [],
+   "end": "125.720",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "I updated the report template, <eol> the LaTeX template, <eob>"
+   ]
+  },
+  {
+   "begin": "125.720",
+   "children": [],
+   "end": "131.240",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "and I put a comment, a little bit more detail <eol> on the GitHub repo. <eob>"
+   ]
+  },
+  {
+   "begin": "131.240",
+   "children": [],
+   "end": "135.800",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "So in the report, if you could put <eol> a link to the repo, <eob>"
+   ]
+  },
+  {
+   "begin": "135.800",
+   "children": [],
+   "end": "136.680",
+   "id": "f000028",
+   "language": "eng",
+   "lines": [
+    "you can put it on grade scope. <eob>"
+   ]
+  },
+  {
+   "begin": "136.680",
+   "children": [],
+   "end": "139.080",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "I also had it as well. <eob>"
+   ]
+  },
+  {
+   "begin": "139.080",
+   "children": [],
+   "end": "146.040",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "But the idea is that, I mean, <eol> like any kind of well-executed project, <eob>"
+   ]
+  },
+  {
+   "begin": "146.040",
+   "children": [],
+   "end": "148.000",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "ideas to make it reproducible, <eob>"
+   ]
+  },
+  {
+   "begin": "148.000",
+   "children": [],
+   "end": "151.960",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "and so somebody can come <eol> and reproduce your work <eob>"
+   ]
+  },
+  {
+   "begin": "151.960",
+   "children": [],
+   "end": "157.200",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "is the kind of ideal case. <eob>"
+   ]
+  },
+  {
+   "begin": "157.200",
+   "children": [],
+   "end": "165.600",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "Any questions about final projects, <eol> presentations? <eob>"
+   ]
+  },
+  {
+   "begin": "165.600",
+   "children": [],
+   "end": "168.080",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "All right, so let's jump in. <eob>"
+   ]
+  },
+  {
+   "begin": "168.080",
+   "children": [],
+   "end": "170.600",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "So graph neural networks. <eob>"
+   ]
+  },
+  {
+   "begin": "170.600",
+   "children": [],
+   "end": "173.280",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "I think this is an interesting space, <eob>"
+   ]
+  },
+  {
+   "begin": "173.280",
+   "children": [],
+   "end": "177.120",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "not something that I had really <eol> worked in before. <eob>"
+   ]
+  },
+  {
+   "begin": "177.120",
+   "children": [],
+   "end": "181.280",
+   "id": "f000039",
+   "language": "eng",
+   "lines": [
+    "But like I said, it's a pretty <eol> straightforward extension. <eob>"
+   ]
+  },
+  {
+   "begin": "181.280",
+   "children": [],
+   "end": "188.480",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "So the main challenges <eol> is that the topology of the graph can vary, <eob>"
+   ]
+  },
+  {
+   "begin": "188.480",
+   "children": [],
+   "end": "194.280",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "the types of connections <eol> in which nodes are connected, <eob>"
+   ]
+  },
+  {
+   "begin": "194.280",
+   "children": [],
+   "end": "198.880",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "the size of these graphs <eol> can be quite large. <eob>"
+   ]
+  },
+  {
+   "begin": "198.880",
+   "children": [],
+   "end": "203.640",
+   "id": "f000043",
+   "language": "eng",
+   "lines": [
+    "And we have to deal with a case <eol> where you have a single monolithic graph, <eob>"
+   ]
+  },
+  {
+   "begin": "203.640",
+   "children": [],
+   "end": "208.480",
+   "id": "f000044",
+   "language": "eng",
+   "lines": [
+    "which is, I'll show a bunch of examples, <eol> but that's a pretty common case. <eob>"
+   ]
+  },
+  {
+   "begin": "208.480",
+   "children": [],
+   "end": "215.440",
+   "id": "f000045",
+   "language": "eng",
+   "lines": [
+    "And so we'll talk about <eol> what does it mean to do batches of data <eob>"
+   ]
+  },
+  {
+   "begin": "215.440",
+   "children": [],
+   "end": "221.760",
+   "id": "f000046",
+   "language": "eng",
+   "lines": [
+    "because you need that for stochastic <eol> gradient descent, for example. <eob>"
+   ]
+  },
+  {
+   "begin": "221.760",
+   "children": [],
+   "end": "223.840",
+   "id": "f000047",
+   "language": "eng",
+   "lines": [
+    "So I'll cover definitions. <eob>"
+   ]
+  },
+  {
+   "begin": "223.840",
+   "children": [],
+   "end": "228.400",
+   "id": "f000048",
+   "language": "eng",
+   "lines": [
+    "We'll talk about representation, <eol> the so-called adjacency matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "228.400",
+   "children": [],
+   "end": "232.320",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "which is kind of crucial <eol> for describing the topology of the graph, <eob>"
+   ]
+  },
+  {
+   "begin": "232.320",
+   "children": [],
+   "end": "235.240",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "and then get into the graph <eol> neural networks, <eob>"
+   ]
+  },
+  {
+   "begin": "235.240",
+   "children": [],
+   "end": "238.880",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "how you build a convolutional layer <eol> on top of a graph, <eob>"
+   ]
+  },
+  {
+   "begin": "238.880",
+   "children": [],
+   "end": "245.440",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "and then how you build graph classification <eol> and regression <eob>"
+   ]
+  },
+  {
+   "begin": "245.440",
+   "children": [],
+   "end": "248.280",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "at the graph level <eol> and the node level. <eob>"
+   ]
+  },
+  {
+   "begin": "248.280",
+   "children": [],
+   "end": "253.680",
+   "id": "f000054",
+   "language": "eng",
+   "lines": [
+    "Yeah, I just realized that I had also mentioned <eob>"
+   ]
+  },
+  {
+   "begin": "253.680",
+   "children": [],
+   "end": "260.520",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "we're going to do <eol> a little recap of the project. <eob>"
+   ]
+  },
+  {
+   "begin": "260.520",
+   "children": [],
+   "end": "264.640",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "Maybe we'll push it to Thursday. <eob>"
+   ]
+  },
+  {
+   "begin": "264.640",
+   "children": [],
+   "end": "266.720",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "266.720",
+   "children": [],
+   "end": "270.640",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "All right, so basic definition <eol> and examples. <eob>"
+   ]
+  },
+  {
+   "begin": "270.640",
+   "children": [],
+   "end": "278.840",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "So generally, so the nodes, <eol> sometimes they're called vertices, <eob>"
+   ]
+  },
+  {
+   "begin": "278.840",
+   "children": [],
+   "end": "280.960",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "are connected by edges or links. <eob>"
+   ]
+  },
+  {
+   "begin": "280.960",
+   "children": [],
+   "end": "282.480",
+   "id": "f000061",
+   "language": "eng",
+   "lines": [
+    "You can have undirected <eob>"
+   ]
+  },
+  {
+   "begin": "282.480",
+   "children": [],
+   "end": "287.200",
+   "id": "f000062",
+   "language": "eng",
+   "lines": [
+    "where there's no kind of implied direction <eol> between the nodes, <eob>"
+   ]
+  },
+  {
+   "begin": "287.200",
+   "children": [],
+   "end": "290.880",
+   "id": "f000063",
+   "language": "eng",
+   "lines": [
+    "or you can have directed. <eob>"
+   ]
+  },
+  {
+   "begin": "290.880",
+   "children": [],
+   "end": "292.680",
+   "id": "f000064",
+   "language": "eng",
+   "lines": [
+    "And if you do have a directed connection, <eob>"
+   ]
+  },
+  {
+   "begin": "292.680",
+   "children": [],
+   "end": "296.800",
+   "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "if there's no cycles, <eol> nothing going back upon itself, <eob>"
+   ]
+  },
+  {
+   "begin": "296.800",
+   "children": [],
+   "end": "298.960",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "then you can have a directed <eol> acyclic graph. <eob>"
+   ]
+  },
+  {
+   "begin": "298.960",
+   "children": [],
+   "end": "304.880",
+   "id": "f000067",
+   "language": "eng",
+   "lines": [
+    "And so sometimes you'll hear the term DAG <eob>"
+   ]
+  },
+  {
+   "begin": "304.880",
+   "children": [],
+   "end": "310.040",
+   "id": "f000068",
+   "language": "eng",
+   "lines": [
+    "because there's certain things <eol> that you can do with DAGs <eob>"
+   ]
+  },
+  {
+   "begin": "310.040",
+   "children": [],
+   "end": "314.560",
+   "id": "f000069",
+   "language": "eng",
+   "lines": [
+    "if they have those two properties. <eob>"
+   ]
+  },
+  {
+   "begin": "314.560",
+   "children": [],
+   "end": "316.080",
+   "id": "f000070",
+   "language": "eng",
+   "lines": [
+    "So we have been looking at, <eob>"
+   ]
+  },
+  {
+   "begin": "316.080",
+   "children": [],
+   "end": "319.960",
+   "id": "f000071",
+   "language": "eng",
+   "lines": [
+    "we didn't really treat it <eol> as a graph per se, <eob>"
+   ]
+  },
+  {
+   "begin": "319.960",
+   "children": [],
+   "end": "325.600",
+   "id": "f000072",
+   "language": "eng",
+   "lines": [
+    "but we have been looking <eol> at directed acyclic graphs. <eob>"
+   ]
+  },
+  {
+   "begin": "325.600",
+   "children": [],
+   "end": "331.920",
+   "id": "f000073",
+   "language": "eng",
+   "lines": [
+    "Just the feed-forward neural network <eol> is one example. <eob>"
+   ]
+  },
+  {
+   "begin": "331.920",
+   "children": [],
+   "end": "335.480",
+   "id": "f000074",
+   "language": "eng",
+   "lines": [
+    "But it's, you know, I guess <eol> kind of a regular topology. <eob>"
+   ]
+  },
+  {
+   "begin": "335.480",
+   "children": [],
+   "end": "338.160",
+   "id": "f000075",
+   "language": "eng",
+   "lines": [
+    "We didn't treat it as a graph. <eob>"
+   ]
+  },
+  {
+   "begin": "338.160",
+   "children": [],
+   "end": "343.120",
+   "id": "f000076",
+   "language": "eng",
+   "lines": [
+    "I also mentioned this in the VAE talk, <eob>"
+   ]
+  },
+  {
+   "begin": "343.120",
+   "children": [],
+   "end": "346.760",
+   "id": "f000077",
+   "language": "eng",
+   "lines": [
+    "these Bayesian probabilistic <eol> graphical models <eob>"
+   ]
+  },
+  {
+   "begin": "346.760",
+   "children": [],
+   "end": "348.680",
+   "id": "f000078",
+   "language": "eng",
+   "lines": [
+    "that you can represent something like this, <eob>"
+   ]
+  },
+  {
+   "begin": "348.680",
+   "children": [],
+   "end": "354.520",
+   "id": "f000079",
+   "language": "eng",
+   "lines": [
+    "where you have like a node <eol> that represents a variable. <eob>"
+   ]
+  },
+  {
+   "begin": "354.520",
+   "children": [],
+   "end": "359.960",
+   "id": "f000080",
+   "language": "eng",
+   "lines": [
+    "And so typically you have something <eol> like a prior probability <eob>"
+   ]
+  },
+  {
+   "begin": "359.960",
+   "children": [],
+   "end": "363.240",
+   "id": "f000081",
+   "language": "eng",
+   "lines": [
+    "with a directed edge <eol> to another variable. <eob>"
+   ]
+  },
+  {
+   "begin": "363.240",
+   "children": [],
+   "end": "367.240",
+   "id": "f000082",
+   "language": "eng",
+   "lines": [
+    "And then that node is representing <eol> the conditional probability, <eob>"
+   ]
+  },
+  {
+   "begin": "367.240",
+   "children": [],
+   "end": "371.480",
+   "id": "f000083",
+   "language": "eng",
+   "lines": [
+    "the probability that this takes on some value <eob>"
+   ]
+  },
+  {
+   "begin": "371.480",
+   "children": [],
+   "end": "377.160",
+   "id": "f000084",
+   "language": "eng",
+   "lines": [
+    "given some latent variable in this case. <eob>"
+   ]
+  },
+  {
+   "begin": "377.160",
+   "children": [],
+   "end": "381.040",
+   "id": "f000085",
+   "language": "eng",
+   "lines": [
+    "So in the book there's a bunch <eol> of examples as well. <eob>"
+   ]
+  },
+  {
+   "begin": "381.040",
+   "children": [],
+   "end": "382.960",
+   "id": "f000086",
+   "language": "eng",
+   "lines": [
+    "So road networks are graphs <eob>"
+   ]
+  },
+  {
+   "begin": "382.960",
+   "children": [],
+   "end": "387.320",
+   "id": "f000087",
+   "language": "eng",
+   "lines": [
+    "where the physical locations <eol> or the landmarks are the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "387.320",
+   "children": [],
+   "end": "389.800",
+   "id": "f000088",
+   "language": "eng",
+   "lines": [
+    "Roads are the edges. <eob>"
+   ]
+  },
+  {
+   "begin": "389.800",
+   "children": [],
+   "end": "394.640",
+   "id": "f000089",
+   "language": "eng",
+   "lines": [
+    "Chemical molecules are examples <eol> where the nodes are atoms <eob>"
+   ]
+  },
+  {
+   "begin": "394.640",
+   "children": [],
+   "end": "398.080",
+   "id": "f000090",
+   "language": "eng",
+   "lines": [
+    "and the edges are chemical bonds between them. <eob>"
+   ]
+  },
+  {
+   "begin": "398.080",
+   "children": [],
+   "end": "402.480",
+   "id": "f000091",
+   "language": "eng",
+   "lines": [
+    "You can have electrical circuit as graphs. <eob>"
+   ]
+  },
+  {
+   "begin": "402.480",
+   "children": [],
+   "end": "406.400",
+   "id": "f000092",
+   "language": "eng",
+   "lines": [
+    "The nodes are components <eol> or the junctions. <eob>"
+   ]
+  },
+  {
+   "begin": "406.400",
+   "children": [],
+   "end": "413.680",
+   "id": "f000093",
+   "language": "eng",
+   "lines": [
+    "And then the edges <eol> are the wires connecting them. <eob>"
+   ]
+  },
+  {
+   "begin": "413.680",
+   "children": [],
+   "end": "415.520",
+   "id": "f000094",
+   "language": "eng",
+   "lines": [
+    "Some other examples. <eob>"
+   ]
+  },
+  {
+   "begin": "415.520",
+   "children": [],
+   "end": "416.600",
+   "id": "f000095",
+   "language": "eng",
+   "lines": [
+    "Social networks, <eob>"
+   ]
+  },
+  {
+   "begin": "416.600",
+   "children": [],
+   "end": "420.400",
+   "id": "f000096",
+   "language": "eng",
+   "lines": [
+    "and this is where <eol> it can be a very large graph. <eob>"
+   ]
+  },
+  {
+   "begin": "420.400",
+   "children": [],
+   "end": "424.000",
+   "id": "f000097",
+   "language": "eng",
+   "lines": [
+    "So you can take all of Facebook <eol> as a social network. <eob>"
+   ]
+  },
+  {
+   "begin": "424.000",
+   "children": [],
+   "end": "425.200",
+   "id": "f000098",
+   "language": "eng",
+   "lines": [
+    "The nodes are the people <eob>"
+   ]
+  },
+  {
+   "begin": "425.200",
+   "children": [],
+   "end": "430.760",
+   "id": "f000099",
+   "language": "eng",
+   "lines": [
+    "and the edges are people <eol> who have friended each other on the platform. <eob>"
+   ]
+  },
+  {
+   "begin": "430.760",
+   "children": [],
+   "end": "432.600",
+   "id": "f000100",
+   "language": "eng",
+   "lines": [
+    "Scientific literature, <eob>"
+   ]
+  },
+  {
+   "begin": "432.600",
+   "children": [],
+   "end": "434.680",
+   "id": "f000101",
+   "language": "eng",
+   "lines": [
+    "the nodes <eol> are the papers, citations, <eob>"
+   ]
+  },
+  {
+   "begin": "434.680",
+   "children": [],
+   "end": "439.160",
+   "id": "f000102",
+   "language": "eng",
+   "lines": [
+    "so these are directed, generally acyclic, <eob>"
+   ]
+  },
+  {
+   "begin": "439.160",
+   "children": [],
+   "end": "441.640",
+   "id": "f000103",
+   "language": "eng",
+   "lines": [
+    "where it's citing password. <eob>"
+   ]
+  },
+  {
+   "begin": "441.640",
+   "children": [],
+   "end": "447.080",
+   "id": "f000104",
+   "language": "eng",
+   "lines": [
+    "And then there's, I'm not aware <eol> of actually much use here <eob>"
+   ]
+  },
+  {
+   "begin": "447.080",
+   "children": [],
+   "end": "448.600",
+   "id": "f000105",
+   "language": "eng",
+   "lines": [
+    "of something like a knowledge graph, <eob>"
+   ]
+  },
+  {
+   "begin": "448.600",
+   "children": [],
+   "end": "451.960",
+   "id": "f000106",
+   "language": "eng",
+   "lines": [
+    "but you can have this kind of hybrid graph. <eob>"
+   ]
+  },
+  {
+   "begin": "451.960",
+   "children": [],
+   "end": "455.840",
+   "id": "f000107",
+   "language": "eng",
+   "lines": [
+    "Actually, in this case, yeah, <eol> these are all directed. <eob>"
+   ]
+  },
+  {
+   "begin": "455.840",
+   "children": [],
+   "end": "458.000",
+   "id": "f000108",
+   "language": "eng",
+   "lines": [
+    "But it is acyclic. <eob>"
+   ]
+  },
+  {
+   "begin": "458.000",
+   "children": [],
+   "end": "461.520",
+   "id": "f000109",
+   "language": "eng",
+   "lines": [
+    "Actually, in the book I think <eol> it says <eol> it's acyclic, <eob>"
+   ]
+  },
+  {
+   "begin": "461.520",
+   "children": [],
+   "end": "462.560",
+   "id": "f000110",
+   "language": "eng",
+   "lines": [
+    "if I remember right, <eob>"
+   ]
+  },
+  {
+   "begin": "462.560",
+   "children": [],
+   "end": "466.320",
+   "id": "f000111",
+   "language": "eng",
+   "lines": [
+    "but I see one cycle right there. <eob>"
+   ]
+  },
+  {
+   "begin": "466.320",
+   "children": [],
+   "end": "472.200",
+   "id": "f000112",
+   "language": "eng",
+   "lines": [
+    "And actually, yeah. <eob>"
+   ]
+  },
+  {
+   "begin": "472.200",
+   "children": [],
+   "end": "474.360",
+   "id": "f000113",
+   "language": "eng",
+   "lines": [
+    "So in this case, you're trying to, <eob>"
+   ]
+  },
+  {
+   "begin": "474.360",
+   "children": [],
+   "end": "477.920",
+   "id": "f000114",
+   "language": "eng",
+   "lines": [
+    "the edges correspond to kind of relationships <eob>"
+   ]
+  },
+  {
+   "begin": "477.920",
+   "children": [],
+   "end": "480.080",
+   "id": "f000115",
+   "language": "eng",
+   "lines": [
+    "between entities that are the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "480.080",
+   "children": [],
+   "end": "485.320",
+   "id": "f000116",
+   "language": "eng",
+   "lines": [
+    "So you can also, things <eol> that are maybe not, <eob>"
+   ]
+  },
+  {
+   "begin": "485.320",
+   "children": [],
+   "end": "487.760",
+   "id": "f000117",
+   "language": "eng",
+   "lines": [
+    "you wouldn't typically think of as graphs, <eob>"
+   ]
+  },
+  {
+   "begin": "487.760",
+   "children": [],
+   "end": "491.600",
+   "id": "f000118",
+   "language": "eng",
+   "lines": [
+    "but if you have a 3D geometry <eol> of a physical object, <eob>"
+   ]
+  },
+  {
+   "begin": "491.600",
+   "children": [],
+   "end": "493.840",
+   "id": "f000119",
+   "language": "eng",
+   "lines": [
+    "like in this case a plane, <eob>"
+   ]
+  },
+  {
+   "begin": "493.840",
+   "children": [],
+   "end": "497.920",
+   "id": "f000120",
+   "language": "eng",
+   "lines": [
+    "the vertices in 3D <eol> can be the nodes <eob>"
+   ]
+  },
+  {
+   "begin": "497.920",
+   "children": [],
+   "end": "498.840",
+   "id": "f000121",
+   "language": "eng",
+   "lines": [
+    "and then they could just, <eob>"
+   ]
+  },
+  {
+   "begin": "498.840",
+   "children": [],
+   "end": "508.400",
+   "id": "f000122",
+   "language": "eng",
+   "lines": [
+    "you could just have connections <eol> to all the nodes nearby. <eob>"
+   ]
+  },
+  {
+   "begin": "508.400",
+   "children": [],
+   "end": "516.600",
+   "id": "f000123",
+   "language": "eng",
+   "lines": [
+    "There's also, there's a scene graph, <eol> which can be used in 3D rendering, <eob>"
+   ]
+  },
+  {
+   "begin": "516.600",
+   "children": [],
+   "end": "522.520",
+   "id": "f000124",
+   "language": "eng",
+   "lines": [
+    "but it's typically, it describes <eol> the relationship of 3D objects <eob>"
+   ]
+  },
+  {
+   "begin": "522.520",
+   "children": [],
+   "end": "523.720",
+   "id": "f000125",
+   "language": "eng",
+   "lines": [
+    "and these can be hierarchical. <eob>"
+   ]
+  },
+  {
+   "begin": "523.720",
+   "children": [],
+   "end": "526.720",
+   "id": "f000126",
+   "language": "eng",
+   "lines": [
+    "So you can have, in this case, <eol> like a room description <eob>"
+   ]
+  },
+  {
+   "begin": "526.720",
+   "children": [],
+   "end": "531.880",
+   "id": "f000127",
+   "language": "eng",
+   "lines": [
+    "where you have the connection <eol> between <eob>"
+   ]
+  },
+  {
+   "begin": "531.880",
+   "children": [],
+   "end": "535.720",
+   "id": "f000128",
+   "language": "eng",
+   "lines": [
+    "like the back walls connected <eol> to the right wall and the left wall <eob>"
+   ]
+  },
+  {
+   "begin": "535.720",
+   "children": [],
+   "end": "537.920",
+   "id": "f000129",
+   "language": "eng",
+   "lines": [
+    "and the ceiling and the floor. <eob>"
+   ]
+  },
+  {
+   "begin": "537.920",
+   "children": [],
+   "end": "542.280",
+   "id": "f000130",
+   "language": "eng",
+   "lines": [
+    "And then you have a hierarchy, <eol> so you can then have a lampshade, <eob>"
+   ]
+  },
+  {
+   "begin": "542.280",
+   "children": [],
+   "end": "544.520",
+   "id": "f000131",
+   "language": "eng",
+   "lines": [
+    "which is broken further down into components <eob>"
+   ]
+  },
+  {
+   "begin": "544.520",
+   "children": [],
+   "end": "548.640",
+   "id": "f000132",
+   "language": "eng",
+   "lines": [
+    "or you can have the table, <eol> which is broken further down as well. <eob>"
+   ]
+  },
+  {
+   "begin": "548.640",
+   "children": [],
+   "end": "554.520",
+   "id": "f000133",
+   "language": "eng",
+   "lines": [
+    "I put some links of papers that, <eob>"
+   ]
+  },
+  {
+   "begin": "554.520",
+   "children": [],
+   "end": "558.840",
+   "id": "f000134",
+   "language": "eng",
+   "lines": [
+    "some of them are applying neural networks <eob>"
+   ]
+  },
+  {
+   "begin": "558.840",
+   "children": [],
+   "end": "561.440",
+   "id": "f000135",
+   "language": "eng",
+   "lines": [
+    "to these kinds of scene graphs. <eob>"
+   ]
+  },
+  {
+   "begin": "561.440",
+   "children": [],
+   "end": "563.440",
+   "id": "f000136",
+   "language": "eng",
+   "lines": [
+    "And then there's a bunch <eol> of other examples. <eob>"
+   ]
+  },
+  {
+   "begin": "563.440",
+   "children": [],
+   "end": "567.800",
+   "id": "f000137",
+   "language": "eng",
+   "lines": [
+    "So Wikipedia, where articles <eol> are the nodes <eob>"
+   ]
+  },
+  {
+   "begin": "567.800",
+   "children": [],
+   "end": "570.000",
+   "id": "f000138",
+   "language": "eng",
+   "lines": [
+    "and the hyperlinks are the edges. <eob>"
+   ]
+  },
+  {
+   "begin": "570.000",
+   "children": [],
+   "end": "573.760",
+   "id": "f000139",
+   "language": "eng",
+   "lines": [
+    "Computer programs, <eol> you can show as graphs. <eob>"
+   ]
+  },
+  {
+   "begin": "573.760",
+   "children": [],
+   "end": "576.640",
+   "id": "f000140",
+   "language": "eng",
+   "lines": [
+    "In fact, in the example that I did <eob>"
+   ]
+  },
+  {
+   "begin": "576.640",
+   "children": [],
+   "end": "580.360",
+   "id": "f000141",
+   "language": "eng",
+   "lines": [
+    "with the Jupiter notebook <eol> for the micrograd, <eob>"
+   ]
+  },
+  {
+   "begin": "580.360",
+   "children": [],
+   "end": "583.640",
+   "id": "f000142",
+   "language": "eng",
+   "lines": [
+    "we were basically building <eol> a tensor compute graph, <eob>"
+   ]
+  },
+  {
+   "begin": "583.640",
+   "children": [],
+   "end": "586.760",
+   "id": "f000143",
+   "language": "eng",
+   "lines": [
+    "right, if you remember. <eob>"
+   ]
+  },
+  {
+   "begin": "586.760",
+   "children": [],
+   "end": "593.400",
+   "id": "f000144",
+   "language": "eng",
+   "lines": [
+    "So, but yeah, so proteins can be, <eob>"
+   ]
+  },
+  {
+   "begin": "593.400",
+   "children": [],
+   "end": "594.880",
+   "id": "f000145",
+   "language": "eng",
+   "lines": [
+    "the proteins are the nodes, <eob>"
+   ]
+  },
+  {
+   "begin": "594.880",
+   "children": [],
+   "end": "598.880",
+   "id": "f000146",
+   "language": "eng",
+   "lines": [
+    "the edges are where the proteins interact, <eob>"
+   ]
+  },
+  {
+   "begin": "598.880",
+   "children": [],
+   "end": "602.720",
+   "id": "f000147",
+   "language": "eng",
+   "lines": [
+    "and then you can even have <eol> like sets <eol> or lists <eob>"
+   ]
+  },
+  {
+   "begin": "602.720",
+   "children": [],
+   "end": "604.040",
+   "id": "f000148",
+   "language": "eng",
+   "lines": [
+    "or even images <eob>"
+   ]
+  },
+  {
+   "begin": "604.040",
+   "children": [],
+   "end": "611.480",
+   "id": "f000149",
+   "language": "eng",
+   "lines": [
+    "where you just have <eol> the six or eight neighboring pixels <eob>"
+   ]
+  },
+  {
+   "begin": "611.480",
+   "children": [],
+   "end": "618.920",
+   "id": "f000150",
+   "language": "eng",
+   "lines": [
+    "just connected to a particular pixel <eol> as well, okay? <eob>"
+   ]
+  },
+  {
+   "begin": "618.920",
+   "children": [],
+   "end": "622.800",
+   "id": "f000151",
+   "language": "eng",
+   "lines": [
+    "All right, so how do we describe these? <eob>"
+   ]
+  },
+  {
+   "begin": "622.800",
+   "children": [],
+   "end": "629.440",
+   "id": "f000152",
+   "language": "eng",
+   "lines": [
+    "Typically, we're going to define something <eol> called like a node embedding. <eob>"
+   ]
+  },
+  {
+   "begin": "629.440",
+   "children": [],
+   "end": "632.360",
+   "id": "f000153",
+   "language": "eng",
+   "lines": [
+    "So we talked about embedding <eol> vectors <eol> with transformers. <eob>"
+   ]
+  },
+  {
+   "begin": "632.360",
+   "children": [],
+   "end": "637.960",
+   "id": "f000154",
+   "language": "eng",
+   "lines": [
+    "There's actually some analogies there, <eol> which we'll see later, <eob>"
+   ]
+  },
+  {
+   "begin": "637.960",
+   "children": [],
+   "end": "643.080",
+   "id": "f000155",
+   "language": "eng",
+   "lines": [
+    "but you can have some kind of information <eol> that you have <eob>"
+   ]
+  },
+  {
+   "begin": "643.080",
+   "children": [],
+   "end": "647.680",
+   "id": "f000156",
+   "language": "eng",
+   "lines": [
+    "basically translated <eol> into an embedding vector, for example. <eob>"
+   ]
+  },
+  {
+   "begin": "647.680",
+   "children": [],
+   "end": "651.240",
+   "id": "f000157",
+   "language": "eng",
+   "lines": [
+    "Typically, they're all <eol> of the same dimension. <eob>"
+   ]
+  },
+  {
+   "begin": "651.240",
+   "children": [],
+   "end": "653.200",
+   "id": "f000158",
+   "language": "eng",
+   "lines": [
+    "You can also do the same thing with edges. <eob>"
+   ]
+  },
+  {
+   "begin": "653.200",
+   "children": [],
+   "end": "658.320",
+   "id": "f000159",
+   "language": "eng",
+   "lines": [
+    "So you can have an edge embedding <eol> or embedding vector for every edge. <eob>"
+   ]
+  },
+  {
+   "begin": "658.320",
+   "children": [],
+   "end": "664.760",
+   "id": "f000160",
+   "language": "eng",
+   "lines": [
+    "And then typically, <eol> we'll define <eol> an adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "664.760",
+   "children": [],
+   "end": "666.200",
+   "id": "f000161",
+   "language": "eng",
+   "lines": [
+    "And the way you read this <eob>"
+   ]
+  },
+  {
+   "begin": "666.200",
+   "children": [],
+   "end": "669.200",
+   "id": "f000162",
+   "language": "eng",
+   "lines": [
+    "is that this is just, in this case, <eob>"
+   ]
+  },
+  {
+   "begin": "669.200",
+   "children": [],
+   "end": "671.440",
+   "id": "f000163",
+   "language": "eng",
+   "lines": [
+    "for undirected graphs, <eob>"
+   ]
+  },
+  {
+   "begin": "671.440",
+   "children": [],
+   "end": "673.280",
+   "id": "f000164",
+   "language": "eng",
+   "lines": [
+    "that you just read the indices. <eob>"
+   ]
+  },
+  {
+   "begin": "673.280",
+   "children": [],
+   "end": "678.920",
+   "id": "f000165",
+   "language": "eng",
+   "lines": [
+    "And so if there's a non-zero, <eol> for example, here at 3, 1, <eob>"
+   ]
+  },
+  {
+   "begin": "678.920",
+   "children": [],
+   "end": "684.320",
+   "id": "f000166",
+   "language": "eng",
+   "lines": [
+    "that means there's a connection <eol> between 3 and 1 on the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "684.320",
+   "children": [],
+   "end": "686.280",
+   "id": "f000167",
+   "language": "eng",
+   "lines": [
+    "And because it's undirected, <eob>"
+   ]
+  },
+  {
+   "begin": "686.280",
+   "children": [],
+   "end": "689.320",
+   "id": "f000168",
+   "language": "eng",
+   "lines": [
+    "then you would expect <eol> there's going <eol> to be a connection on 1, 3. <eob>"
+   ]
+  },
+  {
+   "begin": "689.320",
+   "children": [],
+   "end": "694.120",
+   "id": "f000169",
+   "language": "eng",
+   "lines": [
+    "So it's going to be symmetric, <eol> always a symmetric matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "694.120",
+   "children": [],
+   "end": "696.680",
+   "id": "f000170",
+   "language": "eng",
+   "lines": [
+    "but the diagonal is typically zero <eob>"
+   ]
+  },
+  {
+   "begin": "696.680",
+   "children": [],
+   "end": "700.200",
+   "id": "f000171",
+   "language": "eng",
+   "lines": [
+    "because there's no, at least, external edge <eob>"
+   ]
+  },
+  {
+   "begin": "700.200",
+   "children": [],
+   "end": "702.040",
+   "id": "f000172",
+   "language": "eng",
+   "lines": [
+    "connecting back to itself. <eob>"
+   ]
+  },
+  {
+   "begin": "702.040",
+   "children": [],
+   "end": "708.120",
+   "id": "f000173",
+   "language": "eng",
+   "lines": [
+    "So you see the diagonals are zeros, <eol> and then we have non-zeros, <eob>"
+   ]
+  },
+  {
+   "begin": "708.120",
+   "children": [],
+   "end": "713.680",
+   "id": "f000174",
+   "language": "eng",
+   "lines": [
+    "actually typically just put a 1 <eol> where there's a connection. <eob>"
+   ]
+  },
+  {
+   "begin": "713.680",
+   "children": [],
+   "end": "715.800",
+   "id": "f000175",
+   "language": "eng",
+   "lines": [
+    "And these can be very sparse, <eob>"
+   ]
+  },
+  {
+   "begin": "715.800",
+   "children": [],
+   "end": "722.280",
+   "id": "f000176",
+   "language": "eng",
+   "lines": [
+    "but sometimes you'll use sparse <eol> representation <eol> for the matrices. <eob>"
+   ]
+  },
+  {
+   "begin": "722.280",
+   "children": [],
+   "end": "726.360",
+   "id": "f000177",
+   "language": "eng",
+   "lines": [
+    "Okay, so we could take <eol> all of the node data edges, <eob>"
+   ]
+  },
+  {
+   "begin": "726.360",
+   "children": [],
+   "end": "730.880",
+   "id": "f000178",
+   "language": "eng",
+   "lines": [
+    "and then we can put them <eol> into a matrix, right? <eob>"
+   ]
+  },
+  {
+   "begin": "730.880",
+   "children": [],
+   "end": "734.760",
+   "id": "f000179",
+   "language": "eng",
+   "lines": [
+    "So remember, we have <eol> a d-dimensional <eol> embedding vector <eob>"
+   ]
+  },
+  {
+   "begin": "734.760",
+   "children": [],
+   "end": "736.640",
+   "id": "f000180",
+   "language": "eng",
+   "lines": [
+    "for every node, <eob>"
+   ]
+  },
+  {
+   "begin": "736.640",
+   "children": [],
+   "end": "739.680",
+   "id": "f000181",
+   "language": "eng",
+   "lines": [
+    "and we have, let's say, n nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "739.680",
+   "children": [],
+   "end": "743.320",
+   "id": "f000182",
+   "language": "eng",
+   "lines": [
+    "In this case, yeah, <eol> it lines up six nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "743.320",
+   "children": [],
+   "end": "748.400",
+   "id": "f000183",
+   "language": "eng",
+   "lines": [
+    "And so just like we were doing <eol> for transformers, <eob>"
+   ]
+  },
+  {
+   "begin": "748.400",
+   "children": [],
+   "end": "752.000",
+   "id": "f000184",
+   "language": "eng",
+   "lines": [
+    "you can put together an input matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "752.000",
+   "children": [],
+   "end": "754.480",
+   "id": "f000185",
+   "language": "eng",
+   "lines": [
+    "that is just d-dimension <eol> and then n columns, <eob>"
+   ]
+  },
+  {
+   "begin": "754.480",
+   "children": [],
+   "end": "756.200",
+   "id": "f000186",
+   "language": "eng",
+   "lines": [
+    "one column for every node. <eob>"
+   ]
+  },
+  {
+   "begin": "756.200",
+   "children": [],
+   "end": "759.040",
+   "id": "f000187",
+   "language": "eng",
+   "lines": [
+    "Okay? <eob>"
+   ]
+  },
+  {
+   "begin": "759.040",
+   "children": [],
+   "end": "763.440",
+   "id": "f000188",
+   "language": "eng",
+   "lines": [
+    "And then the same thing <eol> for the edges. <eob>"
+   ]
+  },
+  {
+   "begin": "763.440",
+   "children": [],
+   "end": "768.760",
+   "id": "f000189",
+   "language": "eng",
+   "lines": [
+    "You can have a different <eol> dimensionality <eol> to the edges, <eob>"
+   ]
+  },
+  {
+   "begin": "768.760",
+   "children": [],
+   "end": "774.880",
+   "id": "f000190",
+   "language": "eng",
+   "lines": [
+    "but they represent each one of these edges. <eob>"
+   ]
+  },
+  {
+   "begin": "774.880",
+   "children": [],
+   "end": "780.600",
+   "id": "f000191",
+   "language": "eng",
+   "lines": [
+    "And so there's, you know, it's probably <eol> some kind of metadata here, <eob>"
+   ]
+  },
+  {
+   "begin": "780.600",
+   "children": [],
+   "end": "783.600",
+   "id": "f000192",
+   "language": "eng",
+   "lines": [
+    "but these are the connections <eol> that they represent. <eob>"
+   ]
+  },
+  {
+   "begin": "783.600",
+   "children": [],
+   "end": "797.440",
+   "id": "f000193",
+   "language": "eng",
+   "lines": [
+    "Okay? Okay, so let's look at some properties <eol> of the adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "797.440",
+   "children": [],
+   "end": "800.240",
+   "id": "f000194",
+   "language": "eng",
+   "lines": [
+    "In this case, this is a simple <eol> undirected graph <eob>"
+   ]
+  },
+  {
+   "begin": "800.240",
+   "children": [],
+   "end": "802.880",
+   "id": "f000195",
+   "language": "eng",
+   "lines": [
+    "with eight nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "802.880",
+   "children": [],
+   "end": "808.840",
+   "id": "f000196",
+   "language": "eng",
+   "lines": [
+    "And so you can, I guess <eol> the font's a little bit small, <eob>"
+   ]
+  },
+  {
+   "begin": "808.840",
+   "children": [],
+   "end": "815.080",
+   "id": "f000197",
+   "language": "eng",
+   "lines": [
+    "but you can convince yourself <eol> that there's a one everywhere <eob>"
+   ]
+  },
+  {
+   "begin": "815.080",
+   "children": [],
+   "end": "821.880",
+   "id": "f000198",
+   "language": "eng",
+   "lines": [
+    "where there's a connection on the graph. <eob>"
+   ]
+  },
+  {
+   "begin": "821.880",
+   "children": [],
+   "end": "825.920",
+   "id": "f000199",
+   "language": "eng",
+   "lines": [
+    "And so we can describe one of the nodes <eob>"
+   ]
+  },
+  {
+   "begin": "825.920",
+   "children": [],
+   "end": "828.680",
+   "id": "f000200",
+   "language": "eng",
+   "lines": [
+    "as just a one-hot encoded vector, right? <eob>"
+   ]
+  },
+  {
+   "begin": "828.680",
+   "children": [],
+   "end": "834.720",
+   "id": "f000201",
+   "language": "eng",
+   "lines": [
+    "And so like node six <eol> is just a vector, <eob>"
+   ]
+  },
+  {
+   "begin": "834.720",
+   "children": [],
+   "end": "837.320",
+   "id": "f000202",
+   "language": "eng",
+   "lines": [
+    "the length, this should be length eight, <eob>"
+   ]
+  },
+  {
+   "begin": "837.320",
+   "children": [],
+   "end": "839.360",
+   "id": "f000203",
+   "language": "eng",
+   "lines": [
+    "and then there's just a, <eob>"
+   ]
+  },
+  {
+   "begin": "839.360",
+   "children": [],
+   "end": "841.120",
+   "id": "f000204",
+   "language": "eng",
+   "lines": [
+    "it's all zeros except a one <eob>"
+   ]
+  },
+  {
+   "begin": "841.120",
+   "children": [],
+   "end": "844.280",
+   "id": "f000205",
+   "language": "eng",
+   "lines": [
+    "at the sixth position there, right? <eob>"
+   ]
+  },
+  {
+   "begin": "844.280",
+   "children": [],
+   "end": "851.040",
+   "id": "f000206",
+   "language": "eng",
+   "lines": [
+    "So, and then once you do that, <eob>"
+   ]
+  },
+  {
+   "begin": "851.040",
+   "children": [],
+   "end": "855.400",
+   "id": "f000207",
+   "language": "eng",
+   "lines": [
+    "you can left multiply the embedding vector, <eob>"
+   ]
+  },
+  {
+   "begin": "855.400",
+   "children": [],
+   "end": "858.840",
+   "id": "f000208",
+   "language": "eng",
+   "lines": [
+    "the one-hot vector here <eol> by the adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "858.840",
+   "children": [],
+   "end": "863.240",
+   "id": "f000209",
+   "language": "eng",
+   "lines": [
+    "And what that gives you, <eol> just think about it, right? <eob>"
+   ]
+  },
+  {
+   "begin": "863.240",
+   "children": [],
+   "end": "865.680",
+   "id": "f000210",
+   "language": "eng",
+   "lines": [
+    "You're taking each row <eol> and then <eol> you're multiplying here. <eob>"
+   ]
+  },
+  {
+   "begin": "865.680",
+   "children": [],
+   "end": "869.520",
+   "id": "f000211",
+   "language": "eng",
+   "lines": [
+    "So you're just pulling out <eol> the whatever column is non-zero. <eob>"
+   ]
+  },
+  {
+   "begin": "869.520",
+   "children": [],
+   "end": "874.800",
+   "id": "f000212",
+   "language": "eng",
+   "lines": [
+    "In this case, you're just pulling <eol> out <eol> the sixth column here. <eob>"
+   ]
+  },
+  {
+   "begin": "874.800",
+   "children": [],
+   "end": "876.360",
+   "id": "f000213",
+   "language": "eng",
+   "lines": [
+    "And remember on the adjacency matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "876.360",
+   "children": [],
+   "end": "879.240",
+   "id": "f000214",
+   "language": "eng",
+   "lines": [
+    "this is saying that for the sixth node, <eob>"
+   ]
+  },
+  {
+   "begin": "879.240",
+   "children": [],
+   "end": "885.400",
+   "id": "f000215",
+   "language": "eng",
+   "lines": [
+    "these are the nodes <eol> that it's connected to, right? <eob>"
+   ]
+  },
+  {
+   "begin": "885.400",
+   "children": [],
+   "end": "888.240",
+   "id": "f000216",
+   "language": "eng",
+   "lines": [
+    "And so it's telling you <eol> that these are, <eob>"
+   ]
+  },
+  {
+   "begin": "888.240",
+   "children": [],
+   "end": "890.000",
+   "id": "f000217",
+   "language": "eng",
+   "lines": [
+    "just by doing this multiplication, <eob>"
+   ]
+  },
+  {
+   "begin": "890.000",
+   "children": [],
+   "end": "893.520",
+   "id": "f000218",
+   "language": "eng",
+   "lines": [
+    "it's telling you those are the neighboring nodes <eob>"
+   ]
+  },
+  {
+   "begin": "893.520",
+   "children": [],
+   "end": "896.840",
+   "id": "f000219",
+   "language": "eng",
+   "lines": [
+    "to the node that we're interested in. <eob>"
+   ]
+  },
+  {
+   "begin": "896.840",
+   "children": [],
+   "end": "898.200",
+   "id": "f000220",
+   "language": "eng",
+   "lines": [
+    "And then you can do it again. <eob>"
+   ]
+  },
+  {
+   "begin": "898.200",
+   "children": [],
+   "end": "906.200",
+   "id": "f000221",
+   "language": "eng",
+   "lines": [
+    "You can left multiply again <eol> by another A adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "906.200",
+   "children": [],
+   "end": "911.240",
+   "id": "f000222",
+   "language": "eng",
+   "lines": [
+    "And now what it's showing you <eol> is that all of the nodes <eob>"
+   ]
+  },
+  {
+   "begin": "911.240",
+   "children": [],
+   "end": "914.640",
+   "id": "f000223",
+   "language": "eng",
+   "lines": [
+    "is you can reach in exactly two steps. <eob>"
+   ]
+  },
+  {
+   "begin": "914.640",
+   "children": [],
+   "end": "920.240",
+   "id": "f000224",
+   "language": "eng",
+   "lines": [
+    "And you can hit a node twice, <eob>"
+   ]
+  },
+  {
+   "begin": "920.240",
+   "children": [],
+   "end": "926.640",
+   "id": "f000225",
+   "language": "eng",
+   "lines": [
+    "but you see like seven is not lit up, <eol> it's not colored <eob>"
+   ]
+  },
+  {
+   "begin": "926.640",
+   "children": [],
+   "end": "932.120",
+   "id": "f000226",
+   "language": "eng",
+   "lines": [
+    "because you can't get there <eol> in exactly two steps. <eob>"
+   ]
+  },
+  {
+   "begin": "932.120",
+   "children": [],
+   "end": "934.080",
+   "id": "f000227",
+   "language": "eng",
+   "lines": [
+    "It's not up to two steps, <eob>"
+   ]
+  },
+  {
+   "begin": "934.080",
+   "children": [],
+   "end": "943.240",
+   "id": "f000228",
+   "language": "eng",
+   "lines": [
+    "it's exactly two steps <eol> that it's describing. <eob>"
+   ]
+  },
+  {
+   "begin": "943.240",
+   "children": [],
+   "end": "945.560",
+   "id": "f000229",
+   "language": "eng",
+   "lines": [
+    "Okay? <eob>"
+   ]
+  },
+  {
+   "begin": "945.560",
+   "children": [],
+   "end": "949.600",
+   "id": "f000230",
+   "language": "eng",
+   "lines": [
+    "And so if you just multiply A by itself, <eob>"
+   ]
+  },
+  {
+   "begin": "949.600",
+   "children": [],
+   "end": "955.400",
+   "id": "f000231",
+   "language": "eng",
+   "lines": [
+    "what this is telling you <eol> is that, <eob>"
+   ]
+  },
+  {
+   "begin": "955.400",
+   "children": [],
+   "end": "961.080",
+   "id": "f000232",
+   "language": "eng",
+   "lines": [
+    "I write it here, <eob>"
+   ]
+  },
+  {
+   "begin": "961.080",
+   "children": [],
+   "end": "964.640",
+   "id": "f000233",
+   "language": "eng",
+   "lines": [
+    "that if you raise A to whatever power, <eol> for example of two, <eob>"
+   ]
+  },
+  {
+   "begin": "964.640",
+   "children": [],
+   "end": "969.200",
+   "id": "f000234",
+   "language": "eng",
+   "lines": [
+    "just multiply it by itself <eol> that many times, <eob>"
+   ]
+  },
+  {
+   "begin": "969.200",
+   "children": [],
+   "end": "971.800",
+   "id": "f000235",
+   "language": "eng",
+   "lines": [
+    "then every position here, <eob>"
+   ]
+  },
+  {
+   "begin": "971.800",
+   "children": [],
+   "end": "973.880",
+   "id": "f000236",
+   "language": "eng",
+   "lines": [
+    "it contains the number of, as it says here, <eob>"
+   ]
+  },
+  {
+   "begin": "973.880",
+   "children": [],
+   "end": "981.240",
+   "id": "f000237",
+   "language": "eng",
+   "lines": [
+    "unique walks of that length <eol> that you raise the power to, <eob>"
+   ]
+  },
+  {
+   "begin": "981.240",
+   "children": [],
+   "end": "984.960",
+   "id": "f000238",
+   "language": "eng",
+   "lines": [
+    "the number of unique walks <eol> from node N to N. <eob>"
+   ]
+  },
+  {
+   "begin": "984.960",
+   "children": [],
+   "end": "996.520",
+   "id": "f000239",
+   "language": "eng",
+   "lines": [
+    "So if you look here, let's say one, two, three, four, one, two, three, <eob>"
+   ]
+  },
+  {
+   "begin": "996.520",
+   "children": [],
+   "end": "1002.080",
+   "id": "f000240",
+   "language": "eng",
+   "lines": [
+    "well, okay, that's probably, well, yeah, this is saying <eol> from four to four, <eob>"
+   ]
+  },
+  {
+   "begin": "1002.080",
+   "children": [],
+   "end": "1007.920",
+   "id": "f000241",
+   "language": "eng",
+   "lines": [
+    "you can, there should be <eol> four unique walks, <eob>"
+   ]
+  },
+  {
+   "begin": "1007.920",
+   "children": [],
+   "end": "1009.720",
+   "id": "f000242",
+   "language": "eng",
+   "lines": [
+    "steps of two, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1009.720",
+   "children": [],
+   "end": "1014.600",
+   "id": "f000243",
+   "language": "eng",
+   "lines": [
+    "Is that, I don't see the fourth one. <eob>"
+   ]
+  },
+  {
+   "begin": "1014.600",
+   "children": [],
+   "end": "1015.360",
+   "id": "f000244",
+   "language": "eng",
+   "lines": [
+    "Does anyone see the fourth one? <eob>"
+   ]
+  },
+  {
+   "begin": "1015.360",
+   "children": [],
+   "end": "1020.680",
+   "id": "f000245",
+   "language": "eng",
+   "lines": [
+    "Oh, it's three, three, okay, yeah. <eob>"
+   ]
+  },
+  {
+   "begin": "1020.680",
+   "children": [],
+   "end": "1025.880",
+   "id": "f000246",
+   "language": "eng",
+   "lines": [
+    "Okay, yeah, and so the, <eob>"
+   ]
+  },
+  {
+   "begin": "1025.880",
+   "children": [],
+   "end": "1027.240",
+   "id": "f000247",
+   "language": "eng",
+   "lines": [
+    "but the thing to remember here <eob>"
+   ]
+  },
+  {
+   "begin": "1027.240",
+   "children": [],
+   "end": "1030.280",
+   "id": "f000248",
+   "language": "eng",
+   "lines": [
+    "is that this, that value, <eob>"
+   ]
+  },
+  {
+   "begin": "1030.280",
+   "children": [],
+   "end": "1037.560",
+   "id": "f000249",
+   "language": "eng",
+   "lines": [
+    "that it's not the number <eol> of unique paths, <eob>"
+   ]
+  },
+  {
+   "begin": "1037.560",
+   "children": [],
+   "end": "1039.800",
+   "id": "f000250",
+   "language": "eng",
+   "lines": [
+    "so you can visit the same node, <eob>"
+   ]
+  },
+  {
+   "begin": "1039.800",
+   "children": [],
+   "end": "1042.840",
+   "id": "f000251",
+   "language": "eng",
+   "lines": [
+    "but what you can think about <eol> is kind of an upper bound, <eob>"
+   ]
+  },
+  {
+   "begin": "1042.840",
+   "children": [],
+   "end": "1048.000",
+   "id": "f000252",
+   "language": "eng",
+   "lines": [
+    "but it means that there is some path <eol> up to the value here <eob>"
+   ]
+  },
+  {
+   "begin": "1048.000",
+   "children": [],
+   "end": "1051.120",
+   "id": "f000253",
+   "language": "eng",
+   "lines": [
+    "that, with the connection. <eob>"
+   ]
+  },
+  {
+   "begin": "1051.120",
+   "children": [],
+   "end": "1055.960",
+   "id": "f000254",
+   "language": "eng",
+   "lines": [
+    "So there can be different distance <eol> walks between the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "1055.960",
+   "children": [],
+   "end": "1059.640",
+   "id": "f000255",
+   "language": "eng",
+   "lines": [
+    "Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "1059.640",
+   "children": [],
+   "end": "1066.280",
+   "id": "f000256",
+   "language": "eng",
+   "lines": [
+    "Okay, so now you can do, <eol> you can do some things, <eob>"
+   ]
+  },
+  {
+   "begin": "1066.280",
+   "children": [],
+   "end": "1070.280",
+   "id": "f000257",
+   "language": "eng",
+   "lines": [
+    "like for example, I just created <eol> a tiny graph <eob>"
+   ]
+  },
+  {
+   "begin": "1070.280",
+   "children": [],
+   "end": "1072.280",
+   "id": "f000258",
+   "language": "eng",
+   "lines": [
+    "with these node embeddings, <eob>"
+   ]
+  },
+  {
+   "begin": "1072.280",
+   "children": [],
+   "end": "1074.480",
+   "id": "f000259",
+   "language": "eng",
+   "lines": [
+    "three dimensional node embeddings, <eob>"
+   ]
+  },
+  {
+   "begin": "1074.480",
+   "children": [],
+   "end": "1079.960",
+   "id": "f000260",
+   "language": "eng",
+   "lines": [
+    "which you can put together <eol> into a node data matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1079.960",
+   "children": [],
+   "end": "1086.000",
+   "id": "f000261",
+   "language": "eng",
+   "lines": [
+    "and then this should be the adjacency matrix <eol> for that, for that graph. <eob>"
+   ]
+  },
+  {
+   "begin": "1086.000",
+   "children": [],
+   "end": "1091.360",
+   "id": "f000262",
+   "language": "eng",
+   "lines": [
+    "You can define a permutation matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1091.360",
+   "children": [],
+   "end": "1097.240",
+   "id": "f000263",
+   "language": "eng",
+   "lines": [
+    "and the permutation matrix <eol> just has a one in each column and each row, <eob>"
+   ]
+  },
+  {
+   "begin": "1097.240",
+   "children": [],
+   "end": "1103.440",
+   "id": "f000264",
+   "language": "eng",
+   "lines": [
+    "so you can't have more than one, <eol> in a column or a row, <eob>"
+   ]
+  },
+  {
+   "begin": "1103.440",
+   "children": [],
+   "end": "1108.000",
+   "id": "f000265",
+   "language": "eng",
+   "lines": [
+    "but if you take that data matrix <eol> and you right multiply it, <eob>"
+   ]
+  },
+  {
+   "begin": "1108.000",
+   "children": [],
+   "end": "1111.440",
+   "id": "f000266",
+   "language": "eng",
+   "lines": [
+    "you're basically just permuting these, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1111.440",
+   "children": [],
+   "end": "1116.280",
+   "id": "f000267",
+   "language": "eng",
+   "lines": [
+    "So, same thing again, <eol> you're just taking the rows <eob>"
+   ]
+  },
+  {
+   "begin": "1116.280",
+   "children": [],
+   "end": "1120.040",
+   "id": "f000268",
+   "language": "eng",
+   "lines": [
+    "and you're just grabbing <eol> for each of these columns, <eob>"
+   ]
+  },
+  {
+   "begin": "1120.040",
+   "children": [],
+   "end": "1124.760",
+   "id": "f000269",
+   "language": "eng",
+   "lines": [
+    "you're just grabbing one of the columns out, <eob>"
+   ]
+  },
+  {
+   "begin": "1124.760",
+   "children": [],
+   "end": "1129.000",
+   "id": "f000270",
+   "language": "eng",
+   "lines": [
+    "and so this permutation matrix here <eob>"
+   ]
+  },
+  {
+   "begin": "1129.000",
+   "children": [],
+   "end": "1133.040",
+   "id": "f000271",
+   "language": "eng",
+   "lines": [
+    "is just permuting the values of the data matrix there, <eob>"
+   ]
+  },
+  {
+   "begin": "1133.040",
+   "children": [],
+   "end": "1139.880",
+   "id": "f000272",
+   "language": "eng",
+   "lines": [
+    "and so you can do the same thing to the adjacency matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1139.880",
+   "children": [],
+   "end": "1143.400",
+   "id": "f000273",
+   "language": "eng",
+   "lines": [
+    "but you have to post multiply and premultiply <eob>"
+   ]
+  },
+  {
+   "begin": "1143.400",
+   "children": [],
+   "end": "1145.360",
+   "id": "f000274",
+   "language": "eng",
+   "lines": [
+    "by the transpose, <eob>"
+   ]
+  },
+  {
+   "begin": "1145.360",
+   "children": [],
+   "end": "1150.120",
+   "id": "f000275",
+   "language": "eng",
+   "lines": [
+    "and so you can, hopefully I did this right, <eob>"
+   ]
+  },
+  {
+   "begin": "1150.120",
+   "children": [],
+   "end": "1151.840",
+   "id": "f000276",
+   "language": "eng",
+   "lines": [
+    "so I permuted it, <eob>"
+   ]
+  },
+  {
+   "begin": "1151.840",
+   "children": [],
+   "end": "1153.960",
+   "id": "f000277",
+   "language": "eng",
+   "lines": [
+    "I left the old indices, <eob>"
+   ]
+  },
+  {
+   "begin": "1153.960",
+   "children": [],
+   "end": "1154.800",
+   "id": "f000278",
+   "language": "eng",
+   "lines": [
+    "these are the new indices, <eob>"
+   ]
+  },
+  {
+   "begin": "1154.800",
+   "children": [],
+   "end": "1157.280",
+   "id": "f000279",
+   "language": "eng",
+   "lines": [
+    "I renumbered them, <eob>"
+   ]
+  },
+  {
+   "begin": "1157.280",
+   "children": [],
+   "end": "1159.560",
+   "id": "f000280",
+   "language": "eng",
+   "lines": [
+    "they're just different numbers, <eob>"
+   ]
+  },
+  {
+   "begin": "1159.560",
+   "children": [],
+   "end": "1161.840",
+   "id": "f000281",
+   "language": "eng",
+   "lines": [
+    "but they still have the same value, <eob>"
+   ]
+  },
+  {
+   "begin": "1161.840",
+   "children": [],
+   "end": "1168.360",
+   "id": "f000282",
+   "language": "eng",
+   "lines": [
+    "they're the same topology, <eol> they're just indexed differently, <eob>"
+   ]
+  },
+  {
+   "begin": "1168.360",
+   "children": [],
+   "end": "1174.760",
+   "id": "f000283",
+   "language": "eng",
+   "lines": [
+    "but the new adjacency matrix <eol> should be correct for this. <eob>"
+   ]
+  },
+  {
+   "begin": "1174.760",
+   "children": [],
+   "end": "1186.120",
+   "id": "f000284",
+   "language": "eng",
+   "lines": [
+    "So, yeah, let me talk <eol> about some properties <eob>"
+   ]
+  },
+  {
+   "begin": "1186.120",
+   "children": [],
+   "end": "1190.520",
+   "id": "f000285",
+   "language": "eng",
+   "lines": [
+    "and then we'll go back <eol> to the permutation <eol> adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1190.520",
+   "children": [],
+   "end": "1194.160",
+   "id": "f000286",
+   "language": "eng",
+   "lines": [
+    "So, how do we extend this <eol> to a graph neural network? <eob>"
+   ]
+  },
+  {
+   "begin": "1194.160",
+   "children": [],
+   "end": "1196.320",
+   "id": "f000287",
+   "language": "eng",
+   "lines": [
+    "Essentially what we're going to do <eol> is we're going to take <eob>"
+   ]
+  },
+  {
+   "begin": "1196.320",
+   "children": [],
+   "end": "1201.000",
+   "id": "f000288",
+   "language": "eng",
+   "lines": [
+    "those node embedding matrices <eol> that I showed you <eob>"
+   ]
+  },
+  {
+   "begin": "1201.000",
+   "children": [],
+   "end": "1204.760",
+   "id": "f000289",
+   "language": "eng",
+   "lines": [
+    "and the adjacency matrix <eol> which describes the topology of the graph, <eob>"
+   ]
+  },
+  {
+   "begin": "1204.760",
+   "children": [],
+   "end": "1210.400",
+   "id": "f000290",
+   "language": "eng",
+   "lines": [
+    "and we're going to pass them <eol> through layers of a neural network. <eob>"
+   ]
+  },
+  {
+   "begin": "1210.400",
+   "children": [],
+   "end": "1214.520",
+   "id": "f000291",
+   "language": "eng",
+   "lines": [
+    "So, the node embeddings <eol> are updated at each layer, <eob>"
+   ]
+  },
+  {
+   "begin": "1214.520",
+   "children": [],
+   "end": "1217.880",
+   "id": "f000292",
+   "language": "eng",
+   "lines": [
+    "so you have these kind of hidden representation <eob>"
+   ]
+  },
+  {
+   "begin": "1217.880",
+   "children": [],
+   "end": "1223.800",
+   "id": "f000293",
+   "language": "eng",
+   "lines": [
+    "or hidden activations <eol> after each layer, <eob>"
+   ]
+  },
+  {
+   "begin": "1223.800",
+   "children": [],
+   "end": "1229.280",
+   "id": "f000294",
+   "language": "eng",
+   "lines": [
+    "and of course when you start <eol> the input data <eob>"
+   ]
+  },
+  {
+   "begin": "1229.280",
+   "children": [],
+   "end": "1234.480",
+   "id": "f000295",
+   "language": "eng",
+   "lines": [
+    "is just the embedding vector <eol> of each node, <eob>"
+   ]
+  },
+  {
+   "begin": "1234.480",
+   "children": [],
+   "end": "1239.280",
+   "id": "f000296",
+   "language": "eng",
+   "lines": [
+    "but at the end you have this output <eob>"
+   ]
+  },
+  {
+   "begin": "1239.280",
+   "children": [],
+   "end": "1244.520",
+   "id": "f000297",
+   "language": "eng",
+   "lines": [
+    "which is, you know, you have a representation <eol> for each node, <eob>"
+   ]
+  },
+  {
+   "begin": "1244.520",
+   "children": [],
+   "end": "1249.000",
+   "id": "f000298",
+   "language": "eng",
+   "lines": [
+    "but now it's incorporated context, you know, <eob>"
+   ]
+  },
+  {
+   "begin": "1249.000",
+   "children": [],
+   "end": "1251.080",
+   "id": "f000299",
+   "language": "eng",
+   "lines": [
+    "from its neighbors in the rest of the graph <eob>"
+   ]
+  },
+  {
+   "begin": "1251.080",
+   "children": [],
+   "end": "1256.160",
+   "id": "f000300",
+   "language": "eng",
+   "lines": [
+    "because as you'll see, well, we're going to kind of aggregate information <eob>"
+   ]
+  },
+  {
+   "begin": "1256.160",
+   "children": [],
+   "end": "1259.320",
+   "id": "f000301",
+   "language": "eng",
+   "lines": [
+    "from the neighboring nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "1259.320",
+   "children": [],
+   "end": "1262.040",
+   "id": "f000302",
+   "language": "eng",
+   "lines": [
+    "And so, yeah, interestingly, <eob>"
+   ]
+  },
+  {
+   "begin": "1262.040",
+   "children": [],
+   "end": "1266.080",
+   "id": "f000303",
+   "language": "eng",
+   "lines": [
+    "this is kind of like word embeddings <eol> in a transformer, <eob>"
+   ]
+  },
+  {
+   "begin": "1266.080",
+   "children": [],
+   "end": "1269.280",
+   "id": "f000304",
+   "language": "eng",
+   "lines": [
+    "you know, when you start out you just have <eol> a unique word embedding <eob>"
+   ]
+  },
+  {
+   "begin": "1269.280",
+   "children": [],
+   "end": "1271.360",
+   "id": "f000305",
+   "language": "eng",
+   "lines": [
+    "for every word or token, <eob>"
+   ]
+  },
+  {
+   "begin": "1271.360",
+   "children": [],
+   "end": "1275.160",
+   "id": "f000306",
+   "language": "eng",
+   "lines": [
+    "but as it travels through the transformer <eob>"
+   ]
+  },
+  {
+   "begin": "1275.160",
+   "children": [],
+   "end": "1280.000",
+   "id": "f000307",
+   "language": "eng",
+   "lines": [
+    "that what you have at the end <eol> is you have, you know, <eob>"
+   ]
+  },
+  {
+   "begin": "1280.000",
+   "children": [],
+   "end": "1283.880",
+   "id": "f000308",
+   "language": "eng",
+   "lines": [
+    "kind of something <eol> that represents the word in its context <eob>"
+   ]
+  },
+  {
+   "begin": "1283.880",
+   "children": [],
+   "end": "1290.520",
+   "id": "f000309",
+   "language": "eng",
+   "lines": [
+    "to the other words in the sentence. <eob>"
+   ]
+  },
+  {
+   "begin": "1290.520",
+   "children": [],
+   "end": "1294.640",
+   "id": "f000310",
+   "language": "eng",
+   "lines": [
+    "Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "1294.640",
+   "children": [],
+   "end": "1301.040",
+   "id": "f000311",
+   "language": "eng",
+   "lines": [
+    "Okay, so you can do, <eol> just like other neural networks, <eob>"
+   ]
+  },
+  {
+   "begin": "1301.040",
+   "children": [],
+   "end": "1305.600",
+   "id": "f000312",
+   "language": "eng",
+   "lines": [
+    "we can create classification <eol> and regression networks with these, <eob>"
+   ]
+  },
+  {
+   "begin": "1305.600",
+   "children": [],
+   "end": "1308.720",
+   "id": "f000313",
+   "language": "eng",
+   "lines": [
+    "and so, you know, <eol> some examples, for example, <eob>"
+   ]
+  },
+  {
+   "begin": "1308.720",
+   "children": [],
+   "end": "1311.320",
+   "id": "f000314",
+   "language": "eng",
+   "lines": [
+    "you can give it a molecular structure <eol> and graph form <eob>"
+   ]
+  },
+  {
+   "begin": "1311.320",
+   "children": [],
+   "end": "1315.640",
+   "id": "f000315",
+   "language": "eng",
+   "lines": [
+    "and then you can try to figure out <eol> if it's poisonous or not <eob>"
+   ]
+  },
+  {
+   "begin": "1315.640",
+   "children": [],
+   "end": "1318.800",
+   "id": "f000316",
+   "language": "eng",
+   "lines": [
+    "based on the chemical structure, <eob>"
+   ]
+  },
+  {
+   "begin": "1318.800",
+   "children": [],
+   "end": "1322.200",
+   "id": "f000317",
+   "language": "eng",
+   "lines": [
+    "or you can regress boiling <eol> and freezing points, <eob>"
+   ]
+  },
+  {
+   "begin": "1322.200",
+   "children": [],
+   "end": "1328.920",
+   "id": "f000318",
+   "language": "eng",
+   "lines": [
+    "so two regression values <eol> out of a molecular graph. <eob>"
+   ]
+  },
+  {
+   "begin": "1328.920",
+   "children": [],
+   "end": "1334.440",
+   "id": "f000319",
+   "language": "eng",
+   "lines": [
+    "Yeah, and so generally, <eob>"
+   ]
+  },
+  {
+   "begin": "1334.440",
+   "children": [],
+   "end": "1338.240",
+   "id": "f000320",
+   "language": "eng",
+   "lines": [
+    "just like <eol> with other neural networks <eol> that we saw, <eob>"
+   ]
+  },
+  {
+   "begin": "1338.240",
+   "children": [],
+   "end": "1341.600",
+   "id": "f000321",
+   "language": "eng",
+   "lines": [
+    "that you can put a head <eol> to the network, right, <eob>"
+   ]
+  },
+  {
+   "begin": "1341.600",
+   "children": [],
+   "end": "1346.720",
+   "id": "f000322",
+   "language": "eng",
+   "lines": [
+    "so you can put a classification head <eol> or a regression head <eob>"
+   ]
+  },
+  {
+   "begin": "1346.720",
+   "children": [],
+   "end": "1348.280",
+   "id": "f000323",
+   "language": "eng",
+   "lines": [
+    "at the end of the network <eob>"
+   ]
+  },
+  {
+   "begin": "1348.280",
+   "children": [],
+   "end": "1353.880",
+   "id": "f000324",
+   "language": "eng",
+   "lines": [
+    "to get it into that kind of final regression <eol> or classification form <eob>"
+   ]
+  },
+  {
+   "begin": "1353.880",
+   "children": [],
+   "end": "1357.080",
+   "id": "f000325",
+   "language": "eng",
+   "lines": [
+    "and I'll show you some examples. <eob>"
+   ]
+  },
+  {
+   "begin": "1357.080",
+   "children": [],
+   "end": "1359.400",
+   "id": "f000326",
+   "language": "eng",
+   "lines": [
+    "So I'm going to start <eol> with just the head of the network <eob>"
+   ]
+  },
+  {
+   "begin": "1359.400",
+   "children": [],
+   "end": "1364.000",
+   "id": "f000327",
+   "language": "eng",
+   "lines": [
+    "and then I'll build up <eol> to how you build the network itself, <eob>"
+   ]
+  },
+  {
+   "begin": "1364.000",
+   "children": [],
+   "end": "1368.880",
+   "id": "f000328",
+   "language": "eng",
+   "lines": [
+    "but imagine you had a graph <eol> with node embeddings. <eob>"
+   ]
+  },
+  {
+   "begin": "1368.880",
+   "children": [],
+   "end": "1375.120",
+   "id": "f000329",
+   "language": "eng",
+   "lines": [
+    "We're going to focus mostly on node, <eol> kind of the node data. <eob>"
+   ]
+  },
+  {
+   "begin": "1375.120",
+   "children": [],
+   "end": "1381.040",
+   "id": "f000330",
+   "language": "eng",
+   "lines": [
+    "At the very end, I'll show <eol> there's kind of a simple way <eob>"
+   ]
+  },
+  {
+   "begin": "1381.040",
+   "children": [],
+   "end": "1382.720",
+   "id": "f000331",
+   "language": "eng",
+   "lines": [
+    "to handle data in the edges as well, <eob>"
+   ]
+  },
+  {
+   "begin": "1382.720",
+   "children": [],
+   "end": "1384.720",
+   "id": "f000332",
+   "language": "eng",
+   "lines": [
+    "the edge embeddings, <eob>"
+   ]
+  },
+  {
+   "begin": "1384.720",
+   "children": [],
+   "end": "1387.800",
+   "id": "f000333",
+   "language": "eng",
+   "lines": [
+    "but let's focus on the node embeddings first. <eob>"
+   ]
+  },
+  {
+   "begin": "1387.800",
+   "children": [],
+   "end": "1391.440",
+   "id": "f000334",
+   "language": "eng",
+   "lines": [
+    "So let's say you put it <eol> through some neural network, <eob>"
+   ]
+  },
+  {
+   "begin": "1391.440",
+   "children": [],
+   "end": "1392.960",
+   "id": "f000335",
+   "language": "eng",
+   "lines": [
+    "which we haven't defined, <eob>"
+   ]
+  },
+  {
+   "begin": "1392.960",
+   "children": [],
+   "end": "1399.320",
+   "id": "f000336",
+   "language": "eng",
+   "lines": [
+    "but you have, on the output, <eol> you're going to have some, <eol> you know, <eob>"
+   ]
+  },
+  {
+   "begin": "1399.320",
+   "children": [],
+   "end": "1401.000",
+   "id": "f000337",
+   "language": "eng",
+   "lines": [
+    "activations or embeddings <eob>"
+   ]
+  },
+  {
+   "begin": "1401.000",
+   "children": [],
+   "end": "1404.200",
+   "id": "f000338",
+   "language": "eng",
+   "lines": [
+    "associated with each node <eob>"
+   ]
+  },
+  {
+   "begin": "1404.200",
+   "children": [],
+   "end": "1406.840",
+   "id": "f000339",
+   "language": "eng",
+   "lines": [
+    "and then you can combine it. <eob>"
+   ]
+  },
+  {
+   "begin": "1406.840",
+   "children": [],
+   "end": "1409.720",
+   "id": "f000340",
+   "language": "eng",
+   "lines": [
+    "You can put it through a linear layer <eob>"
+   ]
+  },
+  {
+   "begin": "1409.720",
+   "children": [],
+   "end": "1413.240",
+   "id": "f000341",
+   "language": "eng",
+   "lines": [
+    "and then you can put it <eol> through, <eol> for example, <eob>"
+   ]
+  },
+  {
+   "begin": "1413.240",
+   "children": [],
+   "end": "1414.200",
+   "id": "f000342",
+   "language": "eng",
+   "lines": [
+    "a sigmoid <eob>"
+   ]
+  },
+  {
+   "begin": "1414.200",
+   "children": [],
+   "end": "1416.600",
+   "id": "f000343",
+   "language": "eng",
+   "lines": [
+    "or a softmax <eol> or something like that <eob>"
+   ]
+  },
+  {
+   "begin": "1416.600",
+   "children": [],
+   "end": "1420.320",
+   "id": "f000344",
+   "language": "eng",
+   "lines": [
+    "and then you can end up <eol> with probabilities <eol> for every class. <eob>"
+   ]
+  },
+  {
+   "begin": "1420.320",
+   "children": [],
+   "end": "1423.440",
+   "id": "f000345",
+   "language": "eng",
+   "lines": [
+    "So here's an example <eol> for just binary classification. <eob>"
+   ]
+  },
+  {
+   "begin": "1423.440",
+   "children": [],
+   "end": "1428.880",
+   "id": "f000346",
+   "language": "eng",
+   "lines": [
+    "It's just kind of what should <eol> look <eol> pretty familiar. <eob>"
+   ]
+  },
+  {
+   "begin": "1428.880",
+   "children": [],
+   "end": "1433.400",
+   "id": "f000347",
+   "language": "eng",
+   "lines": [
+    "You have the sigmoid, <eol> you have a beta, a bias here, <eob>"
+   ]
+  },
+  {
+   "begin": "1433.400",
+   "children": [],
+   "end": "1435.560",
+   "id": "f000348",
+   "language": "eng",
+   "lines": [
+    "and then you have the weights <eob>"
+   ]
+  },
+  {
+   "begin": "1435.560",
+   "children": [],
+   "end": "1440.840",
+   "id": "f000349",
+   "language": "eng",
+   "lines": [
+    "and this one is just a d-dimensional row vector <eob>"
+   ]
+  },
+  {
+   "begin": "1440.840",
+   "children": [],
+   "end": "1447.920",
+   "id": "f000350",
+   "language": "eng",
+   "lines": [
+    "and then you have the, you know, <eol> your embeddings matrix here <eob>"
+   ]
+  },
+  {
+   "begin": "1447.920",
+   "children": [],
+   "end": "1450.040",
+   "id": "f000351",
+   "language": "eng",
+   "lines": [
+    "and so this is just multiplying every, <eob>"
+   ]
+  },
+  {
+   "begin": "1450.040",
+   "children": [],
+   "end": "1453.960",
+   "id": "f000352",
+   "language": "eng",
+   "lines": [
+    "it's just weighting every column, right, <eob>"
+   ]
+  },
+  {
+   "begin": "1453.960",
+   "children": [],
+   "end": "1456.600",
+   "id": "f000353",
+   "language": "eng",
+   "lines": [
+    "of your embedding matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1456.600",
+   "children": [],
+   "end": "1463.560",
+   "id": "f000354",
+   "language": "eng",
+   "lines": [
+    "But then in this case, because <eol> we want <eol> to get a single output, <eob>"
+   ]
+  },
+  {
+   "begin": "1463.560",
+   "children": [],
+   "end": "1465.160",
+   "id": "f000355",
+   "language": "eng",
+   "lines": [
+    "we have this one vector, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1465.160",
+   "children": [],
+   "end": "1473.080",
+   "id": "f000356",
+   "language": "eng",
+   "lines": [
+    "This is just a, I think this is a, yeah, typo here. <eob>"
+   ]
+  },
+  {
+   "begin": "1473.080",
+   "children": [],
+   "end": "1477.280",
+   "id": "f000357",
+   "language": "eng",
+   "lines": [
+    "This is just a column of ones, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1477.280",
+   "children": [],
+   "end": "1481.040",
+   "id": "f000358",
+   "language": "eng",
+   "lines": [
+    "And this has the effect <eol> of basically summing, <eob>"
+   ]
+  },
+  {
+   "begin": "1481.040",
+   "children": [],
+   "end": "1487.800",
+   "id": "f000359",
+   "language": "eng",
+   "lines": [
+    "well, because we're dividing <eol> by the number of vectors, <eob>"
+   ]
+  },
+  {
+   "begin": "1487.800",
+   "children": [],
+   "end": "1495.760",
+   "id": "f000360",
+   "language": "eng",
+   "lines": [
+    "this has the, basically, <eol> it's just taking the average <eol> of every one <eol> of those vectors and so, <eob>"
+   ]
+  },
+  {
+   "begin": "1495.760",
+   "children": [],
+   "end": "1500.480",
+   "id": "f000361",
+   "language": "eng",
+   "lines": [
+    "and collapsing it into a single value. <eob>"
+   ]
+  },
+  {
+   "begin": "1500.480",
+   "children": [],
+   "end": "1509.880",
+   "id": "f000362",
+   "language": "eng",
+   "lines": [
+    "And so this is like mean pooling, <eol> like we showed you before, early. <eob>"
+   ]
+  },
+  {
+   "begin": "1509.880",
+   "children": [],
+   "end": "1519.600",
+   "id": "f000363",
+   "language": "eng",
+   "lines": [
+    "Okay, and so that was at the graph level. <eob>"
+   ]
+  },
+  {
+   "begin": "1519.600",
+   "children": [],
+   "end": "1526.760",
+   "id": "f000364",
+   "language": "eng",
+   "lines": [
+    "So we collapsed everything <eol> into a single value. <eob>"
+   ]
+  },
+  {
+   "begin": "1526.760",
+   "children": [],
+   "end": "1529.840",
+   "id": "f000365",
+   "language": "eng",
+   "lines": [
+    "But you can also do it <eol> at the node level. <eob>"
+   ]
+  },
+  {
+   "begin": "1529.840",
+   "children": [],
+   "end": "1532.840",
+   "id": "f000366",
+   "language": "eng",
+   "lines": [
+    "So, for example, <eol> you can do <eol> binary classification, <eob>"
+   ]
+  },
+  {
+   "begin": "1532.840",
+   "children": [],
+   "end": "1538.480",
+   "id": "f000367",
+   "language": "eng",
+   "lines": [
+    "you can decide between, let's say, <eol> one of two kinds of nodes here <eob>"
+   ]
+  },
+  {
+   "begin": "1538.480",
+   "children": [],
+   "end": "1540.120",
+   "id": "f000368",
+   "language": "eng",
+   "lines": [
+    "and it's very similar <eob>"
+   ]
+  },
+  {
+   "begin": "1540.120",
+   "children": [],
+   "end": "1544.880",
+   "id": "f000369",
+   "language": "eng",
+   "lines": [
+    "except you're doing it <eol> on every embedding vector. <eob>"
+   ]
+  },
+  {
+   "begin": "1544.880",
+   "children": [],
+   "end": "1545.720",
+   "id": "f000370",
+   "language": "eng",
+   "lines": [
+    "This is not the matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1545.720",
+   "children": [],
+   "end": "1547.920",
+   "id": "f000371",
+   "language": "eng",
+   "lines": [
+    "the whole matrix <eol> of all the embedding vectors stacked. <eob>"
+   ]
+  },
+  {
+   "begin": "1547.920",
+   "children": [],
+   "end": "1551.040",
+   "id": "f000372",
+   "language": "eng",
+   "lines": [
+    "This is just the individual node vector <eob>"
+   ]
+  },
+  {
+   "begin": "1551.040",
+   "children": [],
+   "end": "1556.160",
+   "id": "f000373",
+   "language": "eng",
+   "lines": [
+    "indexed by the node number n. <eob>"
+   ]
+  },
+  {
+   "begin": "1556.160",
+   "children": [],
+   "end": "1561.720",
+   "id": "f000374",
+   "language": "eng",
+   "lines": [
+    "And then so you're doing that now <eol> and you're producing a vector <eob>"
+   ]
+  },
+  {
+   "begin": "1561.720",
+   "children": [],
+   "end": "1568.360",
+   "id": "f000375",
+   "language": "eng",
+   "lines": [
+    "and then you have a, actually, this is a scale <eob>"
+   ]
+  },
+  {
+   "begin": "1568.360",
+   "children": [],
+   "end": "1570.120",
+   "id": "f000376",
+   "language": "eng",
+   "lines": [
+    "or you're adding the bias <eob>"
+   ]
+  },
+  {
+   "begin": "1570.120",
+   "children": [],
+   "end": "1572.760",
+   "id": "f000377",
+   "language": "eng",
+   "lines": [
+    "and then you're getting the value <eol> just for that particular node. <eob>"
+   ]
+  },
+  {
+   "begin": "1572.760",
+   "children": [],
+   "end": "1580.400",
+   "id": "f000378",
+   "language": "eng",
+   "lines": [
+    "Okay, does that make sense? <eob>"
+   ]
+  },
+  {
+   "begin": "1580.400",
+   "children": [],
+   "end": "1585.880",
+   "id": "f000379",
+   "language": "eng",
+   "lines": [
+    "Okay, yeah, so here's an example <eol> where you can decide, <eob>"
+   ]
+  },
+  {
+   "begin": "1585.880",
+   "children": [],
+   "end": "1589.360",
+   "id": "f000380",
+   "language": "eng",
+   "lines": [
+    "let's say you have, <eob>"
+   ]
+  },
+  {
+   "begin": "1589.360",
+   "children": [],
+   "end": "1592.680",
+   "id": "f000381",
+   "language": "eng",
+   "lines": [
+    "in some cases, <eol> maybe an edge doesn't exist <eob>"
+   ]
+  },
+  {
+   "begin": "1592.680",
+   "children": [],
+   "end": "1595.840",
+   "id": "f000382",
+   "language": "eng",
+   "lines": [
+    "and you're trying to predict <eol> if an edge should exist there. <eob>"
+   ]
+  },
+  {
+   "begin": "1595.840",
+   "children": [],
+   "end": "1599.160",
+   "id": "f000383",
+   "language": "eng",
+   "lines": [
+    "And so here you can take <eol> the, essentially, <eob>"
+   ]
+  },
+  {
+   "begin": "1599.160",
+   "children": [],
+   "end": "1600.920",
+   "id": "f000384",
+   "language": "eng",
+   "lines": [
+    "the dot product <eob>"
+   ]
+  },
+  {
+   "begin": "1600.920",
+   "children": [],
+   "end": "1605.840",
+   "id": "f000385",
+   "language": "eng",
+   "lines": [
+    "of the neighboring node <eol> embedding vectors, <eob>"
+   ]
+  },
+  {
+   "begin": "1605.840",
+   "children": [],
+   "end": "1607.480",
+   "id": "f000386",
+   "language": "eng",
+   "lines": [
+    "send it through a sigmoid <eob>"
+   ]
+  },
+  {
+   "begin": "1607.480",
+   "children": [],
+   "end": "1611.160",
+   "id": "f000387",
+   "language": "eng",
+   "lines": [
+    "and then you can train it <eol> to basically give you the probability <eob>"
+   ]
+  },
+  {
+   "begin": "1611.160",
+   "children": [],
+   "end": "1614.240",
+   "id": "f000388",
+   "language": "eng",
+   "lines": [
+    "that, in fact, this edge should be there. <eob>"
+   ]
+  },
+  {
+   "begin": "1614.240",
+   "children": [],
+   "end": "1617.840",
+   "id": "f000389",
+   "language": "eng",
+   "lines": [
+    "It's kind of another example. <eob>"
+   ]
+  },
+  {
+   "begin": "1617.840",
+   "children": [],
+   "end": "1628.000",
+   "id": "f000390",
+   "language": "eng",
+   "lines": [
+    "Okay? Okay, so let's build up the, <eol> those were the heads of the graph, <eob>"
+   ]
+  },
+  {
+   "begin": "1628.000",
+   "children": [],
+   "end": "1632.040",
+   "id": "f000391",
+   "language": "eng",
+   "lines": [
+    "let's build up the body <eol> of the graph itself. <eob>"
+   ]
+  },
+  {
+   "begin": "1632.040",
+   "children": [],
+   "end": "1635.320",
+   "id": "f000392",
+   "language": "eng",
+   "lines": [
+    "Just like we saw before when we were, <eob>"
+   ]
+  },
+  {
+   "begin": "1635.320",
+   "children": [],
+   "end": "1636.920",
+   "id": "f000393",
+   "language": "eng",
+   "lines": [
+    "it seemed like a long time ago now, <eob>"
+   ]
+  },
+  {
+   "begin": "1636.920",
+   "children": [],
+   "end": "1640.160",
+   "id": "f000394",
+   "language": "eng",
+   "lines": [
+    "when we were building up <eol> the deep neural networks, <eob>"
+   ]
+  },
+  {
+   "begin": "1640.160",
+   "children": [],
+   "end": "1644.320",
+   "id": "f000395",
+   "language": "eng",
+   "lines": [
+    "that we're just going to create <eol> all of these hidden layers. <eob>"
+   ]
+  },
+  {
+   "begin": "1644.320",
+   "children": [],
+   "end": "1645.480",
+   "id": "f000396",
+   "language": "eng",
+   "lines": [
+    "We're going to start with the input. <eob>"
+   ]
+  },
+  {
+   "begin": "1645.480",
+   "children": [],
+   "end": "1648.240",
+   "id": "f000397",
+   "language": "eng",
+   "lines": [
+    "We now have the adjacency matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1648.240",
+   "children": [],
+   "end": "1649.800",
+   "id": "f000398",
+   "language": "eng",
+   "lines": [
+    "but we have parameters for each layer. <eob>"
+   ]
+  },
+  {
+   "begin": "1649.800",
+   "children": [],
+   "end": "1652.200",
+   "id": "f000399",
+   "language": "eng",
+   "lines": [
+    "We're just going to have <eol> a bunch of hidden layers <eob>"
+   ]
+  },
+  {
+   "begin": "1652.200",
+   "children": [],
+   "end": "1653.440",
+   "id": "f000400",
+   "language": "eng",
+   "lines": [
+    "and then we're going to, you know, <eob>"
+   ]
+  },
+  {
+   "begin": "1653.440",
+   "children": [],
+   "end": "1656.560",
+   "id": "f000401",
+   "language": "eng",
+   "lines": [
+    "end up with that final hidden layer <eob>"
+   ]
+  },
+  {
+   "begin": "1656.560",
+   "children": [],
+   "end": "1659.800",
+   "id": "f000402",
+   "language": "eng",
+   "lines": [
+    "before we get to the head <eol> of the network. <eob>"
+   ]
+  },
+  {
+   "begin": "1659.800",
+   "children": [],
+   "end": "1664.440",
+   "id": "f000403",
+   "language": "eng",
+   "lines": [
+    "And so we're going to define <eol> what this function f is <eob>"
+   ]
+  },
+  {
+   "begin": "1664.440",
+   "children": [],
+   "end": "1669.960",
+   "id": "f000404",
+   "language": "eng",
+   "lines": [
+    "to create the next hidden layer. <eob>"
+   ]
+  },
+  {
+   "begin": "1669.960",
+   "children": [],
+   "end": "1679.840",
+   "id": "f000405",
+   "language": "eng",
+   "lines": [
+    "Okay, so just like <eol> in the convolutional networks <eob>"
+   ]
+  },
+  {
+   "begin": "1679.840",
+   "children": [],
+   "end": "1683.280",
+   "id": "f000406",
+   "language": "eng",
+   "lines": [
+    "and some of the other networks, <eob>"
+   ]
+  },
+  {
+   "begin": "1683.280",
+   "children": [],
+   "end": "1688.200",
+   "id": "f000407",
+   "language": "eng",
+   "lines": [
+    "that we do care about equivalence <eol> and invariance. <eob>"
+   ]
+  },
+  {
+   "begin": "1688.200",
+   "children": [],
+   "end": "1691.320",
+   "id": "f000408",
+   "language": "eng",
+   "lines": [
+    "And so remember, equivalence <eol> means that if I do, <eob>"
+   ]
+  },
+  {
+   "begin": "1691.320",
+   "children": [],
+   "end": "1695.520",
+   "id": "f000409",
+   "language": "eng",
+   "lines": [
+    "if I transform the input somehow, <eob>"
+   ]
+  },
+  {
+   "begin": "1695.520",
+   "children": [],
+   "end": "1697.200",
+   "id": "f000410",
+   "language": "eng",
+   "lines": [
+    "that the output is transformed <eol> the same way. <eob>"
+   ]
+  },
+  {
+   "begin": "1697.200",
+   "children": [],
+   "end": "1701.360",
+   "id": "f000411",
+   "language": "eng",
+   "lines": [
+    "And so remember back <eol> to the permutation matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1701.360",
+   "children": [],
+   "end": "1704.840",
+   "id": "f000412",
+   "language": "eng",
+   "lines": [
+    "I can right multiply my data matrix <eob>"
+   ]
+  },
+  {
+   "begin": "1704.840",
+   "children": [],
+   "end": "1707.560",
+   "id": "f000413",
+   "language": "eng",
+   "lines": [
+    "by the permutation back to left <eob>"
+   ]
+  },
+  {
+   "begin": "1707.560",
+   "children": [],
+   "end": "1711.080",
+   "id": "f000414",
+   "language": "eng",
+   "lines": [
+    "multiply and right multiply <eol> the adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1711.080",
+   "children": [],
+   "end": "1715.560",
+   "id": "f000415",
+   "language": "eng",
+   "lines": [
+    "But if I do that, then the output <eol> is just the hidden layer <eob>"
+   ]
+  },
+  {
+   "begin": "1715.560",
+   "children": [],
+   "end": "1718.320",
+   "id": "f000416",
+   "language": "eng",
+   "lines": [
+    "with the same permutation, right, <eob>"
+   ]
+  },
+  {
+   "begin": "1718.320",
+   "children": [],
+   "end": "1721.320",
+   "id": "f000417",
+   "language": "eng",
+   "lines": [
+    "multiplied by the same permutation matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1721.320",
+   "children": [],
+   "end": "1727.720",
+   "id": "f000418",
+   "language": "eng",
+   "lines": [
+    "And so it's equivariant to permutation. <eob>"
+   ]
+  },
+  {
+   "begin": "1727.720",
+   "children": [],
+   "end": "1734.320",
+   "id": "f000419",
+   "language": "eng",
+   "lines": [
+    "And then invariant, if we're doing <eol> something like sigmoid, <eob>"
+   ]
+  },
+  {
+   "begin": "1734.320",
+   "children": [],
+   "end": "1738.440",
+   "id": "f000420",
+   "language": "eng",
+   "lines": [
+    "since we're summing <eol> all of these up anyway, <eob>"
+   ]
+  },
+  {
+   "begin": "1738.440",
+   "children": [],
+   "end": "1745.560",
+   "id": "f000421",
+   "language": "eng",
+   "lines": [
+    "we don't really care <eol> if we're shuffling <eol> the order of the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "1745.560",
+   "children": [],
+   "end": "1749.600",
+   "id": "f000422",
+   "language": "eng",
+   "lines": [
+    "And so in this case, if we're doing <eol> like graph level classification, <eob>"
+   ]
+  },
+  {
+   "begin": "1749.600",
+   "children": [],
+   "end": "1756.840",
+   "id": "f000423",
+   "language": "eng",
+   "lines": [
+    "it's invariant to permutation as well. <eob>"
+   ]
+  },
+  {
+   "begin": "1756.840",
+   "children": [],
+   "end": "1768.640",
+   "id": "f000424",
+   "language": "eng",
+   "lines": [
+    "So that's a valuable thing <eol> for the graph neural networks. <eob>"
+   ]
+  },
+  {
+   "begin": "1768.640",
+   "children": [],
+   "end": "1772.720",
+   "id": "f000425",
+   "language": "eng",
+   "lines": [
+    "Okay, so let's now build out <eol> a convolutional layer for the graph. <eob>"
+   ]
+  },
+  {
+   "begin": "1772.720",
+   "children": [],
+   "end": "1776.160",
+   "id": "f000426",
+   "language": "eng",
+   "lines": [
+    "And so I'm going to define a function here, <eob>"
+   ]
+  },
+  {
+   "begin": "1776.160",
+   "children": [],
+   "end": "1778.040",
+   "id": "f000427",
+   "language": "eng",
+   "lines": [
+    "the aggregation function. <eob>"
+   ]
+  },
+  {
+   "begin": "1778.040",
+   "children": [],
+   "end": "1782.560",
+   "id": "f000428",
+   "language": "eng",
+   "lines": [
+    "And essentially what it's doing, <eol> you can see here <eob>"
+   ]
+  },
+  {
+   "begin": "1782.560",
+   "children": [],
+   "end": "1791.760",
+   "id": "f000429",
+   "language": "eng",
+   "lines": [
+    "that for a particular node <eol> and a particular layer, <eob>"
+   ]
+  },
+  {
+   "begin": "1791.760",
+   "children": [],
+   "end": "1796.000",
+   "id": "f000430",
+   "language": "eng",
+   "lines": [
+    "okay, that I'm just taking the neighborhood. <eob>"
+   ]
+  },
+  {
+   "begin": "1796.000",
+   "children": [],
+   "end": "1800.120",
+   "id": "f000431",
+   "language": "eng",
+   "lines": [
+    "So NE is just saying <eol> that it's returning the indices <eob>"
+   ]
+  },
+  {
+   "begin": "1800.120",
+   "children": [],
+   "end": "1804.280",
+   "id": "f000432",
+   "language": "eng",
+   "lines": [
+    "of all the neighboring nodes <eol> for the node, <eob>"
+   ]
+  },
+  {
+   "begin": "1804.280",
+   "children": [],
+   "end": "1809.400",
+   "id": "f000433",
+   "language": "eng",
+   "lines": [
+    "not including itself. <eob>"
+   ]
+  },
+  {
+   "begin": "1809.400",
+   "children": [],
+   "end": "1815.760",
+   "id": "f000434",
+   "language": "eng",
+   "lines": [
+    "Okay, so that's going to be handy. <eob>"
+   ]
+  },
+  {
+   "begin": "1815.760",
+   "children": [],
+   "end": "1823.240",
+   "id": "f000435",
+   "language": "eng",
+   "lines": [
+    "And then the whole layer itself <eol> is we have a weight matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1823.240",
+   "children": [],
+   "end": "1825.280",
+   "id": "f000436",
+   "language": "eng",
+   "lines": [
+    "We're going to multiply it by the node, <eob>"
+   ]
+  },
+  {
+   "begin": "1825.280",
+   "children": [],
+   "end": "1830.120",
+   "id": "f000437",
+   "language": "eng",
+   "lines": [
+    "the embedding vector <eol> for the node itself, <eob>"
+   ]
+  },
+  {
+   "begin": "1830.120",
+   "children": [],
+   "end": "1833.320",
+   "id": "f000438",
+   "language": "eng",
+   "lines": [
+    "but we're also going to multiply it <eob>"
+   ]
+  },
+  {
+   "begin": "1833.320",
+   "children": [],
+   "end": "1836.600",
+   "id": "f000439",
+   "language": "eng",
+   "lines": [
+    "against the sum of all the neighbors as well. <eob>"
+   ]
+  },
+  {
+   "begin": "1836.600",
+   "children": [],
+   "end": "1840.000",
+   "id": "f000440",
+   "language": "eng",
+   "lines": [
+    "So it's kind of like the convolution, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1840.000",
+   "children": [],
+   "end": "1843.240",
+   "id": "f000441",
+   "language": "eng",
+   "lines": [
+    "We're taking weights <eol> and we're weighting <eol> all of the neighborhood <eob>"
+   ]
+  },
+  {
+   "begin": "1843.240",
+   "children": [],
+   "end": "1846.040",
+   "id": "f000442",
+   "language": "eng",
+   "lines": [
+    "around a pixel in that case. <eob>"
+   ]
+  },
+  {
+   "begin": "1846.040",
+   "children": [],
+   "end": "1849.040",
+   "id": "f000443",
+   "language": "eng",
+   "lines": [
+    "Okay, does that make sense? <eob>"
+   ]
+  },
+  {
+   "begin": "1849.040",
+   "children": [],
+   "end": "1852.280",
+   "id": "f000444",
+   "language": "eng",
+   "lines": [
+    "And we're using the same weights for both. <eob>"
+   ]
+  },
+  {
+   "begin": "1852.280",
+   "children": [],
+   "end": "1856.640",
+   "id": "f000445",
+   "language": "eng",
+   "lines": [
+    "So there's already some weight <eol> sharing happening here. <eob>"
+   ]
+  },
+  {
+   "begin": "1856.640",
+   "children": [],
+   "end": "1865.360",
+   "id": "f000446",
+   "language": "eng",
+   "lines": [
+    "And those same weights <eol> are going to be applied <eob>"
+   ]
+  },
+  {
+   "begin": "1865.360",
+   "children": [],
+   "end": "1868.640",
+   "id": "f000447",
+   "language": "eng",
+   "lines": [
+    "to every node in that graph at that layer. <eob>"
+   ]
+  },
+  {
+   "begin": "1868.640",
+   "children": [],
+   "end": "1871.240",
+   "id": "f000448",
+   "language": "eng",
+   "lines": [
+    "Just like in a convolutional network. <eob>"
+   ]
+  },
+  {
+   "begin": "1871.240",
+   "children": [],
+   "end": "1886.680",
+   "id": "f000449",
+   "language": "eng",
+   "lines": [
+    "Okay, so, yeah, so if you have, in this case, <eob>"
+   ]
+  },
+  {
+   "begin": "1886.680",
+   "children": [],
+   "end": "1888.960",
+   "id": "f000450",
+   "language": "eng",
+   "lines": [
+    "you have your input, <eob>"
+   ]
+  },
+  {
+   "begin": "1888.960",
+   "children": [],
+   "end": "1892.040",
+   "id": "f000451",
+   "language": "eng",
+   "lines": [
+    "you have, <eol> after the first layer, <eob>"
+   ]
+  },
+  {
+   "begin": "1892.040",
+   "children": [],
+   "end": "1895.280",
+   "id": "f000452",
+   "language": "eng",
+   "lines": [
+    "so you do the aggregation <eol> for each node, <eob>"
+   ]
+  },
+  {
+   "begin": "1895.280",
+   "children": [],
+   "end": "1899.640",
+   "id": "f000453",
+   "language": "eng",
+   "lines": [
+    "you have an omega-zero weight matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1899.640",
+   "children": [],
+   "end": "1901.600",
+   "id": "f000454",
+   "language": "eng",
+   "lines": [
+    "and then put it through an activation <eob>"
+   ]
+  },
+  {
+   "begin": "1901.600",
+   "children": [],
+   "end": "1904.960",
+   "id": "f000455",
+   "language": "eng",
+   "lines": [
+    "and you get the first hidden unit output, <eob>"
+   ]
+  },
+  {
+   "begin": "1904.960",
+   "children": [],
+   "end": "1906.920",
+   "id": "f000456",
+   "language": "eng",
+   "lines": [
+    "the embeddings at each node. <eob>"
+   ]
+  },
+  {
+   "begin": "1906.920",
+   "children": [],
+   "end": "1910.560",
+   "id": "f000457",
+   "language": "eng",
+   "lines": [
+    "And then you can do this <eol> through a bunch of layers <eob>"
+   ]
+  },
+  {
+   "begin": "1910.560",
+   "children": [],
+   "end": "1913.160",
+   "id": "f000458",
+   "language": "eng",
+   "lines": [
+    "until you get to the last layer <eob>"
+   ]
+  },
+  {
+   "begin": "1913.160",
+   "children": [],
+   "end": "1919.000",
+   "id": "f000459",
+   "language": "eng",
+   "lines": [
+    "and then you just do it again <eol> at the last layer. <eob>"
+   ]
+  },
+  {
+   "begin": "1919.000",
+   "children": [],
+   "end": "1924.960",
+   "id": "f000460",
+   "language": "eng",
+   "lines": [
+    "So it should look a lot like <eol> the regular neural nets <eob>"
+   ]
+  },
+  {
+   "begin": "1924.960",
+   "children": [],
+   "end": "1933.240",
+   "id": "f000461",
+   "language": "eng",
+   "lines": [
+    "and the convolutional neural nets <eol> that you saw. <eob>"
+   ]
+  },
+  {
+   "begin": "1933.240",
+   "children": [],
+   "end": "1940.000",
+   "id": "f000462",
+   "language": "eng",
+   "lines": [
+    "Okay, so we have this equation <eol> where we had the aggregates, <eob>"
+   ]
+  },
+  {
+   "begin": "1940.000",
+   "children": [],
+   "end": "1941.080",
+   "id": "f000463",
+   "language": "eng",
+   "lines": [
+    "we have this weight matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1941.080",
+   "children": [],
+   "end": "1944.200",
+   "id": "f000464",
+   "language": "eng",
+   "lines": [
+    "we applied it to the node <eol> embedding vector, <eob>"
+   ]
+  },
+  {
+   "begin": "1944.200",
+   "children": [],
+   "end": "1947.720",
+   "id": "f000465",
+   "language": "eng",
+   "lines": [
+    "the sum of all the neighbors. <eob>"
+   ]
+  },
+  {
+   "begin": "1947.720",
+   "children": [],
+   "end": "1955.280",
+   "id": "f000466",
+   "language": "eng",
+   "lines": [
+    "And then, so, if you do this <eol> to the entire, <eob>"
+   ]
+  },
+  {
+   "begin": "1955.280",
+   "children": [],
+   "end": "1958.240",
+   "id": "f000467",
+   "language": "eng",
+   "lines": [
+    "you can do this to just the embedding <eol> vector of a node, <eob>"
+   ]
+  },
+  {
+   "begin": "1958.240",
+   "children": [],
+   "end": "1961.360",
+   "id": "f000468",
+   "language": "eng",
+   "lines": [
+    "but you can also just stack them all together, <eob>"
+   ]
+  },
+  {
+   "begin": "1961.360",
+   "children": [],
+   "end": "1965.320",
+   "id": "f000469",
+   "language": "eng",
+   "lines": [
+    "like the data matrix <eol> that I was showing you. <eob>"
+   ]
+  },
+  {
+   "begin": "1965.320",
+   "children": [],
+   "end": "1967.040",
+   "id": "f000470",
+   "language": "eng",
+   "lines": [
+    "So capital H here. <eob>"
+   ]
+  },
+  {
+   "begin": "1967.040",
+   "children": [],
+   "end": "1972.000",
+   "id": "f000471",
+   "language": "eng",
+   "lines": [
+    "And what you see is that <eol> you're applying it to the same, <eob>"
+   ]
+  },
+  {
+   "begin": "1972.000",
+   "children": [],
+   "end": "1977.880",
+   "id": "f000472",
+   "language": "eng",
+   "lines": [
+    "yeah, so I guess the first thing <eol> that's important to note here <eob>"
+   ]
+  },
+  {
+   "begin": "1977.880",
+   "children": [],
+   "end": "1982.760",
+   "id": "f000473",
+   "language": "eng",
+   "lines": [
+    "is that remember when we right-multiplied <eol> by the adjacency matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "1982.760",
+   "children": [],
+   "end": "1986.320",
+   "id": "f000474",
+   "language": "eng",
+   "lines": [
+    "we got all of the immediate <eol> neighbors <eol> of the node, right? <eob>"
+   ]
+  },
+  {
+   "begin": "1986.320",
+   "children": [],
+   "end": "1990.560",
+   "id": "f000475",
+   "language": "eng",
+   "lines": [
+    "And so we're replacing <eol> the aggregate function <eob>"
+   ]
+  },
+  {
+   "begin": "1990.560",
+   "children": [],
+   "end": "1994.440",
+   "id": "f000476",
+   "language": "eng",
+   "lines": [
+    "with this right-multiply by the adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "1994.440",
+   "children": [],
+   "end": "2001.640",
+   "id": "f000477",
+   "language": "eng",
+   "lines": [
+    "And so now we have the hidden <eol> layer <eol> embedding matrix <eob>"
+   ]
+  },
+  {
+   "begin": "2001.640",
+   "children": [],
+   "end": "2002.240",
+   "id": "f000478",
+   "language": "eng",
+   "lines": [
+    "showing up twice <eob>"
+   ]
+  },
+  {
+   "begin": "2002.240",
+   "children": [],
+   "end": "2004.640",
+   "id": "f000479",
+   "language": "eng",
+   "lines": [
+    "and so we can just factor it out <eob>"
+   ]
+  },
+  {
+   "begin": "2004.640",
+   "children": [],
+   "end": "2007.640",
+   "id": "f000480",
+   "language": "eng",
+   "lines": [
+    "and then we have the equation here. <eob>"
+   ]
+  },
+  {
+   "begin": "2007.640",
+   "children": [],
+   "end": "2014.720",
+   "id": "f000481",
+   "language": "eng",
+   "lines": [
+    "And so you can do it in matrix form <eol> on the whole data matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "2014.720",
+   "children": [],
+   "end": "2018.600",
+   "id": "f000482",
+   "language": "eng",
+   "lines": [
+    "And then you just have the adjacency <eob>"
+   ]
+  },
+  {
+   "begin": "2018.600",
+   "children": [],
+   "end": "2025.520",
+   "id": "f000483",
+   "language": "eng",
+   "lines": [
+    "plus this is the identity matrix here. <eob>"
+   ]
+  },
+  {
+   "begin": "2025.520",
+   "children": [],
+   "end": "2031.320",
+   "id": "f000484",
+   "language": "eng",
+   "lines": [
+    "So the nice thing is that this <eol> is equivariant to permutations. <eob>"
+   ]
+  },
+  {
+   "begin": "2031.320",
+   "children": [],
+   "end": "2034.480",
+   "id": "f000485",
+   "language": "eng",
+   "lines": [
+    "It can handle an arbitrary <eol> number <eol> of neighbors. <eob>"
+   ]
+  },
+  {
+   "begin": "2034.480",
+   "children": [],
+   "end": "2038.520",
+   "id": "f000486",
+   "language": "eng",
+   "lines": [
+    "So that's all handled <eol> in the adjacency matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "2038.520",
+   "children": [],
+   "end": "2041.840",
+   "id": "f000487",
+   "language": "eng",
+   "lines": [
+    "We don't have to deal with any kind <eol> of weird indexing or anything. <eob>"
+   ]
+  },
+  {
+   "begin": "2041.840",
+   "children": [],
+   "end": "2046.360",
+   "id": "f000488",
+   "language": "eng",
+   "lines": [
+    "And it is, you know, <eol> the adjacency matrix <eob>"
+   ]
+  },
+  {
+   "begin": "2046.360",
+   "children": [],
+   "end": "2048.520",
+   "id": "f000489",
+   "language": "eng",
+   "lines": [
+    "is describing the graph structure <eob>"
+   ]
+  },
+  {
+   "begin": "2048.520",
+   "children": [],
+   "end": "2051.840",
+   "id": "f000490",
+   "language": "eng",
+   "lines": [
+    "so it can exploit any kind <eol> of graph structure. <eob>"
+   ]
+  },
+  {
+   "begin": "2051.840",
+   "children": [],
+   "end": "2057.200",
+   "id": "f000491",
+   "language": "eng",
+   "lines": [
+    "And then we are sharing parameters <eol> across every one of the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2057.200",
+   "children": [],
+   "end": "2065.840",
+   "id": "f000492",
+   "language": "eng",
+   "lines": [
+    "So we have that kind of efficiency <eol> of parameters as well. <eob>"
+   ]
+  },
+  {
+   "begin": "2065.840",
+   "children": [],
+   "end": "2073.320",
+   "id": "f000493",
+   "language": "eng",
+   "lines": [
+    "Okay, so let's put it all together <eol> now <eob>"
+   ]
+  },
+  {
+   "begin": "2073.320",
+   "children": [],
+   "end": "2076.600",
+   "id": "f000494",
+   "language": "eng",
+   "lines": [
+    "in graph and node classification. <eob>"
+   ]
+  },
+  {
+   "begin": "2076.600",
+   "children": [],
+   "end": "2080.760",
+   "id": "f000495",
+   "language": "eng",
+   "lines": [
+    "And there are, I'm going <eol> to release a few notebooks. <eob>"
+   ]
+  },
+  {
+   "begin": "2080.760",
+   "children": [],
+   "end": "2082.000",
+   "id": "f000496",
+   "language": "eng",
+   "lines": [
+    "They're pretty straightforward, <eob>"
+   ]
+  },
+  {
+   "begin": "2082.000",
+   "children": [],
+   "end": "2085.160",
+   "id": "f000497",
+   "language": "eng",
+   "lines": [
+    "but I think it just helps <eol> to have a little experience <eob>"
+   ]
+  },
+  {
+   "begin": "2085.160",
+   "children": [],
+   "end": "2086.400",
+   "id": "f000498",
+   "language": "eng",
+   "lines": [
+    "with the Python code <eob>"
+   ]
+  },
+  {
+   "begin": "2086.400",
+   "children": [],
+   "end": "2090.920",
+   "id": "f000499",
+   "language": "eng",
+   "lines": [
+    "and the matrices <eol> and the indexing a little bit. <eob>"
+   ]
+  },
+  {
+   "begin": "2090.920",
+   "children": [],
+   "end": "2096.760",
+   "id": "f000500",
+   "language": "eng",
+   "lines": [
+    "And so the one example <eol> you're going <eol> to see in the Python notebook, <eob>"
+   ]
+  },
+  {
+   "begin": "2096.760",
+   "children": [],
+   "end": "2099.560",
+   "id": "f000501",
+   "language": "eng",
+   "lines": [
+    "maybe it's, yeah, 13. <eob>"
+   ]
+  },
+  {
+   "begin": "2099.560",
+   "children": [],
+   "end": "2105.600",
+   "id": "f000502",
+   "language": "eng",
+   "lines": [
+    "2 notebook, is that, so <eol> you can put it all together. <eob>"
+   ]
+  },
+  {
+   "begin": "2105.600",
+   "children": [],
+   "end": "2109.720",
+   "id": "f000503",
+   "language": "eng",
+   "lines": [
+    "You can put a sigmoid head on it <eol> like this with mean pooling. <eob>"
+   ]
+  },
+  {
+   "begin": "2109.720",
+   "children": [],
+   "end": "2114.400",
+   "id": "f000504",
+   "language": "eng",
+   "lines": [
+    "And then we can do, <eol> for example, classification. <eob>"
+   ]
+  },
+  {
+   "begin": "2114.400",
+   "children": [],
+   "end": "2116.480",
+   "id": "f000505",
+   "language": "eng",
+   "lines": [
+    "And so in this case, there's 118 elements. <eob>"
+   ]
+  },
+  {
+   "begin": "2116.480",
+   "children": [],
+   "end": "2120.720",
+   "id": "f000506",
+   "language": "eng",
+   "lines": [
+    "And so we can just have <eol> a one-hot encoded <eob>"
+   ]
+  },
+  {
+   "begin": "2120.720",
+   "children": [],
+   "end": "2122.120",
+   "id": "f000507",
+   "language": "eng",
+   "lines": [
+    "for every node <eob>"
+   ]
+  },
+  {
+   "begin": "2122.120",
+   "children": [],
+   "end": "2124.160",
+   "id": "f000508",
+   "language": "eng",
+   "lines": [
+    "to describe which element it is. <eob>"
+   ]
+  },
+  {
+   "begin": "2124.160",
+   "children": [],
+   "end": "2127.840",
+   "id": "f000509",
+   "language": "eng",
+   "lines": [
+    "And then the first parameter, <eob>"
+   ]
+  },
+  {
+   "begin": "2127.840",
+   "children": [],
+   "end": "2131.480",
+   "id": "f000510",
+   "language": "eng",
+   "lines": [
+    "we can decide what embedding <eol> dimension we want <eob>"
+   ]
+  },
+  {
+   "begin": "2131.480",
+   "children": [],
+   "end": "2137.120",
+   "id": "f000511",
+   "language": "eng",
+   "lines": [
+    "so that first weight matrix here <eol> can just be d by 118. <eob>"
+   ]
+  },
+  {
+   "begin": "2137.120",
+   "children": [],
+   "end": "2141.240",
+   "id": "f000512",
+   "language": "eng",
+   "lines": [
+    "So we switch to some <eol> d-dimensional embedding. <eob>"
+   ]
+  },
+  {
+   "begin": "2141.240",
+   "children": [],
+   "end": "2144.080",
+   "id": "f000513",
+   "language": "eng",
+   "lines": [
+    "And then we have the weight matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "2144.080",
+   "children": [],
+   "end": "2149.520",
+   "id": "f000514",
+   "language": "eng",
+   "lines": [
+    "which is a 1 by d row vector as well. <eob>"
+   ]
+  },
+  {
+   "begin": "2149.520",
+   "children": [],
+   "end": "2152.960",
+   "id": "f000515",
+   "language": "eng",
+   "lines": [
+    "But with that, you can put it all together <eob>"
+   ]
+  },
+  {
+   "begin": "2152.960",
+   "children": [],
+   "end": "2158.080",
+   "id": "f000516",
+   "language": "eng",
+   "lines": [
+    "and now you basically have <eol> a graph classification network <eob>"
+   ]
+  },
+  {
+   "begin": "2158.080",
+   "children": [],
+   "end": "2165.000",
+   "id": "f000517",
+   "language": "eng",
+   "lines": [
+    "for, I guess, molecular compound detection. <eob>"
+   ]
+  },
+  {
+   "begin": "2165.000",
+   "children": [],
+   "end": "2172.680",
+   "id": "f000518",
+   "language": "eng",
+   "lines": [
+    "All right, so let me define <eol> another term here. <eob>"
+   ]
+  },
+  {
+   "begin": "2172.680",
+   "children": [],
+   "end": "2181.040",
+   "id": "f000519",
+   "language": "eng",
+   "lines": [
+    "So the stuff we've been talking <eol> about up to date with supervised learning <eob>"
+   ]
+  },
+  {
+   "begin": "2181.040",
+   "children": [],
+   "end": "2185.360",
+   "id": "f000520",
+   "language": "eng",
+   "lines": [
+    "has been these inductive kind of models. <eob>"
+   ]
+  },
+  {
+   "begin": "2185.360",
+   "children": [],
+   "end": "2190.040",
+   "id": "f000521",
+   "language": "eng",
+   "lines": [
+    "And so typically what we do <eol> is we split our data <eob>"
+   ]
+  },
+  {
+   "begin": "2190.040",
+   "children": [],
+   "end": "2192.080",
+   "id": "f000522",
+   "language": "eng",
+   "lines": [
+    "into training and test data. <eob>"
+   ]
+  },
+  {
+   "begin": "2192.080",
+   "children": [],
+   "end": "2194.040",
+   "id": "f000523",
+   "language": "eng",
+   "lines": [
+    "So we have separate data. <eob>"
+   ]
+  },
+  {
+   "begin": "2194.040",
+   "children": [],
+   "end": "2200.160",
+   "id": "f000524",
+   "language": "eng",
+   "lines": [
+    "We can hold out test <eol> and validation data. <eob>"
+   ]
+  },
+  {
+   "begin": "2200.160",
+   "children": [],
+   "end": "2205.280",
+   "id": "f000525",
+   "language": "eng",
+   "lines": [
+    "And then we can train on the training data <eob>"
+   ]
+  },
+  {
+   "begin": "2205.280",
+   "children": [],
+   "end": "2209.480",
+   "id": "f000526",
+   "language": "eng",
+   "lines": [
+    "and then test on the testing data. <eob>"
+   ]
+  },
+  {
+   "begin": "2209.480",
+   "children": [],
+   "end": "2211.960",
+   "id": "f000527",
+   "language": "eng",
+   "lines": [
+    "But with graphs, you have this case <eob>"
+   ]
+  },
+  {
+   "begin": "2211.960",
+   "children": [],
+   "end": "2215.400",
+   "id": "f000528",
+   "language": "eng",
+   "lines": [
+    "where you can have <eol> this transductive kind of model, <eob>"
+   ]
+  },
+  {
+   "begin": "2215.400",
+   "children": [],
+   "end": "2221.120",
+   "id": "f000529",
+   "language": "eng",
+   "lines": [
+    "where you might have a case <eol> where you know the labels <eol> of some of the nodes, <eob>"
+   ]
+  },
+  {
+   "begin": "2221.120",
+   "children": [],
+   "end": "2225.440",
+   "id": "f000530",
+   "language": "eng",
+   "lines": [
+    "but you don't know some <eol> of the other nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2225.440",
+   "children": [],
+   "end": "2231.760",
+   "id": "f000531",
+   "language": "eng",
+   "lines": [
+    "But you can do this kind <eol> of like semi-supervised learning <eob>"
+   ]
+  },
+  {
+   "begin": "2231.760",
+   "children": [],
+   "end": "2236.640",
+   "id": "f000532",
+   "language": "eng",
+   "lines": [
+    "is that you can still train <eol> with this network <eob>"
+   ]
+  },
+  {
+   "begin": "2236.640",
+   "children": [],
+   "end": "2238.920",
+   "id": "f000533",
+   "language": "eng",
+   "lines": [
+    "and just your loss function <eob>"
+   ]
+  },
+  {
+   "begin": "2238.920",
+   "children": [],
+   "end": "2242.040",
+   "id": "f000534",
+   "language": "eng",
+   "lines": [
+    "is just incorporating <eol> your labeled nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2242.040",
+   "children": [],
+   "end": "2246.000",
+   "id": "f000535",
+   "language": "eng",
+   "lines": [
+    "And so at training time, <eol> you're not taking into account <eob>"
+   ]
+  },
+  {
+   "begin": "2246.000",
+   "children": [],
+   "end": "2248.400",
+   "id": "f000536",
+   "language": "eng",
+   "lines": [
+    "because we don't know the labels <eol> on these unknown nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2248.400",
+   "children": [],
+   "end": "2251.920",
+   "id": "f000537",
+   "language": "eng",
+   "lines": [
+    "But we can still proceed with training. <eob>"
+   ]
+  },
+  {
+   "begin": "2251.920",
+   "children": [],
+   "end": "2254.480",
+   "id": "f000538",
+   "language": "eng",
+   "lines": [
+    "But then at inference time, <eob>"
+   ]
+  },
+  {
+   "begin": "2254.480",
+   "children": [],
+   "end": "2259.680",
+   "id": "f000539",
+   "language": "eng",
+   "lines": [
+    "you could run inference <eol> on these unlabeled nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2259.680",
+   "children": [],
+   "end": "2268.080",
+   "id": "f000540",
+   "language": "eng",
+   "lines": [
+    "So that's the transductive model. <eob>"
+   ]
+  },
+  {
+   "begin": "2268.080",
+   "children": [],
+   "end": "2271.920",
+   "id": "f000541",
+   "language": "eng",
+   "lines": [
+    "So think about this example here <eob>"
+   ]
+  },
+  {
+   "begin": "2271.920",
+   "children": [],
+   "end": "2277.920",
+   "id": "f000542",
+   "language": "eng",
+   "lines": [
+    "where you want to do binary classification <eol> at the node level. <eob>"
+   ]
+  },
+  {
+   "begin": "2277.920",
+   "children": [],
+   "end": "2283.840",
+   "id": "f000543",
+   "language": "eng",
+   "lines": [
+    "So I just grabbed an example <eol> of some very large graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2283.840",
+   "children": [],
+   "end": "2285.600",
+   "id": "f000544",
+   "language": "eng",
+   "lines": [
+    "but it could be millions of nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2285.600",
+   "children": [],
+   "end": "2290.040",
+   "id": "f000545",
+   "language": "eng",
+   "lines": [
+    "And these are partially labeled. <eob>"
+   ]
+  },
+  {
+   "begin": "2290.040",
+   "children": [],
+   "end": "2298.000",
+   "id": "f000546",
+   "language": "eng",
+   "lines": [
+    "So it's the same body as before <eol> that we use for the graph classification. <eob>"
+   ]
+  },
+  {
+   "begin": "2298.000",
+   "children": [],
+   "end": "2301.680",
+   "id": "f000547",
+   "language": "eng",
+   "lines": [
+    "And then we have vector outputs, <eob>"
+   ]
+  },
+  {
+   "begin": "2301.680",
+   "children": [],
+   "end": "2307.080",
+   "id": "f000548",
+   "language": "eng",
+   "lines": [
+    "which are the same dimension <eol> as the number of nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2307.080",
+   "children": [],
+   "end": "2309.080",
+   "id": "f000549",
+   "language": "eng",
+   "lines": [
+    "If we just remove the mean pooling, <eob>"
+   ]
+  },
+  {
+   "begin": "2309.080",
+   "children": [],
+   "end": "2312.880",
+   "id": "f000550",
+   "language": "eng",
+   "lines": [
+    "like in the node classification example, <eob>"
+   ]
+  },
+  {
+   "begin": "2312.880",
+   "children": [],
+   "end": "2315.840",
+   "id": "f000551",
+   "language": "eng",
+   "lines": [
+    "we get the vector output one by n. <eob>"
+   ]
+  },
+  {
+   "begin": "2315.840",
+   "children": [],
+   "end": "2322.600",
+   "id": "f000552",
+   "language": "eng",
+   "lines": [
+    "And then you can train <eol> using binary cross entropy loss <eob>"
+   ]
+  },
+  {
+   "begin": "2322.600",
+   "children": [],
+   "end": "2332.080",
+   "id": "f000553",
+   "language": "eng",
+   "lines": [
+    "on the nodes with the labels. <eob>"
+   ]
+  },
+  {
+   "begin": "2332.080",
+   "children": [],
+   "end": "2337.360",
+   "id": "f000554",
+   "language": "eng",
+   "lines": [
+    "So the problem is that, at least here, <eol> we're training, <eob>"
+   ]
+  },
+  {
+   "begin": "2337.360",
+   "children": [],
+   "end": "2340.800",
+   "id": "f000555",
+   "language": "eng",
+   "lines": [
+    "let's say you have a graph <eol> with millions of nodes, <eob>"
+   ]
+  },
+  {
+   "begin": "2340.800",
+   "children": [],
+   "end": "2343.680",
+   "id": "f000556",
+   "language": "eng",
+   "lines": [
+    "that for the training <eol> and that execution <eob>"
+   ]
+  },
+  {
+   "begin": "2343.680",
+   "children": [],
+   "end": "2346.480",
+   "id": "f000557",
+   "language": "eng",
+   "lines": [
+    "at every layer of the network, <eob>"
+   ]
+  },
+  {
+   "begin": "2346.480",
+   "children": [],
+   "end": "2352.320",
+   "id": "f000558",
+   "language": "eng",
+   "lines": [
+    "you have to read and process <eol> every one <eol> of the millions of nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2352.320",
+   "children": [],
+   "end": "2356.200",
+   "id": "f000559",
+   "language": "eng",
+   "lines": [
+    "And so you could very easily <eol> run into a situation <eob>"
+   ]
+  },
+  {
+   "begin": "2356.200",
+   "children": [],
+   "end": "2360.200",
+   "id": "f000560",
+   "language": "eng",
+   "lines": [
+    "where you just don't have <eol> the memory on your GPU <eob>"
+   ]
+  },
+  {
+   "begin": "2360.200",
+   "children": [],
+   "end": "2364.520",
+   "id": "f000561",
+   "language": "eng",
+   "lines": [
+    "or the resource that you're using <eob>"
+   ]
+  },
+  {
+   "begin": "2364.520",
+   "children": [],
+   "end": "2369.080",
+   "id": "f000562",
+   "language": "eng",
+   "lines": [
+    "to be able to store every node <eol> on every layer of your network. <eob>"
+   ]
+  },
+  {
+   "begin": "2369.080",
+   "children": [],
+   "end": "2374.240",
+   "id": "f000563",
+   "language": "eng",
+   "lines": [
+    "And then basically, <eol> we're not doing batches here, <eob>"
+   ]
+  },
+  {
+   "begin": "2374.240",
+   "children": [],
+   "end": "2377.840",
+   "id": "f000564",
+   "language": "eng",
+   "lines": [
+    "we can't do stochastic gradient descent. <eob>"
+   ]
+  },
+  {
+   "begin": "2377.840",
+   "children": [],
+   "end": "2379.720",
+   "id": "f000565",
+   "language": "eng",
+   "lines": [
+    "So we're not taking advantage <eol> of the fact <eob>"
+   ]
+  },
+  {
+   "begin": "2379.720",
+   "children": [],
+   "end": "2384.200",
+   "id": "f000566",
+   "language": "eng",
+   "lines": [
+    "that randomly picking some of these nodes <eob>"
+   ]
+  },
+  {
+   "begin": "2384.200",
+   "children": [],
+   "end": "2386.120",
+   "id": "f000567",
+   "language": "eng",
+   "lines": [
+    "and then running that. <eob>"
+   ]
+  },
+  {
+   "begin": "2386.120",
+   "children": [],
+   "end": "2390.640",
+   "id": "f000568",
+   "language": "eng",
+   "lines": [
+    "But there are ways to do it. <eob>"
+   ]
+  },
+  {
+   "begin": "2390.640",
+   "children": [],
+   "end": "2395.520",
+   "id": "f000569",
+   "language": "eng",
+   "lines": [
+    "And so three of the ways <eol> there's others as well <eob>"
+   ]
+  },
+  {
+   "begin": "2395.520",
+   "children": [],
+   "end": "2400.520",
+   "id": "f000570",
+   "language": "eng",
+   "lines": [
+    "is you can just randomly pick <eol> a subset of the nodes as a batch <eob>"
+   ]
+  },
+  {
+   "begin": "2400.520",
+   "children": [],
+   "end": "2402.880",
+   "id": "f000571",
+   "language": "eng",
+   "lines": [
+    "and run it <eob>"
+   ]
+  },
+  {
+   "begin": "2402.880",
+   "children": [],
+   "end": "2407.040",
+   "id": "f000572",
+   "language": "eng",
+   "lines": [
+    "and then just pick <eol> another subset <eol> of the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2407.040",
+   "children": [],
+   "end": "2411.520",
+   "id": "f000573",
+   "language": "eng",
+   "lines": [
+    "And I'll explain what the issue <eol> with that is <eob>"
+   ]
+  },
+  {
+   "begin": "2411.520",
+   "children": [],
+   "end": "2414.080",
+   "id": "f000574",
+   "language": "eng",
+   "lines": [
+    "and then there's better ways, <eob>"
+   ]
+  },
+  {
+   "begin": "2414.080",
+   "children": [],
+   "end": "2418.120",
+   "id": "f000575",
+   "language": "eng",
+   "lines": [
+    "something called neighborhood sampling <eol> and graph partitioning, <eob>"
+   ]
+  },
+  {
+   "begin": "2418.120",
+   "children": [],
+   "end": "2420.640",
+   "id": "f000576",
+   "language": "eng",
+   "lines": [
+    "which is better. <eob>"
+   ]
+  },
+  {
+   "begin": "2420.640",
+   "children": [],
+   "end": "2423.600",
+   "id": "f000577",
+   "language": "eng",
+   "lines": [
+    "So the problem with just taking <eol> a random subset, <eob>"
+   ]
+  },
+  {
+   "begin": "2423.600",
+   "children": [],
+   "end": "2424.680",
+   "id": "f000578",
+   "language": "eng",
+   "lines": [
+    "so it's a small graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2424.680",
+   "children": [],
+   "end": "2432.960",
+   "id": "f000579",
+   "language": "eng",
+   "lines": [
+    "and let's say we're just picking a node <eol> of one, size one, set one, <eob>"
+   ]
+  },
+  {
+   "begin": "2432.960",
+   "children": [],
+   "end": "2438.640",
+   "id": "f000580",
+   "language": "eng",
+   "lines": [
+    "that this node, because of that aggregation, <eob>"
+   ]
+  },
+  {
+   "begin": "2438.640",
+   "children": [],
+   "end": "2441.720",
+   "id": "f000581",
+   "language": "eng",
+   "lines": [
+    "it's dependent on the immediate neighbors <eob>"
+   ]
+  },
+  {
+   "begin": "2441.720",
+   "children": [],
+   "end": "2445.000",
+   "id": "f000582",
+   "language": "eng",
+   "lines": [
+    "of that same node in the previous layer. <eob>"
+   ]
+  },
+  {
+   "begin": "2445.000",
+   "children": [],
+   "end": "2447.240",
+   "id": "f000583",
+   "language": "eng",
+   "lines": [
+    "And in turn, each of these nodes <eob>"
+   ]
+  },
+  {
+   "begin": "2447.240",
+   "children": [],
+   "end": "2447.960",
+   "id": "f000584",
+   "language": "eng",
+   "lines": [
+    "are influenced <eob>"
+   ]
+  },
+  {
+   "begin": "2447.960",
+   "children": [],
+   "end": "2452.040",
+   "id": "f000585",
+   "language": "eng",
+   "lines": [
+    "by their immediate neighbors <eol> of the previous node. <eob>"
+   ]
+  },
+  {
+   "begin": "2452.040",
+   "children": [],
+   "end": "2457.440",
+   "id": "f000586",
+   "language": "eng",
+   "lines": [
+    "And so you can imagine <eol> with a deeper graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2457.440",
+   "children": [],
+   "end": "2463.080",
+   "id": "f000587",
+   "language": "eng",
+   "lines": [
+    "and even if it's larger, <eol> with a deeper graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2463.080",
+   "children": [],
+   "end": "2470.720",
+   "id": "f000588",
+   "language": "eng",
+   "lines": [
+    "that you could quickly start basically <eol> using up most of the network, <eob>"
+   ]
+  },
+  {
+   "begin": "2470.720",
+   "children": [],
+   "end": "2474.520",
+   "id": "f000589",
+   "language": "eng",
+   "lines": [
+    "so actually using most of the network. <eob>"
+   ]
+  },
+  {
+   "begin": "2474.520",
+   "children": [],
+   "end": "2478.480",
+   "id": "f000590",
+   "language": "eng",
+   "lines": [
+    "And just like in the convolutional <eol> neural nets, <eob>"
+   ]
+  },
+  {
+   "begin": "2478.480",
+   "children": [],
+   "end": "2479.960",
+   "id": "f000591",
+   "language": "eng",
+   "lines": [
+    "there's this notion <eol> of receptive field. <eob>"
+   ]
+  },
+  {
+   "begin": "2479.960",
+   "children": [],
+   "end": "2484.600",
+   "id": "f000592",
+   "language": "eng",
+   "lines": [
+    "So that growth, so the fact <eol> that from the original input, <eob>"
+   ]
+  },
+  {
+   "begin": "2484.600",
+   "children": [],
+   "end": "2490.040",
+   "id": "f000593",
+   "language": "eng",
+   "lines": [
+    "all of those nodes <eol> are effectively <eol> influencing this node, <eob>"
+   ]
+  },
+  {
+   "begin": "2490.040",
+   "children": [],
+   "end": "2494.000",
+   "id": "f000594",
+   "language": "eng",
+   "lines": [
+    "you can call that the receptive field <eol> for that particular node. <eob>"
+   ]
+  },
+  {
+   "begin": "2494.000",
+   "children": [],
+   "end": "2504.880",
+   "id": "f000595",
+   "language": "eng",
+   "lines": [
+    "So, yeah, and the problem is <eol> if you have fairly dense connections <eob>"
+   ]
+  },
+  {
+   "begin": "2504.880",
+   "children": [],
+   "end": "2506.760",
+   "id": "f000596",
+   "language": "eng",
+   "lines": [
+    "and you have lots of layers, <eob>"
+   ]
+  },
+  {
+   "begin": "2506.760",
+   "children": [],
+   "end": "2511.440",
+   "id": "f000597",
+   "language": "eng",
+   "lines": [
+    "you can quickly just expand <eol> to encompass every node in the graph. <eob>"
+   ]
+  },
+  {
+   "begin": "2511.440",
+   "children": [],
+   "end": "2514.480",
+   "id": "f000598",
+   "language": "eng",
+   "lines": [
+    "And so you haven't accomplished your goal <eob>"
+   ]
+  },
+  {
+   "begin": "2514.480",
+   "children": [],
+   "end": "2518.360",
+   "id": "f000599",
+   "language": "eng",
+   "lines": [
+    "of having these distinct batches. <eob>"
+   ]
+  },
+  {
+   "begin": "2518.360",
+   "children": [],
+   "end": "2520.120",
+   "id": "f000600",
+   "language": "eng",
+   "lines": [
+    "So the way neighborhood sampling works, <eob>"
+   ]
+  },
+  {
+   "begin": "2520.120",
+   "children": [],
+   "end": "2524.600",
+   "id": "f000601",
+   "language": "eng",
+   "lines": [
+    "you have the, I guess, <eol> a different graph here, <eob>"
+   ]
+  },
+  {
+   "begin": "2524.600",
+   "children": [],
+   "end": "2526.800",
+   "id": "f000602",
+   "language": "eng",
+   "lines": [
+    "but the same random sampling <eob>"
+   ]
+  },
+  {
+   "begin": "2526.800",
+   "children": [],
+   "end": "2529.000",
+   "id": "f000603",
+   "language": "eng",
+   "lines": [
+    "where you're just showing <eob>"
+   ]
+  },
+  {
+   "begin": "2529.000",
+   "children": [],
+   "end": "2531.680",
+   "id": "f000604",
+   "language": "eng",
+   "lines": [
+    "all of the nodes <eol> that influence this node here. <eob>"
+   ]
+  },
+  {
+   "begin": "2531.680",
+   "children": [],
+   "end": "2535.240",
+   "id": "f000605",
+   "language": "eng",
+   "lines": [
+    "With neighborhood sampling, <eol> you're doing the same thing, <eob>"
+   ]
+  },
+  {
+   "begin": "2535.240",
+   "children": [],
+   "end": "2538.160",
+   "id": "f000606",
+   "language": "eng",
+   "lines": [
+    "but you're creating just a max, <eob>"
+   ]
+  },
+  {
+   "begin": "2538.160",
+   "children": [],
+   "end": "2539.320",
+   "id": "f000607",
+   "language": "eng",
+   "lines": [
+    "a limit <eob>"
+   ]
+  },
+  {
+   "begin": "2539.320",
+   "children": [],
+   "end": "2541.760",
+   "id": "f000608",
+   "language": "eng",
+   "lines": [
+    "to how many nodes <eol> in your aggregation. <eob>"
+   ]
+  },
+  {
+   "begin": "2541.760",
+   "children": [],
+   "end": "2544.360",
+   "id": "f000609",
+   "language": "eng",
+   "lines": [
+    "So you're saying like in this case, <eob>"
+   ]
+  },
+  {
+   "begin": "2544.360",
+   "children": [],
+   "end": "2547.520",
+   "id": "f000610",
+   "language": "eng",
+   "lines": [
+    "I'm not going to use any more <eol> than three of the neighboring nodes, <eob>"
+   ]
+  },
+  {
+   "begin": "2547.520",
+   "children": [],
+   "end": "2552.320",
+   "id": "f000611",
+   "language": "eng",
+   "lines": [
+    "and you can just randomly <eol> select <eol> which three you use. <eob>"
+   ]
+  },
+  {
+   "begin": "2552.320",
+   "children": [],
+   "end": "2555.080",
+   "id": "f000612",
+   "language": "eng",
+   "lines": [
+    "But that case, at least you bound the growth <eob>"
+   ]
+  },
+  {
+   "begin": "2555.080",
+   "children": [],
+   "end": "2557.320",
+   "id": "f000613",
+   "language": "eng",
+   "lines": [
+    "as you go back into the network. <eob>"
+   ]
+  },
+  {
+   "begin": "2557.320",
+   "children": [],
+   "end": "2565.120",
+   "id": "f000614",
+   "language": "eng",
+   "lines": [
+    "Does that make sense? Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "2565.120",
+   "children": [],
+   "end": "2571.160",
+   "id": "f000615",
+   "language": "eng",
+   "lines": [
+    "And there's a short notebook <eol> that goes <eol> into that a little bit more. <eob>"
+   ]
+  },
+  {
+   "begin": "2571.160",
+   "children": [],
+   "end": "2575.560",
+   "id": "f000616",
+   "language": "eng",
+   "lines": [
+    "And then graph partitioning takes a graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2575.560",
+   "children": [],
+   "end": "2578.920",
+   "id": "f000617",
+   "language": "eng",
+   "lines": [
+    "and then what you do is you go <eol> and you clip some of the edges, <eob>"
+   ]
+  },
+  {
+   "begin": "2578.920",
+   "children": [],
+   "end": "2584.520",
+   "id": "f000618",
+   "language": "eng",
+   "lines": [
+    "and then you try to find these, <eol> you know, using some algorithms, <eob>"
+   ]
+  },
+  {
+   "begin": "2584.520",
+   "children": [],
+   "end": "2590.920",
+   "id": "f000619",
+   "language": "eng",
+   "lines": [
+    "you can find these kind of maximally <eol> connected subsets of the graph <eob>"
+   ]
+  },
+  {
+   "begin": "2590.920",
+   "children": [],
+   "end": "2594.680",
+   "id": "f000620",
+   "language": "eng",
+   "lines": [
+    "so that you partition them, <eob>"
+   ]
+  },
+  {
+   "begin": "2594.680",
+   "children": [],
+   "end": "2596.080",
+   "id": "f000621",
+   "language": "eng",
+   "lines": [
+    "and then you basically just remove them, <eob>"
+   ]
+  },
+  {
+   "begin": "2596.080",
+   "children": [],
+   "end": "2599.400",
+   "id": "f000622",
+   "language": "eng",
+   "lines": [
+    "and then you treat them as separate graphs. <eob>"
+   ]
+  },
+  {
+   "begin": "2599.400",
+   "children": [],
+   "end": "2607.880",
+   "id": "f000623",
+   "language": "eng",
+   "lines": [
+    "And you can do that partitioning <eol> on, <eol> you know, <eob>"
+   ]
+  },
+  {
+   "begin": "2607.880",
+   "children": [],
+   "end": "2609.520",
+   "id": "f000624",
+   "language": "eng",
+   "lines": [
+    "like every epoch, <eob>"
+   ]
+  },
+  {
+   "begin": "2609.520",
+   "children": [],
+   "end": "2611.720",
+   "id": "f000625",
+   "language": "eng",
+   "lines": [
+    "you can change the partitioning <eob>"
+   ]
+  },
+  {
+   "begin": "2611.720",
+   "children": [],
+   "end": "2616.680",
+   "id": "f000626",
+   "language": "eng",
+   "lines": [
+    "so that you cover some <eol> of these <eol> missing edges as well. <eob>"
+   ]
+  },
+  {
+   "begin": "2616.680",
+   "children": [],
+   "end": "2617.640",
+   "id": "f000627",
+   "language": "eng",
+   "lines": [
+    "Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "2617.640",
+   "children": [],
+   "end": "2628.040",
+   "id": "f000628",
+   "language": "eng",
+   "lines": [
+    "Makes sense? Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "2628.040",
+   "children": [],
+   "end": "2630.480",
+   "id": "f000629",
+   "language": "eng",
+   "lines": [
+    "I'm not going to go into detail here. <eob>"
+   ]
+  },
+  {
+   "begin": "2630.480",
+   "children": [],
+   "end": "2634.040",
+   "id": "f000630",
+   "language": "eng",
+   "lines": [
+    "It's in the book, but besides <eol> the mean pooling, <eob>"
+   ]
+  },
+  {
+   "begin": "2634.040",
+   "children": [],
+   "end": "2637.560",
+   "id": "f000631",
+   "language": "eng",
+   "lines": [
+    "there's a list in the book <eol> on different ways that you can, <eob>"
+   ]
+  },
+  {
+   "begin": "2637.560",
+   "children": [],
+   "end": "2641.960",
+   "id": "f000632",
+   "language": "eng",
+   "lines": [
+    "instead of just straight aggregation, <eob>"
+   ]
+  },
+  {
+   "begin": "2641.960",
+   "children": [],
+   "end": "2648.400",
+   "id": "f000633",
+   "language": "eng",
+   "lines": [
+    "you can do things like enhance <eol> the weight, the diagonal, <eob>"
+   ]
+  },
+  {
+   "begin": "2648.400",
+   "children": [],
+   "end": "2651.080",
+   "id": "f000634",
+   "language": "eng",
+   "lines": [
+    "a little bit more in the equation up there. <eob>"
+   ]
+  },
+  {
+   "begin": "2651.080",
+   "children": [],
+   "end": "2652.320",
+   "id": "f000635",
+   "language": "eng",
+   "lines": [
+    "You can add residual connections <eob>"
+   ]
+  },
+  {
+   "begin": "2652.320",
+   "children": [],
+   "end": "2657.600",
+   "id": "f000636",
+   "language": "eng",
+   "lines": [
+    "just like we saw in the lecture <eol> on ResNets. <eob>"
+   ]
+  },
+  {
+   "begin": "2657.600",
+   "children": [],
+   "end": "2660.960",
+   "id": "f000637",
+   "language": "eng",
+   "lines": [
+    "You can just add <eol> the previous hidden layer <eob>"
+   ]
+  },
+  {
+   "begin": "2660.960",
+   "children": [],
+   "end": "2667.200",
+   "id": "f000638",
+   "language": "eng",
+   "lines": [
+    "to the output <eol> of the activation function. <eob>"
+   ]
+  },
+  {
+   "begin": "2667.200",
+   "children": [],
+   "end": "2670.840",
+   "id": "f000639",
+   "language": "eng",
+   "lines": [
+    "For the aggregation function, <eol> you can weight them. <eob>"
+   ]
+  },
+  {
+   "begin": "2670.840",
+   "children": [],
+   "end": "2675.440",
+   "id": "f000640",
+   "language": "eng",
+   "lines": [
+    "So you're taking an average <eol> instead of a simple sum <eob>"
+   ]
+  },
+  {
+   "begin": "2675.440",
+   "children": [],
+   "end": "2677.200",
+   "id": "f000641",
+   "language": "eng",
+   "lines": [
+    "on the aggregation. <eob>"
+   ]
+  },
+  {
+   "begin": "2677.200",
+   "children": [],
+   "end": "2679.880",
+   "id": "f000642",
+   "language": "eng",
+   "lines": [
+    "This KIPF normalization is factoring in <eob>"
+   ]
+  },
+  {
+   "begin": "2679.880",
+   "children": [],
+   "end": "2685.360",
+   "id": "f000643",
+   "language": "eng",
+   "lines": [
+    "that if you have a node <eol> that's coming from, <eol> that has a lot of neighbors, <eob>"
+   ]
+  },
+  {
+   "begin": "2685.360",
+   "children": [],
+   "end": "2691.720",
+   "id": "f000644",
+   "language": "eng",
+   "lines": [
+    "maybe you don't want it <eol> to overly influence <eol> this aggregation here. <eob>"
+   ]
+  },
+  {
+   "begin": "2691.720",
+   "children": [],
+   "end": "2697.200",
+   "id": "f000645",
+   "language": "eng",
+   "lines": [
+    "And so you can normalize it <eol> a little bit there. <eob>"
+   ]
+  },
+  {
+   "begin": "2697.200",
+   "children": [],
+   "end": "2700.240",
+   "id": "f000646",
+   "language": "eng",
+   "lines": [
+    "And then instead of you can do <eol> a max pool aggregation. <eob>"
+   ]
+  },
+  {
+   "begin": "2700.240",
+   "children": [],
+   "end": "2701.560",
+   "id": "f000647",
+   "language": "eng",
+   "lines": [
+    "Instead of summing, <eob>"
+   ]
+  },
+  {
+   "begin": "2701.560",
+   "children": [],
+   "end": "2705.480",
+   "id": "f000648",
+   "language": "eng",
+   "lines": [
+    "you can just take <eol> the max <eol> of all the neighbors as well. <eob>"
+   ]
+  },
+  {
+   "begin": "2705.480",
+   "children": [],
+   "end": "2709.400",
+   "id": "f000649",
+   "language": "eng",
+   "lines": [
+    "So just like with regular neural networks, <eob>"
+   ]
+  },
+  {
+   "begin": "2709.400",
+   "children": [],
+   "end": "2717.120",
+   "id": "f000650",
+   "language": "eng",
+   "lines": [
+    "you can play with the different <eol> kinds <eol> of pooling operators. <eob>"
+   ]
+  },
+  {
+   "begin": "2717.120",
+   "children": [],
+   "end": "2722.080",
+   "id": "f000651",
+   "language": "eng",
+   "lines": [
+    "Okay. <eob>"
+   ]
+  },
+  {
+   "begin": "2722.080",
+   "children": [],
+   "end": "2724.880",
+   "id": "f000652",
+   "language": "eng",
+   "lines": [
+    "So then there is the analogy <eol> to transformers. <eob>"
+   ]
+  },
+  {
+   "begin": "2724.880",
+   "children": [],
+   "end": "2728.480",
+   "id": "f000653",
+   "language": "eng",
+   "lines": [
+    "You can also do aggregation by attention. <eob>"
+   ]
+  },
+  {
+   "begin": "2728.480",
+   "children": [],
+   "end": "2735.320",
+   "id": "f000654",
+   "language": "eng",
+   "lines": [
+    "And essentially you're creating <eol> a attention matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "2735.320",
+   "children": [],
+   "end": "2739.400",
+   "id": "f000655",
+   "language": "eng",
+   "lines": [
+    "or learning an attention matrix, <eob>"
+   ]
+  },
+  {
+   "begin": "2739.400",
+   "children": [],
+   "end": "2744.000",
+   "id": "f000656",
+   "language": "eng",
+   "lines": [
+    "and then just kind of very similar <eol> to transformers <eob>"
+   ]
+  },
+  {
+   "begin": "2744.000",
+   "children": [],
+   "end": "2746.840",
+   "id": "f000657",
+   "language": "eng",
+   "lines": [
+    "is that so you're doing <eol> a linear transformation on the input. <eob>"
+   ]
+  },
+  {
+   "begin": "2746.840",
+   "children": [],
+   "end": "2749.440",
+   "id": "f000658",
+   "language": "eng",
+   "lines": [
+    "Remember when we took the input <eob>"
+   ]
+  },
+  {
+   "begin": "2749.440",
+   "children": [],
+   "end": "2753.040",
+   "id": "f000659",
+   "language": "eng",
+   "lines": [
+    "and we transformed it <eol> into the value vectors. <eob>"
+   ]
+  },
+  {
+   "begin": "2753.040",
+   "children": [],
+   "end": "2755.280",
+   "id": "f000660",
+   "language": "eng",
+   "lines": [
+    "And then we had the query and the key. <eob>"
+   ]
+  },
+  {
+   "begin": "2755.280",
+   "children": [],
+   "end": "2758.960",
+   "id": "f000661",
+   "language": "eng",
+   "lines": [
+    "There's not really a separate <eol> query and the key, <eob>"
+   ]
+  },
+  {
+   "begin": "2758.960",
+   "children": [],
+   "end": "2763.600",
+   "id": "f000662",
+   "language": "eng",
+   "lines": [
+    "but it is creating this attention matrix <eob>"
+   ]
+  },
+  {
+   "begin": "2763.600",
+   "children": [],
+   "end": "2769.760",
+   "id": "f000663",
+   "language": "eng",
+   "lines": [
+    "and then multiplying by this linear transformed value. <eob>"
+   ]
+  },
+  {
+   "begin": "2769.760",
+   "children": [],
+   "end": "2772.760",
+   "id": "f000664",
+   "language": "eng",
+   "lines": [
+    "So it is similar. <eob>"
+   ]
+  },
+  {
+   "begin": "2772.760",
+   "children": [],
+   "end": "2778.720",
+   "id": "f000665",
+   "language": "eng",
+   "lines": [
+    "And so if you draw like we did before, <eob>"
+   ]
+  },
+  {
+   "begin": "2778.720",
+   "children": [],
+   "end": "2782.880",
+   "id": "f000666",
+   "language": "eng",
+   "lines": [
+    "so this is the graph convolution <eol> that I was just showing you <eob>"
+   ]
+  },
+  {
+   "begin": "2782.880",
+   "children": [],
+   "end": "2786.160",
+   "id": "f000667",
+   "language": "eng",
+   "lines": [
+    "where you have the adjacency <eol> matrix <eol> which is fixed, <eob>"
+   ]
+  },
+  {
+   "begin": "2786.160",
+   "children": [],
+   "end": "2788.280",
+   "id": "f000668",
+   "language": "eng",
+   "lines": [
+    "and then you have the input <eob>"
+   ]
+  },
+  {
+   "begin": "2788.280",
+   "children": [],
+   "end": "2791.360",
+   "id": "f000669",
+   "language": "eng",
+   "lines": [
+    "which is going through a linear transformation, <eob>"
+   ]
+  },
+  {
+   "begin": "2791.360",
+   "children": [],
+   "end": "2794.320",
+   "id": "f000670",
+   "language": "eng",
+   "lines": [
+    "and then you're just multiplying <eol> by the adjacency matrix <eob>"
+   ]
+  },
+  {
+   "begin": "2794.320",
+   "children": [],
+   "end": "2797.800",
+   "id": "f000671",
+   "language": "eng",
+   "lines": [
+    "or that plus the identity. <eob>"
+   ]
+  },
+  {
+   "begin": "2797.800",
+   "children": [],
+   "end": "2802.720",
+   "id": "f000672",
+   "language": "eng",
+   "lines": [
+    "The graph attention, again, <eol> it's not exactly like the transformers, <eob>"
+   ]
+  },
+  {
+   "begin": "2802.720",
+   "children": [],
+   "end": "2808.040",
+   "id": "f000673",
+   "language": "eng",
+   "lines": [
+    "but it is now coming up <eol> with these attention weights <eob>"
+   ]
+  },
+  {
+   "begin": "2808.040",
+   "children": [],
+   "end": "2809.480",
+   "id": "f000674",
+   "language": "eng",
+   "lines": [
+    "and that's multiplying. <eob>"
+   ]
+  },
+  {
+   "begin": "2809.480",
+   "children": [],
+   "end": "2814.480",
+   "id": "f000675",
+   "language": "eng",
+   "lines": [
+    "So it's this kind of hyper network <eol> like I showed you for the transformers. <eob>"
+   ]
+  },
+  {
+   "begin": "2814.480",
+   "children": [],
+   "end": "2817.360",
+   "id": "f000676",
+   "language": "eng",
+   "lines": [
+    "It is learning some attention weights <eob>"
+   ]
+  },
+  {
+   "begin": "2817.360",
+   "children": [],
+   "end": "2820.160",
+   "id": "f000677",
+   "language": "eng",
+   "lines": [
+    "and then multiplying that <eob>"
+   ]
+  },
+  {
+   "begin": "2820.160",
+   "children": [],
+   "end": "2821.600",
+   "id": "f000678",
+   "language": "eng",
+   "lines": [
+    "by the linear transformed input. <eob>"
+   ]
+  },
+  {
+   "begin": "2821.600",
+   "children": [],
+   "end": "2826.240",
+   "id": "f000679",
+   "language": "eng",
+   "lines": [
+    "And just for comparison, <eob>"
+   ]
+  },
+  {
+   "begin": "2826.240",
+   "children": [],
+   "end": "2832.400",
+   "id": "f000680",
+   "language": "eng",
+   "lines": [
+    "I put the, oops, text got cut off here a little bit, <eob>"
+   ]
+  },
+  {
+   "begin": "2832.400",
+   "children": [],
+   "end": "2837.080",
+   "id": "f000681",
+   "language": "eng",
+   "lines": [
+    "but this was the regular dot product self-attention <eob>"
+   ]
+  },
+  {
+   "begin": "2837.080",
+   "children": [],
+   "end": "2840.160",
+   "id": "f000682",
+   "language": "eng",
+   "lines": [
+    "where you had the query and the keys <eob>"
+   ]
+  },
+  {
+   "begin": "2840.160",
+   "children": [],
+   "end": "2841.760",
+   "id": "f000683",
+   "language": "eng",
+   "lines": [
+    "and then you had the linear transform <eob>"
+   ]
+  },
+  {
+   "begin": "2841.760",
+   "children": [],
+   "end": "2846.560",
+   "id": "f000684",
+   "language": "eng",
+   "lines": [
+    "and then it was being multiplied <eol> by this attention matrix. <eob>"
+   ]
+  },
+  {
+   "begin": "2846.560",
+   "children": [],
+   "end": "2849.760",
+   "id": "f000685",
+   "language": "eng",
+   "lines": [
+    "So not quite like the transformer, <eob>"
+   ]
+  },
+  {
+   "begin": "2849.760",
+   "children": [],
+   "end": "2861.480",
+   "id": "f000686",
+   "language": "eng",
+   "lines": [
+    "but it does kind of integrate <eol> some notions of the self-attention. <eob>"
+   ]
+  },
+  {
+   "begin": "2861.480",
+   "children": [],
+   "end": "2871.520",
+   "id": "f000687",
+   "language": "eng",
+   "lines": [
+    "Okay? All right, we're actually <eol> on the last topic here. <eob>"
+   ]
+  },
+  {
+   "begin": "2871.520",
+   "children": [],
+   "end": "2873.560",
+   "id": "f000688",
+   "language": "eng",
+   "lines": [
+    "You guys are going to get out a bit early. <eob>"
+   ]
+  },
+  {
+   "begin": "2873.560",
+   "children": [],
+   "end": "2877.480",
+   "id": "f000689",
+   "language": "eng",
+   "lines": [
+    "So edge graphs, so this <eol> is actually quite simple. <eob>"
+   ]
+  },
+  {
+   "begin": "2877.480",
+   "children": [],
+   "end": "2886.480",
+   "id": "f000690",
+   "language": "eng",
+   "lines": [
+    "You can take, let's say, some graph <eol> that you have with the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2886.480",
+   "children": [],
+   "end": "2892.880",
+   "id": "f000691",
+   "language": "eng",
+   "lines": [
+    "You can create these, you know, <eol> basically nodes corresponding to every edge. <eob>"
+   ]
+  },
+  {
+   "begin": "2892.880",
+   "children": [],
+   "end": "2899.240",
+   "id": "f000692",
+   "language": "eng",
+   "lines": [
+    "So these are just labeled <eol> by the nodes <eol> that they connect, right? <eob>"
+   ]
+  },
+  {
+   "begin": "2899.240",
+   "children": [],
+   "end": "2901.600",
+   "id": "f000693",
+   "language": "eng",
+   "lines": [
+    "So this is between nodes four and six, <eob>"
+   ]
+  },
+  {
+   "begin": "2901.600",
+   "children": [],
+   "end": "2905.960",
+   "id": "f000694",
+   "language": "eng",
+   "lines": [
+    "so we just call it like four slash six. <eob>"
+   ]
+  },
+  {
+   "begin": "2905.960",
+   "children": [],
+   "end": "2910.000",
+   "id": "f000695",
+   "language": "eng",
+   "lines": [
+    "So you can just add these at every edge <eob>"
+   ]
+  },
+  {
+   "begin": "2910.000",
+   "children": [],
+   "end": "2913.800",
+   "id": "f000696",
+   "language": "eng",
+   "lines": [
+    "and then just remove all of the nodes. <eob>"
+   ]
+  },
+  {
+   "begin": "2913.800",
+   "children": [],
+   "end": "2919.080",
+   "id": "f000697",
+   "language": "eng",
+   "lines": [
+    "And now you have, you know, <eol> an edge graph, actually, <eob>"
+   ]
+  },
+  {
+   "begin": "2919.080",
+   "children": [],
+   "end": "2920.880",
+   "id": "f000698",
+   "language": "eng",
+   "lines": [
+    "but this is representing, you know, <eob>"
+   ]
+  },
+  {
+   "begin": "2920.880",
+   "children": [],
+   "end": "2924.880",
+   "id": "f000699",
+   "language": "eng",
+   "lines": [
+    "assuming now that we have <eol> some useful information on the edges. <eob>"
+   ]
+  },
+  {
+   "begin": "2924.880",
+   "children": [],
+   "end": "2928.040",
+   "id": "f000700",
+   "language": "eng",
+   "lines": [
+    "So we have edge embedding vectors. <eob>"
+   ]
+  },
+  {
+   "begin": "2928.040",
+   "children": [],
+   "end": "2931.480",
+   "id": "f000701",
+   "language": "eng",
+   "lines": [
+    "We end up with what looked <eol> like the node graph, <eob>"
+   ]
+  },
+  {
+   "begin": "2931.480",
+   "children": [],
+   "end": "2936.400",
+   "id": "f000702",
+   "language": "eng",
+   "lines": [
+    "but it's just the edge <eol> embedding vectors. <eob>"
+   ]
+  },
+  {
+   "begin": "2936.400",
+   "children": [],
+   "end": "2938.560",
+   "id": "f000703",
+   "language": "eng",
+   "lines": [
+    "So everything that I just showed you before, <eob>"
+   ]
+  },
+  {
+   "begin": "2938.560",
+   "children": [],
+   "end": "2942.320",
+   "id": "f000704",
+   "language": "eng",
+   "lines": [
+    "now you can just apply and do, <eol> you know, whatever, <eob>"
+   ]
+  },
+  {
+   "begin": "2942.320",
+   "children": [],
+   "end": "2951.080",
+   "id": "f000705",
+   "language": "eng",
+   "lines": [
+    "classification and regression on the, <eol> with the node edge data. <eob>"
+   ]
+  },
+  {
+   "begin": "2951.080",
+   "children": [],
+   "end": "2955.840",
+   "id": "f000706",
+   "language": "eng",
+   "lines": [
+    "So very, very simple to handle. <eob>"
+   ]
+  },
+  {
+   "begin": "2955.840",
+   "children": [],
+   "end": "2967.560",
+   "id": "f000707",
+   "language": "eng",
+   "lines": [
+    "Okay? All right, it's a nice warm day, <eol> so we can go enjoy the weather. <eob>"
+   ]
+  },
+  {
+   "begin": "2967.560",
+   "children": [],
+   "end": "2973.400",
+   "id": "f000708",
+   "language": "eng",
+   "lines": [
+    "So next time my plan is to do <eol> kind of a RLHF spin <eob>"
+   ]
+  },
+  {
+   "begin": "2973.400",
+   "children": [],
+   "end": "2976.080",
+   "id": "f000709",
+   "language": "eng",
+   "lines": [
+    "on reinforcement learning. <eob>"
+   ]
+  },
+  {
+   "begin": "2976.080",
+   "children": [],
+   "end": "2982.840",
+   "id": "f000710",
+   "language": "eng",
+   "lines": [
+    "So I'm not going to try to recreate <eol> the other reinforcement class. <eob>"
+   ]
+  },
+  {
+   "begin": "2982.840",
+   "children": [],
+   "end": "2987.640",
+   "id": "f000711",
+   "language": "eng",
+   "lines": [
+    "And then my plan is to talk about <eob>"
+   ]
+  },
+  {
+   "begin": "2987.640",
+   "children": [],
+   "end": "2991.960",
+   "id": "f000712",
+   "language": "eng",
+   "lines": [
+    "this joint embedding predictive architecture <eol> for the last class, <eob>"
+   ]
+  },
+  {
+   "begin": "2991.960",
+   "children": [],
+   "end": "2993.760",
+   "id": "f000713",
+   "language": "eng",
+   "lines": [
+    "and then we'll have <eol> the project presentations. <eob>"
+   ]
+  },
+  {
+   "begin": "2993.760",
+   "children": [],
+   "end": "3000.280",
+   "id": "f000714",
+   "language": "eng",
+   "lines": [
+    "So like I said, I'll send out <eol> a Piazza note tonight <eob>"
+   ]
+  },
+  {
+   "begin": "3000.280",
+   "children": [],
+   "end": "3002.400",
+   "id": "f000715",
+   "language": "eng",
+   "lines": [
+    "with the assignment of who gets <eol> which slot <eob>"
+   ]
+  },
+  {
+   "begin": "3002.400",
+   "children": [],
+   "end": "3004.040",
+   "id": "f000716",
+   "language": "eng",
+   "lines": [
+    "on the 25th and the 30th. <eob>"
+   ]
+  },
+  {
+   "begin": "3004.040",
+   "children": [],
+   "end": "3007.000",
+   "id": "f000717",
+   "language": "eng",
+   "lines": [
+    "And then I'll also, well, it's Tuesday. <eob>"
+   ]
+  },
+  {
+   "begin": "3007.000",
+   "children": [],
+   "end": "3008.120",
+   "id": "f000718",
+   "language": "eng",
+   "lines": [
+    "We'll talk on Thursday, <eob>"
+   ]
+  },
+  {
+   "begin": "3008.120",
+   "children": [],
+   "end": "3013.160",
+   "id": "f000719",
+   "language": "eng",
+   "lines": [
+    "but it's a good chance I'll be in office <eol> for office hours this week as well. <eob>"
+   ]
+  },
+  {
+   "begin": "3013.160",
+   "children": [],
+   "end": "3018.720",
+   "id": "f000720",
+   "language": "eng",
+   "lines": [
+    "Okay, thanks. <eob>"
+   ]
+  },
+  {
+   "begin": "3018.720",
+   "children": [],
+   "end": "3020.960",
+   "id": "f000721",
+   "language": "eng",
+   "lines": [
+    "Thank you. <eob>"
+   ]
+  }
+ ]
+}

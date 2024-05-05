@@ -1,0 +1,721 @@
+ All right, so today we're back <eol> on the book chapter. <eob>
+ I think the treatment <eol> of graphenolormat <eol> works was just fine, <eob>
+ so I actually follow it very closely. <eob>
+ And it's more, I think, <eol> straightforward extension <eob>
+ from what we've been talking about earlier, <eob>
+ opposed to the, oops, I forgot to move the, <eol> you are here pointer. <eob>
+ But yeah, a little bit more straightforward extension <eob>
+ from the neural net stuff, <eob>
+ from the GANS and diffusion <eol> models and VAE. <eob>
+ So I think, so I will keep <eol> the final report and repo here. <eob>
+ I guess technically, I think, <eol> Osama, you're right, <eob>
+ because there's no final. <eob>
+ You know, they want me to start <eol> doing grades after the last class, <eob>
+ but it seems like it's not <eol> strictly enforced. <eob>
+ And so this gives you some more <eol> time <eol> to clean things up. <eob>
+ See why it's not. <eob>
+ So I only have two volunteers <eol> for the 25th. <eob>
+ Thank you to the both of you. <eob>
+ So tonight I'm going to randomly <eol> select <eol> the other six, I guess, for the 25th. <eob>
+ And then everyone else <eol> will go on the 30th. <eob>
+ And so I'll let you know. <eob>
+ The other thing is I updated, <eol> everyone see the final project info. <eob>
+ I updated on the website <eol> and grade scope. <eob>
+ So I put a little bit <eol> more <eol> instruction on the video. <eob>
+ I updated the report template, <eol> the LaTeX template, <eob>
+ and I put a comment, a little bit more detail <eol> on the GitHub repo. <eob>
+ So in the report, if you could put <eol> a link to the repo, <eob>
+ you can put it on grade scope. <eob>
+ I also had it as well. <eob>
+ But the idea is that, I mean, <eol> like any kind of well-executed project, <eob>
+ ideas to make it reproducible, <eob>
+ and so somebody can come <eol> and reproduce your work <eob>
+ is the kind of ideal case. <eob>
+ Any questions about final projects, <eol> presentations? <eob>
+ All right, so let's jump in. <eob>
+ So graph neural networks. <eob>
+ I think this is an interesting space, <eob>
+ not something that I had really <eol> worked in before. <eob>
+ But like I said, it's a pretty <eol> straightforward extension. <eob>
+ So the main challenges <eol> is that the topology of the graph can vary, <eob>
+ the types of connections <eol> in which nodes are connected, <eob>
+ the size of these graphs <eol> can be quite large. <eob>
+ And we have to deal with a case <eol> where you have a single monolithic graph, <eob>
+ which is, I'll show a bunch of examples, <eol> but that's a pretty common case. <eob>
+ And so we'll talk about <eol> what does it mean to do batches of data <eob>
+ because you need that for stochastic <eol> gradient descent, for example. <eob>
+ So I'll cover definitions. <eob>
+ We'll talk about representation, <eol> the so-called adjacency matrix, <eob>
+ which is kind of crucial <eol> for describing the topology of the graph, <eob>
+ and then get into the graph <eol> neural networks, <eob>
+ how you build a convolutional layer <eol> on top of a graph, <eob>
+ and then how you build graph classification <eol> and regression <eob>
+ at the graph level <eol> and the node level. <eob>
+ Yeah, I just realized that I had also mentioned <eob>
+ we're going to do <eol> a little recap of the project. <eob>
+ Maybe we'll push it to Thursday. <eob>
+ Okay. <eob>
+ All right, so basic definition <eol> and examples. <eob>
+ So generally, so the nodes, <eol> sometimes they're called vertices, <eob>
+ are connected by edges or links. <eob>
+ You can have undirected <eob>
+ where there's no kind of implied direction <eol> between the nodes, <eob>
+ or you can have directed. <eob>
+ And if you do have a directed connection, <eob>
+ if there's no cycles, <eol> nothing going back upon itself, <eob>
+ then you can have a directed <eol> acyclic graph. <eob>
+ And so sometimes you'll hear the term DAG <eob>
+ because there's certain things <eol> that you can do with DAGs <eob>
+ if they have those two properties. <eob>
+ So we have been looking at, <eob>
+ we didn't really treat it <eol> as a graph per se, <eob>
+ but we have been looking <eol> at directed acyclic graphs. <eob>
+ Just the feed-forward neural network <eol> is one example. <eob>
+ But it's, you know, I guess <eol> kind of a regular topology. <eob>
+ We didn't treat it as a graph. <eob>
+ I also mentioned this in the VAE talk, <eob>
+ these Bayesian probabilistic <eol> graphical models <eob>
+ that you can represent something like this, <eob>
+ where you have like a node <eol> that represents a variable. <eob>
+ And so typically you have something <eol> like a prior probability <eob>
+ with a directed edge <eol> to another variable. <eob>
+ And then that node is representing <eol> the conditional probability, <eob>
+ the probability that this takes on some value <eob>
+ given some latent variable in this case. <eob>
+ So in the book there's a bunch <eol> of examples as well. <eob>
+ So road networks are graphs <eob>
+ where the physical locations <eol> or the landmarks are the nodes. <eob>
+ Roads are the edges. <eob>
+ Chemical molecules are examples <eol> where the nodes are atoms <eob>
+ and the edges are chemical bonds between them. <eob>
+ You can have electrical circuit as graphs. <eob>
+ The nodes are components <eol> or the junctions. <eob>
+ And then the edges <eol> are the wires connecting them. <eob>
+ Some other examples. <eob>
+ Social networks, <eob>
+ and this is where <eol> it can be a very large graph. <eob>
+ So you can take all of Facebook <eol> as a social network. <eob>
+ The nodes are the people <eob>
+ and the edges are people <eol> who have friended each other on the platform. <eob>
+ Scientific literature, <eob>
+ the nodes <eol> are the papers, citations, <eob>
+ so these are directed, generally acyclic, <eob>
+ where it's citing password. <eob>
+ And then there's, I'm not aware <eol> of actually much use here <eob>
+ of something like a knowledge graph, <eob>
+ but you can have this kind of hybrid graph. <eob>
+ Actually, in this case, yeah, <eol> these are all directed. <eob>
+ But it is acyclic. <eob>
+ Actually, in the book I think <eol> it says <eol> it's acyclic, <eob>
+ if I remember right, <eob>
+ but I see one cycle right there. <eob>
+ And actually, yeah. <eob>
+ So in this case, you're trying to, <eob>
+ the edges correspond to kind of relationships <eob>
+ between entities that are the nodes. <eob>
+ So you can also, things <eol> that are maybe not, <eob>
+ you wouldn't typically think of as graphs, <eob>
+ but if you have a 3D geometry <eol> of a physical object, <eob>
+ like in this case a plane, <eob>
+ the vertices in 3D <eol> can be the nodes <eob>
+ and then they could just, <eob>
+ you could just have connections <eol> to all the nodes nearby. <eob>
+ There's also, there's a scene graph, <eol> which can be used in 3D rendering, <eob>
+ but it's typically, it describes <eol> the relationship of 3D objects <eob>
+ and these can be hierarchical. <eob>
+ So you can have, in this case, <eol> like a room description <eob>
+ where you have the connection <eol> between <eob>
+ like the back walls connected <eol> to the right wall and the left wall <eob>
+ and the ceiling and the floor. <eob>
+ And then you have a hierarchy, <eol> so you can then have a lampshade, <eob>
+ which is broken further down into components <eob>
+ or you can have the table, <eol> which is broken further down as well. <eob>
+ I put some links of papers that, <eob>
+ some of them are applying neural networks <eob>
+ to these kinds of scene graphs. <eob>
+ And then there's a bunch <eol> of other examples. <eob>
+ So Wikipedia, where articles <eol> are the nodes <eob>
+ and the hyperlinks are the edges. <eob>
+ Computer programs, <eol> you can show as graphs. <eob>
+ In fact, in the example that I did <eob>
+ with the Jupiter notebook <eol> for the micrograd, <eob>
+ we were basically building <eol> a tensor compute graph, <eob>
+ right, if you remember. <eob>
+ So, but yeah, so proteins can be, <eob>
+ the proteins are the nodes, <eob>
+ the edges are where the proteins interact, <eob>
+ and then you can even have <eol> like sets <eol> or lists <eob>
+ or even images <eob>
+ where you just have <eol> the six or eight neighboring pixels <eob>
+ just connected to a particular pixel <eol> as well, okay? <eob>
+ All right, so how do we describe these? <eob>
+ Typically, we're going to define something <eol> called like a node embedding. <eob>
+ So we talked about embedding <eol> vectors <eol> with transformers. <eob>
+ There's actually some analogies there, <eol> which we'll see later, <eob>
+ but you can have some kind of information <eol> that you have <eob>
+ basically translated <eol> into an embedding vector, for example. <eob>
+ Typically, they're all <eol> of the same dimension. <eob>
+ You can also do the same thing with edges. <eob>
+ So you can have an edge embedding <eol> or embedding vector for every edge. <eob>
+ And then typically, <eol> we'll define <eol> an adjacency matrix. <eob>
+ And the way you read this <eob>
+ is that this is just, in this case, <eob>
+ for undirected graphs, <eob>
+ that you just read the indices. <eob>
+ And so if there's a non-zero, <eol> for example, here at 3, 1, <eob>
+ that means there's a connection <eol> between 3 and 1 on the nodes. <eob>
+ And because it's undirected, <eob>
+ then you would expect <eol> there's going <eol> to be a connection on 1, 3. <eob>
+ So it's going to be symmetric, <eol> always a symmetric matrix, <eob>
+ but the diagonal is typically zero <eob>
+ because there's no, at least, external edge <eob>
+ connecting back to itself. <eob>
+ So you see the diagonals are zeros, <eol> and then we have non-zeros, <eob>
+ actually typically just put a 1 <eol> where there's a connection. <eob>
+ And these can be very sparse, <eob>
+ but sometimes you'll use sparse <eol> representation <eol> for the matrices. <eob>
+ Okay, so we could take <eol> all of the node data edges, <eob>
+ and then we can put them <eol> into a matrix, right? <eob>
+ So remember, we have <eol> a d-dimensional <eol> embedding vector <eob>
+ for every node, <eob>
+ and we have, let's say, n nodes. <eob>
+ In this case, yeah, <eol> it lines up six nodes. <eob>
+ And so just like we were doing <eol> for transformers, <eob>
+ you can put together an input matrix, <eob>
+ that is just d-dimension <eol> and then n columns, <eob>
+ one column for every node. <eob>
+ Okay? <eob>
+ And then the same thing <eol> for the edges. <eob>
+ You can have a different <eol> dimensionality <eol> to the edges, <eob>
+ but they represent each one of these edges. <eob>
+ And so there's, you know, it's probably <eol> some kind of metadata here, <eob>
+ but these are the connections <eol> that they represent. <eob>
+ Okay? Okay, so let's look at some properties <eol> of the adjacency matrix. <eob>
+ In this case, this is a simple <eol> undirected graph <eob>
+ with eight nodes. <eob>
+ And so you can, I guess <eol> the font's a little bit small, <eob>
+ but you can convince yourself <eol> that there's a one everywhere <eob>
+ where there's a connection on the graph. <eob>
+ And so we can describe one of the nodes <eob>
+ as just a one-hot encoded vector, right? <eob>
+ And so like node six <eol> is just a vector, <eob>
+ the length, this should be length eight, <eob>
+ and then there's just a, <eob>
+ it's all zeros except a one <eob>
+ at the sixth position there, right? <eob>
+ So, and then once you do that, <eob>
+ you can left multiply the embedding vector, <eob>
+ the one-hot vector here <eol> by the adjacency matrix. <eob>
+ And what that gives you, <eol> just think about it, right? <eob>
+ You're taking each row <eol> and then <eol> you're multiplying here. <eob>
+ So you're just pulling out <eol> the whatever column is non-zero. <eob>
+ In this case, you're just pulling <eol> out <eol> the sixth column here. <eob>
+ And remember on the adjacency matrix, <eob>
+ this is saying that for the sixth node, <eob>
+ these are the nodes <eol> that it's connected to, right? <eob>
+ And so it's telling you <eol> that these are, <eob>
+ just by doing this multiplication, <eob>
+ it's telling you those are the neighboring nodes <eob>
+ to the node that we're interested in. <eob>
+ And then you can do it again. <eob>
+ You can left multiply again <eol> by another A adjacency matrix. <eob>
+ And now what it's showing you <eol> is that all of the nodes <eob>
+ is you can reach in exactly two steps. <eob>
+ And you can hit a node twice, <eob>
+ but you see like seven is not lit up, <eol> it's not colored <eob>
+ because you can't get there <eol> in exactly two steps. <eob>
+ It's not up to two steps, <eob>
+ it's exactly two steps <eol> that it's describing. <eob>
+ Okay? <eob>
+ And so if you just multiply A by itself, <eob>
+ what this is telling you <eol> is that, <eob>
+ I write it here, <eob>
+ that if you raise A to whatever power, <eol> for example of two, <eob>
+ just multiply it by itself <eol> that many times, <eob>
+ then every position here, <eob>
+ it contains the number of, as it says here, <eob>
+ unique walks of that length <eol> that you raise the power to, <eob>
+ the number of unique walks <eol> from node N to N. <eob>
+ So if you look here, let's say one, two, three, four, one, two, three, <eob>
+ well, okay, that's probably, well, yeah, this is saying <eol> from four to four, <eob>
+ you can, there should be <eol> four unique walks, <eob>
+ steps of two, right? <eob>
+ Is that, I don't see the fourth one. <eob>
+ Does anyone see the fourth one? <eob>
+ Oh, it's three, three, okay, yeah. <eob>
+ Okay, yeah, and so the, <eob>
+ but the thing to remember here <eob>
+ is that this, that value, <eob>
+ that it's not the number <eol> of unique paths, <eob>
+ so you can visit the same node, <eob>
+ but what you can think about <eol> is kind of an upper bound, <eob>
+ but it means that there is some path <eol> up to the value here <eob>
+ that, with the connection. <eob>
+ So there can be different distance <eol> walks between the nodes. <eob>
+ Okay. <eob>
+ Okay, so now you can do, <eol> you can do some things, <eob>
+ like for example, I just created <eol> a tiny graph <eob>
+ with these node embeddings, <eob>
+ three dimensional node embeddings, <eob>
+ which you can put together <eol> into a node data matrix, <eob>
+ and then this should be the adjacency matrix <eol> for that, for that graph. <eob>
+ You can define a permutation matrix, <eob>
+ and the permutation matrix <eol> just has a one in each column and each row, <eob>
+ so you can't have more than one, <eol> in a column or a row, <eob>
+ but if you take that data matrix <eol> and you right multiply it, <eob>
+ you're basically just permuting these, right? <eob>
+ So, same thing again, <eol> you're just taking the rows <eob>
+ and you're just grabbing <eol> for each of these columns, <eob>
+ you're just grabbing one of the columns out, <eob>
+ and so this permutation matrix here <eob>
+ is just permuting the values of the data matrix there, <eob>
+ and so you can do the same thing to the adjacency matrix, <eob>
+ but you have to post multiply and premultiply <eob>
+ by the transpose, <eob>
+ and so you can, hopefully I did this right, <eob>
+ so I permuted it, <eob>
+ I left the old indices, <eob>
+ these are the new indices, <eob>
+ I renumbered them, <eob>
+ they're just different numbers, <eob>
+ but they still have the same value, <eob>
+ they're the same topology, <eol> they're just indexed differently, <eob>
+ but the new adjacency matrix <eol> should be correct for this. <eob>
+ So, yeah, let me talk <eol> about some properties <eob>
+ and then we'll go back <eol> to the permutation <eol> adjacency matrix. <eob>
+ So, how do we extend this <eol> to a graph neural network? <eob>
+ Essentially what we're going to do <eol> is we're going to take <eob>
+ those node embedding matrices <eol> that I showed you <eob>
+ and the adjacency matrix <eol> which describes the topology of the graph, <eob>
+ and we're going to pass them <eol> through layers of a neural network. <eob>
+ So, the node embeddings <eol> are updated at each layer, <eob>
+ so you have these kind of hidden representation <eob>
+ or hidden activations <eol> after each layer, <eob>
+ and of course when you start <eol> the input data <eob>
+ is just the embedding vector <eol> of each node, <eob>
+ but at the end you have this output <eob>
+ which is, you know, you have a representation <eol> for each node, <eob>
+ but now it's incorporated context, you know, <eob>
+ from its neighbors in the rest of the graph <eob>
+ because as you'll see, well, we're going to kind of aggregate information <eob>
+ from the neighboring nodes. <eob>
+ And so, yeah, interestingly, <eob>
+ this is kind of like word embeddings <eol> in a transformer, <eob>
+ you know, when you start out you just have <eol> a unique word embedding <eob>
+ for every word or token, <eob>
+ but as it travels through the transformer <eob>
+ that what you have at the end <eol> is you have, you know, <eob>
+ kind of something <eol> that represents the word in its context <eob>
+ to the other words in the sentence. <eob>
+ Okay. <eob>
+ Okay, so you can do, <eol> just like other neural networks, <eob>
+ we can create classification <eol> and regression networks with these, <eob>
+ and so, you know, <eol> some examples, for example, <eob>
+ you can give it a molecular structure <eol> and graph form <eob>
+ and then you can try to figure out <eol> if it's poisonous or not <eob>
+ based on the chemical structure, <eob>
+ or you can regress boiling <eol> and freezing points, <eob>
+ so two regression values <eol> out of a molecular graph. <eob>
+ Yeah, and so generally, <eob>
+ just like <eol> with other neural networks <eol> that we saw, <eob>
+ that you can put a head <eol> to the network, right, <eob>
+ so you can put a classification head <eol> or a regression head <eob>
+ at the end of the network <eob>
+ to get it into that kind of final regression <eol> or classification form <eob>
+ and I'll show you some examples. <eob>
+ So I'm going to start <eol> with just the head of the network <eob>
+ and then I'll build up <eol> to how you build the network itself, <eob>
+ but imagine you had a graph <eol> with node embeddings. <eob>
+ We're going to focus mostly on node, <eol> kind of the node data. <eob>
+ At the very end, I'll show <eol> there's kind of a simple way <eob>
+ to handle data in the edges as well, <eob>
+ the edge embeddings, <eob>
+ but let's focus on the node embeddings first. <eob>
+ So let's say you put it <eol> through some neural network, <eob>
+ which we haven't defined, <eob>
+ but you have, on the output, <eol> you're going to have some, <eol> you know, <eob>
+ activations or embeddings <eob>
+ associated with each node <eob>
+ and then you can combine it. <eob>
+ You can put it through a linear layer <eob>
+ and then you can put it <eol> through, <eol> for example, <eob>
+ a sigmoid <eob>
+ or a softmax <eol> or something like that <eob>
+ and then you can end up <eol> with probabilities <eol> for every class. <eob>
+ So here's an example <eol> for just binary classification. <eob>
+ It's just kind of what should <eol> look <eol> pretty familiar. <eob>
+ You have the sigmoid, <eol> you have a beta, a bias here, <eob>
+ and then you have the weights <eob>
+ and this one is just a d-dimensional row vector <eob>
+ and then you have the, you know, <eol> your embeddings matrix here <eob>
+ and so this is just multiplying every, <eob>
+ it's just weighting every column, right, <eob>
+ of your embedding matrix. <eob>
+ But then in this case, because <eol> we want <eol> to get a single output, <eob>
+ we have this one vector, right? <eob>
+ This is just a, I think this is a, yeah, typo here. <eob>
+ This is just a column of ones, right? <eob>
+ And this has the effect <eol> of basically summing, <eob>
+ well, because we're dividing <eol> by the number of vectors, <eob>
+ this has the, basically, <eol> it's just taking the average <eol> of every one <eol> of those vectors and so, <eob>
+ and collapsing it into a single value. <eob>
+ And so this is like mean pooling, <eol> like we showed you before, early. <eob>
+ Okay, and so that was at the graph level. <eob>
+ So we collapsed everything <eol> into a single value. <eob>
+ But you can also do it <eol> at the node level. <eob>
+ So, for example, <eol> you can do <eol> binary classification, <eob>
+ you can decide between, let's say, <eol> one of two kinds of nodes here <eob>
+ and it's very similar <eob>
+ except you're doing it <eol> on every embedding vector. <eob>
+ This is not the matrix, <eob>
+ the whole matrix <eol> of all the embedding vectors stacked. <eob>
+ This is just the individual node vector <eob>
+ indexed by the node number n. <eob>
+ And then so you're doing that now <eol> and you're producing a vector <eob>
+ and then you have a, actually, this is a scale <eob>
+ or you're adding the bias <eob>
+ and then you're getting the value <eol> just for that particular node. <eob>
+ Okay, does that make sense? <eob>
+ Okay, yeah, so here's an example <eol> where you can decide, <eob>
+ let's say you have, <eob>
+ in some cases, <eol> maybe an edge doesn't exist <eob>
+ and you're trying to predict <eol> if an edge should exist there. <eob>
+ And so here you can take <eol> the, essentially, <eob>
+ the dot product <eob>
+ of the neighboring node <eol> embedding vectors, <eob>
+ send it through a sigmoid <eob>
+ and then you can train it <eol> to basically give you the probability <eob>
+ that, in fact, this edge should be there. <eob>
+ It's kind of another example. <eob>
+ Okay? Okay, so let's build up the, <eol> those were the heads of the graph, <eob>
+ let's build up the body <eol> of the graph itself. <eob>
+ Just like we saw before when we were, <eob>
+ it seemed like a long time ago now, <eob>
+ when we were building up <eol> the deep neural networks, <eob>
+ that we're just going to create <eol> all of these hidden layers. <eob>
+ We're going to start with the input. <eob>
+ We now have the adjacency matrix, <eob>
+ but we have parameters for each layer. <eob>
+ We're just going to have <eol> a bunch of hidden layers <eob>
+ and then we're going to, you know, <eob>
+ end up with that final hidden layer <eob>
+ before we get to the head <eol> of the network. <eob>
+ And so we're going to define <eol> what this function f is <eob>
+ to create the next hidden layer. <eob>
+ Okay, so just like <eol> in the convolutional networks <eob>
+ and some of the other networks, <eob>
+ that we do care about equivalence <eol> and invariance. <eob>
+ And so remember, equivalence <eol> means that if I do, <eob>
+ if I transform the input somehow, <eob>
+ that the output is transformed <eol> the same way. <eob>
+ And so remember back <eol> to the permutation matrix, <eob>
+ I can right multiply my data matrix <eob>
+ by the permutation back to left <eob>
+ multiply and right multiply <eol> the adjacency matrix. <eob>
+ But if I do that, then the output <eol> is just the hidden layer <eob>
+ with the same permutation, right, <eob>
+ multiplied by the same permutation matrix. <eob>
+ And so it's equivariant to permutation. <eob>
+ And then invariant, if we're doing <eol> something like sigmoid, <eob>
+ since we're summing <eol> all of these up anyway, <eob>
+ we don't really care <eol> if we're shuffling <eol> the order of the nodes. <eob>
+ And so in this case, if we're doing <eol> like graph level classification, <eob>
+ it's invariant to permutation as well. <eob>
+ So that's a valuable thing <eol> for the graph neural networks. <eob>
+ Okay, so let's now build out <eol> a convolutional layer for the graph. <eob>
+ And so I'm going to define a function here, <eob>
+ the aggregation function. <eob>
+ And essentially what it's doing, <eol> you can see here <eob>
+ that for a particular node <eol> and a particular layer, <eob>
+ okay, that I'm just taking the neighborhood. <eob>
+ So NE is just saying <eol> that it's returning the indices <eob>
+ of all the neighboring nodes <eol> for the node, <eob>
+ not including itself. <eob>
+ Okay, so that's going to be handy. <eob>
+ And then the whole layer itself <eol> is we have a weight matrix. <eob>
+ We're going to multiply it by the node, <eob>
+ the embedding vector <eol> for the node itself, <eob>
+ but we're also going to multiply it <eob>
+ against the sum of all the neighbors as well. <eob>
+ So it's kind of like the convolution, right? <eob>
+ We're taking weights <eol> and we're weighting <eol> all of the neighborhood <eob>
+ around a pixel in that case. <eob>
+ Okay, does that make sense? <eob>
+ And we're using the same weights for both. <eob>
+ So there's already some weight <eol> sharing happening here. <eob>
+ And those same weights <eol> are going to be applied <eob>
+ to every node in that graph at that layer. <eob>
+ Just like in a convolutional network. <eob>
+ Okay, so, yeah, so if you have, in this case, <eob>
+ you have your input, <eob>
+ you have, <eol> after the first layer, <eob>
+ so you do the aggregation <eol> for each node, <eob>
+ you have an omega-zero weight matrix, <eob>
+ and then put it through an activation <eob>
+ and you get the first hidden unit output, <eob>
+ the embeddings at each node. <eob>
+ And then you can do this <eol> through a bunch of layers <eob>
+ until you get to the last layer <eob>
+ and then you just do it again <eol> at the last layer. <eob>
+ So it should look a lot like <eol> the regular neural nets <eob>
+ and the convolutional neural nets <eol> that you saw. <eob>
+ Okay, so we have this equation <eol> where we had the aggregates, <eob>
+ we have this weight matrix, <eob>
+ we applied it to the node <eol> embedding vector, <eob>
+ the sum of all the neighbors. <eob>
+ And then, so, if you do this <eol> to the entire, <eob>
+ you can do this to just the embedding <eol> vector of a node, <eob>
+ but you can also just stack them all together, <eob>
+ like the data matrix <eol> that I was showing you. <eob>
+ So capital H here. <eob>
+ And what you see is that <eol> you're applying it to the same, <eob>
+ yeah, so I guess the first thing <eol> that's important to note here <eob>
+ is that remember when we right-multiplied <eol> by the adjacency matrix, <eob>
+ we got all of the immediate <eol> neighbors <eol> of the node, right? <eob>
+ And so we're replacing <eol> the aggregate function <eob>
+ with this right-multiply by the adjacency matrix. <eob>
+ And so now we have the hidden <eol> layer <eol> embedding matrix <eob>
+ showing up twice <eob>
+ and so we can just factor it out <eob>
+ and then we have the equation here. <eob>
+ And so you can do it in matrix form <eol> on the whole data matrix. <eob>
+ And then you just have the adjacency <eob>
+ plus this is the identity matrix here. <eob>
+ So the nice thing is that this <eol> is equivariant to permutations. <eob>
+ It can handle an arbitrary <eol> number <eol> of neighbors. <eob>
+ So that's all handled <eol> in the adjacency matrix. <eob>
+ We don't have to deal with any kind <eol> of weird indexing or anything. <eob>
+ And it is, you know, <eol> the adjacency matrix <eob>
+ is describing the graph structure <eob>
+ so it can exploit any kind <eol> of graph structure. <eob>
+ And then we are sharing parameters <eol> across every one of the nodes. <eob>
+ So we have that kind of efficiency <eol> of parameters as well. <eob>
+ Okay, so let's put it all together <eol> now <eob>
+ in graph and node classification. <eob>
+ And there are, I'm going <eol> to release a few notebooks. <eob>
+ They're pretty straightforward, <eob>
+ but I think it just helps <eol> to have a little experience <eob>
+ with the Python code <eob>
+ and the matrices <eol> and the indexing a little bit. <eob>
+ And so the one example <eol> you're going <eol> to see in the Python notebook, <eob>
+ maybe it's, yeah, 13. <eob>
+ 2 notebook, is that, so <eol> you can put it all together. <eob>
+ You can put a sigmoid head on it <eol> like this with mean pooling. <eob>
+ And then we can do, <eol> for example, classification. <eob>
+ And so in this case, there's 118 elements. <eob>
+ And so we can just have <eol> a one-hot encoded <eob>
+ for every node <eob>
+ to describe which element it is. <eob>
+ And then the first parameter, <eob>
+ we can decide what embedding <eol> dimension we want <eob>
+ so that first weight matrix here <eol> can just be d by 118. <eob>
+ So we switch to some <eol> d-dimensional embedding. <eob>
+ And then we have the weight matrix, <eob>
+ which is a 1 by d row vector as well. <eob>
+ But with that, you can put it all together <eob>
+ and now you basically have <eol> a graph classification network <eob>
+ for, I guess, molecular compound detection. <eob>
+ All right, so let me define <eol> another term here. <eob>
+ So the stuff we've been talking <eol> about up to date with supervised learning <eob>
+ has been these inductive kind of models. <eob>
+ And so typically what we do <eol> is we split our data <eob>
+ into training and test data. <eob>
+ So we have separate data. <eob>
+ We can hold out test <eol> and validation data. <eob>
+ And then we can train on the training data <eob>
+ and then test on the testing data. <eob>
+ But with graphs, you have this case <eob>
+ where you can have <eol> this transductive kind of model, <eob>
+ where you might have a case <eol> where you know the labels <eol> of some of the nodes, <eob>
+ but you don't know some <eol> of the other nodes. <eob>
+ But you can do this kind <eol> of like semi-supervised learning <eob>
+ is that you can still train <eol> with this network <eob>
+ and just your loss function <eob>
+ is just incorporating <eol> your labeled nodes. <eob>
+ And so at training time, <eol> you're not taking into account <eob>
+ because we don't know the labels <eol> on these unknown nodes. <eob>
+ But we can still proceed with training. <eob>
+ But then at inference time, <eob>
+ you could run inference <eol> on these unlabeled nodes. <eob>
+ So that's the transductive model. <eob>
+ So think about this example here <eob>
+ where you want to do binary classification <eol> at the node level. <eob>
+ So I just grabbed an example <eol> of some very large graph, <eob>
+ but it could be millions of nodes. <eob>
+ And these are partially labeled. <eob>
+ So it's the same body as before <eol> that we use for the graph classification. <eob>
+ And then we have vector outputs, <eob>
+ which are the same dimension <eol> as the number of nodes. <eob>
+ If we just remove the mean pooling, <eob>
+ like in the node classification example, <eob>
+ we get the vector output one by n. <eob>
+ And then you can train <eol> using binary cross entropy loss <eob>
+ on the nodes with the labels. <eob>
+ So the problem is that, at least here, <eol> we're training, <eob>
+ let's say you have a graph <eol> with millions of nodes, <eob>
+ that for the training <eol> and that execution <eob>
+ at every layer of the network, <eob>
+ you have to read and process <eol> every one <eol> of the millions of nodes. <eob>
+ And so you could very easily <eol> run into a situation <eob>
+ where you just don't have <eol> the memory on your GPU <eob>
+ or the resource that you're using <eob>
+ to be able to store every node <eol> on every layer of your network. <eob>
+ And then basically, <eol> we're not doing batches here, <eob>
+ we can't do stochastic gradient descent. <eob>
+ So we're not taking advantage <eol> of the fact <eob>
+ that randomly picking some of these nodes <eob>
+ and then running that. <eob>
+ But there are ways to do it. <eob>
+ And so three of the ways <eol> there's others as well <eob>
+ is you can just randomly pick <eol> a subset of the nodes as a batch <eob>
+ and run it <eob>
+ and then just pick <eol> another subset <eol> of the nodes. <eob>
+ And I'll explain what the issue <eol> with that is <eob>
+ and then there's better ways, <eob>
+ something called neighborhood sampling <eol> and graph partitioning, <eob>
+ which is better. <eob>
+ So the problem with just taking <eol> a random subset, <eob>
+ so it's a small graph, <eob>
+ and let's say we're just picking a node <eol> of one, size one, set one, <eob>
+ that this node, because of that aggregation, <eob>
+ it's dependent on the immediate neighbors <eob>
+ of that same node in the previous layer. <eob>
+ And in turn, each of these nodes <eob>
+ are influenced <eob>
+ by their immediate neighbors <eol> of the previous node. <eob>
+ And so you can imagine <eol> with a deeper graph, <eob>
+ and even if it's larger, <eol> with a deeper graph, <eob>
+ that you could quickly start basically <eol> using up most of the network, <eob>
+ so actually using most of the network. <eob>
+ And just like in the convolutional <eol> neural nets, <eob>
+ there's this notion <eol> of receptive field. <eob>
+ So that growth, so the fact <eol> that from the original input, <eob>
+ all of those nodes <eol> are effectively <eol> influencing this node, <eob>
+ you can call that the receptive field <eol> for that particular node. <eob>
+ So, yeah, and the problem is <eol> if you have fairly dense connections <eob>
+ and you have lots of layers, <eob>
+ you can quickly just expand <eol> to encompass every node in the graph. <eob>
+ And so you haven't accomplished your goal <eob>
+ of having these distinct batches. <eob>
+ So the way neighborhood sampling works, <eob>
+ you have the, I guess, <eol> a different graph here, <eob>
+ but the same random sampling <eob>
+ where you're just showing <eob>
+ all of the nodes <eol> that influence this node here. <eob>
+ With neighborhood sampling, <eol> you're doing the same thing, <eob>
+ but you're creating just a max, <eob>
+ a limit <eob>
+ to how many nodes <eol> in your aggregation. <eob>
+ So you're saying like in this case, <eob>
+ I'm not going to use any more <eol> than three of the neighboring nodes, <eob>
+ and you can just randomly <eol> select <eol> which three you use. <eob>
+ But that case, at least you bound the growth <eob>
+ as you go back into the network. <eob>
+ Does that make sense? Okay. <eob>
+ And there's a short notebook <eol> that goes <eol> into that a little bit more. <eob>
+ And then graph partitioning takes a graph, <eob>
+ and then what you do is you go <eol> and you clip some of the edges, <eob>
+ and then you try to find these, <eol> you know, using some algorithms, <eob>
+ you can find these kind of maximally <eol> connected subsets of the graph <eob>
+ so that you partition them, <eob>
+ and then you basically just remove them, <eob>
+ and then you treat them as separate graphs. <eob>
+ And you can do that partitioning <eol> on, <eol> you know, <eob>
+ like every epoch, <eob>
+ you can change the partitioning <eob>
+ so that you cover some <eol> of these <eol> missing edges as well. <eob>
+ Okay. <eob>
+ Makes sense? Okay. <eob>
+ I'm not going to go into detail here. <eob>
+ It's in the book, but besides <eol> the mean pooling, <eob>
+ there's a list in the book <eol> on different ways that you can, <eob>
+ instead of just straight aggregation, <eob>
+ you can do things like enhance <eol> the weight, the diagonal, <eob>
+ a little bit more in the equation up there. <eob>
+ You can add residual connections <eob>
+ just like we saw in the lecture <eol> on ResNets. <eob>
+ You can just add <eol> the previous hidden layer <eob>
+ to the output <eol> of the activation function. <eob>
+ For the aggregation function, <eol> you can weight them. <eob>
+ So you're taking an average <eol> instead of a simple sum <eob>
+ on the aggregation. <eob>
+ This KIPF normalization is factoring in <eob>
+ that if you have a node <eol> that's coming from, <eol> that has a lot of neighbors, <eob>
+ maybe you don't want it <eol> to overly influence <eol> this aggregation here. <eob>
+ And so you can normalize it <eol> a little bit there. <eob>
+ And then instead of you can do <eol> a max pool aggregation. <eob>
+ Instead of summing, <eob>
+ you can just take <eol> the max <eol> of all the neighbors as well. <eob>
+ So just like with regular neural networks, <eob>
+ you can play with the different <eol> kinds <eol> of pooling operators. <eob>
+ Okay. <eob>
+ So then there is the analogy <eol> to transformers. <eob>
+ You can also do aggregation by attention. <eob>
+ And essentially you're creating <eol> a attention matrix, <eob>
+ or learning an attention matrix, <eob>
+ and then just kind of very similar <eol> to transformers <eob>
+ is that so you're doing <eol> a linear transformation on the input. <eob>
+ Remember when we took the input <eob>
+ and we transformed it <eol> into the value vectors. <eob>
+ And then we had the query and the key. <eob>
+ There's not really a separate <eol> query and the key, <eob>
+ but it is creating this attention matrix <eob>
+ and then multiplying by this linear transformed value. <eob>
+ So it is similar. <eob>
+ And so if you draw like we did before, <eob>
+ so this is the graph convolution <eol> that I was just showing you <eob>
+ where you have the adjacency <eol> matrix <eol> which is fixed, <eob>
+ and then you have the input <eob>
+ which is going through a linear transformation, <eob>
+ and then you're just multiplying <eol> by the adjacency matrix <eob>
+ or that plus the identity. <eob>
+ The graph attention, again, <eol> it's not exactly like the transformers, <eob>
+ but it is now coming up <eol> with these attention weights <eob>
+ and that's multiplying. <eob>
+ So it's this kind of hyper network <eol> like I showed you for the transformers. <eob>
+ It is learning some attention weights <eob>
+ and then multiplying that <eob>
+ by the linear transformed input. <eob>
+ And just for comparison, <eob>
+ I put the, oops, text got cut off here a little bit, <eob>
+ but this was the regular dot product self-attention <eob>
+ where you had the query and the keys <eob>
+ and then you had the linear transform <eob>
+ and then it was being multiplied <eol> by this attention matrix. <eob>
+ So not quite like the transformer, <eob>
+ but it does kind of integrate <eol> some notions of the self-attention. <eob>
+ Okay? All right, we're actually <eol> on the last topic here. <eob>
+ You guys are going to get out a bit early. <eob>
+ So edge graphs, so this <eol> is actually quite simple. <eob>
+ You can take, let's say, some graph <eol> that you have with the nodes. <eob>
+ You can create these, you know, <eol> basically nodes corresponding to every edge. <eob>
+ So these are just labeled <eol> by the nodes <eol> that they connect, right? <eob>
+ So this is between nodes four and six, <eob>
+ so we just call it like four slash six. <eob>
+ So you can just add these at every edge <eob>
+ and then just remove all of the nodes. <eob>
+ And now you have, you know, <eol> an edge graph, actually, <eob>
+ but this is representing, you know, <eob>
+ assuming now that we have <eol> some useful information on the edges. <eob>
+ So we have edge embedding vectors. <eob>
+ We end up with what looked <eol> like the node graph, <eob>
+ but it's just the edge <eol> embedding vectors. <eob>
+ So everything that I just showed you before, <eob>
+ now you can just apply and do, <eol> you know, whatever, <eob>
+ classification and regression on the, <eol> with the node edge data. <eob>
+ So very, very simple to handle. <eob>
+ Okay? All right, it's a nice warm day, <eol> so we can go enjoy the weather. <eob>
+ So next time my plan is to do <eol> kind of a RLHF spin <eob>
+ on reinforcement learning. <eob>
+ So I'm not going to try to recreate <eol> the other reinforcement class. <eob>
+ And then my plan is to talk about <eob>
+ this joint embedding predictive architecture <eol> for the last class, <eob>
+ and then we'll have <eol> the project presentations. <eob>
+ So like I said, I'll send out <eol> a Piazza note tonight <eob>
+ with the assignment of who gets <eol> which slot <eob>
+ on the 25th and the 30th. <eob>
+ And then I'll also, well, it's Tuesday. <eob>
+ We'll talk on Thursday, <eob>
+ but it's a good chance I'll be in office <eol> for office hours this week as well. <eob>
+ Okay, thanks. <eob>
+ Thank you. <eob>
