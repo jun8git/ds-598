@@ -32,7 +32,7 @@ To set up the project on your local machine, follow these steps:
 2. Install required dependencies.
 3. Prepare your video and convert it to audio using any online services.
 4. Generate plain text file with `<eol>` and `<eob>` labels:
-   - Run `subtitle_segmentation_model_1.ipynb`
+   - Run `model1_test_course.ipynb`
 5. Add timestamp and convert to `.srt` file:
    - Run notebook `convert_to_srt.ipynb` on Windows or Linux OS, or run it on [google colab](https://colab.research.google.com/drive/1H5y1eP53-73TclaAhfctGhe9FpWXk6w4?usp=sharing)
    - Navigate to the last two cells of the notebook.
